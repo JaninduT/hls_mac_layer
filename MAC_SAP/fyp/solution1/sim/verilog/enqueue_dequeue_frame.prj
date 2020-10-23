@@ -1,0 +1,6 @@
+sv work "glbl.v"
+sv xil_defaultlib "AESL_automem_inout_frame.v"
+sv xil_defaultlib "enqueue_dequeue_fbkb.v"
+sv xil_defaultlib "enqueue_dequeue_frame.autotb.v"
+sv xil_defaultlib "enqueue_dequeue_frame.v"
+

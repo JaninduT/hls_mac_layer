@@ -1,0 +1,451 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "D:/Xilinx/Vivado/2019.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_enqueue_dequeue_frame.cpp
+   Compiling (apcc) compose_mac_frame_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:05 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) compose_mac_header_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:09 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) crc_32.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:13 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) mac_layer_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:17 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) mac_layer.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:21 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) decompose_mac_frame_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:25 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) crc_32_validate.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:29 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) edca_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:33 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) compose_mac_frame.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:37 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) crc_32_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:41 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) decompose_mac_frame.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:45 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) MA_UNITDATAX_request.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:49 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) edca.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:53 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) crc_32_validate_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:42:57 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+1,1,1,1,1
+17 , 17
+0 , 0
+0 , 0
+0 , 0
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+171 , 171
+188 , 188
+205 , 205
+222 , 222
+239 , 239
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+8 , 8
+48 , 48
+116 , 116
+0 , 0
+9 , 9
+139 , 139
+87 , 87
+176 , 176
+92 , 92
+95 , 95
+178 , 178
+87 , 87
+120 , 120
+23 , 23
+169 , 169
+81 , 81
+45 , 45
+79 , 79
+57 , 57
+53 , 53
+6 , 6
+119 , 119
+228 , 228
+15 , 15
+44 , 44
+39 , 39
+176 , 176
+88 , 88
+136 , 136
+178 , 178
+114 , 114
+37 , 37
+40 , 40
+254 , 254
+76 , 76
+158 , 158
+228 , 228
+147 , 147
+117 , 117
+178 , 178
+65 , 65
+241 , 241
+56 , 56
+9 , 9
+149 , 149
+39 , 39
+64 , 64
+58 , 58
+108 , 108
+161 , 161
+18 , 18
+63 , 63
+43 , 43
+66 , 66
+219 , 219
+38 , 38
+243 , 243
+179 , 179
+108 , 108
+8 , 8
+200 , 200
+250 , 250
+131 , 131
+63 , 63
+243 , 243
+78 , 78
+76 , 76
+212 , 212
+164 , 164
+41 , 41
+39 , 39
+55 , 55
+220 , 220
+160 , 160
+136 , 136
+211 , 211
+238 , 238
+91 , 91
+
+E:\FYP\HLS\MAC_SAP\fyp\solution1\sim\verilog>set PATH= 
+
+E:\FYP\HLS\MAC_SAP\fyp\solution1\sim\verilog>call D:/Xilinx/Vivado/2019.2/bin/xelab xil_defaultlib.apatb_enqueue_dequeue_frame_top glbl -prj enqueue_dequeue_frame.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s enqueue_dequeue_frame -debug wave 
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_enqueue_dequeue_frame_top glbl -prj enqueue_dequeue_frame.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s enqueue_dequeue_frame -debug wave 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/AESL_automem_inout_frame.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_inout_frame
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_fbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module enqueue_dequeue_fbkb_ram
+INFO: [VRFC 10-311] analyzing module enqueue_dequeue_fbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_frame.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_enqueue_dequeue_frame_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_frame.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module enqueue_dequeue_frame
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.enqueue_dequeue_fbkb_ram
+Compiling module xil_defaultlib.enqueue_dequeue_fbkb(DataWidth=8...
+Compiling module xil_defaultlib.enqueue_dequeue_frame
+Compiling module xil_defaultlib.AESL_automem_inout_frame
+Compiling module xil_defaultlib.apatb_enqueue_dequeue_frame_top
+Compiling module work.glbl
+Built simulation snapshot enqueue_dequeue_frame
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/enqueue_dequeue_frame/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/enqueue_dequeue_frame/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Oct 22 21:43:09 2020. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct 22 21:43:09 2020...
+
+****** xsim v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/enqueue_dequeue_frame/xsim_script.tcl
+# xsim {enqueue_dequeue_frame} -autoloadwcfg -tclbatch {enqueue_dequeue_frame.tcl}
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source enqueue_dequeue_frame.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+## set inout_frame_group [add_wave_group inout_frame(memory) -into $cinoutgroup]
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/inout_frame_q0 -into $inout_frame_group -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/inout_frame_d0 -into $inout_frame_group -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/inout_frame_we0 -into $inout_frame_group -color #ffff00 -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/inout_frame_ce0 -into $inout_frame_group -color #ffff00 -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/inout_frame_address0 -into $inout_frame_group -radix hex
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set return_group [add_wave_group return(wire) -into $coutputgroup]
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_return -into $return_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set ac_group [add_wave_group ac(wire) -into $cinputgroup]
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ac -into $ac_group -radix hex
+## set operation_group [add_wave_group operation(wire) -into $cinputgroup]
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/operation -into $operation_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_start -into $blocksiggroup
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_done -into $blocksiggroup
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_idle -into $blocksiggroup
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_enqueue_dequeue_frame_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/LENGTH_operation -into $tb_portdepth_group -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/LENGTH_ac -into $tb_portdepth_group -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/LENGTH_inout_frame -into $tb_portdepth_group -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/LENGTH_ap_return -into $tb_portdepth_group -radix hex
+## set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
+## set tb_inout_frame_group [add_wave_group inout_frame(memory) -into $tbcinoutgroup]
+## add_wave /apatb_enqueue_dequeue_frame_top/inout_frame_q0 -into $tb_inout_frame_group -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/inout_frame_d0 -into $tb_inout_frame_group -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/inout_frame_we0 -into $tb_inout_frame_group -color #ffff00 -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/inout_frame_ce0 -into $tb_inout_frame_group -color #ffff00 -radix hex
+## add_wave /apatb_enqueue_dequeue_frame_top/inout_frame_address0 -into $tb_inout_frame_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(wire) -into $tbcoutputgroup]
+## add_wave /apatb_enqueue_dequeue_frame_top/ap_return -into $tb_return_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_ac_group [add_wave_group ac(wire) -into $tbcinputgroup]
+## add_wave /apatb_enqueue_dequeue_frame_top/ac -into $tb_ac_group -radix hex
+## set tb_operation_group [add_wave_group operation(wire) -into $tbcinputgroup]
+## add_wave /apatb_enqueue_dequeue_frame_top/operation -into $tb_operation_group -radix hex
+## save_wave_config enqueue_dequeue_frame.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 5 [0.00%] @ "125000"
+// RTL Simulation : 1 / 5 [100.00%] @ "2165000"
+// RTL Simulation : 2 / 5 [100.00%] @ "4195000"
+// RTL Simulation : 3 / 5 [100.00%] @ "6225000"
+// RTL Simulation : 4 / 5 [100.00%] @ "8255000"
+// RTL Simulation : 5 / 5 [100.00%] @ "10285000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 10325 ns : File "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_frame.autotb.v" Line 377
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 22 21:43:18 2020...
+1,1,1,1,1
+17 , 17
+0 , 0
+0 , 0
+0 , 0
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+171 , 171
+188 , 188
+205 , 205
+222 , 222
+239 , 239
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+255 , 255
+8 , 8
+48 , 48
+116 , 116
+0 , 0
+9 , 9
+139 , 139
+87 , 87
+176 , 176
+92 , 92
+95 , 95
+178 , 178
+87 , 87
+120 , 120
+23 , 23
+169 , 169
+81 , 81
+45 , 45
+79 , 79
+57 , 57
+53 , 53
+6 , 6
+119 , 119
+228 , 228
+15 , 15
+44 , 44
+39 , 39
+176 , 176
+88 , 88
+136 , 136
+178 , 178
+114 , 114
+37 , 37
+40 , 40
+254 , 254
+76 , 76
+158 , 158
+228 , 228
+147 , 147
+117 , 117
+178 , 178
+65 , 65
+241 , 241
+56 , 56
+9 , 9
+149 , 149
+39 , 39
+64 , 64
+58 , 58
+108 , 108
+161 , 161
+18 , 18
+63 , 63
+43 , 43
+66 , 66
+219 , 219
+38 , 38
+243 , 243
+179 , 179
+108 , 108
+8 , 8
+200 , 200
+250 , 250
+131 , 131
+63 , 63
+243 , 243
+78 , 78
+76 , 76
+212 , 212
+164 , 164
+41 , 41
+39 , 39
+55 , 55
+220 , 220
+160 , 160
+136 , 136
+211 , 211
+238 , 238
+91 , 91
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

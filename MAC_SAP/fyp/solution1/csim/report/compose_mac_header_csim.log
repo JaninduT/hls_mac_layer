@@ -1,0 +1,61 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../compose_mac_frame_test.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 13 20:22:39 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/csim/build'
+In file included from ../../../compose_mac_frame_test.c:3:
+In file included from ../../../compose_mac_frame.h:4:
+In file included from ../../../common.h:4:
+In file included from D:/Xilinx/Vivado/2019.2/common/technology/autopilot\ap_cint.h:83:
+In file included from D:/Xilinx/Vivado/2019.2/common/technology/autopilot/etc/autopilot_apint.h:57:
+D:/Xilinx/Vivado/2019.2/common/technology/autopilot\etc/autopilot_dt.h:133:13: warning: 'bool' macro redefined
+#    define bool uint1
+            ^
+D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\stdbool.h:31:9: note: previous definition is here
+#define bool _Bool
+        ^
+1 warning generated.
+In file included from ../../../compose_mac_frame_test.c:3:
+In file included from ../../../compose_mac_frame.h:4:
+In file included from ../../../common.h:4:
+In file included from D:/Xilinx/Vivado/2019.2/common/technology/autopilot\ap_cint.h:83:
+In file included from D:/Xilinx/Vivado/2019.2/common/technology/autopilot/etc/autopilot_apint.h:57:
+D:/Xilinx/Vivado/2019.2/common/technology/autopilot\etc/autopilot_dt.h:133:13: warning: 'bool' macro redefined
+#    define bool uint1
+            ^
+D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\stdbool.h:31:9: note: previous definition is here
+#define bool _Bool
+        ^
+1 warning generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+17
+0
+0
+0
+255
+255
+255
+255
+255
+255
+255
+171
+188
+205
+222
+239
+255
+255
+255
+255
+255
+255
+8
+48
+116
+0
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,125 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../mac_layer_test.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:21:39 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../edca_test.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:21:44 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../edca.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 21:21:50 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+1,1,1,1,0
+1,1,1,1,0
+17
+0
+0
+0
+255
+255
+255
+255
+255
+255
+255
+171
+188
+205
+222
+239
+255
+255
+255
+255
+255
+255
+8
+48
+116
+0
+9
+139
+87
+176
+92
+95
+178
+87
+120
+23
+169
+81
+45
+79
+57
+53
+6
+119
+228
+15
+44
+39
+176
+88
+136
+178
+114
+37
+40
+254
+76
+158
+228
+147
+117
+178
+65
+241
+56
+9
+149
+39
+64
+58
+108
+161
+18
+63
+43
+66
+219
+38
+243
+179
+108
+8
+200
+250
+131
+63
+243
+78
+76
+212
+164
+41
+39
+55
+220
+160
+136
+211
+238
+91
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
