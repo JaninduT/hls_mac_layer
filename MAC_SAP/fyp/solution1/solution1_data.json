@@ -19,8 +19,8 @@
     "operation": {
       "index": "0",
       "type": {
-        "dataType": "uint1",
-        "dataWidth": "1",
+        "dataType": "uint2",
+        "dataWidth": "2",
         "interfaceRef": "operation"
       }
     },
@@ -74,13 +74,14 @@
   },
   "Files": {
     "CSource": [
-      "..\/MA_UNITDATAX_request.c",
-      "..\/compose_mac_frame.c",
-      "..\/crc_32.c",
-      "..\/crc_32_validate.c",
-      "..\/decompose_mac_frame.c",
+      "..\/timer.c",
+      "..\/mac_layer.c",
       "..\/edca.c",
-      "..\/mac_layer.c"
+      "..\/decompose_mac_frame.c",
+      "..\/crc_32_validate.c",
+      "..\/crc_32.c",
+      "..\/compose_mac_frame.c",
+      "..\/MA_UNITDATAX_request.c"
     ],
     "Vhdl": [
       "impl\/vhdl\/enqueue_dequeue_fbkb.vhd",
@@ -107,6 +108,7 @@
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/enque_frame.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/reset_pointers.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/send_frame.protoinst",
+      "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/start_timer.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/validate_crc.protoinst"
     ]
   },
@@ -198,10 +200,10 @@
     "operation": {
       "type": "data",
       "dir": "in",
-      "width": "1",
+      "width": "2",
       "ctype": {"DATA": {
           "Type": "integer unsigned",
-          "Width": "1"
+          "Width": "2"
         }},
       "bundle_name": "operation",
       "bundle_role": "default"
@@ -239,8 +241,7 @@
     },
     "operation": {
       "dir": "in",
-      "width": "1",
-      "isVector": "true"
+      "width": "2"
     },
     "ac": {
       "dir": "in",
@@ -279,7 +280,7 @@
     "Metrics": {"enqueue_dequeue_frame": {
         "Latency": {
           "LatencyBest": "1",
-          "LatencyAvg": "102",
+          "LatencyAvg": "90",
           "LatencyWorst": "202",
           "PipelineIIMin": "2",
           "PipelineIIMax": "203",
@@ -290,7 +291,7 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "5.486"
+          "Estimate": "7.502"
         },
         "Loops": [
           {
@@ -351,10 +352,10 @@
           }
         ],
         "Area": {
-          "BRAM_18K": "4",
+          "BRAM_18K": "1",
           "DSP48E": "0",
           "FF": "279",
-          "LUT": "1217",
+          "LUT": "1401",
           "URAM": "0"
         }
       }}
@@ -369,7 +370,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-10-22 21:37:05 +0530",
+    "Time": "2020-10-25 21:18:29 +0530",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

@@ -20,6 +20,8 @@ add_files fyp/edca.c
 add_files fyp/edca.h
 add_files fyp/mac_layer.c
 add_files fyp/mac_layer.h
+add_files fyp/timer.c
+add_files fyp/timer.h
 add_files -tb fyp/compose_mac_frame_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 add_files -tb fyp/compose_mac_header_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 add_files -tb fyp/crc_32_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
@@ -31,6 +33,7 @@ add_files -tb fyp/input_message.bin -cflags "-Wno-unknown-pragmas" -csimflags "-
 add_files -tb fyp/input_message_crc.bin -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 add_files -tb fyp/mac_frame.bin -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 add_files -tb fyp/mac_layer_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files -tb fyp/timer_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7a35t-cpg236-1}
 create_clock -period 10 -name default

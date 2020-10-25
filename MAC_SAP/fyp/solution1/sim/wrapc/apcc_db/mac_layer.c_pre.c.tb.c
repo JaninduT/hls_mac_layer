@@ -133,7 +133,7 @@ float fmodf(float, float);
 long double fmodl(long double, long double);
 void send_frame( char llvm_cbe_ftype,  char llvm_cbe_fstype, signed short llvm_cbe_seqnumber,  char llvm_cbe_up,  char *llvm_cbe_data,  char *llvm_cbe_mac_frame);
 void compose_mac_frame( char ,  char , signed short ,  char ,  char *,  char *);
-bool AESL_WRAP_enqueue_dequeue_frame(bool ,  char ,  char *);
+bool AESL_WRAP_enqueue_dequeue_frame( char ,  char ,  char *);
 
 
 /* Function Bodies */
@@ -204,10 +204,10 @@ printf("\nArgument seqnumber = 0x%X",llvm_cbe_seqnumber);
 printf("\nArgument up = 0x%X",llvm_cbe_up);
 }
 if (AESL_DEBUG_TRACE)
-printf("\n  %%2 = call zeroext i1 @AESL_WRAP_enqueue_dequeue_frame(i1 zeroext false, i2 zeroext 0, i8* %%1) nounwind, !dbg !5 for 0x%I64xth hint within @send_frame  --> \n", ++aesl_llvm_cbe_16_count);
-  llvm_cbe_tmp__2 = (bool )((AESL_WRAP_enqueue_dequeue_frame(0, ((unsigned char )0), ( char *)llvm_cbe_tmp__1))&1);
+printf("\n  %%2 = call zeroext i1 @AESL_WRAP_enqueue_dequeue_frame(i2 zeroext 0, i2 zeroext 0, i8* %%1) nounwind, !dbg !5 for 0x%I64xth hint within @send_frame  --> \n", ++aesl_llvm_cbe_16_count);
+  llvm_cbe_tmp__2 = (bool )((AESL_WRAP_enqueue_dequeue_frame(((unsigned char )0), ((unsigned char )0), ( char *)llvm_cbe_tmp__1))&1);
 if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",0);
+printf("\nArgument  = 0x%X",((unsigned char )0));
 printf("\nArgument  = 0x%X",((unsigned char )0));
 printf("\nReturn  = 0x%X",llvm_cbe_tmp__2);
 }
@@ -219,10 +219,10 @@ printf("\nReturn  = 0x%X",llvm_cbe_tmp__2);
 
 llvm_cbe_tmp__4:
 if (AESL_DEBUG_TRACE)
-printf("\n  %%4 = call zeroext i1 @AESL_WRAP_enqueue_dequeue_frame(i1 zeroext true, i2 zeroext 0, i8* %%mac_frame) nounwind, !dbg !4 for 0x%I64xth hint within @send_frame  --> \n", ++aesl_llvm_cbe_20_count);
-  ((AESL_WRAP_enqueue_dequeue_frame(1, ((unsigned char )0), ( char *)llvm_cbe_mac_frame))&1);
+printf("\n  %%4 = call zeroext i1 @AESL_WRAP_enqueue_dequeue_frame(i2 zeroext 1, i2 zeroext 0, i8* %%mac_frame) nounwind, !dbg !4 for 0x%I64xth hint within @send_frame  --> \n", ++aesl_llvm_cbe_20_count);
+  ((AESL_WRAP_enqueue_dequeue_frame(((unsigned char )1), ((unsigned char )0), ( char *)llvm_cbe_mac_frame))&1);
 if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",1);
+printf("\nArgument  = 0x%X",((unsigned char )1));
 printf("\nArgument  = 0x%X",((unsigned char )0));
 printf("\nReturn  = 0x%X",llvm_cbe_tmp__3);
 }

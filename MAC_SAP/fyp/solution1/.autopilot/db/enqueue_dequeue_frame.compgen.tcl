@@ -7,8 +7,8 @@ set MemName enqueue_dequeue_fbkb
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 8
-set AddrRange 400
-set AddrWd 9
+set AddrRange 1600
+set AddrWd 11
 set impl_style block
 set TrueReset 0
 set IsROM 0
@@ -124,7 +124,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_operation \
     op interface \
-    ports { operation { I 1 vector } } \
+    ports { operation { I 2 vector } } \
 } "
 }
 

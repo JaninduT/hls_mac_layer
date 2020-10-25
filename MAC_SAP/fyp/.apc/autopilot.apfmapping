@@ -16,6 +16,8 @@
     <originFiles name="edca.h" path="E:\FYP\HLS\MAC_SAP\fyp\edca.h"/>
     <originFiles name="mac_layer.c" path="E:\FYP\HLS\MAC_SAP\fyp\mac_layer.c"/>
     <originFiles name="mac_layer.h" path="E:\FYP\HLS\MAC_SAP\fyp\mac_layer.h"/>
+    <originFiles name="timer.c" path="E:\FYP\HLS\MAC_SAP\fyp\timer.c"/>
+    <originFiles name="timer.h" path="E:\FYP\HLS\MAC_SAP\fyp\timer.h"/>
   </source>
   <testbench>
     <originFiles name="compose_mac_frame_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\compose_mac_frame_test.c"/>
@@ -29,5 +31,6 @@
     <originFiles name="input_message_crc.bin" path="E:\FYP\HLS\MAC_SAP\fyp\input_message_crc.bin"/>
     <originFiles name="mac_frame.bin" path="E:\FYP\HLS\MAC_SAP\fyp\mac_frame.bin"/>
     <originFiles name="mac_layer_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\mac_layer_test.c"/>
+    <originFiles name="timer_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\timer_test.c"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

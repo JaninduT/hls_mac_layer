@@ -82,8 +82,8 @@
             <obj_property name="label">operation(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/operation" type="array">
-               <obj_property name="ElementShortName">operation[0:0]</obj_property>
-               <obj_property name="ObjectShortName">operation[0:0]</obj_property>
+               <obj_property name="ElementShortName">operation[1:0]</obj_property>
+               <obj_property name="ObjectShortName">operation[1:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
@@ -239,8 +239,8 @@
             <obj_property name="label">operation(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_enqueue_dequeue_frame_top/operation" type="array">
-               <obj_property name="ElementShortName">operation[0:0]</obj_property>
-               <obj_property name="ObjectShortName">operation[0:0]</obj_property>
+               <obj_property name="ElementShortName">operation[1:0]</obj_property>
+               <obj_property name="ObjectShortName">operation[1:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>

@@ -5,7 +5,7 @@ set rawDecl ""
 set globalVariable ""
 set PortList ""
 set PortName1 "operation"
-set BitWidth1 "1"
+set BitWidth1 "2"
 set ArrayOpt1 ""
 set Const1 "0"
 set Volatile1 "0"
@@ -13,7 +13,7 @@ set Pointer1 "0"
 set Reference1 "0"
 set Dims1 [list 0]
 set Interface1 "wire"
-set DataType1 "uint1"
+set DataType1 "uint2"
 set Port1 [list $PortName1 $Interface1 $DataType1 $Pointer1 $Dims1 $Const1 $Volatile1 $ArrayOpt1]
 lappend PortList $Port1
 set PortName2 "ac"

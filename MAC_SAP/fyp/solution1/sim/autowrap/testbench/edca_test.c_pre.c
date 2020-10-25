@@ -5486,20 +5486,8 @@ static const mac48 my_mac = {.mac[0]=0xff, .mac[1]=0xab, .mac[2]=0xbc, .mac[3]=0
 static const mac48 bcast_wcard_mac = {.mac[0]=0xff, .mac[1]=0xff, .mac[2]=0xff, .mac[3]=0xff, .mac[4]=0xff, .mac[5]=0xff};
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/edca.h" 2
 
-void reset_pointers();
-
-uint1 enqueue_frame(
-  uint2 ac,
-  unsigned char input_frame[100]
-  );
-
-uint1 dequeue_frame(
-  uint2 ac,
-  unsigned char output_frame[100]
-  );
-
 uint1 enqueue_dequeue_frame(
-  uint1 operation,
+  uint2 operation,
   uint2 ac,
   unsigned char inout_frame[100]
   );
@@ -5526,7 +5514,13 @@ int main(){
  uint1 res3 = enqueue_dequeue_frame(0, 0, frame);
  uint1 res4 = enqueue_dequeue_frame(0, 0, frame);
  uint1 res5 = enqueue_dequeue_frame(1, 0, o_frame);
- printf("%d,%d,%d,%d,%d\n",res1,res2,res3,res4,res5);
+ uint1 res6 = enqueue_dequeue_frame(2, 0, o_frame);
+ uint1 res7 = enqueue_dequeue_frame(0, 0, frame);
+ uint1 res8 = enqueue_dequeue_frame(0, 0, frame);
+ uint1 res9 = enqueue_dequeue_frame(0, 0, frame);
+ uint1 res10 = enqueue_dequeue_frame(0, 0, frame);
+ uint1 res11 = enqueue_dequeue_frame(0, 0, frame);
+ printf("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\n",res1,res2,res3,res4,res5,res6,res7,res8,res9,res11);
 
  for (int j=0; j<100; j++){
   printf("%d , %d\n",o_frame[j],frame[j]);

@@ -117,6 +117,16 @@
 			<location>E:/FYP/HLS/MAC_SAP/fyp/mac_layer.h</location>
 		</link>
 		<link>
+			<name>source/timer.c</name>
+			<type>1</type>
+			<location>E:/FYP/HLS/MAC_SAP/fyp/timer.c</location>
+		</link>
+		<link>
+			<name>source/timer.h</name>
+			<type>1</type>
+			<location>E:/FYP/HLS/MAC_SAP/fyp/timer.h</location>
+		</link>
+		<link>
 			<name>testbench/compose_mac_frame_test.c</name>
 			<type>1</type>
 			<location>E:/FYP/HLS/MAC_SAP/fyp/compose_mac_frame_test.c</location>
@@ -170,6 +180,11 @@
 			<name>testbench/mac_layer_test.c</name>
 			<type>1</type>
 			<location>E:/FYP/HLS/MAC_SAP/fyp/mac_layer_test.c</location>
+		</link>
+		<link>
+			<name>testbench/timer_test.c</name>
+			<type>1</type>
+			<location>E:/FYP/HLS/MAC_SAP/fyp/timer_test.c</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>

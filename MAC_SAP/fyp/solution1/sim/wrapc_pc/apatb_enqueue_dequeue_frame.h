@@ -4,6 +4,6 @@
 // ==============================================================
 
 extern uint1 AESL_WRAP_enqueue_dequeue_frame (
-uint1 operation,
+uint2 operation,
 uint2 ac,
 unsigned char inout_frame[100]);

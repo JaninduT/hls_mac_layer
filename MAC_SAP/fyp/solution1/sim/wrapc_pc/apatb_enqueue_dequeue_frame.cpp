@@ -100,12 +100,12 @@ class INTER_TCL_FILE {
 };
 
 extern "C" uint1 enqueue_dequeue_frame (
-uint1 operation,
+uint2 operation,
 uint2 ac,
 char inout_frame[100]);
 
 extern "C" uint1 AESL_WRAP_enqueue_dequeue_frame (
-uint1 operation,
+uint2 operation,
 uint2 ac,
 char inout_frame[100])
 {
@@ -421,13 +421,13 @@ char inout_frame[100])
 		sprintf(tvin_operation, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_operation, tvin_operation);
 
-		sc_bv<1> operation_tvin_wrapc_buffer;
+		sc_bv<2> operation_tvin_wrapc_buffer;
 
 		// RTL Name: operation
 		{
-			// bitslice(0, 0)
+			// bitslice(1, 0)
 			{
-				// celement: operation(0, 0)
+				// celement: operation(1, 0)
 				{
 					// carray: (0) => (0) @ (0)
 					{
@@ -439,9 +439,9 @@ char inout_frame[100])
 						// input_type_conversion : operation
 						if (&(operation) != NULL) // check the null address if the c port is array or others
 						{
-							sc_lv<1> operation_tmp_mem;
+							sc_lv<2> operation_tmp_mem;
 							operation_tmp_mem = operation;
-							operation_tvin_wrapc_buffer.range(0, 0) = operation_tmp_mem.range(0, 0);
+							operation_tvin_wrapc_buffer.range(1, 0) = operation_tmp_mem.range(1, 0);
 						}
 					}
 				}

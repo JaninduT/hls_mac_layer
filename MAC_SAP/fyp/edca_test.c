@@ -34,7 +34,13 @@ int main(){
 	bool res3 = enqueue_dequeue_frame(0, 0, frame);
 	bool res4 = enqueue_dequeue_frame(0, 0, frame);
 	bool res5 = enqueue_dequeue_frame(1, 0, o_frame);
-	printf("%d,%d,%d,%d,%d\n",res1,res2,res3,res4,res5);
+	bool res6 = enqueue_dequeue_frame(2, 0, o_frame);
+	bool res7 = enqueue_dequeue_frame(0, 0, frame);
+	bool res8 = enqueue_dequeue_frame(0, 0, frame);
+	bool res9 = enqueue_dequeue_frame(0, 0, frame);
+	bool res10 = enqueue_dequeue_frame(0, 0, frame);
+	bool res11 = enqueue_dequeue_frame(0, 0, frame);
+	printf("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\n",res1,res2,res3,res4,res5,res6,res7,res8,res9,res11);
 
 	for (int j=0; j<100; j++){
 		printf("%d , %d\n",o_frame[j],frame[j]);

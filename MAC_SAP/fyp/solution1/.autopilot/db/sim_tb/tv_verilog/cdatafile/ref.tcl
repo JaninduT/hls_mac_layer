@@ -4,4 +4,4 @@ set depth_list {
 {inout_frame 100}
 {ap_return 1}
 }
-set trans_num 5
+set trans_num 11

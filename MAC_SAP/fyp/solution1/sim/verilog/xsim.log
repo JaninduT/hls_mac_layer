@@ -2,8 +2,8 @@
 # xsim v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Thu Oct 22 21:43:10 2020
-# Process ID: 13364
+# Start of session at: Sun Oct 25 21:22:09 2020
+# Process ID: 15600
 # Current directory: E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog
 # Command line: xsim.exe -mode tcl -source {xsim.dir/enqueue_dequeue_frame/xsim_script.tcl}
 # Log file: E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.log
@@ -75,13 +75,19 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 //
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
-// RTL Simulation : 0 / 5 [0.00%] @ "125000"
-// RTL Simulation : 1 / 5 [100.00%] @ "2165000"
-// RTL Simulation : 2 / 5 [100.00%] @ "4195000"
-// RTL Simulation : 3 / 5 [100.00%] @ "6225000"
-// RTL Simulation : 4 / 5 [100.00%] @ "8255000"
-// RTL Simulation : 5 / 5 [100.00%] @ "10285000"
+// RTL Simulation : 0 / 11 [0.00%] @ "125000"
+// RTL Simulation : 1 / 11 [100.00%] @ "2165000"
+// RTL Simulation : 2 / 11 [100.00%] @ "4195000"
+// RTL Simulation : 3 / 11 [100.00%] @ "6225000"
+// RTL Simulation : 4 / 11 [100.00%] @ "8255000"
+// RTL Simulation : 5 / 11 [100.00%] @ "10285000"
+// RTL Simulation : 6 / 11 [100.00%] @ "10305000"
+// RTL Simulation : 7 / 11 [100.00%] @ "12335000"
+// RTL Simulation : 8 / 11 [100.00%] @ "14365000"
+// RTL Simulation : 9 / 11 [100.00%] @ "16395000"
+// RTL Simulation : 10 / 11 [100.00%] @ "18425000"
+// RTL Simulation : 11 / 11 [100.00%] @ "18445000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 10325 ns : File "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_frame.autotb.v" Line 377
+$finish called at time : 18485 ns : File "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_frame.autotb.v" Line 377
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu Oct 22 21:43:18 2020...
+INFO: [Common 17-206] Exiting xsim at Sun Oct 25 21:22:17 2020...

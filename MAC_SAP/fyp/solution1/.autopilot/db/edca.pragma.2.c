@@ -4531,43 +4531,35 @@ static const mac48 my_mac = {.mac[0]=0xff, .mac[1]=0xab, .mac[2]=0xbc, .mac[3]=0
 static const mac48 bcast_wcard_mac = {.mac[0]=0xff, .mac[1]=0xff, .mac[2]=0xff, .mac[3]=0xff, .mac[4]=0xff, .mac[5]=0xff};
 # 5 "fyp/edca.h" 2
 
-void reset_pointers();
-
-uint1 enqueue_frame(
-  uint2 ac,
-  unsigned char input_frame[100]
-  );
-
-uint1 dequeue_frame(
-  uint2 ac,
-  unsigned char output_frame[100]
-  );
-
 uint1 enqueue_dequeue_frame(
-  uint1 operation,
+  uint2 operation,
   uint2 ac,
   unsigned char inout_frame[100]
   );
 # 2 "fyp/edca.c" 2
-# 110 "fyp/edca.c"
-uint1 enqueue_dequeue_frame(uint1 operation, uint2 ac, unsigned char inout_frame[100]){_ssdm_SpecArrayDimSize(inout_frame, 100);
- static unsigned char edca_fifo_vo[400];
- static unsigned char edca_fifo_vi[400];
- static unsigned char edca_fifo_be[400];
- static unsigned char edca_fifo_bk[400];
- static uint2 read_pointer_vo = 0;
- static uint2 write_pointer_vo = 0;
- static uint3 available_spaces_vo = 4;
- static uint2 read_pointer_vi = 0;
- static uint2 write_pointer_vi = 0;
- static uint3 available_spaces_vi = 4;
- static uint2 read_pointer_be = 0;
- static uint2 write_pointer_be = 0;
- static uint3 available_spaces_be = 4;
- static uint2 read_pointer_bk = 0;
- static uint2 write_pointer_bk = 0;
- static uint3 available_spaces_bk = 4;
 
+static unsigned char edca_fifo_vo[400];
+static unsigned char edca_fifo_vi[400];
+static unsigned char edca_fifo_be[400];
+static unsigned char edca_fifo_bk[400];
+static uint2 read_pointer_vo = 0;
+static uint2 write_pointer_vo = 0;
+static uint3 available_spaces_vo = 4;
+static uint2 read_pointer_vi = 0;
+static uint2 write_pointer_vi = 0;
+static uint3 available_spaces_vi = 4;
+static uint2 read_pointer_be = 0;
+static uint2 write_pointer_be = 0;
+static uint3 available_spaces_be = 4;
+static uint2 read_pointer_bk = 0;
+static uint2 write_pointer_bk = 0;
+static uint3 available_spaces_bk = 4;
+
+uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame[100]){_ssdm_SpecArrayDimSize(inout_frame, 100);
+_ssdm_SpecArrayMap( &edca_fifo_bk, "edca_queues", -1, "HORIZONTAL", "");
+_ssdm_SpecArrayMap( &edca_fifo_be, "edca_queues", -1, "HORIZONTAL", "");
+_ssdm_SpecArrayMap( &edca_fifo_vi, "edca_queues", -1, "HORIZONTAL", "");
+_ssdm_SpecArrayMap( &edca_fifo_vo, "edca_queues", -1, "HORIZONTAL", "");
  if(operation == 0){
   if (ac == 0){
    if(available_spaces_bk == 0){
@@ -4656,6 +4648,20 @@ uint1 enqueue_dequeue_frame(uint1 operation, uint2 ac, unsigned char inout_frame
   }else{
    return 0;
   }
+ }else if (operation == 2){
+  read_pointer_vo = 0;
+  write_pointer_vo = 0;
+  available_spaces_vo = 4;
+  read_pointer_vi = 0;
+  write_pointer_vi = 0;
+  available_spaces_vi = 4;
+  read_pointer_be = 0;
+  write_pointer_be = 0;
+  available_spaces_be = 4;
+  read_pointer_bk = 0;
+  write_pointer_bk = 0;
+  available_spaces_bk = 4;
+  return 1;
  }else{
   return 0;
  }

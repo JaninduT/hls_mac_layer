@@ -30,7 +30,7 @@
 `define AUTOTB_TVOUT_ap_return_out_wrapc  "./impl_rtl.enqueue_dequeue_frame.autotvout_ap_return.dat"
 module `AUTOTB_TOP;
 
-parameter AUTOTB_TRANSACTION_NUM = 5;
+parameter AUTOTB_TRANSACTION_NUM = 11;
 parameter PROGRESS_TIMEOUT = 10000000;
 parameter LATENCY_ESTIMATION = 202;
 parameter LENGTH_operation = 1;
@@ -123,7 +123,7 @@ wire ap_start;
 wire ap_done;
 wire ap_idle;
 wire ap_ready;
-wire [0 : 0] operation;
+wire [1 : 0] operation;
 wire [1 : 0] ac;
 wire [6 : 0] inout_frame_address0;
 wire  inout_frame_ce0;
@@ -192,7 +192,7 @@ assign AESL_continue = tb_continue;
         end
     end
 // The signal of port operation
-reg [0: 0] AESL_REG_operation = 0;
+reg [1: 0] AESL_REG_operation = 0;
 assign operation = AESL_REG_operation;
 initial begin : read_file_process_operation
     integer fp;

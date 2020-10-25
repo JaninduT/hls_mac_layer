@@ -19,8 +19,8 @@ using namespace sc_dt;
 struct enqueue_dequeue_fbkb_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 8;
-  static const unsigned AddressRange = 400;
-  static const unsigned AddressWidth = 9;
+  static const unsigned AddressRange = 1600;
+  static const unsigned AddressWidth = 11;
 
 //latency = 1
 //input_reg = 1
@@ -38,7 +38,7 @@ sc_lv<DataWidth> ram[AddressRange];
 
 
    SC_CTOR(enqueue_dequeue_fbkb_ram) {
-        for (unsigned i = 0; i < 400; i = i + 1) {
+        for (unsigned i = 0; i < 1600; i = i + 1) {
             ram[i] = 0;
         }
 
@@ -79,8 +79,8 @@ SC_MODULE(enqueue_dequeue_fbkb) {
 
 
 static const unsigned DataWidth = 8;
-static const unsigned AddressRange = 400;
-static const unsigned AddressWidth = 9;
+static const unsigned AddressRange = 1600;
+static const unsigned AddressWidth = 11;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in<sc_logic> ce0;

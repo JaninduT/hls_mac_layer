@@ -6,7 +6,7 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("ap_done", 1, hls_out, -1, "", "", 1),
 	Port_Property("ap_idle", 1, hls_out, -1, "", "", 1),
 	Port_Property("ap_ready", 1, hls_out, -1, "", "", 1),
-	Port_Property("operation", 1, hls_in, 0, "ap_none", "in_data", 1),
+	Port_Property("operation", 2, hls_in, 0, "ap_none", "in_data", 1),
 	Port_Property("ac", 2, hls_in, 1, "ap_none", "in_data", 1),
 	Port_Property("inout_frame_address0", 7, hls_out, 2, "ap_memory", "mem_address", 1),
 	Port_Property("inout_frame_ce0", 1, hls_out, 2, "ap_memory", "mem_ce", 1),

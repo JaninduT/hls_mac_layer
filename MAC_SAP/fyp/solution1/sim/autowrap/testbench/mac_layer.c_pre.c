@@ -5542,20 +5542,8 @@ uint1 decompose_mac_frame(
 
 
 
-void reset_pointers();
-
-uint1 enqueue_frame(
-  uint2 ac,
-  unsigned char input_frame[100]
-  );
-
-uint1 dequeue_frame(
-  uint2 ac,
-  unsigned char output_frame[100]
-  );
-
 uint1 enqueue_dequeue_frame(
-  uint1 operation,
+  uint2 operation,
   uint2 ac,
   unsigned char inout_frame[100]
   );
