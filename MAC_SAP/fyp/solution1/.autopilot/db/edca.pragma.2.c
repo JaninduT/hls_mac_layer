@@ -4529,6 +4529,12 @@ enum time_slot {
 
 static const mac48 my_mac = {.mac[0]=0xff, .mac[1]=0xab, .mac[2]=0xbc, .mac[3]=0xcd, .mac[4]=0xde, .mac[5]=0xef};
 static const mac48 bcast_wcard_mac = {.mac[0]=0xff, .mac[1]=0xff, .mac[2]=0xff, .mac[3]=0xff, .mac[4]=0xff, .mac[5]=0xff};
+
+static const uint8 SIFS = 2;
+static const uint8 rx_ok = 2;
+static const uint8 rx_error = 2;
+static const uint8 tx_ok = 2;
+static const uint8 aSlotTime = 2;
 # 5 "fyp/edca.h" 2
 
 uint1 enqueue_dequeue_frame(
@@ -4536,7 +4542,30 @@ uint1 enqueue_dequeue_frame(
   uint2 ac,
   unsigned char inout_frame[100]
   );
+
+void slot_boundary_timing(
+  uint2 timing_mode,
+  uint1 *idle_waiting,
+  volatile uint1 *medium_state
+  );
 # 2 "fyp/edca.c" 2
+# 1 "fyp/timer.h" 1
+
+
+
+
+
+void start_timer(
+  uint8 count,
+  uint1 *timeout,
+  uint1 count_idle,
+  volatile uint1 *medium_state
+  );
+
+void stop_timer(
+  uint1 *medium_state
+  );
+# 3 "fyp/edca.c" 2
 
 static unsigned char edca_fifo_vo[400];
 static unsigned char edca_fifo_vi[400];
@@ -4664,5 +4693,64 @@ _ssdm_SpecArrayMap( &edca_fifo_vo, "edca_queues", -1, "HORIZONTAL", "");
   return 1;
  }else{
   return 0;
+ }
+}
+
+void slot_boundary_timing(uint2 timing_mode, uint1 *idle_waiting, volatile uint1 *medium_state){
+ *idle_waiting = 0;
+ uint1 sifs_timeout = 0;
+ uint1 idle_timeout = 0;
+ if (timing_mode == 0){
+  sifs_timeout = 0;
+  idle_timeout = 0;
+  start_timer(SIFS, &sifs_timeout, 0, medium_state);
+  if(sifs_timeout == 1){
+   start_timer(rx_ok, &idle_timeout, 1, medium_state);
+   if(idle_timeout == 1){
+    *idle_waiting = 1;
+    return;
+   }else{
+    *idle_waiting = 0;
+    return;
+   }
+  }else{
+   return;
+  }
+ }else if (timing_mode == 1){
+  idle_timeout = 0;
+  start_timer(rx_error, &idle_timeout, 1, medium_state);
+  if(idle_timeout == 1){
+   *idle_waiting = 1;
+   return;
+  }else{
+   *idle_waiting = 0;
+   return;
+  }
+ }else if (timing_mode == 2){
+  sifs_timeout = 0;
+  idle_timeout = 0;
+  start_timer(SIFS, &sifs_timeout, 0, medium_state);
+  if(sifs_timeout == 1){
+   start_timer(tx_ok, &idle_timeout, 1, medium_state);
+   if(idle_timeout == 1){
+    *idle_waiting = 1;
+    return;
+   }else{
+    *idle_waiting = 0;
+    return;
+   }
+  }else{
+   return;
+  }
+ }else if (timing_mode == 3){
+  idle_timeout = 0;
+  start_timer(aSlotTime, &idle_timeout, 1, medium_state);
+  if(idle_timeout == 1){
+   *idle_waiting = 1;
+   return;
+  }else{
+   *idle_waiting = 0;
+   return;
+  }
  }
 }

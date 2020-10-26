@@ -9,4 +9,10 @@ bool enqueue_dequeue_frame(
 		unsigned char inout_frame[100]
 		);
 
+void slot_boundary_timing(
+		uint2 timing_mode,
+		bool *idle_waiting,
+		volatile uint1 *medium_state
+		);
+
 #endif

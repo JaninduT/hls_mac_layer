@@ -1,111 +1,21 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling(apcc) ../../../mac_layer_test.c in debug mode
-INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Oct 22 13:19:59 +0530 2020
-INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is apcc_db
-INFO: [APCC 202-1] APCC is done.
+   Compiling ../../../timer_test.c in debug mode
+   Compiling ../../../mac_layer_test.c in debug mode
+   Compiling ../../../edca_test.c in debug mode
+   Compiling ../../../decompose_mac_frame_test.c in debug mode
+   Compiling ../../../crc_32_validate_test.c in debug mode
+   Compiling ../../../crc_32_test.c in debug mode
+   Compiling ../../../compose_mac_header_test.c in debug mode
+   Compiling ../../../compose_mac_frame_test.c in debug mode
+   Compiling ../../../timer.c in debug mode
+   Compiling ../../../mac_layer.c in debug mode
+   Compiling ../../../edca.c in debug mode
+   Compiling ../../../decompose_mac_frame.c in debug mode
+   Compiling ../../../crc_32_validate.c in debug mode
+   Compiling ../../../crc_32.c in debug mode
+   Compiling ../../../compose_mac_frame.c in debug mode
+   Compiling ../../../MA_UNITDATAX_request.c in debug mode
    Generating csim.exe
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 1] CSim file generation done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

@@ -5,7 +5,13 @@
 
 void start_timer(
 		uint8 count,
-		bool *timeout
+		bool *timeout,
+		bool count_idle,
+		volatile uint1 *medium_state
+		);
+
+void stop_timer(
+		uint1 *medium_state
 		);
 
 #endif

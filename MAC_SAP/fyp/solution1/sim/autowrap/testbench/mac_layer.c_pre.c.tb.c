@@ -5488,6 +5488,12 @@ enum time_slot {
 
 static const mac48 my_mac = {.mac[0]=0xff, .mac[1]=0xab, .mac[2]=0xbc, .mac[3]=0xcd, .mac[4]=0xde, .mac[5]=0xef};
 static const mac48 bcast_wcard_mac = {.mac[0]=0xff, .mac[1]=0xff, .mac[2]=0xff, .mac[3]=0xff, .mac[4]=0xff, .mac[5]=0xff};
+
+static const uint8 SIFS = 2;
+static const uint8 rx_ok = 2;
+static const uint8 rx_error = 2;
+static const uint8 tx_ok = 2;
+static const uint8 aSlotTime = 2;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.h" 2
 # 1 "E:/FYP/HLS/MAC_SAP/fyp/crc_32.h" 1
 
@@ -5551,6 +5557,12 @@ uint1 enqueue_dequeue_frame(
   uint2 ac,
   unsigned char inout_frame[100]
   );
+
+void slot_boundary_timing(
+  uint2 timing_mode,
+  uint1 *idle_waiting,
+  volatile uint1 *medium_state
+  );
 # 9 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.h" 2
 
 void send_frame(
@@ -5563,11 +5575,6 @@ void send_frame(
   );
 # 2 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c" 2
 
-#ifndef HLS_FASTSIM
-#ifndef HLS_FASTSIM
-#include "apatb_enqueue_dequeue_frame.h"
-#endif
-# 3 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c"
 void send_frame(frame_type_t ftype, frame_subtype_t fstype,
   sequence_number_t seqnumber, user_priority_t up,
   unsigned char data[70], unsigned char mac_frame[100]){
@@ -5576,29 +5583,10 @@ void send_frame(frame_type_t ftype, frame_subtype_t fstype,
 
  compose_mac_frame(ftype, fstype, seqnumber, up, data, temp_frame);
 
- uint1 res1 = 
-#ifndef HLS_FASTSIM
-#define enqueue_dequeue_frame AESL_WRAP_enqueue_dequeue_frame
-#endif
-# 11 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c"
-enqueue_dequeue_frame(0, 0, temp_frame);
-#undef enqueue_dequeue_frame
-# 11 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c"
-
+ uint1 res1 = enqueue_dequeue_frame(0, 0, temp_frame);
 
  if(res1){
-  uint1 res2 = 
-#ifndef HLS_FASTSIM
-#define enqueue_dequeue_frame AESL_WRAP_enqueue_dequeue_frame
-#endif
-# 14 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c"
-enqueue_dequeue_frame(1, 0, mac_frame);
-#undef enqueue_dequeue_frame
-# 14 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c"
-
+  uint1 res2 = enqueue_dequeue_frame(1, 0, mac_frame);
  }
  return;
 }
-#endif
-# 17 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c"
-

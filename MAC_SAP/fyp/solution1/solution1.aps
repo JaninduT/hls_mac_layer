@@ -9,7 +9,7 @@
         <clock default="false" name="default" period="10"/>
     </clockList>
     <config>
-        <schedule model="enqueue_dequeue_frame"/>
+        <schedule model="slot_boundary_timing"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf boardInfo="Basys3 (xc7a35tcpg236-1) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">

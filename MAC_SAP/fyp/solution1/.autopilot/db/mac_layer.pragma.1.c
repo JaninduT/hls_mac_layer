@@ -4529,6 +4529,12 @@ enum time_slot {
 
 static const mac48 my_mac = {.mac[0]=0xff, .mac[1]=0xab, .mac[2]=0xbc, .mac[3]=0xcd, .mac[4]=0xde, .mac[5]=0xef};
 static const mac48 bcast_wcard_mac = {.mac[0]=0xff, .mac[1]=0xff, .mac[2]=0xff, .mac[3]=0xff, .mac[4]=0xff, .mac[5]=0xff};
+
+static const uint8 SIFS = 2;
+static const uint8 rx_ok = 2;
+static const uint8 rx_error = 2;
+static const uint8 tx_ok = 2;
+static const uint8 aSlotTime = 2;
 # 5 "fyp/mac_layer.h" 2
 # 1 "fyp/crc_32.h" 1
 
@@ -4591,6 +4597,12 @@ uint1 enqueue_dequeue_frame(
   uint2 operation,
   uint2 ac,
   unsigned char inout_frame[100]
+  );
+
+void slot_boundary_timing(
+  uint2 timing_mode,
+  uint1 *idle_waiting,
+  volatile uint1 *medium_state
   );
 # 9 "fyp/mac_layer.h" 2
 

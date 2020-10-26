@@ -1,0 +1,784 @@
+
+
+================================================================
+== Vivado HLS Report for 'slot_boundary_timing'
+================================================================
+* Date:           Mon Oct 26 21:45:56 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        fyp
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 7.972 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------+-------------+---------+---------+----------+----------+-----+-----+---------+
+        |                       |             |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |        Instance       |    Module   |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-----------------------+-------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_start_timer_fu_67  |start_timer  |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+        +-----------------------+-------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
++-----------------+---------+-------+-------+-------+-----+
+|DSP              |        -|      -|      -|      -|    -|
+|Expression       |        -|      -|      0|     39|    -|
+|FIFO             |        -|      -|      -|      -|    -|
+|Instance         |        -|      -|     42|    158|    -|
+|Memory           |        -|      -|      -|      -|    -|
+|Multiplexer      |        -|      -|      -|     77|    -|
+|Register         |        -|      -|     15|      -|    -|
++-----------------+---------+-------+-------+-------+-----+
+|Total            |        0|      0|     57|    274|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Available        |      100|     90|  41600|  20800|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0  |      1|    0|
++-----------------+---------+-------+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------+-------------+---------+-------+----+-----+-----+
+    |        Instance       |    Module   | BRAM_18K| DSP48E| FF | LUT | URAM|
+    +-----------------------+-------------+---------+-------+----+-----+-----+
+    |grp_start_timer_fu_67  |start_timer  |        0|      0|  42|  158|    0|
+    +-----------------------+-------------+---------+-------+----+-----+-----+
+    |Total                  |             |        0|      0|  42|  158|    0|
+    +-----------------------+-------------+---------+-------+----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |ap_predicate_op31_call_state5    |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op33_call_state5    |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln137_fu_78_p2              |   icmp   |      0|  0|   8|           2|           1|
+    |icmp_ln153_fu_84_p2              |   icmp   |      0|  0|   8|           2|           1|
+    |icmp_ln163_fu_90_p2              |   icmp   |      0|  0|   9|           2|           3|
+    |icmp_ln179_fu_96_p2              |   icmp   |      0|  0|   8|           2|           2|
+    |ap_block_state5_on_subcall_done  |    or    |      0|  0|   2|           1|           1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |Total                            |          |      0|  0|  39|          11|          10|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                    | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                    |  44|          9|    1|          9|
+    |ap_phi_mux_idle_waiting_new_0_phi_fu_47_p14  |   9|          2|    1|          2|
+    |grp_start_timer_fu_67_count_idle             |  15|          3|    1|          3|
+    |idle_waiting_new_0_reg_43                    |   9|          2|    1|          2|
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |Total                                        |  77|         16|    4|         16|
+    +---------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------+---+----+-----+-----------+
+    |                Name                | FF| LUT| Bits| Const Bits|
+    +------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                           |  8|   0|    8|          0|
+    |grp_start_timer_fu_67_ap_start_reg  |  1|   0|    1|          0|
+    |icmp_ln137_reg_102                  |  1|   0|    1|          0|
+    |icmp_ln153_reg_106                  |  1|   0|    1|          0|
+    |icmp_ln163_reg_110                  |  1|   0|    1|          0|
+    |idle_waiting_new_0_reg_43           |  1|   0|    1|          0|
+    |sifs_timeout_1_reg_122              |  1|   0|    1|          0|
+    |sifs_timeout_reg_131                |  1|   0|    1|          0|
+    +------------------------------------+---+----+-----+-----------+
+    |Total                               | 15|   0|   15|          0|
+    +------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+----------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++---------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk               |  in |    1| ap_ctrl_hs | slot_boundary_timing | return value |
+|ap_rst               |  in |    1| ap_ctrl_hs | slot_boundary_timing | return value |
+|ap_start             |  in |    1| ap_ctrl_hs | slot_boundary_timing | return value |
+|ap_done              | out |    1| ap_ctrl_hs | slot_boundary_timing | return value |
+|ap_idle              | out |    1| ap_ctrl_hs | slot_boundary_timing | return value |
+|ap_ready             | out |    1| ap_ctrl_hs | slot_boundary_timing | return value |
+|timing_mode          |  in |    2|   ap_none  |      timing_mode     |    scalar    |
+|idle_waiting         | out |    1|   ap_vld   |     idle_waiting     |    pointer   |
+|idle_waiting_ap_vld  | out |    1|   ap_vld   |     idle_waiting     |    pointer   |
+|medium_state         |  in |    1|   ap_none  |     medium_state     |    pointer   |
++---------------------+-----+-----+------------+----------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 7 6 3 2 5 
+2 --> 5 
+3 --> 4 5 
+4 --> 5 
+5 --> 
+6 --> 5 
+7 --> 5 8 
+8 --> 5 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.61>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2 %timing_mode) nounwind, !map !45"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %idle_waiting) nounwind, !map !51"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %medium_state) nounwind, !map !57"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([21 x i8]* @slot_boundary_timing_1) nounwind"   --->   Operation 12 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%timing_mode_read = call i2 @_ssdm_op_Read.ap_auto.i2(i2 %timing_mode) nounwind" [fyp/edca.c:133]   --->   Operation 13 'read' 'timing_mode_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.93ns)   --->   "%icmp_ln137 = icmp eq i2 %timing_mode_read, 0" [fyp/edca.c:137]   --->   Operation 14 'icmp' 'icmp_ln137' <Predicate = true> <Delay = 0.93> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "br i1 %icmp_ln137, label %1, label %3" [fyp/edca.c:137]   --->   Operation 15 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.93ns)   --->   "%icmp_ln153 = icmp eq i2 %timing_mode_read, 1" [fyp/edca.c:153]   --->   Operation 16 'icmp' 'icmp_ln153' <Predicate = (!icmp_ln137)> <Delay = 0.93> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "br i1 %icmp_ln153, label %4, label %5" [fyp/edca.c:153]   --->   Operation 17 'br' <Predicate = (!icmp_ln137)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.93ns)   --->   "%icmp_ln163 = icmp eq i2 %timing_mode_read, -2" [fyp/edca.c:163]   --->   Operation 18 'icmp' 'icmp_ln163' <Predicate = (!icmp_ln137 & !icmp_ln153)> <Delay = 0.93> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "br i1 %icmp_ln163, label %6, label %8" [fyp/edca.c:163]   --->   Operation 19 'br' <Predicate = (!icmp_ln137 & !icmp_ln153)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.93ns)   --->   "%icmp_ln179 = icmp eq i2 %timing_mode_read, -1" [fyp/edca.c:179]   --->   Operation 20 'icmp' 'icmp_ln179' <Predicate = (!icmp_ln137 & !icmp_ln153 & !icmp_ln163)> <Delay = 0.93> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (1.79ns)   --->   "br i1 %icmp_ln179, label %9, label %mergeST" [fyp/edca.c:179]   --->   Operation 21 'br' <Predicate = (!icmp_ln137 & !icmp_ln153 & !icmp_ln163)> <Delay = 1.79>
+ST_1 : Operation 22 [2/2] (4.61ns)   --->   "%idle_timeout_3 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:181]   --->   Operation 22 'call' 'idle_timeout_3' <Predicate = (!icmp_ln137 & !icmp_ln153 & !icmp_ln163 & icmp_ln179)> <Delay = 4.61> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 23 [2/2] (4.61ns)   --->   "%sifs_timeout_1 = call fastcc i1 @start_timer(i1 false, i1* %medium_state)" [fyp/edca.c:166]   --->   Operation 23 'call' 'sifs_timeout_1' <Predicate = (!icmp_ln137 & !icmp_ln153 & icmp_ln163)> <Delay = 4.61> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 24 [2/2] (4.61ns)   --->   "%idle_timeout_1 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:155]   --->   Operation 24 'call' 'idle_timeout_1' <Predicate = (!icmp_ln137 & icmp_ln153)> <Delay = 4.61> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 25 [2/2] (4.61ns)   --->   "%sifs_timeout = call fastcc i1 @start_timer(i1 false, i1* %medium_state)" [fyp/edca.c:140]   --->   Operation 25 'call' 'sifs_timeout' <Predicate = (icmp_ln137)> <Delay = 4.61> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 6.17>
+ST_2 : Operation 26 [1/2] (6.17ns)   --->   "%idle_timeout_3 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:181]   --->   Operation 26 'call' 'idle_timeout_3' <Predicate = true> <Delay = 6.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 27 [1/1] (1.79ns)   --->   "br label %mergeST" [fyp/edca.c:182]   --->   Operation 27 'br' <Predicate = true> <Delay = 1.79>
+
+State 3 <SV = 1> <Delay = 7.97>
+ST_3 : Operation 28 [1/2] (6.17ns)   --->   "%sifs_timeout_1 = call fastcc i1 @start_timer(i1 false, i1* %medium_state)" [fyp/edca.c:166]   --->   Operation 28 'call' 'sifs_timeout_1' <Predicate = true> <Delay = 6.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 29 [1/1] (1.79ns)   --->   "br i1 %sifs_timeout_1, label %7, label %mergeST" [fyp/edca.c:167]   --->   Operation 29 'br' <Predicate = true> <Delay = 1.79>
+
+State 4 <SV = 2> <Delay = 4.61>
+ST_4 : Operation 30 [2/2] (4.61ns)   --->   "%idle_timeout_2 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:168]   --->   Operation 30 'call' 'idle_timeout_2' <Predicate = true> <Delay = 4.61> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 3> <Delay = 7.97>
+ST_5 : Operation 31 [1/2] (6.17ns)   --->   "%idle_timeout_2 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:168]   --->   Operation 31 'call' 'idle_timeout_2' <Predicate = (!icmp_ln137 & !icmp_ln153 & icmp_ln163 & sifs_timeout_1)> <Delay = 6.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 32 [1/1] (1.79ns)   --->   "br label %mergeST" [fyp/edca.c:169]   --->   Operation 32 'br' <Predicate = (!icmp_ln137 & !icmp_ln153 & icmp_ln163 & sifs_timeout_1)> <Delay = 1.79>
+ST_5 : Operation 33 [1/2] (6.17ns)   --->   "%idle_timeout = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:142]   --->   Operation 33 'call' 'idle_timeout' <Predicate = (icmp_ln137 & sifs_timeout)> <Delay = 6.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 34 [1/1] (1.79ns)   --->   "br label %mergeST" [fyp/edca.c:143]   --->   Operation 34 'br' <Predicate = (icmp_ln137 & sifs_timeout)> <Delay = 1.79>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%idle_waiting_new_0 = phi i1 [ false, %1 ], [ false, %6 ], [ false, %8 ], [ %idle_timeout, %2 ], [ %idle_timeout_1, %4 ], [ %idle_timeout_2, %7 ], [ %idle_timeout_3, %9 ]"   --->   Operation 35 'phi' 'idle_waiting_new_0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 36 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i1P(i1* %idle_waiting, i1 %idle_waiting_new_0) nounwind" [fyp/edca.c:134]   --->   Operation 36 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "ret void" [fyp/edca.c:190]   --->   Operation 37 'ret' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 1> <Delay = 6.17>
+ST_6 : Operation 38 [1/2] (6.17ns)   --->   "%idle_timeout_1 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:155]   --->   Operation 38 'call' 'idle_timeout_1' <Predicate = true> <Delay = 6.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 39 [1/1] (1.79ns)   --->   "br label %mergeST" [fyp/edca.c:156]   --->   Operation 39 'br' <Predicate = true> <Delay = 1.79>
+
+State 7 <SV = 1> <Delay = 7.97>
+ST_7 : Operation 40 [1/2] (6.17ns)   --->   "%sifs_timeout = call fastcc i1 @start_timer(i1 false, i1* %medium_state)" [fyp/edca.c:140]   --->   Operation 40 'call' 'sifs_timeout' <Predicate = true> <Delay = 6.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 41 [1/1] (1.79ns)   --->   "br i1 %sifs_timeout, label %2, label %mergeST" [fyp/edca.c:141]   --->   Operation 41 'br' <Predicate = true> <Delay = 1.79>
+
+State 8 <SV = 2> <Delay = 4.61>
+ST_8 : Operation 42 [2/2] (4.61ns)   --->   "%idle_timeout = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:142]   --->   Operation 42 'call' 'idle_timeout' <Predicate = true> <Delay = 4.61> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ timing_mode]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ idle_waiting]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ medium_state]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+specbitsmap_ln0    (specbitsmap  ) [ 000000000]
+specbitsmap_ln0    (specbitsmap  ) [ 000000000]
+specbitsmap_ln0    (specbitsmap  ) [ 000000000]
+spectopmodule_ln0  (spectopmodule) [ 000000000]
+timing_mode_read   (read         ) [ 000000000]
+icmp_ln137         (icmp         ) [ 011111111]
+br_ln137           (br           ) [ 000000000]
+icmp_ln153         (icmp         ) [ 011111111]
+br_ln153           (br           ) [ 000000000]
+icmp_ln163         (icmp         ) [ 011111111]
+br_ln163           (br           ) [ 000000000]
+icmp_ln179         (icmp         ) [ 010000000]
+br_ln179           (br           ) [ 011111111]
+idle_timeout_3     (call         ) [ 011101110]
+br_ln182           (br           ) [ 011101110]
+sifs_timeout_1     (call         ) [ 000111000]
+br_ln167           (br           ) [ 011111110]
+idle_timeout_2     (call         ) [ 000000000]
+br_ln169           (br           ) [ 000000000]
+idle_timeout       (call         ) [ 000000000]
+br_ln143           (br           ) [ 000000000]
+idle_waiting_new_0 (phi          ) [ 000001000]
+write_ln134        (write        ) [ 000000000]
+ret_ln190          (ret          ) [ 000000000]
+idle_timeout_1     (call         ) [ 011101110]
+br_ln156           (br           ) [ 011101110]
+sifs_timeout       (call         ) [ 000001011]
+br_ln141           (br           ) [ 011101111]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="timing_mode">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="timing_mode"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="idle_waiting">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="idle_waiting"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="medium_state">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="medium_state"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="slot_boundary_timing_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="start_timer"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_auto.i1P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1004" name="timing_mode_read_read_fu_30">
+<pin_list>
+<pin id="31" dir="0" index="0" bw="2" slack="0"/>
+<pin id="32" dir="0" index="1" bw="2" slack="0"/>
+<pin id="33" dir="1" index="2" bw="2" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="timing_mode_read/1 "/>
+</bind>
+</comp>
+
+<comp id="36" class="1004" name="write_ln134_write_fu_36">
+<pin_list>
+<pin id="37" dir="0" index="0" bw="0" slack="0"/>
+<pin id="38" dir="0" index="1" bw="1" slack="0"/>
+<pin id="39" dir="0" index="2" bw="1" slack="0"/>
+<pin id="40" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln134/5 "/>
+</bind>
+</comp>
+
+<comp id="43" class="1005" name="idle_waiting_new_0_reg_43">
+<pin_list>
+<pin id="44" dir="0" index="0" bw="1" slack="2"/>
+<pin id="45" dir="1" index="1" bw="1" slack="2"/>
+</pin_list>
+<bind>
+<opset="idle_waiting_new_0 (phireg) "/>
+</bind>
+</comp>
+
+<comp id="47" class="1004" name="idle_waiting_new_0_phi_fu_47">
+<pin_list>
+<pin id="48" dir="0" index="0" bw="1" slack="2"/>
+<pin id="49" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="50" dir="0" index="2" bw="1" slack="2"/>
+<pin id="51" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="52" dir="0" index="4" bw="1" slack="3"/>
+<pin id="53" dir="0" index="5" bw="0" slack="2147483647"/>
+<pin id="54" dir="0" index="6" bw="1" slack="0"/>
+<pin id="55" dir="0" index="7" bw="0" slack="2147483647"/>
+<pin id="56" dir="0" index="8" bw="1" slack="2"/>
+<pin id="57" dir="0" index="9" bw="0" slack="2147483647"/>
+<pin id="58" dir="0" index="10" bw="1" slack="0"/>
+<pin id="59" dir="0" index="11" bw="0" slack="2147483647"/>
+<pin id="60" dir="0" index="12" bw="1" slack="2"/>
+<pin id="61" dir="0" index="13" bw="0" slack="2147483647"/>
+<pin id="62" dir="1" index="14" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="idle_waiting_new_0/5 "/>
+</bind>
+</comp>
+
+<comp id="67" class="1004" name="grp_start_timer_fu_67">
+<pin_list>
+<pin id="68" dir="0" index="0" bw="1" slack="0"/>
+<pin id="69" dir="0" index="1" bw="1" slack="0"/>
+<pin id="70" dir="0" index="2" bw="1" slack="0"/>
+<pin id="71" dir="1" index="3" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="idle_timeout_3/1 sifs_timeout_1/1 idle_timeout_1/1 sifs_timeout/1 idle_timeout_2/4 idle_timeout/8 "/>
+</bind>
+</comp>
+
+<comp id="78" class="1004" name="icmp_ln137_fu_78">
+<pin_list>
+<pin id="79" dir="0" index="0" bw="2" slack="0"/>
+<pin id="80" dir="0" index="1" bw="2" slack="0"/>
+<pin id="81" dir="1" index="2" bw="1" slack="3"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln137/1 "/>
+</bind>
+</comp>
+
+<comp id="84" class="1004" name="icmp_ln153_fu_84">
+<pin_list>
+<pin id="85" dir="0" index="0" bw="2" slack="0"/>
+<pin id="86" dir="0" index="1" bw="2" slack="0"/>
+<pin id="87" dir="1" index="2" bw="1" slack="3"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln153/1 "/>
+</bind>
+</comp>
+
+<comp id="90" class="1004" name="icmp_ln163_fu_90">
+<pin_list>
+<pin id="91" dir="0" index="0" bw="2" slack="0"/>
+<pin id="92" dir="0" index="1" bw="2" slack="0"/>
+<pin id="93" dir="1" index="2" bw="1" slack="3"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln163/1 "/>
+</bind>
+</comp>
+
+<comp id="96" class="1004" name="icmp_ln179_fu_96">
+<pin_list>
+<pin id="97" dir="0" index="0" bw="2" slack="0"/>
+<pin id="98" dir="0" index="1" bw="2" slack="0"/>
+<pin id="99" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln179/1 "/>
+</bind>
+</comp>
+
+<comp id="102" class="1005" name="icmp_ln137_reg_102">
+<pin_list>
+<pin id="103" dir="0" index="0" bw="1" slack="3"/>
+<pin id="104" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="icmp_ln137 "/>
+</bind>
+</comp>
+
+<comp id="106" class="1005" name="icmp_ln153_reg_106">
+<pin_list>
+<pin id="107" dir="0" index="0" bw="1" slack="3"/>
+<pin id="108" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="icmp_ln153 "/>
+</bind>
+</comp>
+
+<comp id="110" class="1005" name="icmp_ln163_reg_110">
+<pin_list>
+<pin id="111" dir="0" index="0" bw="1" slack="3"/>
+<pin id="112" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="icmp_ln163 "/>
+</bind>
+</comp>
+
+<comp id="117" class="1005" name="idle_timeout_3_reg_117">
+<pin_list>
+<pin id="118" dir="0" index="0" bw="1" slack="2"/>
+<pin id="119" dir="1" index="1" bw="1" slack="2"/>
+</pin_list>
+<bind>
+<opset="idle_timeout_3 "/>
+</bind>
+</comp>
+
+<comp id="122" class="1005" name="sifs_timeout_1_reg_122">
+<pin_list>
+<pin id="123" dir="0" index="0" bw="1" slack="2"/>
+<pin id="124" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="sifs_timeout_1 "/>
+</bind>
+</comp>
+
+<comp id="126" class="1005" name="idle_timeout_1_reg_126">
+<pin_list>
+<pin id="127" dir="0" index="0" bw="1" slack="2"/>
+<pin id="128" dir="1" index="1" bw="1" slack="2"/>
+</pin_list>
+<bind>
+<opset="idle_timeout_1 "/>
+</bind>
+</comp>
+
+<comp id="131" class="1005" name="sifs_timeout_reg_131">
+<pin_list>
+<pin id="132" dir="0" index="0" bw="1" slack="2"/>
+<pin id="133" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="sifs_timeout "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="34"><net_src comp="12" pin="0"/><net_sink comp="30" pin=0"/></net>
+
+<net id="35"><net_src comp="0" pin="0"/><net_sink comp="30" pin=1"/></net>
+
+<net id="41"><net_src comp="28" pin="0"/><net_sink comp="36" pin=0"/></net>
+
+<net id="42"><net_src comp="2" pin="0"/><net_sink comp="36" pin=1"/></net>
+
+<net id="46"><net_src comp="26" pin="0"/><net_sink comp="43" pin=0"/></net>
+
+<net id="63"><net_src comp="43" pin="1"/><net_sink comp="47" pin=0"/></net>
+
+<net id="64"><net_src comp="43" pin="1"/><net_sink comp="47" pin=2"/></net>
+
+<net id="65"><net_src comp="43" pin="1"/><net_sink comp="47" pin=4"/></net>
+
+<net id="66"><net_src comp="47" pin="14"/><net_sink comp="36" pin=2"/></net>
+
+<net id="72"><net_src comp="22" pin="0"/><net_sink comp="67" pin=0"/></net>
+
+<net id="73"><net_src comp="24" pin="0"/><net_sink comp="67" pin=1"/></net>
+
+<net id="74"><net_src comp="4" pin="0"/><net_sink comp="67" pin=2"/></net>
+
+<net id="75"><net_src comp="26" pin="0"/><net_sink comp="67" pin=1"/></net>
+
+<net id="76"><net_src comp="67" pin="3"/><net_sink comp="47" pin=10"/></net>
+
+<net id="77"><net_src comp="67" pin="3"/><net_sink comp="47" pin=6"/></net>
+
+<net id="82"><net_src comp="30" pin="2"/><net_sink comp="78" pin=0"/></net>
+
+<net id="83"><net_src comp="14" pin="0"/><net_sink comp="78" pin=1"/></net>
+
+<net id="88"><net_src comp="30" pin="2"/><net_sink comp="84" pin=0"/></net>
+
+<net id="89"><net_src comp="16" pin="0"/><net_sink comp="84" pin=1"/></net>
+
+<net id="94"><net_src comp="30" pin="2"/><net_sink comp="90" pin=0"/></net>
+
+<net id="95"><net_src comp="18" pin="0"/><net_sink comp="90" pin=1"/></net>
+
+<net id="100"><net_src comp="30" pin="2"/><net_sink comp="96" pin=0"/></net>
+
+<net id="101"><net_src comp="20" pin="0"/><net_sink comp="96" pin=1"/></net>
+
+<net id="105"><net_src comp="78" pin="2"/><net_sink comp="102" pin=0"/></net>
+
+<net id="109"><net_src comp="84" pin="2"/><net_sink comp="106" pin=0"/></net>
+
+<net id="113"><net_src comp="90" pin="2"/><net_sink comp="110" pin=0"/></net>
+
+<net id="120"><net_src comp="67" pin="3"/><net_sink comp="117" pin=0"/></net>
+
+<net id="121"><net_src comp="117" pin="1"/><net_sink comp="47" pin=12"/></net>
+
+<net id="125"><net_src comp="67" pin="3"/><net_sink comp="122" pin=0"/></net>
+
+<net id="129"><net_src comp="67" pin="3"/><net_sink comp="126" pin=0"/></net>
+
+<net id="130"><net_src comp="126" pin="1"/><net_sink comp="47" pin=8"/></net>
+
+<net id="134"><net_src comp="67" pin="3"/><net_sink comp="131" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: idle_waiting | {5 }
+ - Input state : 
+	Port: slot_boundary_timing : timing_mode | {1 }
+	Port: slot_boundary_timing : medium_state | {1 2 3 4 5 6 7 8 }
+  - Chain level:
+	State 1
+		br_ln137 : 1
+		br_ln153 : 1
+		br_ln163 : 1
+		br_ln179 : 1
+	State 2
+	State 3
+		br_ln167 : 1
+	State 4
+	State 5
+		idle_waiting_new_0 : 1
+		write_ln134 : 2
+	State 6
+	State 7
+		br_ln141 : 1
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-----------------------------|---------|---------|
+| Operation|       Functional Unit       |    FF   |   LUT   |
+|----------|-----------------------------|---------|---------|
+|   call   |    grp_start_timer_fu_67    |    65   |    83   |
+|----------|-----------------------------|---------|---------|
+|          |       icmp_ln137_fu_78      |    0    |    8    |
+|   icmp   |       icmp_ln153_fu_84      |    0    |    8    |
+|          |       icmp_ln163_fu_90      |    0    |    8    |
+|          |       icmp_ln179_fu_96      |    0    |    8    |
+|----------|-----------------------------|---------|---------|
+|   read   | timing_mode_read_read_fu_30 |    0    |    0    |
+|----------|-----------------------------|---------|---------|
+|   write  |   write_ln134_write_fu_36   |    0    |    0    |
+|----------|-----------------------------|---------|---------|
+|   Total  |                             |    65   |   115   |
+|----------|-----------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++-------------------------+--------+
+|                         |   FF   |
++-------------------------+--------+
+|    icmp_ln137_reg_102   |    1   |
+|    icmp_ln153_reg_106   |    1   |
+|    icmp_ln163_reg_110   |    1   |
+|  idle_timeout_1_reg_126 |    1   |
+|  idle_timeout_3_reg_117 |    1   |
+|idle_waiting_new_0_reg_43|    1   |
+|  sifs_timeout_1_reg_122 |    1   |
+|   sifs_timeout_reg_131  |    1   |
++-------------------------+--------+
+|          Total          |    8   |
++-------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-----------------------|------|------|------|--------||---------|
+|          Comp         |  Pin | Size |  BW  | S x BW ||  Delay  |
+|-----------------------|------|------|------|--------||---------|
+| grp_start_timer_fu_67 |  p1  |   2  |   1  |    2   |
+|-----------------------|------|------|------|--------||---------|
+|         Total         |      |      |      |    2   ||  1.664  |
+|-----------------------|------|------|------|--------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |   65   |   115  |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    1   |    -   |    -   |
+|  Register |    -   |    8   |    -   |
++-----------+--------+--------+--------+
+|   Total   |    1   |   73   |   115  |
++-----------+--------+--------+--------+

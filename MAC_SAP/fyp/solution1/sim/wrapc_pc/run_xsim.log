@@ -1,211 +1,100 @@
-1,1,1,1,1,1,1,1,1,0
-17 , 17
-0 , 0
-0 , 0
-0 , 0
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-171 , 171
-188 , 188
-205 , 205
-222 , 222
-239 , 239
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-8 , 8
-48 , 48
-116 , 116
-0 , 0
-9 , 9
-139 , 139
-87 , 87
-176 , 176
-92 , 92
-95 , 95
-178 , 178
-87 , 87
-120 , 120
-23 , 23
-169 , 169
-81 , 81
-45 , 45
-79 , 79
-57 , 57
-53 , 53
-6 , 6
-119 , 119
-228 , 228
-15 , 15
-44 , 44
-39 , 39
-176 , 176
-88 , 88
-136 , 136
-178 , 178
-114 , 114
-37 , 37
-40 , 40
-254 , 254
-76 , 76
-158 , 158
-228 , 228
-147 , 147
-117 , 117
-178 , 178
-65 , 65
-241 , 241
-56 , 56
-9 , 9
-149 , 149
-39 , 39
-64 , 64
-58 , 58
-108 , 108
-161 , 161
-18 , 18
-63 , 63
-43 , 43
-66 , 66
-219 , 219
-38 , 38
-243 , 243
-179 , 179
-108 , 108
-8 , 8
-200 , 200
-250 , 250
-131 , 131
-63 , 63
-243 , 243
-78 , 78
-76 , 76
-212 , 212
-164 , 164
-41 , 41
-39 , 39
-55 , 55
-220 , 220
-160 , 160
-136 , 136
-211 , 211
-238 , 238
-91 , 91
+tm0_ms1 : 1
+tm0_ms0 : 0
+tm1_ms1 : 1
+tm1_ms0 : 0
+tm2_ms1 : 1
+tm2_ms0 : 0
+tm3_ms1 : 1
+tm3_ms0 : 0
 
 E:\FYP\HLS\MAC_SAP\fyp\solution1\sim\verilog>set PATH= 
 
-E:\FYP\HLS\MAC_SAP\fyp\solution1\sim\verilog>call D:/Xilinx/Vivado/2019.2/bin/xelab xil_defaultlib.apatb_enqueue_dequeue_frame_top glbl -prj enqueue_dequeue_frame.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s enqueue_dequeue_frame -debug wave 
+E:\FYP\HLS\MAC_SAP\fyp\solution1\sim\verilog>call D:/Xilinx/Vivado/2019.2/bin/xelab xil_defaultlib.apatb_slot_boundary_timing_top glbl -prj slot_boundary_timing.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s slot_boundary_timing -debug wave 
 INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_enqueue_dequeue_frame_top glbl -prj enqueue_dequeue_frame.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s enqueue_dequeue_frame -debug wave 
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_slot_boundary_timing_top glbl -prj slot_boundary_timing.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s slot_boundary_timing -debug wave 
 Multi-threading is on. Using 10 slave threads.
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/AESL_automem_inout_frame.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_inout_frame
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_fbkb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module enqueue_dequeue_fbkb_ram
-INFO: [VRFC 10-311] analyzing module enqueue_dequeue_fbkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_frame.autotb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module apatb_enqueue_dequeue_frame_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_frame.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module enqueue_dequeue_frame
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/slot_boundary_timing.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_slot_boundary_timing_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/slot_boundary_timing.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module slot_boundary_timing
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/start_timer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_timer
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.enqueue_dequeue_fbkb_ram
-Compiling module xil_defaultlib.enqueue_dequeue_fbkb(DataWidth=8...
-Compiling module xil_defaultlib.enqueue_dequeue_frame
-Compiling module xil_defaultlib.AESL_automem_inout_frame
-Compiling module xil_defaultlib.apatb_enqueue_dequeue_frame_top
+Compiling module xil_defaultlib.start_timer
+Compiling module xil_defaultlib.slot_boundary_timing
+Compiling module xil_defaultlib.apatb_slot_boundary_timing_top
 Compiling module work.glbl
-Built simulation snapshot enqueue_dequeue_frame
+Built simulation snapshot slot_boundary_timing
 
 ****** Webtalk v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/enqueue_dequeue_frame/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/enqueue_dequeue_frame/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Oct 25 21:22:08 2020. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Sun Oct 25 21:22:08 2020...
+source E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/slot_boundary_timing/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/slot_boundary_timing/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Oct 26 21:50:04 2020. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Oct 26 21:50:04 2020...
 
 ****** xsim v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source xsim.dir/enqueue_dequeue_frame/xsim_script.tcl
-# xsim {enqueue_dequeue_frame} -autoloadwcfg -tclbatch {enqueue_dequeue_frame.tcl}
+source xsim.dir/slot_boundary_timing/xsim_script.tcl
+# xsim {slot_boundary_timing} -autoloadwcfg -tclbatch {slot_boundary_timing.tcl}
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-source enqueue_dequeue_frame.tcl
+source slot_boundary_timing.tcl
 ## log_wave -r /
 WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
 ## set designtopgroup [add_wave_group "Design Top Signals"]
-## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
-## set inout_frame_group [add_wave_group inout_frame(memory) -into $cinoutgroup]
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/inout_frame_q0 -into $inout_frame_group -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/inout_frame_d0 -into $inout_frame_group -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/inout_frame_we0 -into $inout_frame_group -color #ffff00 -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/inout_frame_ce0 -into $inout_frame_group -color #ffff00 -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/inout_frame_address0 -into $inout_frame_group -radix hex
 ## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
-## set return_group [add_wave_group return(wire) -into $coutputgroup]
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_return -into $return_group -radix hex
+## set idle_waiting_group [add_wave_group idle_waiting(wire) -into $coutputgroup]
+## add_wave /apatb_slot_boundary_timing_top/AESL_inst_slot_boundary_timing/idle_waiting_ap_vld -into $idle_waiting_group -color #ffff00 -radix hex
+## add_wave /apatb_slot_boundary_timing_top/AESL_inst_slot_boundary_timing/idle_waiting -into $idle_waiting_group -radix hex
 ## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
-## set ac_group [add_wave_group ac(wire) -into $cinputgroup]
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ac -into $ac_group -radix hex
-## set operation_group [add_wave_group operation(wire) -into $cinputgroup]
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/operation -into $operation_group -radix hex
+## set medium_state_group [add_wave_group medium_state(wire) -into $cinputgroup]
+## add_wave /apatb_slot_boundary_timing_top/AESL_inst_slot_boundary_timing/medium_state -into $medium_state_group -radix hex
+## set timing_mode_group [add_wave_group timing_mode(wire) -into $cinputgroup]
+## add_wave /apatb_slot_boundary_timing_top/AESL_inst_slot_boundary_timing/timing_mode -into $timing_mode_group -radix hex
 ## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_start -into $blocksiggroup
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_done -into $blocksiggroup
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_idle -into $blocksiggroup
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_ready -into $blocksiggroup
+## add_wave /apatb_slot_boundary_timing_top/AESL_inst_slot_boundary_timing/ap_start -into $blocksiggroup
+## add_wave /apatb_slot_boundary_timing_top/AESL_inst_slot_boundary_timing/ap_done -into $blocksiggroup
+## add_wave /apatb_slot_boundary_timing_top/AESL_inst_slot_boundary_timing/ap_idle -into $blocksiggroup
+## add_wave /apatb_slot_boundary_timing_top/AESL_inst_slot_boundary_timing/ap_ready -into $blocksiggroup
 ## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_rst -into $resetgroup
+## add_wave /apatb_slot_boundary_timing_top/AESL_inst_slot_boundary_timing/ap_rst -into $resetgroup
 ## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
-## add_wave /apatb_enqueue_dequeue_frame_top/AESL_inst_enqueue_dequeue_frame/ap_clk -into $clockgroup
+## add_wave /apatb_slot_boundary_timing_top/AESL_inst_slot_boundary_timing/ap_clk -into $clockgroup
 ## set testbenchgroup [add_wave_group "Test Bench Signals"]
 ## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
 ## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
 ## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
-## add_wave /apatb_enqueue_dequeue_frame_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/ready_cnt -into $tb_simstatus_group -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/done_cnt -into $tb_simstatus_group -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/LENGTH_operation -into $tb_portdepth_group -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/LENGTH_ac -into $tb_portdepth_group -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/LENGTH_inout_frame -into $tb_portdepth_group -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/LENGTH_ap_return -into $tb_portdepth_group -radix hex
-## set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
-## set tb_inout_frame_group [add_wave_group inout_frame(memory) -into $tbcinoutgroup]
-## add_wave /apatb_enqueue_dequeue_frame_top/inout_frame_q0 -into $tb_inout_frame_group -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/inout_frame_d0 -into $tb_inout_frame_group -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/inout_frame_we0 -into $tb_inout_frame_group -color #ffff00 -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/inout_frame_ce0 -into $tb_inout_frame_group -color #ffff00 -radix hex
-## add_wave /apatb_enqueue_dequeue_frame_top/inout_frame_address0 -into $tb_inout_frame_group -radix hex
+## add_wave /apatb_slot_boundary_timing_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_slot_boundary_timing_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_slot_boundary_timing_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_slot_boundary_timing_top/LENGTH_timing_mode -into $tb_portdepth_group -radix hex
+## add_wave /apatb_slot_boundary_timing_top/LENGTH_idle_waiting -into $tb_portdepth_group -radix hex
+## add_wave /apatb_slot_boundary_timing_top/LENGTH_medium_state -into $tb_portdepth_group -radix hex
 ## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
-## set tb_return_group [add_wave_group return(wire) -into $tbcoutputgroup]
-## add_wave /apatb_enqueue_dequeue_frame_top/ap_return -into $tb_return_group -radix hex
+## set tb_idle_waiting_group [add_wave_group idle_waiting(wire) -into $tbcoutputgroup]
+## add_wave /apatb_slot_boundary_timing_top/idle_waiting_ap_vld -into $tb_idle_waiting_group -color #ffff00 -radix hex
+## add_wave /apatb_slot_boundary_timing_top/idle_waiting -into $tb_idle_waiting_group -radix hex
 ## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
-## set tb_ac_group [add_wave_group ac(wire) -into $tbcinputgroup]
-## add_wave /apatb_enqueue_dequeue_frame_top/ac -into $tb_ac_group -radix hex
-## set tb_operation_group [add_wave_group operation(wire) -into $tbcinputgroup]
-## add_wave /apatb_enqueue_dequeue_frame_top/operation -into $tb_operation_group -radix hex
-## save_wave_config enqueue_dequeue_frame.wcfg
+## set tb_medium_state_group [add_wave_group medium_state(wire) -into $tbcinputgroup]
+## add_wave /apatb_slot_boundary_timing_top/medium_state -into $tb_medium_state_group -radix hex
+## set tb_timing_mode_group [add_wave_group timing_mode(wire) -into $tbcinputgroup]
+## add_wave /apatb_slot_boundary_timing_top/timing_mode -into $tb_timing_mode_group -radix hex
+## save_wave_config slot_boundary_timing.wcfg
 ## run all
 ////////////////////////////////////////////////////////////////////////////////////
 // Inter-Transaction Progress: Completed Transaction / Total Transaction
@@ -213,120 +102,24 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 //
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
-// RTL Simulation : 0 / 11 [0.00%] @ "125000"
-// RTL Simulation : 1 / 11 [100.00%] @ "2165000"
-// RTL Simulation : 2 / 11 [100.00%] @ "4195000"
-// RTL Simulation : 3 / 11 [100.00%] @ "6225000"
-// RTL Simulation : 4 / 11 [100.00%] @ "8255000"
-// RTL Simulation : 5 / 11 [100.00%] @ "10285000"
-// RTL Simulation : 6 / 11 [100.00%] @ "10305000"
-// RTL Simulation : 7 / 11 [100.00%] @ "12335000"
-// RTL Simulation : 8 / 11 [100.00%] @ "14365000"
-// RTL Simulation : 9 / 11 [100.00%] @ "16395000"
-// RTL Simulation : 10 / 11 [100.00%] @ "18425000"
-// RTL Simulation : 11 / 11 [100.00%] @ "18445000"
+// RTL Simulation : 0 / 8 [n/a] @ "125000"
+// RTL Simulation : 1 / 8 [n/a] @ "4175000"
+// RTL Simulation : 2 / 8 [n/a] @ "6235000"
+// RTL Simulation : 3 / 8 [n/a] @ "8265000"
+// RTL Simulation : 4 / 8 [n/a] @ "8315000"
+// RTL Simulation : 5 / 8 [n/a] @ "12355000"
+// RTL Simulation : 6 / 8 [n/a] @ "14415000"
+// RTL Simulation : 7 / 8 [n/a] @ "16445000"
+// RTL Simulation : 8 / 8 [n/a] @ "16495000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 18485 ns : File "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_frame.autotb.v" Line 377
+$finish called at time : 16535 ns : File "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/slot_boundary_timing.autotb.v" Line 341
 ## quit
-INFO: [Common 17-206] Exiting xsim at Sun Oct 25 21:22:17 2020...
-1,1,1,1,1,1,1,1,1,0
-17 , 17
-0 , 0
-0 , 0
-0 , 0
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-171 , 171
-188 , 188
-205 , 205
-222 , 222
-239 , 239
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-255 , 255
-8 , 8
-48 , 48
-116 , 116
-0 , 0
-9 , 9
-139 , 139
-87 , 87
-176 , 176
-92 , 92
-95 , 95
-178 , 178
-87 , 87
-120 , 120
-23 , 23
-169 , 169
-81 , 81
-45 , 45
-79 , 79
-57 , 57
-53 , 53
-6 , 6
-119 , 119
-228 , 228
-15 , 15
-44 , 44
-39 , 39
-176 , 176
-88 , 88
-136 , 136
-178 , 178
-114 , 114
-37 , 37
-40 , 40
-254 , 254
-76 , 76
-158 , 158
-228 , 228
-147 , 147
-117 , 117
-178 , 178
-65 , 65
-241 , 241
-56 , 56
-9 , 9
-149 , 149
-39 , 39
-64 , 64
-58 , 58
-108 , 108
-161 , 161
-18 , 18
-63 , 63
-43 , 43
-66 , 66
-219 , 219
-38 , 38
-243 , 243
-179 , 179
-108 , 108
-8 , 8
-200 , 200
-250 , 250
-131 , 131
-63 , 63
-243 , 243
-78 , 78
-76 , 76
-212 , 212
-164 , 164
-41 , 41
-39 , 39
-55 , 55
-220 , 220
-160 , 160
-136 , 136
-211 , 211
-238 , 238
-91 , 91
+INFO: [Common 17-206] Exiting xsim at Mon Oct 26 21:50:13 2020...
+tm0_ms1 : 1
+tm0_ms0 : 0
+tm1_ms1 : 1
+tm1_ms0 : 0
+tm2_ms1 : 1
+tm2_ms0 : 0
+tm3_ms1 : 1
+tm3_ms0 : 0

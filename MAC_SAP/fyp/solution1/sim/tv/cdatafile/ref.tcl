@@ -1,7 +1,6 @@
 set depth_list {
-{operation 1}
-{ac 1}
-{inout_frame 100}
-{ap_return 1}
+{timing_mode 1}
+{idle_waiting 1}
+{medium_state 1}
 }
-set trans_num 11
+set trans_num 8

@@ -65,6 +65,10 @@ $(ObjDir)/timer_test.c_pre.c.tb.o : timer_test.c_pre.c.tb.c $(ObjDir)/.dir
 	$(Echo) "   Compiling (apcc) timer_test.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
 
+$(ObjDir)/slot_boundary_timing_test.c_pre.c.tb.o : slot_boundary_timing_test.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) slot_boundary_timing_test.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
 $(ObjDir)/mac_layer_test.c_pre.c.tb.o : mac_layer_test.c_pre.c.tb.c $(ObjDir)/.dir
 	$(Echo) "   Compiling (apcc) mac_layer_test.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \

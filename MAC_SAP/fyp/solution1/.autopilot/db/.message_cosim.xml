@@ -3,82 +3,87 @@
 	<Message severity="INFO" prefix="[COSIM 212-47]" key="COSIM_TCL_47_1115" tag="" content="Using XSIM for RTL simulation."/>
 	<Message severity="INFO" prefix="[COSIM 212-14]" key="COSIM_TCL_14_1084" tag="" content="Instrumenting C test bench ..."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:20:54 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:48:46 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:20:58 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:48:50 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:02 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:48:55 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:06 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:48:59 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:10 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:03 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:15 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:07 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:19 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:11 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:23 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:15 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:27 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:19 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:31 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:23 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:35 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:27 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:39 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:31 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:43 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:36 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:47 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:40 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:51 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:44 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Sun Oct 25 21:21:55 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:48 +0530 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;User&apos; on host &apos;desktop-v5a9ups&apos; (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:53 +0530 2020"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>

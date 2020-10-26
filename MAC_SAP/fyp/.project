@@ -182,6 +182,11 @@
 			<location>E:/FYP/HLS/MAC_SAP/fyp/mac_layer_test.c</location>
 		</link>
 		<link>
+			<name>testbench/slot_boundary_timing_test.c</name>
+			<type>1</type>
+			<location>E:/FYP/HLS/MAC_SAP/fyp/slot_boundary_timing_test.c</location>
+		</link>
+		<link>
 			<name>testbench/timer_test.c</name>
 			<type>1</type>
 			<location>E:/FYP/HLS/MAC_SAP/fyp/timer_test.c</location>

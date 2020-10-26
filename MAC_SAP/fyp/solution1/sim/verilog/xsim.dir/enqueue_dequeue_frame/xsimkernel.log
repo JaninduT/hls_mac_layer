@@ -1,7 +1,0 @@
-Running: xsim.dir/enqueue_dequeue_frame/xsimk.exe -simmode gui -wdb enqueue_dequeue_frame.wdb -simrunnum 0 -socket 62029
-Design successfully loaded
-Design Loading Memory Usage: 5508 KB (Peak: 5508 KB)
-Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 9788 KB (Peak: 9788 KB)
-Simulation CPU Usage: 77 ms

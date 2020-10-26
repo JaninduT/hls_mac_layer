@@ -4529,22 +4529,48 @@ enum time_slot {
 
 static const mac48 my_mac = {.mac[0]=0xff, .mac[1]=0xab, .mac[2]=0xbc, .mac[3]=0xcd, .mac[4]=0xde, .mac[5]=0xef};
 static const mac48 bcast_wcard_mac = {.mac[0]=0xff, .mac[1]=0xff, .mac[2]=0xff, .mac[3]=0xff, .mac[4]=0xff, .mac[5]=0xff};
+
+static const uint8 SIFS = 2;
+static const uint8 rx_ok = 2;
+static const uint8 rx_error = 2;
+static const uint8 tx_ok = 2;
+static const uint8 aSlotTime = 2;
 # 5 "fyp/timer.h" 2
 
 void start_timer(
   uint8 count,
-  uint1 *timeout
+  uint1 *timeout,
+  uint1 count_idle,
+  volatile uint1 *medium_state
+  );
+
+void stop_timer(
+  uint1 *medium_state
   );
 # 2 "fyp/timer.c" 2
 
-void start_timer(uint8 count, uint1 *timeout){
- volatile uint20 total_count = 0;
- volatile uint20 tc = 0;
+void start_timer(uint8 count, uint1 *timeout, uint1 count_idle, volatile uint1 *medium_state){
+ volatile uint16 total_count = 0;
+ volatile uint16 tc = 0;
  total_count = count*100;
  *timeout = 0;
  for (uint20 i=0; i<total_count-2; i++){
-  tc = tc +1 ;
+  if(count_idle == 1){
+   if(*medium_state == 1){
+    tc = tc + 1;
+   }else{
+    *timeout = 0;
+    return;
+   }
+  }else{
+   tc = tc + 1;
+  }
  }
  *timeout = 1;
+ return;
+}
+
+void stop_timer(uint1 *medium_state){
+ *medium_state = 0;
  return;
 }

@@ -80,11 +80,9 @@ proc check_tvin_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "c.enqueue_dequeue_frame.autotvin_operation.dat"
-         "c.enqueue_dequeue_frame.autotvin_ac.dat"
-         "c.enqueue_dequeue_frame.autotvin_inout_frame.dat"
-         "c.enqueue_dequeue_frame.autotvout_inout_frame.dat"
-         "c.enqueue_dequeue_frame.autotvout_ap_return.dat"
+         "c.slot_boundary_timing.autotvin_timing_mode.dat"
+         "c.slot_boundary_timing.autotvin_medium_state.dat"
+         "c.slot_boundary_timing.autotvout_idle_waiting.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {
@@ -109,8 +107,7 @@ proc check_tvout_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "rtl.enqueue_dequeue_frame.autotvout_inout_frame.dat"
-         "rtl.enqueue_dequeue_frame.autotvout_ap_return.dat"
+         "rtl.slot_boundary_timing.autotvout_idle_waiting.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {

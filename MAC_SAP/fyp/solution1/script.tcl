@@ -4,7 +4,7 @@
 ## Copyright (C) 1986-2019 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project fyp
-set_top enqueue_dequeue_frame
+set_top slot_boundary_timing
 add_files fyp/MA_UNITDATAX_request.c
 add_files fyp/MA_UNITDATAX_request.h
 add_files fyp/MA_UNITDATA_indication.h
@@ -22,18 +22,19 @@ add_files fyp/mac_layer.c
 add_files fyp/mac_layer.h
 add_files fyp/timer.c
 add_files fyp/timer.h
-add_files -tb fyp/compose_mac_frame_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb fyp/compose_mac_header_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb fyp/crc_32_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb fyp/crc_32_validate_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb fyp/decompose_mac_frame_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb fyp/edca_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb fyp/input_data.bin -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb fyp/input_message.bin -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb fyp/input_message_crc.bin -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb fyp/mac_frame.bin -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb fyp/mac_layer_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb fyp/timer_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files -tb fyp/compose_mac_frame_test.c -cflags "-Wno-unknown-pragmas"
+add_files -tb fyp/compose_mac_header_test.c -cflags "-Wno-unknown-pragmas"
+add_files -tb fyp/crc_32_test.c -cflags "-Wno-unknown-pragmas"
+add_files -tb fyp/crc_32_validate_test.c -cflags "-Wno-unknown-pragmas"
+add_files -tb fyp/decompose_mac_frame_test.c -cflags "-Wno-unknown-pragmas"
+add_files -tb fyp/edca_test.c -cflags "-Wno-unknown-pragmas"
+add_files -tb fyp/input_data.bin -cflags "-Wno-unknown-pragmas"
+add_files -tb fyp/input_message.bin -cflags "-Wno-unknown-pragmas"
+add_files -tb fyp/input_message_crc.bin -cflags "-Wno-unknown-pragmas"
+add_files -tb fyp/mac_frame.bin -cflags "-Wno-unknown-pragmas"
+add_files -tb fyp/mac_layer_test.c -cflags "-Wno-unknown-pragmas"
+add_files -tb fyp/slot_boundary_timing_test.c
+add_files -tb fyp/timer_test.c -cflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7a35t-cpg236-1}
 create_clock -period 10 -name default

@@ -32,4 +32,9 @@ enum time_slot {
 static const mac48 my_mac = {.mac[0]=0xff, .mac[1]=0xab, .mac[2]=0xbc, .mac[3]=0xcd, .mac[4]=0xde, .mac[5]=0xef};
 static const mac48 bcast_wcard_mac = {.mac[0]=0xff, .mac[1]=0xff, .mac[2]=0xff, .mac[3]=0xff, .mac[4]=0xff, .mac[5]=0xff};
 
+static const uint8 SIFS = 2;
+static const uint8 rx_ok = 2;
+static const uint8 rx_error = 2;
+static const uint8 tx_ok = 2;
+static const uint8 aSlotTime = 2;
 #endif

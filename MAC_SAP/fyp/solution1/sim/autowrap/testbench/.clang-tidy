@@ -1,2 +1,2 @@
- {CheckOptions: [ {key: xilinx-tb31-process.TopFunctionName, value: 'enqueue_dequeue_frame'}, {key: xilinx-tb31-process.KeepTopName, value: '1'},
+ {CheckOptions: [ {key: xilinx-tb31-process.TopFunctionName, value: 'slot_boundary_timing'}, {key: xilinx-tb31-process.KeepTopName, value: '1'},
 {key: xilinx-tb31-process.NewFlow, value: '1'}, {key: xilinx-tb31-process.BCSim, value: '0'} ] } 

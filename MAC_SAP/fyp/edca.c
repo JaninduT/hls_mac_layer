@@ -1,4 +1,5 @@
 #include "edca.h"
+#include "timer.h"
 
 static unsigned char edca_fifo_vo[400];
 static unsigned char edca_fifo_vi[400];
@@ -126,5 +127,64 @@ bool enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame[
 		return true;
 	}else{
 		return false;
+	}
+}
+
+void slot_boundary_timing(uint2 timing_mode, bool *idle_waiting, volatile uint1 *medium_state){
+	*idle_waiting = false;
+	bool sifs_timeout = false;
+	bool idle_timeout = false;
+	if (timing_mode == 0){
+		sifs_timeout = false;
+		idle_timeout = false;
+		start_timer(SIFS, &sifs_timeout, false, medium_state);
+		if(sifs_timeout == true){
+			start_timer(rx_ok, &idle_timeout, true, medium_state);
+			if(idle_timeout == true){
+				*idle_waiting = true;
+				return;
+			}else{
+				*idle_waiting = false;
+				return;
+			}
+		}else{
+			return;
+		}
+	}else if (timing_mode == 1){
+		idle_timeout = false;
+		start_timer(rx_error, &idle_timeout, true, medium_state);
+		if(idle_timeout == true){
+			*idle_waiting = true;
+			return;
+		}else{
+			*idle_waiting = false;
+			return;
+		}
+	}else if (timing_mode == 2){
+		sifs_timeout = false;
+		idle_timeout = false;
+		start_timer(SIFS, &sifs_timeout, false, medium_state);
+		if(sifs_timeout == true){
+			start_timer(tx_ok, &idle_timeout, true, medium_state);
+			if(idle_timeout == true){
+				*idle_waiting = true;
+				return;
+			}else{
+				*idle_waiting = false;
+				return;
+			}
+		}else{
+			return;
+		}
+	}else if (timing_mode == 3){
+		idle_timeout = false;
+		start_timer(aSlotTime, &idle_timeout, true, medium_state);
+		if(idle_timeout == true){
+			*idle_waiting = true;
+			return;
+		}else{
+			*idle_waiting = false;
+			return;
+		}
 	}
 }

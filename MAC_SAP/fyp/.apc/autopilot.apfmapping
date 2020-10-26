@@ -32,5 +32,6 @@
     <originFiles name="mac_frame.bin" path="E:\FYP\HLS\MAC_SAP\fyp\mac_frame.bin"/>
     <originFiles name="mac_layer_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\mac_layer_test.c"/>
     <originFiles name="timer_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\timer_test.c"/>
+    <originFiles name="slot_boundary_timing_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\slot_boundary_timing_test.c"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
