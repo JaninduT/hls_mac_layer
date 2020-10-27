@@ -4535,6 +4535,9 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
+
+static const uint10 aCWmin = 15;
+static const uint10 aCWmax = 1023;
 # 5 "fyp/edca.h" 2
 
 uint1 enqueue_dequeue_frame(
@@ -4547,6 +4550,22 @@ void slot_boundary_timing(
   uint2 timing_mode,
   uint1 *idle_waiting,
   volatile uint1 *medium_state
+  );
+
+void backoff_vo(
+  uint3 *current_txop_holder
+  );
+
+void backoff_vi(
+  uint3 *current_txop_holder
+  );
+
+void backoff_be(
+  uint3 *current_txop_holder
+  );
+
+void backoff_bk(
+  uint3 *current_txop_holder
   );
 # 2 "fyp/edca.c" 2
 # 1 "fyp/timer.h" 1
@@ -4576,13 +4595,19 @@ static uint2 write_pointer_vo = 0;
 static uint3 available_spaces_vo = 4;
 static uint2 read_pointer_vi = 0;
 static uint2 write_pointer_vi = 0;
-static uint3 available_spaces_vi = 4;
+static uint3 available_spaces_vi = 3;
 static uint2 read_pointer_be = 0;
 static uint2 write_pointer_be = 0;
 static uint3 available_spaces_be = 4;
 static uint2 read_pointer_bk = 0;
 static uint2 write_pointer_bk = 0;
 static uint3 available_spaces_bk = 4;
+
+
+static uint10 vo_backoff_counter = 0;
+static uint10 vi_backoff_counter = 0;
+static uint10 be_backoff_counter = 0;
+static uint10 bk_backoff_counter = 0;
 
 uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame[100]){_ssdm_SpecArrayDimSize(inout_frame, 100);
 _ssdm_SpecArrayMap( &edca_fifo_bk, "edca_queues", -1, "HORIZONTAL", "");
@@ -4750,6 +4775,69 @@ void slot_boundary_timing(uint2 timing_mode, uint1 *idle_waiting, volatile uint1
    return;
   }else{
    *idle_waiting = 0;
+   return;
+  }
+ }
+}
+
+void backoff_vo(uint3 *current_txop_holder){
+ if(available_spaces_vo < 4){
+  if(vo_backoff_counter == 0){
+   *current_txop_holder = 4;
+   return;
+  }else{
+   vo_backoff_counter = vo_backoff_counter - 1;
+   return;
+  }
+ }
+}
+
+void backoff_vi(uint3 *current_txop_holder){
+ if(available_spaces_vi < 4){
+  if(vi_backoff_counter == 0){
+   if(*current_txop_holder < 3){
+    *current_txop_holder = 3;
+    return;
+   }else{
+
+    return;
+   }
+  }else{
+   vi_backoff_counter = vi_backoff_counter - 1;
+   return;
+  }
+ }
+}
+
+void backoff_be(uint3 *current_txop_holder){
+ if(available_spaces_be < 4){
+  if(be_backoff_counter == 0){
+   if(*current_txop_holder < 2){
+    *current_txop_holder = 2;
+    return;
+   }else{
+
+    return;
+   }
+  }else{
+   be_backoff_counter = be_backoff_counter - 1;
+   return;
+  }
+ }
+}
+
+void backoff_bk(uint3 *current_txop_holder){
+ if(available_spaces_bk < 4){
+  if(bk_backoff_counter == 0){
+   if(*current_txop_holder < 1){
+    *current_txop_holder = 1;
+    return;
+   }else{
+
+    return;
+   }
+  }else{
+   bk_backoff_counter = bk_backoff_counter - 1;
    return;
   }
  }

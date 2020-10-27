@@ -1,2 +1,1 @@
-start_timer
-slot_boundary_timing
+backoff_vi

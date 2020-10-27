@@ -15,4 +15,20 @@ void slot_boundary_timing(
 		volatile uint1 *medium_state
 		);
 
+void backoff_vo(
+		uint3 *current_txop_holder
+		);
+
+void backoff_vi(
+		uint3 *current_txop_holder
+		);
+
+void backoff_be(
+		uint3 *current_txop_holder
+		);
+
+void backoff_bk(
+		uint3 *current_txop_holder
+		);
+
 #endif

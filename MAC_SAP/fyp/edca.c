@@ -10,13 +10,19 @@ static uint2 write_pointer_vo = 0;
 static uint3 available_spaces_vo = 4;
 static uint2 read_pointer_vi = 0;
 static uint2 write_pointer_vi = 0;
-static uint3 available_spaces_vi = 4;
+static uint3 available_spaces_vi = 3;
 static uint2 read_pointer_be = 0;
 static uint2 write_pointer_be = 0;
 static uint3 available_spaces_be = 4;
 static uint2 read_pointer_bk = 0;
 static uint2 write_pointer_bk = 0;
 static uint3 available_spaces_bk = 4;
+
+
+static uint10 vo_backoff_counter = 0;
+static uint10 vi_backoff_counter = 0;
+static uint10 be_backoff_counter = 0;
+static uint10 bk_backoff_counter = 0;
 
 bool enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame[100]){
 #pragma HLS ARRAY_MAP variable=edca_fifo_bk instance=edca_queues horizontal
@@ -188,3 +194,67 @@ void slot_boundary_timing(uint2 timing_mode, bool *idle_waiting, volatile uint1 
 		}
 	}
 }
+
+void backoff_vo(uint3 *current_txop_holder){
+	if(available_spaces_vo < 4){
+		if(vo_backoff_counter == 0){
+			*current_txop_holder = 4;
+			return;
+		}else{
+			vo_backoff_counter = vo_backoff_counter - 1;
+			return;
+		}
+	}
+}
+
+void backoff_vi(uint3 *current_txop_holder){
+	if(available_spaces_vi < 4){
+		if(vi_backoff_counter == 0){
+			if(*current_txop_holder < 3){
+				*current_txop_holder = 3;
+				return;
+			}else{
+				//start_backoff_vi();
+				return;
+			}
+		}else{
+			vi_backoff_counter = vi_backoff_counter - 1;
+			return;
+		}
+	}
+}
+
+void backoff_be(uint3 *current_txop_holder){
+	if(available_spaces_be < 4){
+		if(be_backoff_counter == 0){
+			if(*current_txop_holder < 2){
+				*current_txop_holder = 2;
+				return;
+			}else{
+				//start_backoff_be();
+				return;
+			}
+		}else{
+			be_backoff_counter = be_backoff_counter - 1;
+			return;
+		}
+	}
+}
+
+void backoff_bk(uint3 *current_txop_holder){
+	if(available_spaces_bk < 4){
+		if(bk_backoff_counter == 0){
+			if(*current_txop_holder < 1){
+				*current_txop_holder = 1;
+				return;
+			}else{
+				//start_backoff_bk();
+				return;
+			}
+		}else{
+			bk_backoff_counter = bk_backoff_counter - 1;
+			return;
+		}
+	}
+}
+

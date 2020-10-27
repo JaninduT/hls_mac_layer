@@ -1,0 +1,7 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="7" filename="fyp/edca.c" linenumber="212" name="icmp_ln212" contextFuncName="backoff_vi" moduleName="backoff_vi" rtlName="icmp_ln212_fu_38_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="E:\FYP\HLS\MAC_SAP"><\/item>
+<item  id="10" filename="fyp/edca.c" linenumber="221" name="add_ln221" contextFuncName="backoff_vi" moduleName="backoff_vi" rtlName="add_ln221_fu_44_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="17" fileDirectory="E:\FYP\HLS\MAC_SAP"><\/item>
+<item  id="15" filename="fyp/edca.c" linenumber="213" name="icmp_ln213" contextFuncName="backoff_vi" moduleName="backoff_vi" rtlName="icmp_ln213_fu_56_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="9" fileDirectory="E:\FYP\HLS\MAC_SAP"><\/item>
+<\/annotationInfo>
+</annotationInfo>

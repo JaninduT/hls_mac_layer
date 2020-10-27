@@ -1,5 +1,5 @@
 
-set TopModule "slot_boundary_timing"
+set TopModule "backoff_vi"
 set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 0
@@ -40,15 +40,15 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7a35t:-cpg236:-1
-set SourceFiles {sc {} c {../timer.c ../mac_layer.c ../edca.c ../decompose_mac_frame.c ../crc_32_validate.c ../crc_32.c ../compose_mac_frame.c ../MA_UNITDATAX_request.c}}
+set SourceFiles {sc {} c {../MA_UNITDATAX_request.c ../compose_mac_frame.c ../crc_32.c ../crc_32_validate.c ../decompose_mac_frame.c ../edca.c ../mac_layer.c ../timer.c}}
 set SourceFlags {sc {} c {{} {} {} {} {} {} {} {}}}
 set DirectiveFile E:/FYP/HLS/MAC_SAP/fyp/solution1/solution1.directive
-set TBFiles {verilog {../timer_test.c ../slot_boundary_timing_test.c ../mac_layer_test.c ../mac_frame.bin ../input_message_crc.bin ../input_message.bin ../input_data.bin ../edca_test.c ../decompose_mac_frame_test.c ../crc_32_validate_test.c ../crc_32_test.c ../compose_mac_header_test.c ../compose_mac_frame_test.c} bc {../timer_test.c ../slot_boundary_timing_test.c ../mac_layer_test.c ../mac_frame.bin ../input_message_crc.bin ../input_message.bin ../input_data.bin ../edca_test.c ../decompose_mac_frame_test.c ../crc_32_validate_test.c ../crc_32_test.c ../compose_mac_header_test.c ../compose_mac_frame_test.c} vhdl {../timer_test.c ../slot_boundary_timing_test.c ../mac_layer_test.c ../mac_frame.bin ../input_message_crc.bin ../input_message.bin ../input_data.bin ../edca_test.c ../decompose_mac_frame_test.c ../crc_32_validate_test.c ../crc_32_test.c ../compose_mac_header_test.c ../compose_mac_frame_test.c} sc {../timer_test.c ../slot_boundary_timing_test.c ../mac_layer_test.c ../mac_frame.bin ../input_message_crc.bin ../input_message.bin ../input_data.bin ../edca_test.c ../decompose_mac_frame_test.c ../crc_32_validate_test.c ../crc_32_test.c ../compose_mac_header_test.c ../compose_mac_frame_test.c} cas {../timer_test.c ../slot_boundary_timing_test.c ../mac_layer_test.c ../mac_frame.bin ../input_message_crc.bin ../input_message.bin ../input_data.bin ../edca_test.c ../decompose_mac_frame_test.c ../crc_32_validate_test.c ../crc_32_test.c ../compose_mac_header_test.c ../compose_mac_frame_test.c} c {}}
+set TBFiles {verilog {../timer_test.c ../slot_boundary_timing_test.c ../mac_layer_test.c ../mac_frame.bin ../input_message_crc.bin ../input_message.bin ../input_data.bin ../edca_test.c ../decompose_mac_frame_test.c ../crc_32_validate_test.c ../crc_32_test.c ../compose_mac_header_test.c ../compose_mac_frame_test.c ../backoff_test.c} bc {../timer_test.c ../slot_boundary_timing_test.c ../mac_layer_test.c ../mac_frame.bin ../input_message_crc.bin ../input_message.bin ../input_data.bin ../edca_test.c ../decompose_mac_frame_test.c ../crc_32_validate_test.c ../crc_32_test.c ../compose_mac_header_test.c ../compose_mac_frame_test.c ../backoff_test.c} sc {../timer_test.c ../slot_boundary_timing_test.c ../mac_layer_test.c ../mac_frame.bin ../input_message_crc.bin ../input_message.bin ../input_data.bin ../edca_test.c ../decompose_mac_frame_test.c ../crc_32_validate_test.c ../crc_32_test.c ../compose_mac_header_test.c ../compose_mac_frame_test.c ../backoff_test.c} vhdl {../timer_test.c ../slot_boundary_timing_test.c ../mac_layer_test.c ../mac_frame.bin ../input_message_crc.bin ../input_message.bin ../input_data.bin ../edca_test.c ../decompose_mac_frame_test.c ../crc_32_validate_test.c ../crc_32_test.c ../compose_mac_header_test.c ../compose_mac_frame_test.c ../backoff_test.c} c {} cas {../timer_test.c ../slot_boundary_timing_test.c ../mac_layer_test.c ../mac_frame.bin ../input_message_crc.bin ../input_message.bin ../input_data.bin ../edca_test.c ../decompose_mac_frame_test.c ../crc_32_validate_test.c ../crc_32_test.c ../compose_mac_header_test.c ../compose_mac_frame_test.c ../backoff_test.c}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
-set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBTops {verilog {} bc {} sc {} vhdl {} c {} cas {}}
+set TBInstNames {verilog {} bc {} sc {} vhdl {} c {} cas {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}

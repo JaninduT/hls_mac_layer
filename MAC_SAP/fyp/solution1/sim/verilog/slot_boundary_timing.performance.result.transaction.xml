@@ -1,9 +1,0 @@
-                             latency        interval
-transaction       0:             403             404
-transaction       1:             205             206
-transaction       2:             202             203
-transaction       3:               4               5
-transaction       4:             403             404
-transaction       5:             205             206
-transaction       6:             202             203
-transaction       7:               4               x

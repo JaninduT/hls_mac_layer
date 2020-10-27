@@ -1,5 +1,0 @@
-sv work "glbl.v"
-sv xil_defaultlib "slot_boundary_timing.autotb.v"
-sv xil_defaultlib "slot_boundary_timing.v"
-sv xil_defaultlib "start_timer.v"
-

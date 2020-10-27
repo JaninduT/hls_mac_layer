@@ -1,8 +1,16 @@
    Build using "D:/Xilinx/Vivado/2019.2/tps/win64/msys64/mingw64/bin/g++"
-   Compiling apatb_slot_boundary_timing.cpp
+   Compiling apatb_backoff_vi.cpp
    Compiling (apcc) compose_mac_frame_test.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:48:46 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:06:37 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) backoff_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:06:41 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -10,7 +18,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) compose_mac_header_test.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:48:50 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:06:45 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -18,7 +26,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) crc_32.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:48:55 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:06:49 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -26,7 +34,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) mac_layer_test.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:48:59 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:06:54 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -34,7 +42,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) mac_layer.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:03 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:06:58 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -42,7 +50,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) decompose_mac_frame_test.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:07 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:07:02 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -50,7 +58,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) crc_32_validate.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:11 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:07:06 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -58,7 +66,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) timer_test.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:15 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:07:10 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -66,7 +74,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) edca_test.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:19 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:07:14 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -74,7 +82,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) compose_mac_frame.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:23 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:07:18 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -82,7 +90,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) crc_32_test.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:27 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:07:22 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -90,7 +98,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) decompose_mac_frame.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:31 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:07:26 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -98,7 +106,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) MA_UNITDATAX_request.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:36 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:07:30 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -106,7 +114,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) slot_boundary_timing_test.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:40 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:07:34 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -114,7 +122,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) timer.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:44 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:07:38 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -122,7 +130,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) edca.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:48 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:07:42 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -130,7 +138,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) crc_32_validate_test.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Mon Oct 26 21:49:53 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Tue Oct 27 13:07:47 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'

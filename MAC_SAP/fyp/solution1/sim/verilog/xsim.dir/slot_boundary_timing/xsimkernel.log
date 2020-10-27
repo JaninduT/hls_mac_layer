@@ -1,7 +1,0 @@
-Running: xsim.dir/slot_boundary_timing/xsimk.exe -simmode gui -wdb slot_boundary_timing.wdb -simrunnum 0 -socket 55621
-Design successfully loaded
-Design Loading Memory Usage: 5960 KB (Peak: 5960 KB)
-Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 8544 KB (Peak: 8544 KB)
-Simulation CPU Usage: 61 ms

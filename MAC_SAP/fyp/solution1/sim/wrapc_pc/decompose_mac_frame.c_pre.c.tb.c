@@ -5494,6 +5494,9 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
+
+static const uint10 aCWmin = 15;
+static const uint10 aCWmax = 1023;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/decompose_mac_frame.h" 2
 
 uint1 decompose_mac_frame(

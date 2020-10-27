@@ -1,6 +1,4 @@
 set depth_list {
-{timing_mode 1}
-{idle_waiting 1}
-{medium_state 1}
+{current_txop_holder 1}
 }
-set trans_num 8
+set trans_num 1

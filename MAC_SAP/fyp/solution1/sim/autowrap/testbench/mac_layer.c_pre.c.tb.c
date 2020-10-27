@@ -5494,6 +5494,9 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
+
+static const uint10 aCWmin = 15;
+static const uint10 aCWmax = 1023;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.h" 2
 # 1 "E:/FYP/HLS/MAC_SAP/fyp/crc_32.h" 1
 
@@ -5562,6 +5565,22 @@ void slot_boundary_timing(
   uint2 timing_mode,
   uint1 *idle_waiting,
   volatile uint1 *medium_state
+  );
+
+void backoff_vo(
+  uint3 *current_txop_holder
+  );
+
+void backoff_vi(
+  uint3 *current_txop_holder
+  );
+
+void backoff_be(
+  uint3 *current_txop_holder
+  );
+
+void backoff_bk(
+  uint3 *current_txop_holder
   );
 # 9 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.h" 2
 
