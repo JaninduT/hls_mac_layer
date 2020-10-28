@@ -4,25 +4,27 @@
 ## Copyright (C) 1986-2019 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project fyp
-set_top backoff_vi
-add_files fyp/timer.h
-add_files fyp/timer.c
-add_files fyp/mac_layer.h
-add_files fyp/mac_layer.c
-add_files fyp/edca.h
-add_files fyp/edca.c
-add_files fyp/decompose_mac_frame.h
-add_files fyp/decompose_mac_frame.c
-add_files fyp/crc_32_validate.c
-add_files fyp/crc_32.h
-add_files fyp/crc_32.c
-add_files fyp/compose_mac_frame.h
-add_files fyp/compose_mac_frame.c
-add_files fyp/common.h
-add_files fyp/MA_UNITDATA_indication.h
-add_files fyp/MA_UNITDATAX_request.h
+set_top start_backoff_vo
 add_files fyp/MA_UNITDATAX_request.c
-add_files -tb fyp/backoff_test.c
+add_files fyp/MA_UNITDATAX_request.h
+add_files fyp/MA_UNITDATA_indication.h
+add_files fyp/common.h
+add_files fyp/compose_mac_frame.c
+add_files fyp/compose_mac_frame.h
+add_files fyp/crc_32.c
+add_files fyp/crc_32.h
+add_files fyp/crc_32_validate.c
+add_files fyp/decompose_mac_frame.c
+add_files fyp/decompose_mac_frame.h
+add_files fyp/edca.c
+add_files fyp/edca.h
+add_files fyp/mac_layer.c
+add_files fyp/mac_layer.h
+add_files fyp/r_n_g.c
+add_files fyp/r_n_g.h
+add_files fyp/timer.c
+add_files fyp/timer.h
+add_files -tb fyp/backoff_test.c -cflags "-Wno-unknown-pragmas"
 add_files -tb fyp/compose_mac_frame_test.c -cflags "-Wno-unknown-pragmas"
 add_files -tb fyp/compose_mac_header_test.c -cflags "-Wno-unknown-pragmas"
 add_files -tb fyp/crc_32_test.c -cflags "-Wno-unknown-pragmas"
@@ -34,6 +36,7 @@ add_files -tb fyp/input_message.bin -cflags "-Wno-unknown-pragmas"
 add_files -tb fyp/input_message_crc.bin -cflags "-Wno-unknown-pragmas"
 add_files -tb fyp/mac_frame.bin -cflags "-Wno-unknown-pragmas"
 add_files -tb fyp/mac_layer_test.c -cflags "-Wno-unknown-pragmas"
+add_files -tb fyp/r_n_g_test.c
 add_files -tb fyp/slot_boundary_timing_test.c -cflags "-Wno-unknown-pragmas"
 add_files -tb fyp/timer_test.c -cflags "-Wno-unknown-pragmas"
 open_solution "solution1"

@@ -1,5 +1,6 @@
 #include "edca.h"
 #include "timer.h"
+#include "r_n_g.h"
 
 static unsigned char edca_fifo_vo[400];
 static unsigned char edca_fifo_vi[400];
@@ -18,11 +19,17 @@ static uint2 read_pointer_bk = 0;
 static uint2 write_pointer_bk = 0;
 static uint3 available_spaces_bk = 4;
 
+static uint10 CW_vo = aCWmin;
+static uint10 CW_vi = aCWmin;
+static uint10 CW_be = aCWmin;
+static uint10 CW_bk = aCWmin;
 
 static uint10 vo_backoff_counter = 0;
 static uint10 vi_backoff_counter = 0;
 static uint10 be_backoff_counter = 0;
 static uint10 bk_backoff_counter = 0;
+
+static uint32 rand_state = 123456789;
 
 bool enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame[100]){
 #pragma HLS ARRAY_MAP variable=edca_fifo_bk instance=edca_queues horizontal
@@ -257,4 +264,49 @@ void backoff_bk(uint3 *current_txop_holder){
 		}
 	}
 }
+
+void start_backoff_vo(uint1 invoke_reason){
+	if(invoke_reason == 0){
+		CW_vo = aCWmin;
+	}else if (invoke_reason == 1){
+		if(CW_vo < aCWmax){
+			CW_vo = ((CW_vo+1)*2) - 1;
+		}
+	}
+	vo_backoff_counter = CW_vo * random_int_gen(&rand_state);
+}
+
+void start_backoff_vi(uint1 invoke_reason){
+	if(invoke_reason == 0){
+		CW_vi = aCWmin;
+	}else if (invoke_reason == 1){
+		if(CW_vi < aCWmax){
+			CW_vi = ((CW_vi+1)*2) - 1;
+		}
+	}
+	vi_backoff_counter = CW_vi * random_int_gen(&rand_state);
+}
+
+void start_backoff_be(uint1 invoke_reason){
+	if(invoke_reason == 0){
+		CW_be = aCWmin;
+	}else if (invoke_reason == 1){
+		if(CW_be < aCWmax){
+			CW_be = ((CW_be+1)*2) - 1;
+		}
+	}
+	be_backoff_counter = CW_be * random_int_gen(&rand_state);
+}
+
+void start_backoff_bk(uint1 invoke_reason){
+	if(invoke_reason == 0){
+		CW_bk = aCWmin;
+	}else if (invoke_reason == 1){
+		if(CW_bk < aCWmax){
+			CW_bk = ((CW_bk+1)*2) - 1;
+		}
+	}
+	bk_backoff_counter = CW_bk * random_int_gen(&rand_state);
+}
+
 

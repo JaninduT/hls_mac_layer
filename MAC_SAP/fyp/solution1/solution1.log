@@ -10890,3 +10890,1314 @@ INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+WARNING: [HLS 200-40] In file included from fyp/edca.c:3:
+D:/Xilinx/Vivado/2019.2/common/technology/autopilot\hls_math.h:36:10: fatal error: 'cmath' file not found
+#include <cmath>
+         ^
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:50 . Memory (MB): peak = 187.922 ; gain = 95.504
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:50 . Memory (MB): peak = 187.922 ; gain = 95.504
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:51 . Memory (MB): peak = 187.922 ; gain = 95.504
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:51 . Memory (MB): peak = 187.922 ; gain = 95.504
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:51 . Memory (MB): peak = 187.922 ; gain = 95.504
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:51 . Memory (MB): peak = 187.922 ; gain = 95.504
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'backoff_vi' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backoff_vi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 51.124 seconds; current allocated memory: 101.022 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.164 seconds; current allocated memory: 101.138 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backoff_vi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'backoff_vi/current_txop_holder' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'backoff_vi' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'vi_backoff_counter' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backoff_vi'.
+INFO: [HLS 200-111]  Elapsed time: 0.107 seconds; current allocated memory: 101.288 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 471.09 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:53 . Memory (MB): peak = 187.922 ; gain = 95.504
+INFO: [VHDL 208-304] Generating VHDL RTL for backoff_vi.
+INFO: [VLOG 209-307] Generating Verilog RTL for backoff_vi.
+INFO: [HLS 200-112] Total elapsed time: 52.773 seconds; peak allocated memory: 101.288 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:56 . Memory (MB): peak = 188.375 ; gain = 95.965
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:56 . Memory (MB): peak = 188.375 ; gain = 95.965
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:57 . Memory (MB): peak = 188.375 ; gain = 95.965
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:57 . Memory (MB): peak = 188.375 ; gain = 95.965
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:57 . Memory (MB): peak = 188.375 ; gain = 95.965
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:57 . Memory (MB): peak = 188.375 ; gain = 95.965
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'random_int_gen' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.84725ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'random_int_gen' consists of the following:
+	'mul' operation of DSP[17] ('mul_ln5', fyp/r_n_g.c:5) [8]  (3.36 ns)
+	'add' operation of DSP[17] ('add_ln7', fyp/r_n_g.c:7) [17]  (3.82 ns)
+	'add' operation ('x', fyp/r_n_g.c:7) [19]  (2.67 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 57.562 seconds; current allocated memory: 101.189 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.184 seconds; current allocated memory: 101.301 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'random_int_gen/state' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'random_int_gen' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mul_mul_17ns_17ns_32_1_1' to 'random_int_gen_mubkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mac_muladd_17ns_15ns_16ns_31_1_1' to 'random_int_gen_macud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_macud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_mubkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'random_int_gen'.
+INFO: [HLS 200-111]  Elapsed time: 0.189 seconds; current allocated memory: 101.543 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 101.55 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:01:00 . Memory (MB): peak = 188.375 ; gain = 95.965
+INFO: [VHDL 208-304] Generating VHDL RTL for random_int_gen.
+INFO: [VLOG 209-307] Generating Verilog RTL for random_int_gen.
+INFO: [HLS 200-112] Total elapsed time: 59.86 seconds; peak allocated memory: 101.543 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.480 ; gain = 99.000
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.480 ; gain = 99.000
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.480 ; gain = 99.000
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.480 ; gain = 99.000
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.480 ; gain = 99.000
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.480 ; gain = 99.000
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'random_int_gen' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.84725ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'random_int_gen' consists of the following:
+	'mul' operation of DSP[17] ('mul_ln6', fyp/r_n_g.c:6) [8]  (3.36 ns)
+	'add' operation of DSP[17] ('add_ln9', fyp/r_n_g.c:9) [17]  (3.82 ns)
+	'add' operation ('x', fyp/r_n_g.c:9) [19]  (2.67 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 51.57 seconds; current allocated memory: 101.132 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.091 seconds; current allocated memory: 101.259 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'random_int_gen/state' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'random_int_gen' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mul_mul_17ns_17ns_32_1_1' to 'random_int_gen_mubkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mac_muladd_17ns_15ns_16ns_31_1_1' to 'random_int_gen_macud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_macud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_mubkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'random_int_gen'.
+INFO: [HLS 200-111]  Elapsed time: 0.126 seconds; current allocated memory: 101.516 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 101.55 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 188.480 ; gain = 99.000
+INFO: [VHDL 208-304] Generating VHDL RTL for random_int_gen.
+INFO: [VLOG 209-307] Generating Verilog RTL for random_int_gen.
+INFO: [HLS 200-112] Total elapsed time: 53.478 seconds; peak allocated memory: 101.516 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 188.191 ; gain = 95.770
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 188.191 ; gain = 95.770
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.191 ; gain = 95.770
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.191 ; gain = 95.770
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.191 ; gain = 95.770
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.191 ; gain = 95.770
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'random_int_gen' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (10.678ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'random_int_gen' consists of the following:
+	'mul' operation of DSP[13] ('mul_ln14', fyp/r_n_g.c:14) [12]  (3.36 ns)
+	'add' operation of DSP[13] ('result', fyp/r_n_g.c:14) [13]  (3.82 ns)
+	'add' operation ('result', fyp/r_n_g.c:17) [15]  (2.7 ns)
+	'select' operation ('result', fyp/r_n_g.c:16) [16]  (0.796 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 51.431 seconds; current allocated memory: 101.198 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.096 seconds; current allocated memory: 101.355 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'random_int_gen/state' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'random_int_gen' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_urem_32ns_17ns_32_36_seq_1' to 'random_int_gen_urbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mac_muladd_17ns_13s_32ns_32_1_1' to 'random_int_gen_macud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_macud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_urbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'random_int_gen'.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 101.831 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 93.65 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'random_int_gen_urbkb_div'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 188.191 ; gain = 95.770
+INFO: [VHDL 208-304] Generating VHDL RTL for random_int_gen.
+INFO: [VLOG 209-307] Generating Verilog RTL for random_int_gen.
+INFO: [HLS 200-112] Total elapsed time: 53.33 seconds; peak allocated memory: 101.831 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 188.227 ; gain = 95.773
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 188.227 ; gain = 95.773
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.227 ; gain = 95.773
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.227 ; gain = 95.773
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.227 ; gain = 95.773
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.227 ; gain = 95.773
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'random_int_gen' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.84725ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'random_int_gen' consists of the following:
+	'mul' operation of DSP[17] ('mul_ln6', fyp/r_n_g.c:6) [8]  (3.36 ns)
+	'add' operation of DSP[17] ('add_ln9', fyp/r_n_g.c:9) [17]  (3.82 ns)
+	'add' operation ('x', fyp/r_n_g.c:9) [19]  (2.67 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 51.019 seconds; current allocated memory: 101.132 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.082 seconds; current allocated memory: 101.259 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'random_int_gen/state' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'random_int_gen' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mul_mul_17ns_17ns_32_1_1' to 'random_int_gen_mubkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mac_muladd_17ns_15ns_16ns_31_1_1' to 'random_int_gen_macud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_macud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_mubkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'random_int_gen'.
+INFO: [HLS 200-111]  Elapsed time: 0.123 seconds; current allocated memory: 101.516 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 101.55 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 188.227 ; gain = 95.773
+INFO: [VHDL 208-304] Generating VHDL RTL for random_int_gen.
+INFO: [VLOG 209-307] Generating Verilog RTL for random_int_gen.
+INFO: [HLS 200-112] Total elapsed time: 52.759 seconds; peak allocated memory: 101.516 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 187.805 ; gain = 97.352
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 187.805 ; gain = 97.352
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 187.805 ; gain = 97.352
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 187.805 ; gain = 97.352
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 187.805 ; gain = 97.352
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 187.805 ; gain = 97.352
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'random_int_gen' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'random_int_gen'.
+WARNING: [SCHED 204-68] The II Violation in module 'random_int_gen' (Function: random_int_gen): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between wire write on port 'state' (fyp/r_n_g.c:13) and wire read on port 'state' (fyp/r_n_g.c:6).
+WARNING: [SCHED 204-68] The II Violation in module 'random_int_gen' (Function: random_int_gen): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between wire write on port 'state' (fyp/r_n_g.c:13) and wire read on port 'state' (fyp/r_n_g.c:6).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 3.
+WARNING: [SCHED 204-21] Estimated clock period (9.84725ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'random_int_gen' consists of the following:
+	'mul' operation of DSP[18] ('mul_ln7', fyp/r_n_g.c:7) [9]  (3.36 ns)
+	'add' operation of DSP[18] ('add_ln10', fyp/r_n_g.c:10) [18]  (3.82 ns)
+	'add' operation ('x', fyp/r_n_g.c:10) [20]  (2.67 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 51.586 seconds; current allocated memory: 101.186 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.084 seconds; current allocated memory: 101.318 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'random_int_gen/state' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'random_int_gen' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mul_mul_17ns_17ns_32_1_1' to 'random_int_gen_mubkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mac_muladd_17ns_15ns_16ns_31_1_1' to 'random_int_gen_macud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_macud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_mubkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'random_int_gen'.
+INFO: [HLS 200-111]  Elapsed time: 0.155 seconds; current allocated memory: 101.560 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 101.55 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 187.805 ; gain = 97.352
+INFO: [VHDL 208-304] Generating VHDL RTL for random_int_gen.
+INFO: [VLOG 209-307] Generating Verilog RTL for random_int_gen.
+INFO: [HLS 200-112] Total elapsed time: 53.29 seconds; peak allocated memory: 101.560 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 188.723 ; gain = 96.281
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 188.723 ; gain = 96.281
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.723 ; gain = 96.281
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.723 ; gain = 96.281
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.723 ; gain = 96.281
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.723 ; gain = 96.281
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'random_int_gen' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.84725ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'random_int_gen' consists of the following:
+	'mul' operation of DSP[17] ('mul_ln6', fyp/r_n_g.c:6) [8]  (3.36 ns)
+	'add' operation of DSP[17] ('add_ln9', fyp/r_n_g.c:9) [17]  (3.82 ns)
+	'add' operation ('x', fyp/r_n_g.c:9) [19]  (2.67 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 51.449 seconds; current allocated memory: 101.132 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.082 seconds; current allocated memory: 101.259 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'random_int_gen/state' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'random_int_gen' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mul_mul_17ns_17ns_32_1_1' to 'random_int_gen_mubkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mac_muladd_17ns_15ns_16ns_31_1_1' to 'random_int_gen_macud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_macud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_mubkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'random_int_gen'.
+INFO: [HLS 200-111]  Elapsed time: 0.141 seconds; current allocated memory: 101.516 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 101.55 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 188.723 ; gain = 96.281
+INFO: [VHDL 208-304] Generating VHDL RTL for random_int_gen.
+INFO: [VLOG 209-307] Generating Verilog RTL for random_int_gen.
+INFO: [HLS 200-112] Total elapsed time: 53.309 seconds; peak allocated memory: 101.516 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 188.242 ; gain = 95.848
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 188.242 ; gain = 95.848
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.242 ; gain = 95.848
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.242 ; gain = 95.848
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.242 ; gain = 95.848
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.242 ; gain = 95.848
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'random_int_gen' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.84725ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'random_int_gen' consists of the following:
+	'mul' operation of DSP[19] ('low', fyp/r_n_g.c:6) [8]  (3.36 ns)
+	'add' operation of DSP[19] ('x', fyp/r_n_g.c:10) [19]  (3.82 ns)
+	'add' operation ('x', fyp/r_n_g.c:12) [24]  (2.67 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 50.987 seconds; current allocated memory: 101.086 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.085 seconds; current allocated memory: 101.195 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'random_int_gen/state' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'random_int_gen' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mul_mul_17ns_17ns_32_1_1' to 'random_int_gen_mubkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mac_muladd_17ns_15ns_32ns_32_1_1' to 'random_int_gen_macud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_macud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_mubkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'random_int_gen'.
+INFO: [HLS 200-111]  Elapsed time: 0.128 seconds; current allocated memory: 101.444 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 101.55 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 188.242 ; gain = 95.848
+INFO: [VHDL 208-304] Generating VHDL RTL for random_int_gen.
+INFO: [VLOG 209-307] Generating Verilog RTL for random_int_gen.
+INFO: [HLS 200-112] Total elapsed time: 52.65 seconds; peak allocated memory: 101.444 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+ERROR: [HLS 214-124] use of undeclared identifier 'low': E:\FYP\HLS\MAC_SAP\fyp\r_n_g.c:4
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 188.707 ; gain = 96.262
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 188.707 ; gain = 96.262
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.707 ; gain = 96.262
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.707 ; gain = 96.262
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.707 ; gain = 96.262
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.707 ; gain = 96.262
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'random_int_gen' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 51.328 seconds; current allocated memory: 101.145 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.086 seconds; current allocated memory: 101.352 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'random_int_gen/state' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'random_int_gen' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mul_mul_17ns_17ns_32_1_1' to 'random_int_gen_mubkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_mubkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'random_int_gen'.
+INFO: [HLS 200-111]  Elapsed time: 0.119 seconds; current allocated memory: 101.552 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 117.49 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 188.707 ; gain = 96.262
+INFO: [VHDL 208-304] Generating VHDL RTL for random_int_gen.
+INFO: [VLOG 209-307] Generating Verilog RTL for random_int_gen.
+INFO: [HLS 200-112] Total elapsed time: 52.893 seconds; peak allocated memory: 101.552 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 187.855 ; gain = 97.465
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 187.855 ; gain = 97.465
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 187.855 ; gain = 97.465
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 187.855 ; gain = 97.465
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 187.855 ; gain = 97.465
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 187.855 ; gain = 97.465
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'random_int_gen' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 51.965 seconds; current allocated memory: 101.178 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.087 seconds; current allocated memory: 101.392 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'random_int_gen/state' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'random_int_gen' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mul_mul_17ns_17ns_32_1_1' to 'random_int_gen_mubkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_mubkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'random_int_gen'.
+INFO: [HLS 200-111]  Elapsed time: 0.114 seconds; current allocated memory: 101.608 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 117.49 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 187.855 ; gain = 97.465
+INFO: [VHDL 208-304] Generating VHDL RTL for random_int_gen.
+INFO: [VLOG 209-307] Generating Verilog RTL for random_int_gen.
+INFO: [HLS 200-112] Total elapsed time: 53.563 seconds; peak allocated memory: 101.608 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 187.910 ; gain = 97.563
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 187.910 ; gain = 97.563
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 187.910 ; gain = 97.563
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 187.910 ; gain = 97.563
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 187.910 ; gain = 97.563
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 187.910 ; gain = 97.563
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'random_int_gen' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 51.914 seconds; current allocated memory: 101.145 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.086 seconds; current allocated memory: 101.352 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'random_int_gen/state' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'random_int_gen' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mul_mul_17ns_17ns_32_1_1' to 'random_int_gen_mubkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_mubkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'random_int_gen'.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 101.552 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 117.49 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 187.910 ; gain = 97.563
+INFO: [VHDL 208-304] Generating VHDL RTL for random_int_gen.
+INFO: [VLOG 209-307] Generating Verilog RTL for random_int_gen.
+INFO: [HLS 200-112] Total elapsed time: 53.441 seconds; peak allocated memory: 101.552 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.875 ; gain = 96.508
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.875 ; gain = 96.508
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 188.875 ; gain = 96.508
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 188.875 ; gain = 96.508
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 188.875 ; gain = 96.508
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 188.875 ; gain = 96.508
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'random_int_gen' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 52.206 seconds; current allocated memory: 101.237 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.165 seconds; current allocated memory: 101.518 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'random_int_gen' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'random_int_gen/state' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'random_int_gen' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_ddiv_64ns_64ns_64_31_1' to 'random_int_gen_ddbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_uitodp_32ns_64_6_1' to 'random_int_gen_uicud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'random_int_gen_mul_mul_17ns_17ns_32_1_1' to 'random_int_gen_mudEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_ddbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_mudEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'random_int_gen_uicud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'random_int_gen'.
+INFO: [HLS 200-111]  Elapsed time: 0.233 seconds; current allocated memory: 102.045 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.08 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:55 . Memory (MB): peak = 188.875 ; gain = 96.508
+INFO: [VHDL 208-304] Generating VHDL RTL for random_int_gen.
+INFO: [VLOG 209-307] Generating Verilog RTL for random_int_gen.
+INFO: [HLS 200-112] Total elapsed time: 54.719 seconds; peak allocated memory: 102.045 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.480 ; gain = 98.480
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.480 ; gain = 98.480
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 188.480 ; gain = 98.480
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:91) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<unsigned short, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned short, double>' into '__hls_fptoui_double_i16' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'random_int_gen' into 'start_backoff_vo' (fyp/edca.c:276) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptoui_double_i16' into 'start_backoff_vo' (fyp/edca.c:276) automatically.
+WARNING: [SYNCHK 200-77] The top function 'start_backoff_vo' (fyp/edca.c:268) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:53 . Memory (MB): peak = 198.258 ; gain = 108.258
+INFO: [XFORM 203-602] Inlining function 'random_int_gen' into 'start_backoff_vo' (fyp/edca.c:276) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 230.383 ; gain = 140.383
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 230.383 ; gain = 140.383
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'start_backoff_vo' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'start_backoff_vo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 53.214 seconds; current allocated memory: 162.591 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.106 seconds; current allocated memory: 162.759 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'start_backoff_vo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'start_backoff_vo/invoke_reason' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'start_backoff_vo' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'CW_vo' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'rand_state' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'start_backoff_vo_mul_mul_17ns_17ns_32_1_1' to 'start_backoff_vo_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'start_backoff_vo_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'start_backoff_vo'.
+INFO: [HLS 200-111]  Elapsed time: 0.152 seconds; current allocated memory: 163.004 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 117.85 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:55 . Memory (MB): peak = 247.000 ; gain = 157.000
+INFO: [VHDL 208-304] Generating VHDL RTL for start_backoff_vo.
+INFO: [VLOG 209-307] Generating Verilog RTL for start_backoff_vo.
+INFO: [HLS 200-112] Total elapsed time: 54.944 seconds; peak allocated memory: 163.004 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 187.656 ; gain = 95.254
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 187.656 ; gain = 95.254
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:53 . Memory (MB): peak = 187.656 ; gain = 95.254
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:91) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<unsigned short, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned short, double>' into '__hls_fptoui_double_i16' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'random_int_gen' into 'start_backoff_vo' (fyp/edca.c:276) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptoui_double_i16' into 'start_backoff_vo' (fyp/edca.c:276) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:53 . Memory (MB): peak = 210.613 ; gain = 118.211
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<unsigned short, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned short, double>' into '__hls_fptoui_double_i16' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'random_int_gen' into 'start_backoff_vo' (fyp/edca.c:276) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptoui_double_i16' into 'start_backoff_vo' (fyp/edca.c:276) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 257.523 ; gain = 165.121
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:54 . Memory (MB): peak = 263.934 ; gain = 171.531
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'start_backoff_vo' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'start_backoff_vo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 53.69 seconds; current allocated memory: 193.429 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.205 seconds; current allocated memory: 193.842 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'start_backoff_vo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'start_backoff_vo/invoke_reason' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'start_backoff_vo/bk' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'start_backoff_vo' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'CW_vo' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'rand_state' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'start_backoff_vo_dmul_64ns_64ns_64_6_max_dsp_1' to 'start_backoff_vo_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_backoff_vo_ddiv_64ns_64ns_64_31_1' to 'start_backoff_vo_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_backoff_vo_uitodp_32ns_64_6_1' to 'start_backoff_vo_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_backoff_vo_sitodp_32ns_64_6_1' to 'start_backoff_vo_eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_backoff_vo_mul_mul_17ns_17ns_32_1_1' to 'start_backoff_vo_fYi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'start_backoff_vo_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'start_backoff_vo_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'start_backoff_vo_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'start_backoff_vo_eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'start_backoff_vo_fYi': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'start_backoff_vo'.
+INFO: [HLS 200-111]  Elapsed time: 0.348 seconds; current allocated memory: 194.638 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.08 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:57 . Memory (MB): peak = 280.313 ; gain = 187.910
+INFO: [VHDL 208-304] Generating VHDL RTL for start_backoff_vo.
+INFO: [VLOG 209-307] Generating Verilog RTL for start_backoff_vo.
+INFO: [HLS 200-112] Total elapsed time: 56.801 seconds; peak allocated memory: 194.638 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.105 ; gain = 95.680
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 188.105 ; gain = 95.680
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:53 . Memory (MB): peak = 188.105 ; gain = 95.680
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:91) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<unsigned short, double>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned short, double>' into '__hls_fptoui_double_i16' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'random_int_gen' into 'start_backoff_vo' (fyp/edca.c:276) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptoui_double_i16' into 'start_backoff_vo' (fyp/edca.c:276) automatically.
+WARNING: [SYNCHK 200-77] The top function 'start_backoff_vo' (fyp/edca.c:268) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 197.461 ; gain = 105.035
+INFO: [XFORM 203-602] Inlining function 'random_int_gen' into 'start_backoff_vo' (fyp/edca.c:276) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:54 . Memory (MB): peak = 230.117 ; gain = 137.691
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:54 . Memory (MB): peak = 230.117 ; gain = 137.691
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'start_backoff_vo' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'start_backoff_vo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 53.699 seconds; current allocated memory: 162.513 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.109 seconds; current allocated memory: 162.759 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'start_backoff_vo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'start_backoff_vo/invoke_reason' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'start_backoff_vo' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'CW_vo' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'rand_state' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'start_backoff_vo_mul_mul_17ns_17ns_32_1_1' to 'start_backoff_vo_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'start_backoff_vo_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'start_backoff_vo'.
+INFO: [HLS 200-111]  Elapsed time: 0.147 seconds; current allocated memory: 163.004 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 117.85 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:55 . Memory (MB): peak = 246.984 ; gain = 154.559
+INFO: [VHDL 208-304] Generating VHDL RTL for start_backoff_vo.
+INFO: [VLOG 209-307] Generating Verilog RTL for start_backoff_vo.
+INFO: [HLS 200-112] Total elapsed time: 55.359 seconds; peak allocated memory: 163.004 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***

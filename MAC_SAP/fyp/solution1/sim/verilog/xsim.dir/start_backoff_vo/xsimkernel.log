@@ -1,0 +1,7 @@
+Running: xsim.dir/start_backoff_vo/xsimk.exe -simmode gui -wdb start_backoff_vo.wdb -simrunnum 0 -socket 58990
+Design successfully loaded
+Design Loading Memory Usage: 5440 KB (Peak: 5440 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 7176 KB (Peak: 7176 KB)
+Simulation CPU Usage: 31 ms

@@ -31,12 +31,12 @@ if {$ret == 1} {
 	return -code error -errorcode $::errorCode
 }
 
-if {[file isfile backoff_vi.autotvin.dat]} {
-	file delete -force backoff_vi.autotvin.dat
+if {[file isfile start_backoff_vo.autotvin.dat]} {
+	file delete -force start_backoff_vo.autotvin.dat
 }
 
-if {[file isfile backoff_vi.autotvout.dat]} {
-	file delete -force backoff_vi.autotvout.dat
+if {[file isfile start_backoff_vo.autotvout.dat]} {
+	file delete -force start_backoff_vo.autotvout.dat
 }
 
 sc_sim_check $ret $err "temp0.log"

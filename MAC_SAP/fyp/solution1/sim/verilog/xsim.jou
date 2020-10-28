@@ -2,12 +2,12 @@
 # xsim v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Oct 27 13:07:59 2020
-# Process ID: 8604
+# Start of session at: Wed Oct 28 13:53:45 2020
+# Process ID: 17928
 # Current directory: E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog
-# Command line: xsim.exe -mode tcl -source {xsim.dir/backoff_vi/xsim_script.tcl}
+# Command line: xsim.exe -mode tcl -source {xsim.dir/start_backoff_vo/xsim_script.tcl}
 # Log file: E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.log
 # Journal file: E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog\xsim.jou
 #-----------------------------------------------------------
-source xsim.dir/backoff_vi/xsim_script.tcl
-source backoff_vi.tcl
+source xsim.dir/start_backoff_vo/xsim_script.tcl
+source start_backoff_vo.tcl

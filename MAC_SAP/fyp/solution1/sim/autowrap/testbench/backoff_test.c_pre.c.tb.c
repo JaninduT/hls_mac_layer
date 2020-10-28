@@ -5494,9 +5494,6 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
-
-static const uint10 aCWmin = 15;
-static const uint10 aCWmax = 1023;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/edca.h" 2
 
 uint1 enqueue_dequeue_frame(
@@ -5526,29 +5523,123 @@ void backoff_be(
 void backoff_bk(
   uint3 *current_txop_holder
   );
-# 2 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c" 2
 
+void start_backoff_vo(
+  uint1 invoke_reason
+  );
+
+void start_backoff_vi(
+  uint1 invoke_reason
+  );
+
+void start_backoff_be(
+  uint1 invoke_reason
+  );
+
+void start_backoff_bk(
+  uint1 invoke_reason
+  );
+# 2 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c" 2
+# 12 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
 #ifndef HLS_FASTSIM
 #ifndef HLS_FASTSIM
-#include "apatb_backoff_vi.h"
+#include "apatb_start_backoff_vo.h"
 #endif
-# 3 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+# 12 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
 int main(){
- uint3 curr_txop = 0;
  
 #ifndef HLS_FASTSIM
-#define backoff_vi AESL_WRAP_backoff_vi
+#define start_backoff_vo AESL_WRAP_start_backoff_vo
 #endif
-# 5 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-backoff_vi(&curr_txop);
-#undef backoff_vi
-# 5 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+# 13 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+start_backoff_vo(0);
+#undef start_backoff_vo
+# 13 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
 
- if(curr_txop == 3){
-  return 0;
- }
- return 1;
+ 
+#ifndef HLS_FASTSIM
+#define start_backoff_vo AESL_WRAP_start_backoff_vo
+#endif
+# 14 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+start_backoff_vo(1);
+#undef start_backoff_vo
+# 14 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+
+ 
+#ifndef HLS_FASTSIM
+#define start_backoff_vo AESL_WRAP_start_backoff_vo
+#endif
+# 15 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+start_backoff_vo(1);
+#undef start_backoff_vo
+# 15 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+
+ 
+#ifndef HLS_FASTSIM
+#define start_backoff_vo AESL_WRAP_start_backoff_vo
+#endif
+# 16 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+start_backoff_vo(1);
+#undef start_backoff_vo
+# 16 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+
+ 
+#ifndef HLS_FASTSIM
+#define start_backoff_vo AESL_WRAP_start_backoff_vo
+#endif
+# 17 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+start_backoff_vo(1);
+#undef start_backoff_vo
+# 17 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+
+ 
+#ifndef HLS_FASTSIM
+#define start_backoff_vo AESL_WRAP_start_backoff_vo
+#endif
+# 18 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+start_backoff_vo(1);
+#undef start_backoff_vo
+# 18 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+
+ 
+#ifndef HLS_FASTSIM
+#define start_backoff_vo AESL_WRAP_start_backoff_vo
+#endif
+# 19 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+start_backoff_vo(1);
+#undef start_backoff_vo
+# 19 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+
+ 
+#ifndef HLS_FASTSIM
+#define start_backoff_vo AESL_WRAP_start_backoff_vo
+#endif
+# 20 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+start_backoff_vo(1);
+#undef start_backoff_vo
+# 20 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+
+ 
+#ifndef HLS_FASTSIM
+#define start_backoff_vo AESL_WRAP_start_backoff_vo
+#endif
+# 21 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+start_backoff_vo(1);
+#undef start_backoff_vo
+# 21 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+
+ 
+#ifndef HLS_FASTSIM
+#define start_backoff_vo AESL_WRAP_start_backoff_vo
+#endif
+# 22 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+start_backoff_vo(1);
+#undef start_backoff_vo
+# 22 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+
+# 45 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+ return 0;
 }
 #endif
-# 10 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+# 46 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
 

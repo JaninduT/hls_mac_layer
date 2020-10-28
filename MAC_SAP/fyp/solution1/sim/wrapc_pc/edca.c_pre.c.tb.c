@@ -5494,9 +5494,6 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
-
-static const uint10 aCWmin = 15;
-static const uint10 aCWmax = 1023;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/edca.h" 2
 
 uint1 enqueue_dequeue_frame(
@@ -5526,6 +5523,22 @@ void backoff_be(
 void backoff_bk(
   uint3 *current_txop_holder
   );
+
+void start_backoff_vo(
+  uint1 invoke_reason
+  );
+
+void start_backoff_vi(
+  uint1 invoke_reason
+  );
+
+void start_backoff_be(
+  uint1 invoke_reason
+  );
+
+void start_backoff_bk(
+  uint1 invoke_reason
+  );
 # 2 "E:/FYP/HLS/MAC_SAP/fyp/edca.c" 2
 # 1 "E:/FYP/HLS/MAC_SAP/fyp/timer.h" 1
 
@@ -5544,6 +5557,14 @@ void stop_timer(
   uint1 *medium_state
   );
 # 3 "E:/FYP/HLS/MAC_SAP/fyp/edca.c" 2
+# 1 "E:/FYP/HLS/MAC_SAP/fyp/r_n_g.h" 1
+
+
+
+
+
+double random_int_gen(uint32 *state);
+# 4 "E:/FYP/HLS/MAC_SAP/fyp/edca.c" 2
 
 static unsigned char edca_fifo_vo[400];
 static unsigned char edca_fifo_vi[400];
@@ -5562,11 +5583,17 @@ static uint2 read_pointer_bk = 0;
 static uint2 write_pointer_bk = 0;
 static uint3 available_spaces_bk = 4;
 
+static uint10 CW_vo = 15;
+static uint10 CW_vi = 15;
+static uint10 CW_be = 15;
+static uint10 CW_bk = 15;
 
 static uint10 vo_backoff_counter = 0;
 static uint10 vi_backoff_counter = 0;
 static uint10 be_backoff_counter = 0;
 static uint10 bk_backoff_counter = 0;
+
+static uint32 rand_state = 123456789;
 
 uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame[100]){
 #pragma HLS ARRAY_MAP variable=edca_fifo_bk instance=edca_queues horizontal
@@ -5800,4 +5827,48 @@ void backoff_bk(uint3 *current_txop_holder){
    return;
   }
  }
+}
+
+void start_backoff_vo(uint1 invoke_reason){
+ if(invoke_reason == 0){
+  CW_vo = 15;
+ }else if (invoke_reason == 1){
+  if(CW_vo < 1023){
+   CW_vo = ((CW_vo+1)*2) - 1;
+  }
+ }
+ vo_backoff_counter = CW_vo * random_int_gen(&rand_state);
+}
+
+void start_backoff_vi(uint1 invoke_reason){
+ if(invoke_reason == 0){
+  CW_vi = 15;
+ }else if (invoke_reason == 1){
+  if(CW_vi < 1023){
+   CW_vi = ((CW_vi+1)*2) - 1;
+  }
+ }
+ vi_backoff_counter = CW_vi * random_int_gen(&rand_state);
+}
+
+void start_backoff_be(uint1 invoke_reason){
+ if(invoke_reason == 0){
+  CW_be = 15;
+ }else if (invoke_reason == 1){
+  if(CW_be < 1023){
+   CW_be = ((CW_be+1)*2) - 1;
+  }
+ }
+ be_backoff_counter = CW_be * random_int_gen(&rand_state);
+}
+
+void start_backoff_bk(uint1 invoke_reason){
+ if(invoke_reason == 0){
+  CW_bk = 15;
+ }else if (invoke_reason == 1){
+  if(CW_bk < 1023){
+   CW_bk = ((CW_bk+1)*2) - 1;
+  }
+ }
+ bk_backoff_counter = CW_bk * random_int_gen(&rand_state);
 }

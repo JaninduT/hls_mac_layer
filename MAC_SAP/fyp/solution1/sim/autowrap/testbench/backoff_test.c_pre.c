@@ -5490,9 +5490,6 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
-
-static const uint10 aCWmin = 15;
-static const uint10 aCWmax = 1023;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/edca.h" 2
 
 uint1 enqueue_dequeue_frame(
@@ -5522,13 +5519,35 @@ void backoff_be(
 void backoff_bk(
   uint3 *current_txop_holder
   );
-# 2 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c" 2
 
+void start_backoff_vo(
+  uint1 invoke_reason
+  );
+
+void start_backoff_vi(
+  uint1 invoke_reason
+  );
+
+void start_backoff_be(
+  uint1 invoke_reason
+  );
+
+void start_backoff_bk(
+  uint1 invoke_reason
+  );
+# 2 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c" 2
+# 12 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
 int main(){
- uint3 curr_txop = 0;
- backoff_vi(&curr_txop);
- if(curr_txop == 3){
-  return 0;
- }
- return 1;
+ start_backoff_vo(0);
+ start_backoff_vo(1);
+ start_backoff_vo(1);
+ start_backoff_vo(1);
+ start_backoff_vo(1);
+ start_backoff_vo(1);
+ start_backoff_vo(1);
+ start_backoff_vo(1);
+ start_backoff_vo(1);
+ start_backoff_vo(1);
+# 45 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+ return 0;
 }

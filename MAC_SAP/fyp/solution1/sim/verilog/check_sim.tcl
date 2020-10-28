@@ -80,8 +80,7 @@ proc check_tvin_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "c.backoff_vi.autotvin_current_txop_holder.dat"
-         "c.backoff_vi.autotvout_current_txop_holder.dat"
+         "c.start_backoff_vo.autotvin_invoke_reason.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {
@@ -106,7 +105,6 @@ proc check_tvout_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "rtl.backoff_vi.autotvout_current_txop_holder.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {

@@ -18,7 +18,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../backoff_test.c ../../../compose_mac_frame_test.c ../../../compose_mac_header_test.c ../../../crc_32_test.c ../../../crc_32_validate_test.c ../../../decompose_mac_frame_test.c ../../../edca_test.c ../../../mac_layer_test.c ../../../slot_boundary_timing_test.c ../../../timer_test.c ../../../timer.c ../../../mac_layer.c ../../../edca.c ../../../decompose_mac_frame.c ../../../crc_32_validate.c ../../../crc_32.c ../../../compose_mac_frame.c ../../../MA_UNITDATAX_request.c
+HLS_SOURCES = ../../../backoff_test.c ../../../compose_mac_frame_test.c ../../../compose_mac_header_test.c ../../../crc_32_test.c ../../../crc_32_validate_test.c ../../../decompose_mac_frame_test.c ../../../edca_test.c ../../../mac_layer_test.c ../../../r_n_g_test.c ../../../slot_boundary_timing_test.c ../../../timer_test.c ../../../MA_UNITDATAX_request.c ../../../compose_mac_frame.c ../../../crc_32.c ../../../crc_32_validate.c ../../../decompose_mac_frame.c ../../../edca.c ../../../mac_layer.c ../../../r_n_g.c ../../../timer.c
 
 TARGET := csim.exe
 
@@ -76,7 +76,7 @@ AUTOCC := cmd //c apcc.bat
 
 $(ObjDir)/backoff_test.o: ../../../backoff_test.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../backoff_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/backoff_test.d
 
@@ -122,6 +122,12 @@ $(ObjDir)/mac_layer_test.o: ../../../mac_layer_test.c $(ObjDir)/.dir
 
 -include $(ObjDir)/mac_layer_test.d
 
+$(ObjDir)/r_n_g_test.o: ../../../r_n_g_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../r_n_g_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/r_n_g_test.d
+
 $(ObjDir)/slot_boundary_timing_test.o: ../../../slot_boundary_timing_test.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../slot_boundary_timing_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
@@ -134,41 +140,11 @@ $(ObjDir)/timer_test.o: ../../../timer_test.c $(ObjDir)/.dir
 
 -include $(ObjDir)/timer_test.d
 
-$(ObjDir)/timer.o: ../../../timer.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../timer.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/MA_UNITDATAX_request.o: ../../../MA_UNITDATAX_request.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../MA_UNITDATAX_request.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/timer.d
-
-$(ObjDir)/mac_layer.o: ../../../mac_layer.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../mac_layer.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/mac_layer.d
-
-$(ObjDir)/edca.o: ../../../edca.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../edca.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/edca.d
-
-$(ObjDir)/decompose_mac_frame.o: ../../../decompose_mac_frame.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../decompose_mac_frame.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/decompose_mac_frame.d
-
-$(ObjDir)/crc_32_validate.o: ../../../crc_32_validate.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../crc_32_validate.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/crc_32_validate.d
-
-$(ObjDir)/crc_32.o: ../../../crc_32.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../crc_32.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/crc_32.d
+-include $(ObjDir)/MA_UNITDATAX_request.d
 
 $(ObjDir)/compose_mac_frame.o: ../../../compose_mac_frame.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../compose_mac_frame.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
@@ -176,8 +152,44 @@ $(ObjDir)/compose_mac_frame.o: ../../../compose_mac_frame.c $(ObjDir)/.dir
 
 -include $(ObjDir)/compose_mac_frame.d
 
-$(ObjDir)/MA_UNITDATAX_request.o: ../../../MA_UNITDATAX_request.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../MA_UNITDATAX_request.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/crc_32.o: ../../../crc_32.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../crc_32.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/MA_UNITDATAX_request.d
+-include $(ObjDir)/crc_32.d
+
+$(ObjDir)/crc_32_validate.o: ../../../crc_32_validate.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../crc_32_validate.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/crc_32_validate.d
+
+$(ObjDir)/decompose_mac_frame.o: ../../../decompose_mac_frame.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../decompose_mac_frame.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/decompose_mac_frame.d
+
+$(ObjDir)/edca.o: ../../../edca.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../edca.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/edca.d
+
+$(ObjDir)/mac_layer.o: ../../../mac_layer.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../mac_layer.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/mac_layer.d
+
+$(ObjDir)/r_n_g.o: ../../../r_n_g.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../r_n_g.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/r_n_g.d
+
+$(ObjDir)/timer.o: ../../../timer.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../timer.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/timer.d

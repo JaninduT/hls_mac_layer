@@ -31,4 +31,20 @@ void backoff_bk(
 		uint3 *current_txop_holder
 		);
 
+void start_backoff_vo(
+		uint1 invoke_reason
+		);
+
+void start_backoff_vi(
+		uint1 invoke_reason
+		);
+
+void start_backoff_be(
+		uint1 invoke_reason
+		);
+
+void start_backoff_bk(
+		uint1 invoke_reason
+		);
+
 #endif

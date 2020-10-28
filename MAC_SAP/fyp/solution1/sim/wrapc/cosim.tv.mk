@@ -69,6 +69,10 @@ $(ObjDir)/slot_boundary_timing_test.c_pre.c.tb.o : slot_boundary_timing_test.c_p
 	$(Echo) "   Compiling (apcc) slot_boundary_timing_test.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
 
+$(ObjDir)/r_n_g_test.c_pre.c.tb.o : r_n_g_test.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) r_n_g_test.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
 $(ObjDir)/mac_layer_test.c_pre.c.tb.o : mac_layer_test.c_pre.c.tb.c $(ObjDir)/.dir
 	$(Echo) "   Compiling (apcc) mac_layer_test.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
@@ -101,34 +105,38 @@ $(ObjDir)/backoff_test.c_pre.c.tb.o : backoff_test.c_pre.c.tb.c $(ObjDir)/.dir
 	$(Echo) "   Compiling (apcc) backoff_test.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
 
-$(ObjDir)/MA_UNITDATAX_request.c_pre.c.tb.o : MA_UNITDATAX_request.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) MA_UNITDATAX_request.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+$(ObjDir)/timer.c_pre.c.tb.o : timer.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) timer.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
 
-$(ObjDir)/compose_mac_frame.c_pre.c.tb.o : compose_mac_frame.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) compose_mac_frame.c_pre.c.tb.c" $(AVE_DIR_DLOG)
-	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
-
-$(ObjDir)/crc_32.c_pre.c.tb.o : crc_32.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) crc_32.c_pre.c.tb.c" $(AVE_DIR_DLOG)
-	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
-
-$(ObjDir)/crc_32_validate.c_pre.c.tb.o : crc_32_validate.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) crc_32_validate.c_pre.c.tb.c" $(AVE_DIR_DLOG)
-	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
-
-$(ObjDir)/decompose_mac_frame.c_pre.c.tb.o : decompose_mac_frame.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) decompose_mac_frame.c_pre.c.tb.c" $(AVE_DIR_DLOG)
-	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
-
-$(ObjDir)/edca.c_pre.c.tb.o : edca.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) edca.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+$(ObjDir)/r_n_g.c_pre.c.tb.o : r_n_g.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) r_n_g.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
 
 $(ObjDir)/mac_layer.c_pre.c.tb.o : mac_layer.c_pre.c.tb.c $(ObjDir)/.dir
 	$(Echo) "   Compiling (apcc) mac_layer.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
 
-$(ObjDir)/timer.c_pre.c.tb.o : timer.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) timer.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+$(ObjDir)/edca.c_pre.c.tb.o : edca.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) edca.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
+$(ObjDir)/decompose_mac_frame.c_pre.c.tb.o : decompose_mac_frame.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) decompose_mac_frame.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
+$(ObjDir)/crc_32_validate.c_pre.c.tb.o : crc_32_validate.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) crc_32_validate.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
+$(ObjDir)/crc_32.c_pre.c.tb.o : crc_32.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) crc_32.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
+$(ObjDir)/compose_mac_frame.c_pre.c.tb.o : compose_mac_frame.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) compose_mac_frame.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
+$(ObjDir)/MA_UNITDATAX_request.c_pre.c.tb.o : MA_UNITDATAX_request.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) MA_UNITDATAX_request.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \

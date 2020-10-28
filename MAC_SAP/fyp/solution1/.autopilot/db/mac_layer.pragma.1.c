@@ -4535,9 +4535,6 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
-
-static const uint10 aCWmin = 15;
-static const uint10 aCWmax = 1023;
 # 5 "fyp/mac_layer.h" 2
 # 1 "fyp/crc_32.h" 1
 
@@ -4622,6 +4619,22 @@ void backoff_be(
 
 void backoff_bk(
   uint3 *current_txop_holder
+  );
+
+void start_backoff_vo(
+  uint1 invoke_reason
+  );
+
+void start_backoff_vi(
+  uint1 invoke_reason
+  );
+
+void start_backoff_be(
+  uint1 invoke_reason
+  );
+
+void start_backoff_bk(
+  uint1 invoke_reason
   );
 # 9 "fyp/mac_layer.h" 2
 
