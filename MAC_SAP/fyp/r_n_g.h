@@ -3,6 +3,6 @@
 
 #include "common.h"
 
-double random_int_gen(uint32 *state);
+float random_int_gen(uint32 *state);
 
 #endif

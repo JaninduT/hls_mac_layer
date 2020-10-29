@@ -4,7 +4,6 @@
 #include <ap_cint.h>
 #include "stdint.h"
 
-typedef unsigned char msdu_t[70];
 typedef uint4 user_priority_t;
 typedef uint7 data_rate_t;
 typedef uint4 txpwr_lvl_t;

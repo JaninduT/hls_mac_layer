@@ -5496,20 +5496,21 @@ static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/r_n_g.h" 2
 
-double random_int_gen(uint32 *state);
+float random_int_gen(uint32 *state);
 # 2 "E:/FYP/HLS/MAC_SAP/fyp/r_n_g.c" 2
 
-double random_int_gen(uint32 *state){
+float random_int_gen(uint32 *state){
  const uint32 A = 48271;
  uint32 low = (*state & 0x7fff);
- low = low * A;
 #pragma HLS RESOURCE variable=low core=Mul
+ low = low * A;
  uint32 high = (*state >> 15);
  high = high * A;
  uint32 x = (high & 0xffff) << 15 + (high >> 16);
  x = x + low;
-
  x = (x & 0x7fffffff) + (x >> 31);
  *state = x;
- return (double)x / 2147483647;
+
+ return (float)x / 2147483647;
+
 }

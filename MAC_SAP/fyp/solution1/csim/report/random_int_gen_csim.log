@@ -1,27 +1,17 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling(apcc) ../../../r_n_g_test.c in debug mode
+   Compiling(apcc) ../../../r_n_g.c in debug mode
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Wed Oct 28 12:34:42 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Wed Oct 28 22:00:48 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/csim/build'
 INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Generating csim.exe
-0.604049
-0.751304
-0.292217
-0.556153
-0.041276
-0.023045
-0.195040
-0.080511
-0.256136
-0.536358
-0.513999
-0.263854
-0.108218
-0.924444
-0.279850
-0.486566
+0.444153
+0.361355
+0.162981
+0.088494
+0.906873
+0.644338
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

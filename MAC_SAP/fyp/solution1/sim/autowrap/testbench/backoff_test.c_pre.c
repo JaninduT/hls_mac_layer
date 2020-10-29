@@ -5536,18 +5536,12 @@ void start_backoff_bk(
   uint1 invoke_reason
   );
 # 2 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c" 2
-# 12 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+
 int main(){
- start_backoff_vo(0);
- start_backoff_vo(1);
- start_backoff_vo(1);
- start_backoff_vo(1);
- start_backoff_vo(1);
- start_backoff_vo(1);
- start_backoff_vo(1);
- start_backoff_vo(1);
- start_backoff_vo(1);
- start_backoff_vo(1);
-# 45 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
- return 0;
+ uint3 curr_txop = 4;
+ backoff_vi(&curr_txop);
+ if(curr_txop == 4){
+  return 0;
+ }
+ return 1;
 }

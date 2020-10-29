@@ -132,7 +132,7 @@ double fmod(double, double);
 float fmodf(float, float);
 long double fmodl(long double, long double);
 signed int main(void);
-void AESL_WRAP_start_backoff_vo(bool );
+void AESL_WRAP_backoff_vi( char *);
 
 
 /* Function Bodies */
@@ -152,6 +152,8 @@ static inline int llvm_fcmp_ole(double X, double Y) { return X <= Y ; }
 static inline int llvm_fcmp_oge(double X, double Y) { return X >= Y ; }
 
 signed int main(void) {
+  static  unsigned long long aesl_llvm_cbe_curr_txop_count = 0;
+   char llvm_cbe_curr_txop;    /* Address-exposed local */
   static  unsigned long long aesl_llvm_cbe_1_count = 0;
   static  unsigned long long aesl_llvm_cbe_2_count = 0;
   static  unsigned long long aesl_llvm_cbe_3_count = 0;
@@ -163,72 +165,43 @@ signed int main(void) {
   static  unsigned long long aesl_llvm_cbe_9_count = 0;
   static  unsigned long long aesl_llvm_cbe_10_count = 0;
   static  unsigned long long aesl_llvm_cbe_11_count = 0;
+  static  unsigned long long aesl_llvm_cbe_12_count = 0;
+  static  unsigned long long aesl_llvm_cbe_13_count = 0;
+  static  unsigned long long aesl_llvm_cbe_14_count = 0;
+  static  unsigned long long aesl_llvm_cbe_15_count = 0;
+  static  unsigned long long aesl_llvm_cbe_16_count = 0;
+  unsigned char llvm_cbe_tmp__1;
+  static  unsigned long long aesl_llvm_cbe_17_count = 0;
+  static  unsigned long long aesl_llvm_cbe_storemerge_count = 0;
+  unsigned int llvm_cbe_storemerge;
+  static  unsigned long long aesl_llvm_cbe_18_count = 0;
+
   CODE_FOR_MAIN();
 const char* AESL_DEBUG_TRACE = getenv("DEBUG_TRACE");
 if (AESL_DEBUG_TRACE)
 printf("\n\{ BEGIN @main\n");
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @AESL_WRAP_start_backoff_vo(i1 zeroext false) nounwind, !dbg !2 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_1_count);
-   /*tail*/ AESL_WRAP_start_backoff_vo(0);
+printf("\n  store i3 -4, i3* %%curr_txop, align 1, !dbg !2 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_8_count);
+  *(&llvm_cbe_curr_txop) = ((((unsigned char )4u)) & 7ull);
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", ((unsigned char )4u));
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @AESL_WRAP_backoff_vi(i3* %%curr_txop) nounwind, !dbg !3 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_9_count);
+  AESL_WRAP_backoff_vi(( char *)(&llvm_cbe_curr_txop));
 if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",0);
 }
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @AESL_WRAP_start_backoff_vo(i1 zeroext true) nounwind, !dbg !2 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_2_count);
-   /*tail*/ AESL_WRAP_start_backoff_vo(1);
-if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",1);
-}
+printf("\n  %%1 = load i3* %%curr_txop, align 1, !dbg !3 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_16_count);
+  llvm_cbe_tmp__1 = (unsigned char )*(&llvm_cbe_curr_txop);
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @AESL_WRAP_start_backoff_vo(i1 zeroext true) nounwind, !dbg !2 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_3_count);
-   /*tail*/ AESL_WRAP_start_backoff_vo(1);
-if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",1);
-}
+printf("\n = 0x%X\n", llvm_cbe_tmp__1);
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @AESL_WRAP_start_backoff_vo(i1 zeroext true) nounwind, !dbg !2 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_4_count);
-   /*tail*/ AESL_WRAP_start_backoff_vo(1);
-if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",1);
-}
+printf("\n  %%storemerge = select i1 %%2, i32 0, i32 1, !dbg !3 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_storemerge_count);
+  llvm_cbe_storemerge = (unsigned int )((((llvm_cbe_tmp__1&7U) == (((unsigned char )4u)&7U))) ? ((unsigned int )0u) : ((unsigned int )1u));
 if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @AESL_WRAP_start_backoff_vo(i1 zeroext true) nounwind, !dbg !2 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_5_count);
-   /*tail*/ AESL_WRAP_start_backoff_vo(1);
-if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",1);
-}
-if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @AESL_WRAP_start_backoff_vo(i1 zeroext true) nounwind, !dbg !2 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_6_count);
-   /*tail*/ AESL_WRAP_start_backoff_vo(1);
-if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",1);
-}
-if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @AESL_WRAP_start_backoff_vo(i1 zeroext true) nounwind, !dbg !3 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_7_count);
-   /*tail*/ AESL_WRAP_start_backoff_vo(1);
-if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",1);
-}
-if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @AESL_WRAP_start_backoff_vo(i1 zeroext true) nounwind, !dbg !3 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_8_count);
-   /*tail*/ AESL_WRAP_start_backoff_vo(1);
-if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",1);
-}
-if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @AESL_WRAP_start_backoff_vo(i1 zeroext true) nounwind, !dbg !3 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_9_count);
-   /*tail*/ AESL_WRAP_start_backoff_vo(1);
-if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",1);
-}
-if (AESL_DEBUG_TRACE)
-printf("\n  tail call void @AESL_WRAP_start_backoff_vo(i1 zeroext true) nounwind, !dbg !3 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_10_count);
-   /*tail*/ AESL_WRAP_start_backoff_vo(1);
-if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",1);
-}
+printf("\nstoremerge = 0x%X\n", llvm_cbe_storemerge);
   if (AESL_DEBUG_TRACE)
       printf("\nEND @main}\n");
-  return 0u;
+  return llvm_cbe_storemerge;
 }
 

@@ -5540,106 +5540,28 @@ void start_backoff_bk(
   uint1 invoke_reason
   );
 # 2 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c" 2
-# 12 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+
 #ifndef HLS_FASTSIM
 #ifndef HLS_FASTSIM
-#include "apatb_start_backoff_vo.h"
+#include "apatb_backoff_vi.h"
 #endif
-# 12 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+# 3 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
 int main(){
+ uint3 curr_txop = 4;
  
 #ifndef HLS_FASTSIM
-#define start_backoff_vo AESL_WRAP_start_backoff_vo
+#define backoff_vi AESL_WRAP_backoff_vi
 #endif
-# 13 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-start_backoff_vo(0);
-#undef start_backoff_vo
-# 13 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+# 5 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+backoff_vi(&curr_txop);
+#undef backoff_vi
+# 5 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
 
- 
-#ifndef HLS_FASTSIM
-#define start_backoff_vo AESL_WRAP_start_backoff_vo
-#endif
-# 14 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-start_backoff_vo(1);
-#undef start_backoff_vo
-# 14 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-
- 
-#ifndef HLS_FASTSIM
-#define start_backoff_vo AESL_WRAP_start_backoff_vo
-#endif
-# 15 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-start_backoff_vo(1);
-#undef start_backoff_vo
-# 15 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-
- 
-#ifndef HLS_FASTSIM
-#define start_backoff_vo AESL_WRAP_start_backoff_vo
-#endif
-# 16 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-start_backoff_vo(1);
-#undef start_backoff_vo
-# 16 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-
- 
-#ifndef HLS_FASTSIM
-#define start_backoff_vo AESL_WRAP_start_backoff_vo
-#endif
-# 17 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-start_backoff_vo(1);
-#undef start_backoff_vo
-# 17 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-
- 
-#ifndef HLS_FASTSIM
-#define start_backoff_vo AESL_WRAP_start_backoff_vo
-#endif
-# 18 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-start_backoff_vo(1);
-#undef start_backoff_vo
-# 18 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-
- 
-#ifndef HLS_FASTSIM
-#define start_backoff_vo AESL_WRAP_start_backoff_vo
-#endif
-# 19 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-start_backoff_vo(1);
-#undef start_backoff_vo
-# 19 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-
- 
-#ifndef HLS_FASTSIM
-#define start_backoff_vo AESL_WRAP_start_backoff_vo
-#endif
-# 20 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-start_backoff_vo(1);
-#undef start_backoff_vo
-# 20 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-
- 
-#ifndef HLS_FASTSIM
-#define start_backoff_vo AESL_WRAP_start_backoff_vo
-#endif
-# 21 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-start_backoff_vo(1);
-#undef start_backoff_vo
-# 21 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-
- 
-#ifndef HLS_FASTSIM
-#define start_backoff_vo AESL_WRAP_start_backoff_vo
-#endif
-# 22 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-start_backoff_vo(1);
-#undef start_backoff_vo
-# 22 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-
-# 45 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
- return 0;
+ if(curr_txop == 4){
+  return 0;
+ }
+ return 1;
 }
 #endif
-# 46 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
+# 10 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
 

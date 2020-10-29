@@ -4537,20 +4537,28 @@ static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
 # 5 "fyp/r_n_g.h" 2
 
-double random_int_gen(uint32 *state);
+float random_int_gen(uint32 *state);
 # 2 "fyp/r_n_g.c" 2
 
-double random_int_gen(uint32 *state){
+float random_int_gen(uint32 *state){
  const uint32 A = 48271;
  uint32 low = (*state & 0x7fff);
- low = low * A;
-_ssdm_op_SpecResource(&low, "", "Mul", "", -1, "", "", "", "", "");
+#pragma 
+ 
+{ _ssdm_RegionBegin("?Mul_low_Region_fyp/r_n_g.c:7:2");
+# 7 "fyp/r_n_g.c"
+low = low * A;
+_ssdm_op_SpecResource(low, "?Mul_low_Region_fyp/r_n_g.c:7:2", "", "Mul", "", -1, "", "", "", "", "");
+_ssdm_RegionEnd("?Mul_low_Region_fyp/r_n_g.c:7:2"); }
+# 7 "fyp/r_n_g.c"
+
  uint32 high = (*state >> 15);
  high = high * A;
  uint32 x = (high & 0xffff) << 15 + (high >> 16);
  x = x + low;
-
  x = (x & 0x7fffffff) + (x >> 31);
  *state = x;
- return (double)x / 2147483647;
+
+ return (float)x / 2147483647;
+
 }

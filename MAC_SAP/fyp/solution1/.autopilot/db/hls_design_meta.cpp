@@ -6,6 +6,8 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("ap_done", 1, hls_out, -1, "", "", 1),
 	Port_Property("ap_idle", 1, hls_out, -1, "", "", 1),
 	Port_Property("ap_ready", 1, hls_out, -1, "", "", 1),
-	Port_Property("invoke_reason", 1, hls_in, 0, "ap_none", "in_data", 1),
+	Port_Property("current_txop_holder_i", 3, hls_in, 0, "ap_ovld", "in_data", 1),
+	Port_Property("current_txop_holder_o", 3, hls_out, 0, "ap_ovld", "out_data", 1),
+	Port_Property("current_txop_holder_o_ap_vld", 1, hls_out, 0, "ap_ovld", "out_vld", 1),
 };
-const char* HLS_Design_Meta::dut_name = "start_backoff_vo";
+const char* HLS_Design_Meta::dut_name = "backoff_vi";

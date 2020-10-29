@@ -221,7 +221,7 @@ void backoff_vi(uint3 *current_txop_holder){
 				*current_txop_holder = 3;
 				return;
 			}else{
-				//start_backoff_vi();
+				start_backoff_vi(1);
 				return;
 			}
 		}else{
@@ -238,7 +238,7 @@ void backoff_be(uint3 *current_txop_holder){
 				*current_txop_holder = 2;
 				return;
 			}else{
-				//start_backoff_be();
+				start_backoff_be(1);
 				return;
 			}
 		}else{
@@ -255,7 +255,7 @@ void backoff_bk(uint3 *current_txop_holder){
 				*current_txop_holder = 1;
 				return;
 			}else{
-				//start_backoff_bk();
+				start_backoff_bk(1);
 				return;
 			}
 		}else{

@@ -1,10 +1,10 @@
 <InterfaceSummary>
 <RtlPorts>
-<name>invoke_reason</name>
+<name>current_txop_holder</name>
 <CType>
-<TypeName>uint1</TypeName>
-<TypeWidth>1</TypeWidth>
-<PhysicalWidth>1</PhysicalWidth>
+<TypeName>uint3</TypeName>
+<TypeWidth>3</TypeWidth>
+<PhysicalWidth>3</PhysicalWidth>
 </CType>
 <CFractionWidth>0</CFractionWidth>
 <InvalidType>0</InvalidType>

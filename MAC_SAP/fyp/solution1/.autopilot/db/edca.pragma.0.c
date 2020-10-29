@@ -4604,7 +4604,7 @@ void stop_timer(
 
 
 
-double random_int_gen(uint32 *state);
+float random_int_gen(uint32 *state);
 # 4 "fyp/edca.c" 2
 
 static unsigned char edca_fifo_vo[400];
@@ -4826,7 +4826,7 @@ void backoff_vi(uint3 *current_txop_holder){
     *current_txop_holder = 3;
     return;
    }else{
-
+    start_backoff_vi(1);
     return;
    }
   }else{
@@ -4843,7 +4843,7 @@ void backoff_be(uint3 *current_txop_holder){
     *current_txop_holder = 2;
     return;
    }else{
-
+    start_backoff_be(1);
     return;
    }
   }else{
@@ -4860,7 +4860,7 @@ void backoff_bk(uint3 *current_txop_holder){
     *current_txop_holder = 1;
     return;
    }else{
-
+    start_backoff_bk(1);
     return;
    }
   }else{

@@ -1,4 +1,4 @@
 set depth_list {
-{invoke_reason 1}
+{current_txop_holder 1}
 }
-set trans_num 10
+set trans_num 1

@@ -131,7 +131,7 @@ typedef union {
 double fmod(double, double);
 float fmodf(float, float);
 long double fmodl(long double, long double);
-double random_int_gen(signed int *llvm_cbe_state);
+float random_int_gen(signed int *llvm_cbe_state);
 
 
 /* Function Bodies */
@@ -150,7 +150,7 @@ static inline int llvm_fcmp_ogt(double X, double Y) { return X >  Y ; }
 static inline int llvm_fcmp_ole(double X, double Y) { return X <= Y ; }
 static inline int llvm_fcmp_oge(double X, double Y) { return X >= Y ; }
 
-double random_int_gen(signed int *llvm_cbe_state) {
+float random_int_gen(signed int *llvm_cbe_state) {
   static  unsigned long long aesl_llvm_cbe_1_count = 0;
   static  unsigned long long aesl_llvm_cbe_2_count = 0;
   static  unsigned long long aesl_llvm_cbe_3_count = 0;
@@ -206,9 +206,9 @@ double random_int_gen(signed int *llvm_cbe_state) {
   static  unsigned long long aesl_llvm_cbe_40_count = 0;
   static  unsigned long long aesl_llvm_cbe_41_count = 0;
   static  unsigned long long aesl_llvm_cbe_42_count = 0;
-  double llvm_cbe_tmp__14;
+  float llvm_cbe_tmp__14;
   static  unsigned long long aesl_llvm_cbe_43_count = 0;
-  double llvm_cbe_tmp__15;
+  float llvm_cbe_tmp__15;
   static  unsigned long long aesl_llvm_cbe_44_count = 0;
 
 const char* AESL_DEBUG_TRACE = getenv("DEBUG_TRACE");
@@ -285,15 +285,15 @@ printf("\n  store i32 %%13, i32* %%state, align 4, !dbg !3 for 0x%I64xth hint wi
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", llvm_cbe_tmp__13);
 if (AESL_DEBUG_TRACE)
-printf("\n  %%14 = uitofp i32 %%13 to double, !dbg !4 for 0x%I64xth hint within @random_int_gen  --> \n", ++aesl_llvm_cbe_42_count);
-  llvm_cbe_tmp__14 = (double )((double )(unsigned int )llvm_cbe_tmp__13);
+printf("\n  %%14 = uitofp i32 %%13 to float, !dbg !4 for 0x%I64xth hint within @random_int_gen  --> \n", ++aesl_llvm_cbe_42_count);
+  llvm_cbe_tmp__14 = (float )((float )(unsigned int )llvm_cbe_tmp__13);
 if (AESL_DEBUG_TRACE)
-printf("\n = %lf,  0x%llx\n", llvm_cbe_tmp__14, *(long long*)(&llvm_cbe_tmp__14));
+printf("\n = %f,  0x%x\n", llvm_cbe_tmp__14, *(int*)(&llvm_cbe_tmp__14));
 if (AESL_DEBUG_TRACE)
-printf("\n  %%15 = fdiv double %%14, 0x41DFFFFFFFC00000, !dbg !4 for 0x%I64xth hint within @random_int_gen  --> \n", ++aesl_llvm_cbe_43_count);
-  llvm_cbe_tmp__15 = (double )llvm_cbe_tmp__14 / 0x1.fffffffcp30;
+printf("\n  %%15 = fmul float %%14, 0x3E00000000000000, !dbg !4 for 0x%I64xth hint within @random_int_gen  --> \n", ++aesl_llvm_cbe_43_count);
+  llvm_cbe_tmp__15 = (float )((float )(llvm_cbe_tmp__14 * 0x1p-31));
 if (AESL_DEBUG_TRACE)
-printf("\n = %lf,  0x%llx\n", llvm_cbe_tmp__15, *(long long*)(&llvm_cbe_tmp__15));
+printf("\n = %f,  0x%x\n", llvm_cbe_tmp__15, *(int*)(&llvm_cbe_tmp__15));
   if (AESL_DEBUG_TRACE)
       printf("\nEND @random_int_gen}\n");
   return llvm_cbe_tmp__15;
