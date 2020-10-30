@@ -1,0 +1,176 @@
+
+
+================================================================
+== Vivado HLS Report for 'compose_mac_frame'
+================================================================
+* Date:           Fri Oct 30 21:10:54 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        fyp
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 6.316 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     1215|     1215| 12.150 us | 12.150 us |  1215|  1215|   none  |
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                           |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |         Loop Name         |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1                   |      140|      140|         2|          -|          -|    70|    no    |
+        |- char_array_loop          |     1056|     1056|        11|          -|          -|    96|    no    |
+        | + iter_through_byte_loop  |        8|        8|         1|          -|          -|     8|    no    |
+        |- Loop 3                   |        4|        4|         1|          -|          -|     4|    no    |
+        +---------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
++-----------------+---------+-------+-------+-------+-----+
+|DSP              |        -|      -|      -|      -|    -|
+|Expression       |        -|      -|      0|    363|    -|
+|FIFO             |        -|      -|      -|      -|    -|
+|Instance         |        -|      -|      -|      -|    -|
+|Memory           |        -|      -|      -|      -|    -|
+|Multiplexer      |        -|      -|      -|    360|    -|
+|Register         |        -|      -|    118|      -|    -|
++-----------------+---------+-------+-------+-------+-----+
+|Total            |        0|      0|    118|    723|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Available        |      100|     90|  41600|  20800|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0  |      3|    0|
++-----------------+---------+-------+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+-------+---+-----+------------+------------+
+    |     Variable Name     | Operation| DSP48E| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+-------+---+-----+------------+------------+
+    |add_ln66_fu_566_p2     |     +    |      0|  0|   15|           7|           5|
+    |i_fu_583_p2            |     +    |      0|  0|   15|           7|           1|
+    |j_1_fu_625_p2          |     +    |      0|  0|   13|           4|           1|
+    |j_fu_550_p2            |     +    |      0|  0|   15|           7|           1|
+    |k_fu_674_p2            |     +    |      0|  0|   12|           3|           1|
+    |sub_ln73_fu_706_p2     |     -    |      0|  0|   15|           6|           6|
+    |icmp_ln11_fu_619_p2    |   icmp   |      0|  0|   11|           4|           5|
+    |icmp_ln65_fu_544_p2    |   icmp   |      0|  0|   11|           7|           7|
+    |icmp_ln72_fu_668_p2    |   icmp   |      0|  0|    9|           3|           4|
+    |icmp_ln8_fu_577_p2     |   icmp   |      0|  0|   11|           7|           7|
+    |lshr_ln73_fu_696_p2    |   lshr   |      0|  0|  101|          32|          32|
+    |qos_h_1_fu_533_p2      |    or    |      0|  0|    7|           7|           3|
+    |remainder_3_fu_651_p3  |  select  |      0|  0|   32|           1|          32|
+    |crc_1_fu_594_p2        |    xor   |      0|  0|   32|          32|           2|
+    |remainder_2_fu_645_p2  |    xor   |      0|  0|   32|          32|          27|
+    |remainder_fu_608_p2    |    xor   |      0|  0|   32|          32|          32|
+    +-----------------------+----------+-------+---+-----+------------+------------+
+    |Total                  |          |      0|  0|  363|         191|         166|
+    +-----------------------+----------+-------+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm           |  97|         20|    1|         20|
+    |crc_fu_146          |  15|          3|   32|         96|
+    |i_0_i_reg_465       |   9|          2|    7|         14|
+    |j_0_i_reg_476       |   9|          2|    4|          8|
+    |j_0_reg_453         |   9|          2|    7|         14|
+    |k_0_reg_487         |   9|          2|    3|          6|
+    |mac_frame_address0  |  65|         16|    7|        112|
+    |mac_frame_address1  |  62|         15|    7|        105|
+    |mac_frame_d0        |  47|         10|    8|         80|
+    |mac_frame_d1        |  38|          7|    8|         56|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               | 360|         79|   84|        511|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------+----+----+-----+-----------+
+    |      Name     | FF | LUT| Bits| Const Bits|
+    +---------------+----+----+-----+-----------+
+    |ap_CS_fsm      |  19|   0|   19|          0|
+    |crc_1_reg_755  |  32|   0|   32|          0|
+    |crc_fu_146     |  32|   0|   32|          0|
+    |i_0_i_reg_465  |   7|   0|    7|          0|
+    |i_reg_745      |   7|   0|    7|          0|
+    |j_0_i_reg_476  |   4|   0|    4|          0|
+    |j_0_reg_453    |   7|   0|    7|          0|
+    |j_reg_724      |   7|   0|    7|          0|
+    |k_0_reg_487    |   3|   0|    3|          0|
+    +---------------+----+----+-----+-----------+
+    |Total          | 118|   0|  118|          0|
+    +---------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+-------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++--------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk              |  in |    1| ap_ctrl_hs | compose_mac_frame | return value |
+|ap_rst              |  in |    1| ap_ctrl_hs | compose_mac_frame | return value |
+|ap_start            |  in |    1| ap_ctrl_hs | compose_mac_frame | return value |
+|ap_done             | out |    1| ap_ctrl_hs | compose_mac_frame | return value |
+|ap_idle             | out |    1| ap_ctrl_hs | compose_mac_frame | return value |
+|ap_ready            | out |    1| ap_ctrl_hs | compose_mac_frame | return value |
+|seqnumber           |  in |   12|   ap_none  |     seqnumber     |    scalar    |
+|up                  |  in |    4|   ap_none  |         up        |    scalar    |
+|data_address0       | out |    7|  ap_memory |        data       |     array    |
+|data_ce0            | out |    1|  ap_memory |        data       |     array    |
+|data_q0             |  in |    8|  ap_memory |        data       |     array    |
+|mac_frame_address0  | out |    7|  ap_memory |     mac_frame     |     array    |
+|mac_frame_ce0       | out |    1|  ap_memory |     mac_frame     |     array    |
+|mac_frame_we0       | out |    1|  ap_memory |     mac_frame     |     array    |
+|mac_frame_d0        | out |    8|  ap_memory |     mac_frame     |     array    |
+|mac_frame_address1  | out |    7|  ap_memory |     mac_frame     |     array    |
+|mac_frame_ce1       | out |    1|  ap_memory |     mac_frame     |     array    |
+|mac_frame_we1       | out |    1|  ap_memory |     mac_frame     |     array    |
+|mac_frame_d1        | out |    8|  ap_memory |     mac_frame     |     array    |
+|mac_frame_q1        |  in |    8|  ap_memory |     mac_frame     |     array    |
++--------------------+-----+-----+------------+-------------------+--------------+
+

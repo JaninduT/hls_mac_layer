@@ -5461,7 +5461,6 @@ __extension__ typedef unsigned long long uintmax_t;
 # 33 "D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
 # 6 "E:/FYP/HLS/MAC_SAP/fyp/common.h" 2
 
-typedef unsigned char msdu_t[70];
 typedef uint4 user_priority_t;
 typedef uint7 data_rate_t;
 typedef uint4 txpwr_lvl_t;
@@ -5499,7 +5498,9 @@ static const uint8 aSlotTime = 2;
 uint1 enqueue_dequeue_frame(
   uint2 operation,
   uint2 ac,
-  unsigned char inout_frame[100]
+  unsigned char inout_frame[100],
+  uint7 *io_d_rate,
+  uint4 *io_tx_pwr_lvl
   );
 
 void slot_boundary_timing(
@@ -5540,28 +5541,4 @@ void start_backoff_bk(
   uint1 invoke_reason
   );
 # 2 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c" 2
-
-#ifndef HLS_FASTSIM
-#ifndef HLS_FASTSIM
-#include "apatb_backoff_vi.h"
-#endif
-# 3 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-int main(){
- uint3 curr_txop = 4;
- 
-#ifndef HLS_FASTSIM
-#define backoff_vi AESL_WRAP_backoff_vi
-#endif
-# 5 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-backoff_vi(&curr_txop);
-#undef backoff_vi
-# 5 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
-
- if(curr_txop == 4){
-  return 0;
- }
- return 1;
-}
-#endif
-# 10 "E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c"
 

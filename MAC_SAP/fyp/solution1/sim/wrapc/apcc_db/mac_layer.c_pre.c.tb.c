@@ -131,9 +131,6 @@ typedef union {
 double fmod(double, double);
 float fmodf(float, float);
 long double fmodl(long double, long double);
-void send_frame( char llvm_cbe_ftype,  char llvm_cbe_fstype, signed short llvm_cbe_seqnumber,  char llvm_cbe_up,  char *llvm_cbe_data,  char *llvm_cbe_mac_frame);
-void compose_mac_frame( char ,  char , signed short ,  char ,  char *,  char *);
-bool enqueue_dequeue_frame( char ,  char ,  char *);
 
 
 /* Function Bodies */
@@ -151,86 +148,3 @@ static inline int llvm_fcmp_olt(double X, double Y) { return X <  Y ; }
 static inline int llvm_fcmp_ogt(double X, double Y) { return X >  Y ; }
 static inline int llvm_fcmp_ole(double X, double Y) { return X <= Y ; }
 static inline int llvm_fcmp_oge(double X, double Y) { return X >= Y ; }
-
-void send_frame( char llvm_cbe_ftype,  char llvm_cbe_fstype, signed short llvm_cbe_seqnumber,  char llvm_cbe_up,  char *llvm_cbe_data,  char *llvm_cbe_mac_frame) {
-  static  unsigned long long aesl_llvm_cbe_temp_frame_count = 0;
-   char llvm_cbe_temp_frame[100];    /* Address-exposed local */
-  static  unsigned long long aesl_llvm_cbe_1_count = 0;
-  static  unsigned long long aesl_llvm_cbe_2_count = 0;
-  static  unsigned long long aesl_llvm_cbe_3_count = 0;
-  static  unsigned long long aesl_llvm_cbe_4_count = 0;
-  static  unsigned long long aesl_llvm_cbe_5_count = 0;
-  static  unsigned long long aesl_llvm_cbe_6_count = 0;
-  static  unsigned long long aesl_llvm_cbe_7_count = 0;
-  static  unsigned long long aesl_llvm_cbe_8_count = 0;
-  static  unsigned long long aesl_llvm_cbe_9_count = 0;
-  static  unsigned long long aesl_llvm_cbe_10_count = 0;
-  static  unsigned long long aesl_llvm_cbe_11_count = 0;
-  static  unsigned long long aesl_llvm_cbe_12_count = 0;
-  static  unsigned long long aesl_llvm_cbe_13_count = 0;
-  static  unsigned long long aesl_llvm_cbe_14_count = 0;
-   char *llvm_cbe_tmp__1;
-  static  unsigned long long aesl_llvm_cbe_15_count = 0;
-  static  unsigned long long aesl_llvm_cbe_16_count = 0;
-  bool llvm_cbe_tmp__2;
-  static  unsigned long long aesl_llvm_cbe_17_count = 0;
-  static  unsigned long long aesl_llvm_cbe_18_count = 0;
-  static  unsigned long long aesl_llvm_cbe_19_count = 0;
-  static  unsigned long long aesl_llvm_cbe_20_count = 0;
-  bool llvm_cbe_tmp__3;
-  static  unsigned long long aesl_llvm_cbe_21_count = 0;
-  static  unsigned long long aesl_llvm_cbe_22_count = 0;
-  static  unsigned long long aesl_llvm_cbe_23_count = 0;
-
-const char* AESL_DEBUG_TRACE = getenv("DEBUG_TRACE");
-if (AESL_DEBUG_TRACE)
-printf("\n\{ BEGIN @send_frame\n");
-if (AESL_DEBUG_TRACE)
-printf("\n  %%1 = getelementptr inbounds [100 x i8]* %%temp_frame, i64 0, i64 0, !dbg !5 for 0x%I64xth hint within @send_frame  --> \n", ++aesl_llvm_cbe_14_count);
-  llvm_cbe_tmp__1 = ( char *)(&llvm_cbe_temp_frame[(((signed long long )0ull))
-#ifdef AESL_BC_SIM
- % 100
-#endif
-]);
-if (AESL_DEBUG_TRACE) {
-}
-if (AESL_DEBUG_TRACE)
-printf("\n  call void @compose_mac_frame(i2 zeroext %%ftype, i4 zeroext %%fstype, i12 zeroext %%seqnumber, i4 zeroext %%up, i8* %%data, i8* %%1) nounwind, !dbg !5 for 0x%I64xth hint within @send_frame  --> \n", ++aesl_llvm_cbe_15_count);
-  compose_mac_frame(llvm_cbe_ftype, llvm_cbe_fstype, llvm_cbe_seqnumber, llvm_cbe_up, ( char *)llvm_cbe_data, ( char *)llvm_cbe_tmp__1);
-if (AESL_DEBUG_TRACE) {
-printf("\nArgument ftype = 0x%X",llvm_cbe_ftype);
-printf("\nArgument fstype = 0x%X",llvm_cbe_fstype);
-printf("\nArgument seqnumber = 0x%X",llvm_cbe_seqnumber);
-printf("\nArgument up = 0x%X",llvm_cbe_up);
-}
-if (AESL_DEBUG_TRACE)
-printf("\n  %%2 = call zeroext i1 @enqueue_dequeue_frame(i2 zeroext 0, i2 zeroext 0, i8* %%1) nounwind, !dbg !5 for 0x%I64xth hint within @send_frame  --> \n", ++aesl_llvm_cbe_16_count);
-  llvm_cbe_tmp__2 = (bool )((enqueue_dequeue_frame(((unsigned char )0), ((unsigned char )0), ( char *)llvm_cbe_tmp__1))&1);
-if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",((unsigned char )0));
-printf("\nArgument  = 0x%X",((unsigned char )0));
-printf("\nReturn  = 0x%X",llvm_cbe_tmp__2);
-}
-  if (llvm_cbe_tmp__2) {
-    goto llvm_cbe_tmp__4;
-  } else {
-    goto llvm_cbe_tmp__5;
-  }
-
-llvm_cbe_tmp__4:
-if (AESL_DEBUG_TRACE)
-printf("\n  %%4 = call zeroext i1 @enqueue_dequeue_frame(i2 zeroext 1, i2 zeroext 0, i8* %%mac_frame) nounwind, !dbg !4 for 0x%I64xth hint within @send_frame  --> \n", ++aesl_llvm_cbe_20_count);
-  ((enqueue_dequeue_frame(((unsigned char )1), ((unsigned char )0), ( char *)llvm_cbe_mac_frame))&1);
-if (AESL_DEBUG_TRACE) {
-printf("\nArgument  = 0x%X",((unsigned char )1));
-printf("\nArgument  = 0x%X",((unsigned char )0));
-printf("\nReturn  = 0x%X",llvm_cbe_tmp__3);
-}
-  goto llvm_cbe_tmp__5;
-
-llvm_cbe_tmp__5:
-  if (AESL_DEBUG_TRACE)
-      printf("\nEND @send_frame}\n");
-  return;
-}
-

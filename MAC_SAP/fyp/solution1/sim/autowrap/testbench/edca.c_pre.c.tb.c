@@ -5461,7 +5461,6 @@ __extension__ typedef unsigned long long uintmax_t;
 # 33 "D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
 # 6 "E:/FYP/HLS/MAC_SAP/fyp/common.h" 2
 
-typedef unsigned char msdu_t[70];
 typedef uint4 user_priority_t;
 typedef uint7 data_rate_t;
 typedef uint4 txpwr_lvl_t;
@@ -5499,7 +5498,9 @@ static const uint8 aSlotTime = 2;
 uint1 enqueue_dequeue_frame(
   uint2 operation,
   uint2 ac,
-  unsigned char inout_frame[100]
+  unsigned char inout_frame[100],
+  uint7 *io_d_rate,
+  uint4 *io_tx_pwr_lvl
   );
 
 void slot_boundary_timing(
@@ -5570,6 +5571,17 @@ static unsigned char edca_fifo_vo[400];
 static unsigned char edca_fifo_vi[400];
 static unsigned char edca_fifo_be[400];
 static unsigned char edca_fifo_bk[400];
+
+static uint7 vo_data_rate[4];
+static uint7 vi_data_rate[4];
+static uint7 be_data_rate[4];
+static uint7 bk_data_rate[4];
+
+static uint4 vo_tx_pwr_lvl[4];
+static uint4 vi_tx_pwr_lvl[4];
+static uint4 be_tx_pwr_lvl[4];
+static uint4 bk_tx_pwr_lvl[4];
+
 static uint2 read_pointer_vo = 0;
 static uint2 write_pointer_vo = 0;
 static uint3 available_spaces_vo = 4;
@@ -5595,7 +5607,8 @@ static uint10 bk_backoff_counter = 0;
 
 static uint32 rand_state = 123456789;
 
-uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame[100]){
+uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame[100],
+  uint7 *io_d_rate, uint4 *io_tx_pwr_lvl){
 #pragma HLS ARRAY_MAP variable=edca_fifo_bk instance=edca_queues horizontal
 #pragma HLS ARRAY_MAP variable=edca_fifo_be instance=edca_queues horizontal
 #pragma HLS ARRAY_MAP variable=edca_fifo_vi instance=edca_queues horizontal
@@ -5608,6 +5621,9 @@ uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame
    write_to_bk:for (int bk=0; bk<100; bk++){
      edca_fifo_bk[(write_pointer_bk*100)+bk] = inout_frame[bk];
    }
+   bk_data_rate[write_pointer_bk] = *io_d_rate;
+   bk_tx_pwr_lvl[write_pointer_bk] = *io_tx_pwr_lvl;
+
    write_pointer_bk = (write_pointer_bk + 1) % 4;
    available_spaces_bk = available_spaces_bk - 1;
    return 1;
@@ -5618,6 +5634,9 @@ uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame
    write_to_be:for (int be=0; be<100; be++){
      edca_fifo_be[(write_pointer_be*100)+be] = inout_frame[be];
    }
+   be_data_rate[write_pointer_be] = *io_d_rate;
+   be_tx_pwr_lvl[write_pointer_be] = *io_tx_pwr_lvl;
+
    write_pointer_be = (write_pointer_be + 1) % 4;
    available_spaces_be = available_spaces_be - 1;
    return 1;
@@ -5628,6 +5647,9 @@ uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame
    write_to_vi:for (int vi=0; vi<100; vi++){
      edca_fifo_vi[(write_pointer_vi*100)+vi] = inout_frame[vi];
    }
+   vi_data_rate[write_pointer_vi] = *io_d_rate;
+   vi_tx_pwr_lvl[write_pointer_vi] = *io_tx_pwr_lvl;
+
    write_pointer_vi = (write_pointer_vi + 1) % 4;
    available_spaces_vi = available_spaces_vi - 1;
    return 1;
@@ -5638,6 +5660,9 @@ uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame
    write_to_vo:for (int vo=0; vo<100; vo++){
      edca_fifo_vo[(write_pointer_vo*100)+vo] = inout_frame[vo];
    }
+   vo_data_rate[write_pointer_vo] = *io_d_rate;
+   vo_tx_pwr_lvl[write_pointer_vo] = *io_tx_pwr_lvl;
+
    write_pointer_vo = (write_pointer_vo + 1) % 4;
    available_spaces_vo = available_spaces_vo - 1;
    return 1;
@@ -5652,6 +5677,9 @@ uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame
    read_from_bk:for (int bk=0; bk<100; bk++){
      inout_frame[bk] = edca_fifo_bk[(read_pointer_bk*100)+bk];
    }
+   *io_d_rate = bk_data_rate[read_pointer_bk];
+   *io_tx_pwr_lvl = bk_tx_pwr_lvl[read_pointer_bk];
+
    read_pointer_bk = (read_pointer_bk + 1) % 4;
    available_spaces_bk = available_spaces_bk + 1;
    return 1;
@@ -5662,6 +5690,9 @@ uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame
    read_from_be:for (int be=0; be<100; be++){
      inout_frame[be] = edca_fifo_be[(read_pointer_be*100)+be];
    }
+   *io_d_rate = be_data_rate[read_pointer_be];
+   *io_tx_pwr_lvl = be_tx_pwr_lvl[read_pointer_be];
+
    read_pointer_be = (read_pointer_be + 1) % 4;
    available_spaces_be = available_spaces_be + 1;
    return 1;
@@ -5672,6 +5703,9 @@ uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame
    read_from_vi:for (int vi=0; vi<100; vi++){
      inout_frame[vi] = edca_fifo_vi[(read_pointer_vi*100)+vi];
    }
+   *io_d_rate = vi_data_rate[read_pointer_vi];
+   *io_tx_pwr_lvl = vi_tx_pwr_lvl[read_pointer_vi];
+
    read_pointer_vi = (read_pointer_vi + 1) % 4;
    available_spaces_vi = available_spaces_vi + 1;
    return 1;
@@ -5682,6 +5716,9 @@ uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame
    read_from_vo:for (int vo=0; vo<100; vo++){
      inout_frame[vo] = edca_fifo_vo[(read_pointer_vo*100)+vo];
    }
+   *io_d_rate = vo_data_rate[read_pointer_vo];
+   *io_tx_pwr_lvl = vo_tx_pwr_lvl[read_pointer_vo];
+
    read_pointer_vo = (read_pointer_vo + 1) % 4;
    available_spaces_vo = available_spaces_vo + 1;
    return 1;

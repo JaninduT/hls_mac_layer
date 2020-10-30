@@ -6,7 +6,9 @@
 bool enqueue_dequeue_frame(
 		uint2 operation,
 		uint2 ac,
-		unsigned char inout_frame[100]
+		unsigned char inout_frame[100],
+		uint7 *io_d_rate,
+		uint4 *io_tx_pwr_lvl
 		);
 
 void slot_boundary_timing(

@@ -5457,7 +5457,6 @@ __extension__ typedef unsigned long long uintmax_t;
 # 33 "D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
 # 6 "E:/FYP/HLS/MAC_SAP/fyp/common.h" 2
 
-typedef unsigned char msdu_t[70];
 typedef uint4 user_priority_t;
 typedef uint7 data_rate_t;
 typedef uint4 txpwr_lvl_t;
@@ -5506,7 +5505,5 @@ float random_int_gen(uint32 *state){
  x = x + low;
  x = (x & 0x7fffffff) + (x >> 31);
  *state = x;
-
  return (float)x / 2147483647;
-
 }

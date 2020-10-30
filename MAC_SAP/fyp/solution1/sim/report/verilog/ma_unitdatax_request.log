@@ -1,0 +1,554 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "D:/Xilinx/Vivado/2019.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_ma_unitdatax_request.cpp
+   Compiling (apcc) compose_mac_frame_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:11:57 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) backoff_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:01 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) compose_mac_header_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:05 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) crc_32.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:09 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) mac_layer_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:13 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) mac_layer.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:17 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) MA_UNITDATAX_request_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:21 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request_test.c:1:
+E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request_test.c:30:22: warning: passing 'const mac48 *' to parameter of type 'mac48 *' discards qualifiers [-Wincompatible-pointer-types]
+ma_unitdatax_request(&my_mac, &bcast_wcard_mac, data, up, QOS_NOACK, ci, &ts, &dr, &tx_p_l, &exp);
+                     ^~~~~~~
+./apatb_ma_unitdatax_request.h:7:8: note: passing argument to parameter 'source_addr' here
+mac48* source_addr,
+       ^
+In file included from E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request_test.c:1:
+E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request_test.c:30:31: warning: passing 'const mac48 *' to parameter of type 'mac48 *' discards qualifiers [-Wincompatible-pointer-types]
+ma_unitdatax_request(&my_mac, &bcast_wcard_mac, data, up, QOS_NOACK, ci, &ts, &dr, &tx_p_l, &exp);
+                              ^~~~~~~~~~~~~~~~
+./apatb_ma_unitdatax_request.h:8:8: note: passing argument to parameter 'dest_addr' here
+mac48* dest_addr,
+       ^
+2 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) decompose_mac_frame_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:25 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) crc_32_validate.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:29 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) timer_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:33 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) edca_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:37 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) r_n_g.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:41 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) compose_mac_frame.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:45 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) r_n_g_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:49 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) crc_32_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:53 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) decompose_mac_frame.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:12:57 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) slot_boundary_timing_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:13:01 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) timer.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:13:06 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) edca.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:13:10 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) crc_32_validate_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:13:14 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) MA_UNITDATAX_request.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Fri Oct 30 21:13:18 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+ERROR: [COSIM-361] C TB post check failed, nonzero return value '1'.
+res: 1, d_rate : 6, tx_pwr : 4
+17
+0
+0
+0
+255
+255
+255
+255
+255
+255
+255
+171
+188
+205
+222
+239
+255
+255
+255
+255
+255
+255
+0
+0
+100
+0
+9
+139
+87
+176
+92
+95
+178
+87
+120
+23
+169
+81
+45
+79
+57
+53
+6
+119
+228
+15
+44
+39
+176
+88
+136
+178
+114
+37
+40
+254
+76
+158
+228
+147
+117
+178
+65
+241
+56
+9
+149
+39
+64
+58
+108
+161
+18
+63
+43
+66
+219
+38
+243
+179
+108
+8
+200
+250
+131
+63
+243
+78
+76
+212
+164
+41
+39
+55
+220
+160
+0
+103
+158
+253
+
+E:\FYP\HLS\MAC_SAP\fyp\solution1\sim\verilog>set PATH= 
+
+E:\FYP\HLS\MAC_SAP\fyp\solution1\sim\verilog>call D:/Xilinx/Vivado/2019.2/bin/xelab xil_defaultlib.apatb_ma_unitdatax_request_top glbl -prj ma_unitdatax_request.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s ma_unitdatax_request -debug wave 
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_ma_unitdatax_request_top glbl -prj ma_unitdatax_request.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s ma_unitdatax_request -debug wave 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/AESL_automem_data.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_data
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/compose_mac_frame.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module compose_mac_frame
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_fbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module enqueue_dequeue_fbkb_ram
+INFO: [VRFC 10-311] analyzing module enqueue_dequeue_fbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_fram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module enqueue_dequeue_fram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_requcud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ma_unitdatax_requcud_ram
+INFO: [VRFC 10-311] analyzing module ma_unitdatax_requcud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_requdEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ma_unitdatax_requdEe_ram
+INFO: [VRFC 10-311] analyzing module ma_unitdatax_requdEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_requeOg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ma_unitdatax_requeOg_DSP48_0
+INFO: [VRFC 10-311] analyzing module ma_unitdatax_requeOg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_request.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_ma_unitdatax_request_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_request.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ma_unitdatax_request
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ma_unitdatax_requcud_ram
+Compiling module xil_defaultlib.ma_unitdatax_requcud(DataWidth=8...
+Compiling module xil_defaultlib.ma_unitdatax_requdEe_ram
+Compiling module xil_defaultlib.ma_unitdatax_requdEe(DataWidth=8...
+Compiling module xil_defaultlib.enqueue_dequeue_fbkb_ram
+Compiling module xil_defaultlib.enqueue_dequeue_fbkb(DataWidth=8...
+Compiling module xil_defaultlib.enqueue_dequeue_fram
+Compiling module xil_defaultlib.compose_mac_frame
+Compiling module xil_defaultlib.ma_unitdatax_requeOg_DSP48_0
+Compiling module xil_defaultlib.ma_unitdatax_requeOg(ID=1,NUM_ST...
+Compiling module xil_defaultlib.ma_unitdatax_request
+Compiling module xil_defaultlib.AESL_automem_data
+Compiling module xil_defaultlib.apatb_ma_unitdatax_request_top
+Compiling module work.glbl
+Built simulation snapshot ma_unitdatax_request
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/ma_unitdatax_request/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/ma_unitdatax_request/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct 30 21:13:31 2020. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 30 21:13:31 2020...
+
+****** xsim v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/ma_unitdatax_request/xsim_script.tcl
+# xsim {ma_unitdatax_request} -autoloadwcfg -tclbatch {ma_unitdatax_request.tcl}
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source ma_unitdatax_request.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set expiry_time_group [add_wave_group expiry_time(wire) -into $cinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/expiry_time -into $expiry_time_group -radix hex
+## set tx_power_lvl_group [add_wave_group tx_power_lvl(wire) -into $cinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/tx_power_lvl -into $tx_power_lvl_group -radix hex
+## set d_rate_group [add_wave_group d_rate(wire) -into $cinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/d_rate -into $d_rate_group -radix hex
+## set t_slot_group [add_wave_group t_slot(wire) -into $cinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/t_slot -into $t_slot_group -radix hex
+## set c_identifier_group [add_wave_group c_identifier(wire) -into $cinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/c_identifier_channel_number -into $c_identifier_group -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/c_identifier_operating_class -into $c_identifier_group -radix hex
+## set s_class_group [add_wave_group s_class(wire) -into $cinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/s_class -into $s_class_group -radix hex
+## set up_group [add_wave_group up(wire) -into $cinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/up -into $up_group -radix hex
+## set data_group [add_wave_group data(memory) -into $cinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/data_q0 -into $data_group -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/data_ce0 -into $data_group -color #ffff00 -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/data_address0 -into $data_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_start -into $blocksiggroup
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_done -into $blocksiggroup
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_idle -into $blocksiggroup
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_ma_unitdatax_request_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/LENGTH_data -into $tb_portdepth_group -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/LENGTH_up -into $tb_portdepth_group -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/LENGTH_s_class -into $tb_portdepth_group -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/LENGTH_c_identifier_operating_class -into $tb_portdepth_group -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/LENGTH_c_identifier_channel_number -into $tb_portdepth_group -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/LENGTH_d_rate -into $tb_portdepth_group -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/LENGTH_tx_power_lvl -into $tb_portdepth_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_expiry_time_group [add_wave_group expiry_time(wire) -into $tbcinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/expiry_time -into $tb_expiry_time_group -radix hex
+## set tb_tx_power_lvl_group [add_wave_group tx_power_lvl(wire) -into $tbcinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/tx_power_lvl -into $tb_tx_power_lvl_group -radix hex
+## set tb_d_rate_group [add_wave_group d_rate(wire) -into $tbcinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/d_rate -into $tb_d_rate_group -radix hex
+## set tb_t_slot_group [add_wave_group t_slot(wire) -into $tbcinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/t_slot -into $tb_t_slot_group -radix hex
+## set tb_c_identifier_group [add_wave_group c_identifier(wire) -into $tbcinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/c_identifier_channel_number -into $tb_c_identifier_group -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/c_identifier_operating_class -into $tb_c_identifier_group -radix hex
+## set tb_s_class_group [add_wave_group s_class(wire) -into $tbcinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/s_class -into $tb_s_class_group -radix hex
+## set tb_up_group [add_wave_group up(wire) -into $tbcinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/up -into $tb_up_group -radix hex
+## set tb_data_group [add_wave_group data(memory) -into $tbcinputgroup]
+## add_wave /apatb_ma_unitdatax_request_top/data_q0 -into $tb_data_group -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/data_ce0 -into $tb_data_group -color #ffff00 -radix hex
+## add_wave /apatb_ma_unitdatax_request_top/data_address0 -into $tb_data_group -radix hex
+## save_wave_config ma_unitdatax_request.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "15765000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 15805 ns : File "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_request.autotb.v" Line 659
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Oct 30 21:13:40 2020...
+res: 0, d_rate : 0, tx_pwr : 0
+164
+49
+64
+0
+0
+0
+0
+0
+96
+80
+80
+0
+0
+0
+0
+0
+0
+81
+80
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+255
+255
+255
+255
+255
+255
+255
+255
+73
+74
+206
+111
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+9
+203
+75
+0
+0
+0
+0
+0
+48
+151
+109
+1
+0
+0
+0
+0
+224
+253
+99
+1
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+96
+80
+80
+0
+ERROR: [COSIM-4] *** C/RTL co-simulation finished: FAIL ***
+INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.

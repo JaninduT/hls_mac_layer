@@ -1,0 +1,12 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+sv work "glbl.v"
+vhdl xil_defaultlib "AESL_automem_data.vhd"
+vhdl xil_defaultlib "compose_mac_frame.vhd"
+vhdl xil_defaultlib "enqueue_dequeue_fbkb.vhd"
+vhdl xil_defaultlib "enqueue_dequeue_fram.vhd"
+vhdl xil_defaultlib "ma_unitdatax_requcud.vhd"
+vhdl xil_defaultlib "ma_unitdatax_requdEe.vhd"
+vhdl xil_defaultlib "ma_unitdatax_requeOg.vhd"
+vhdl xil_defaultlib "ma_unitdatax_request.autotb.vhd"
+vhdl xil_defaultlib "ma_unitdatax_request.vhd"
+

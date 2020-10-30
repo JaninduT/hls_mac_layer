@@ -1,2 +1,2 @@
- {CheckOptions: [ {key: xilinx-tb31-process.TopFunctionName, value: 'backoff_vi'}, {key: xilinx-tb31-process.KeepTopName, value: '1'},
+ {CheckOptions: [ {key: xilinx-tb31-process.TopFunctionName, value: 'ma_unitdatax_request'}, {key: xilinx-tb31-process.KeepTopName, value: '1'},
 {key: xilinx-tb31-process.NewFlow, value: '1'}, {key: xilinx-tb31-process.BCSim, value: '0'} ] } 

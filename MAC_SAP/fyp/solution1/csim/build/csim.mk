@@ -18,7 +18,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../backoff_test.c ../../../compose_mac_frame_test.c ../../../compose_mac_header_test.c ../../../crc_32_test.c ../../../crc_32_validate_test.c ../../../decompose_mac_frame_test.c ../../../edca_test.c ../../../mac_layer_test.c ../../../r_n_g_test.c ../../../slot_boundary_timing_test.c ../../../timer_test.c ../../../MA_UNITDATAX_request.c ../../../compose_mac_frame.c ../../../crc_32.c ../../../crc_32_validate.c ../../../decompose_mac_frame.c ../../../edca.c ../../../mac_layer.c ../../../r_n_g.c ../../../timer.c
+HLS_SOURCES = ../../../timer_test.c ../../../slot_boundary_timing_test.c ../../../r_n_g_test.c ../../../mac_layer_test.c ../../../edca_test.c ../../../decompose_mac_frame_test.c ../../../crc_32_validate_test.c ../../../crc_32_test.c ../../../compose_mac_header_test.c ../../../compose_mac_frame_test.c ../../../backoff_test.c ../../../MA_UNITDATAX_request_test.c ../../../timer.c ../../../r_n_g.c ../../../mac_layer.c ../../../edca.c ../../../decompose_mac_frame.c ../../../crc_32_validate.c ../../../crc_32.c ../../../compose_mac_frame.c ../../../MA_UNITDATAX_request.c
 
 TARGET := csim.exe
 
@@ -59,6 +59,7 @@ IFLAG += -Wno-unknown-pragmas
 IFLAG += -g
 IFLAG += -DNT
 LFLAG += -Wl,--enable-auto-import 
+DFLAG += -DAUTOCC
 DFLAG += -D__xilinx_ip_top= -DAESL_TB
 CCFLAG += 
 TOOLCHAIN += 
@@ -71,122 +72,130 @@ all: $(TARGET)
 
 
 
-$(ObjDir)/backoff_test.o: ../../../backoff_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../backoff_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/backoff_test.d
-
-$(ObjDir)/compose_mac_frame_test.o: ../../../compose_mac_frame_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../compose_mac_frame_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/compose_mac_frame_test.d
-
-$(ObjDir)/compose_mac_header_test.o: ../../../compose_mac_header_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../compose_mac_header_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/compose_mac_header_test.d
-
-$(ObjDir)/crc_32_test.o: ../../../crc_32_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../crc_32_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/crc_32_test.d
-
-$(ObjDir)/crc_32_validate_test.o: ../../../crc_32_validate_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../crc_32_validate_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/crc_32_validate_test.d
-
-$(ObjDir)/decompose_mac_frame_test.o: ../../../decompose_mac_frame_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../decompose_mac_frame_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/decompose_mac_frame_test.d
-
-$(ObjDir)/edca_test.o: ../../../edca_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../edca_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/edca_test.d
-
-$(ObjDir)/mac_layer_test.o: ../../../mac_layer_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../mac_layer_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/mac_layer_test.d
-
-$(ObjDir)/r_n_g_test.o: ../../../r_n_g_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../r_n_g_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/r_n_g_test.d
-
-$(ObjDir)/slot_boundary_timing_test.o: ../../../slot_boundary_timing_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../slot_boundary_timing_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/slot_boundary_timing_test.d
+AUTOCC := cmd //c apcc.bat  
 
 $(ObjDir)/timer_test.o: ../../../timer_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../timer_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../timer_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/timer_test.d
 
-$(ObjDir)/MA_UNITDATAX_request.o: ../../../MA_UNITDATAX_request.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../MA_UNITDATAX_request.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/slot_boundary_timing_test.o: ../../../slot_boundary_timing_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../slot_boundary_timing_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/MA_UNITDATAX_request.d
+-include $(ObjDir)/slot_boundary_timing_test.d
 
-$(ObjDir)/compose_mac_frame.o: ../../../compose_mac_frame.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../compose_mac_frame.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/r_n_g_test.o: ../../../r_n_g_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../r_n_g_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/compose_mac_frame.d
+-include $(ObjDir)/r_n_g_test.d
 
-$(ObjDir)/crc_32.o: ../../../crc_32.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../crc_32.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/mac_layer_test.o: ../../../mac_layer_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../mac_layer_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/crc_32.d
+-include $(ObjDir)/mac_layer_test.d
 
-$(ObjDir)/crc_32_validate.o: ../../../crc_32_validate.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../crc_32_validate.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/edca_test.o: ../../../edca_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../edca_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/crc_32_validate.d
+-include $(ObjDir)/edca_test.d
 
-$(ObjDir)/decompose_mac_frame.o: ../../../decompose_mac_frame.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../decompose_mac_frame.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/decompose_mac_frame_test.o: ../../../decompose_mac_frame_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../decompose_mac_frame_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/decompose_mac_frame.d
+-include $(ObjDir)/decompose_mac_frame_test.d
 
-$(ObjDir)/edca.o: ../../../edca.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../edca.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/crc_32_validate_test.o: ../../../crc_32_validate_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../crc_32_validate_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/edca.d
+-include $(ObjDir)/crc_32_validate_test.d
 
-$(ObjDir)/mac_layer.o: ../../../mac_layer.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../mac_layer.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/crc_32_test.o: ../../../crc_32_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../crc_32_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/mac_layer.d
+-include $(ObjDir)/crc_32_test.d
+
+$(ObjDir)/compose_mac_header_test.o: ../../../compose_mac_header_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../compose_mac_header_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/compose_mac_header_test.d
+
+$(ObjDir)/compose_mac_frame_test.o: ../../../compose_mac_frame_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../compose_mac_frame_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/compose_mac_frame_test.d
+
+$(ObjDir)/backoff_test.o: ../../../backoff_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../backoff_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/backoff_test.d
+
+$(ObjDir)/MA_UNITDATAX_request_test.o: ../../../MA_UNITDATAX_request_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../MA_UNITDATAX_request_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/MA_UNITDATAX_request_test.d
+
+$(ObjDir)/timer.o: ../../../timer.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../timer.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/timer.d
 
 $(ObjDir)/r_n_g.o: ../../../r_n_g.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../r_n_g.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../r_n_g.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/r_n_g.d
 
-$(ObjDir)/timer.o: ../../../timer.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../timer.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/mac_layer.o: ../../../mac_layer.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../mac_layer.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/timer.d
+-include $(ObjDir)/mac_layer.d
+
+$(ObjDir)/edca.o: ../../../edca.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../edca.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/edca.d
+
+$(ObjDir)/decompose_mac_frame.o: ../../../decompose_mac_frame.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../decompose_mac_frame.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/decompose_mac_frame.d
+
+$(ObjDir)/crc_32_validate.o: ../../../crc_32_validate.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../crc_32_validate.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/crc_32_validate.d
+
+$(ObjDir)/crc_32.o: ../../../crc_32.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../crc_32.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/crc_32.d
+
+$(ObjDir)/compose_mac_frame.o: ../../../compose_mac_frame.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../compose_mac_frame.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/compose_mac_frame.d
+
+$(ObjDir)/MA_UNITDATAX_request.o: ../../../MA_UNITDATAX_request.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../MA_UNITDATAX_request.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/MA_UNITDATAX_request.d
