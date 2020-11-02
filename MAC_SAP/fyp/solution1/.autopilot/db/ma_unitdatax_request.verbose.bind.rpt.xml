@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'ma_unitdatax_request'" level="0">
-<item name = "Date">Fri Oct 30 21:10:53 2020
+<item name = "Date">Mon Nov  2 20:52:10 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">fyp</item>
@@ -24,15 +24,16 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 1563, 10.000 ns, 15.630 us, 1, 1563, none</column>
+<column name="">2, 1563, 20.000 ns, 15.630 us, 2, 1563, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_enqueue_dequeue_fram_fu_243">enqueue_dequeue_fram, 1, 202, 10.000 ns, 2.020 us, 1, 202, none</column>
-<column name="grp_compose_mac_frame_fu_271">compose_mac_frame, 1215, 1215, 12.150 us, 12.150 us, 1215, 1215, none</column>
+<column name="grp_enqueue_dequeue_fram_fu_263">enqueue_dequeue_fram, 1, 202, 10.000 ns, 2.020 us, 1, 202, none</column>
+<column name="grp_compose_mac_frame_fu_291">compose_mac_frame, 1215, 1215, 12.150 us, 12.150 us, 1215, 1215, none</column>
+<column name="grp_ma_unitdatax_status_s_fu_299">ma_unitdatax_status_s, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

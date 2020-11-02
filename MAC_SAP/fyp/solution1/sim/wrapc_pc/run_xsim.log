@@ -1,4 +1,4 @@
-res: 1, d_rate : 6, tx_pwr : 4
+res: 14, d_rate : 6, tx_pwr : 4
 17
 0
 0
@@ -132,6 +132,8 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/soluti
 INFO: [VRFC 10-311] analyzing module apatb_ma_unitdatax_request_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_request.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ma_unitdatax_request
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_status_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ma_unitdatax_status_s
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
@@ -146,6 +148,7 @@ Compiling module xil_defaultlib.enqueue_dequeue_fbkb_ram
 Compiling module xil_defaultlib.enqueue_dequeue_fbkb(DataWidth=8...
 Compiling module xil_defaultlib.enqueue_dequeue_fram
 Compiling module xil_defaultlib.compose_mac_frame
+Compiling module xil_defaultlib.ma_unitdatax_status_s
 Compiling module xil_defaultlib.ma_unitdatax_requeOg_DSP48_0
 Compiling module xil_defaultlib.ma_unitdatax_requeOg(ID=1,NUM_ST...
 Compiling module xil_defaultlib.ma_unitdatax_request
@@ -160,8 +163,8 @@ Built simulation snapshot ma_unitdatax_request
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/ma_unitdatax_request/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/ma_unitdatax_request/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct 30 21:13:31 2020. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Fri Oct 30 21:13:31 2020...
+INFO: [Common 17-186] 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/ma_unitdatax_request/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Nov  2 20:54:55 2020. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Nov  2 20:54:55 2020...
 
 ****** xsim v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
@@ -247,15 +250,16 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 //
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
-// RTL Simulation : 0 / 1 [0.00%] @ "125000"
-// RTL Simulation : 1 / 1 [100.00%] @ "15765000"
+// RTL Simulation : 0 / 2 [0.00%] @ "125000"
+// RTL Simulation : 1 / 2 [100.00%] @ "15775000"
+// RTL Simulation : 2 / 2 [100.00%] @ "31415000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 15805 ns : File "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_request.autotb.v" Line 659
+$finish called at time : 31455 ns : File "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_request.autotb.v" Line 659
 ## quit
-INFO: [Common 17-206] Exiting xsim at Fri Oct 30 21:13:40 2020...
-res: 0, d_rate : 0, tx_pwr : 0
-164
-49
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 20:55:03 2020...
+res: 13, d_rate : 0, tx_pwr : 0
+55
+47
 64
 0
 0
@@ -263,15 +267,15 @@ res: 0, d_rate : 0, tx_pwr : 0
 0
 0
 96
+96
 80
-80
 0
 0
 0
 0
 0
 0
-81
+97
 80
 0
 0
@@ -310,8 +314,8 @@ res: 0, d_rate : 0, tx_pwr : 0
 0
 0
 0
-9
-203
+25
+215
 75
 0
 0
@@ -320,7 +324,7 @@ res: 0, d_rate : 0, tx_pwr : 0
 0
 48
 151
-109
+106
 1
 0
 0
@@ -328,7 +332,7 @@ res: 0, d_rate : 0, tx_pwr : 0
 0
 224
 253
-99
+100
 1
 0
 0
@@ -351,6 +355,6 @@ res: 0, d_rate : 0, tx_pwr : 0
 0
 0
 96
-80
+96
 80
 0

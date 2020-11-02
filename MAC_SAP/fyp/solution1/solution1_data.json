@@ -19,10 +19,7 @@
     "source_addr": {
       "index": "0",
       "type": {
-        "kinds": [
-          "struct",
-          "pointer"
-        ],
+        "kinds": ["struct"],
         "dataType": "mac48",
         "structImpl": "flat-interface",
         "fields": {"mac": {
@@ -46,10 +43,7 @@
     "dest_addr": {
       "index": "1",
       "type": {
-        "kinds": [
-          "struct",
-          "pointer"
-        ],
+        "kinds": ["struct"],
         "dataType": "mac48",
         "structImpl": "flat-interface",
         "fields": {"mac": {
@@ -126,7 +120,6 @@
     "t_slot": {
       "index": "6",
       "type": {
-        "kinds": ["pointer"],
         "dataType": "time_slot",
         "dataWidth": "2",
         "interfaceRef": "t_slot"
@@ -135,7 +128,6 @@
     "d_rate": {
       "index": "7",
       "type": {
-        "kinds": ["pointer"],
         "dataType": "uint7",
         "dataWidth": "7",
         "interfaceRef": "d_rate"
@@ -144,7 +136,6 @@
     "tx_power_lvl": {
       "index": "8",
       "type": {
-        "kinds": ["pointer"],
         "dataType": "uint4",
         "dataWidth": "4",
         "interfaceRef": "tx_power_lvl"
@@ -153,7 +144,6 @@
     "expiry_time": {
       "index": "9",
       "type": {
-        "kinds": ["pointer"],
         "dataType": "long",
         "dataWidth": "64",
         "interfaceRef": "expiry_time"
@@ -168,7 +158,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "1",
+    "Latency": "2",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -185,6 +175,7 @@
   },
   "Files": {
     "CSource": [
+      "..\/MA_UNITDATAX_STATUS_indication.c",
       "..\/MA_UNITDATAX_request.c",
       "..\/compose_mac_frame.c",
       "..\/crc_32.c",
@@ -202,6 +193,7 @@
       "impl\/vhdl\/ma_unitdatax_requcud.vhd",
       "impl\/vhdl\/ma_unitdatax_requdEe.vhd",
       "impl\/vhdl\/ma_unitdatax_requeOg.vhd",
+      "impl\/vhdl\/ma_unitdatax_status_s.vhd",
       "impl\/vhdl\/ma_unitdatax_request.vhd"
     ],
     "Verilog": [
@@ -212,6 +204,7 @@
       "impl\/verilog\/ma_unitdatax_requcud.v",
       "impl\/verilog\/ma_unitdatax_requdEe.v",
       "impl\/verilog\/ma_unitdatax_requeOg.v",
+      "impl\/verilog\/ma_unitdatax_status_s.v",
       "impl\/verilog\/ma_unitdatax_request.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
@@ -231,6 +224,7 @@
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/enqueue_frame.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/enque_frame.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/ma_unitdatax_request.protoinst",
+      "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/ma_unitdatax_status_indication.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/random_int_gen.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/reset_pointers.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/send_frame.protoinst",
@@ -671,15 +665,26 @@
       "Instances": [
         {
           "ModuleName": "enqueue_dequeue_fram",
-          "InstanceName": "grp_enqueue_dequeue_fram_fu_243"
+          "InstanceName": "grp_enqueue_dequeue_fram_fu_263"
         },
         {
           "ModuleName": "compose_mac_frame",
-          "InstanceName": "grp_compose_mac_frame_fu_271"
+          "InstanceName": "grp_compose_mac_frame_fu_291"
+        },
+        {
+          "ModuleName": "ma_unitdatax_status_s",
+          "InstanceName": "grp_ma_unitdatax_status_s_fu_299"
         }
       ]
     },
     "Info": {
+      "ma_unitdatax_status_s": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
       "compose_mac_frame": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
@@ -703,6 +708,28 @@
       }
     },
     "Metrics": {
+      "ma_unitdatax_status_s": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "2.115"
+        },
+        "Area": {
+          "FF": "49",
+          "LUT": "135",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
       "compose_mac_frame": {
         "Latency": {
           "LatencyBest": "1215",
@@ -758,7 +785,7 @@
       "enqueue_dequeue_fram": {
         "Latency": {
           "LatencyBest": "1",
-          "LatencyAvg": "102",
+          "LatencyAvg": "90",
           "LatencyWorst": "202",
           "PipelineIIMin": "1",
           "PipelineIIMax": "202",
@@ -804,19 +831,19 @@
         "Area": {
           "BRAM_18K": "1",
           "DSP48E": "0",
-          "FF": "172",
-          "LUT": "661",
+          "FF": "176",
+          "LUT": "686",
           "URAM": "0"
         }
       },
       "ma_unitdatax_request": {
         "Latency": {
-          "LatencyBest": "1",
-          "LatencyAvg": "1088",
+          "LatencyBest": "2",
+          "LatencyAvg": "998",
           "LatencyWorst": "1563",
-          "PipelineIIMin": "2",
+          "PipelineIIMin": "3",
           "PipelineIIMax": "1564",
-          "PipelineII": "2 ~ 1564",
+          "PipelineII": "3 ~ 1564",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -835,8 +862,8 @@
         "Area": {
           "BRAM_18K": "2",
           "DSP48E": "8",
-          "FF": "862",
-          "LUT": "2737",
+          "FF": "923",
+          "LUT": "2972",
           "URAM": "0"
         }
       }
@@ -852,7 +879,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-10-30 21:10:58 +0530",
+    "Time": "2020-11-02 20:52:15 +0530",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

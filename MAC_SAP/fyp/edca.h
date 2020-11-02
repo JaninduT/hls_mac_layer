@@ -3,7 +3,7 @@
 
 #include "common.h"
 
-bool enqueue_dequeue_frame(
+uint4 enqueue_dequeue_frame(
 		uint2 operation,
 		uint2 ac,
 		unsigned char inout_frame[100],

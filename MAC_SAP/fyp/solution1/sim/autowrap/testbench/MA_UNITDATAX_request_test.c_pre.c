@@ -5481,8 +5481,8 @@ enum time_slot {
  EITHER = 3
 };
 
-static const mac48 my_mac = {.mac[0]=0xff, .mac[1]=0xab, .mac[2]=0xbc, .mac[3]=0xcd, .mac[4]=0xde, .mac[5]=0xef};
-static const mac48 bcast_wcard_mac = {.mac[0]=0xff, .mac[1]=0xff, .mac[2]=0xff, .mac[3]=0xff, .mac[4]=0xff, .mac[5]=0xff};
+static mac48 my_mac = {.mac[0]=0xff, .mac[1]=0xab, .mac[2]=0xbc, .mac[3]=0xcd, .mac[4]=0xde, .mac[5]=0xef};
+static mac48 bcast_wcard_mac = {.mac[0]=0xff, .mac[1]=0xff, .mac[2]=0xff, .mac[3]=0xff, .mac[4]=0xff, .mac[5]=0xff};
 
 static const uint8 SIFS = 2;
 static const uint8 rx_ok = 2;
@@ -5492,18 +5492,19 @@ static const uint8 aSlotTime = 2;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request.h" 2
 
 void ma_unitdatax_request (
-  mac48 *source_addr,
-  mac48 *dest_addr,
+  mac48 source_addr,
+  mac48 dest_addr,
   unsigned char data[70],
   user_priority_t up,
   enum service_class s_class,
   channel_identifier c_identifier,
-  enum time_slot *t_slot,
-  data_rate_t *d_rate,
-  txpwr_lvl_t *tx_power_lvl,
-  int64_t *expiry_time
+  enum time_slot t_slot,
+  data_rate_t d_rate,
+  txpwr_lvl_t tx_power_lvl,
+  int64_t expiry_time
   );
 # 2 "E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request_test.c" 2
+
 
 int main(){
  FILE *fp;
@@ -5532,9 +5533,11 @@ int main(){
   fread(&data[i], 1, 1, fp);
  }
  fclose(fp);
- ma_unitdatax_request(&my_mac, &bcast_wcard_mac, data, up, QOS_NOACK, ci, &ts, &dr, &tx_p_l, &exp);
+ ma_unitdatax_request(my_mac, bcast_wcard_mac, data, up, QOS_NOACK, ci, ts, dr, tx_p_l, exp);
+ up = 2;
+ ma_unitdatax_request(my_mac, bcast_wcard_mac, data, up, QOS_NOACK, ci, ts, dr, tx_p_l, exp);
 
- uint1 res = enqueue_dequeue_frame(1, 3, frame, &io_d_rate, &io_tx_pwr_lvl);
+ uint4 res = enqueue_dequeue_frame(1, 3, frame, &io_d_rate, &io_tx_pwr_lvl);
 
  printf("res: %d, d_rate : %d, tx_pwr : %d\n",res, io_d_rate, io_tx_pwr_lvl);
 

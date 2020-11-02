@@ -5,22 +5,136 @@
 <ModuleName>ma_unitdatax_request</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_enqueue_dequeue_fram_fu_243</InstName>
+<InstName>grp_enqueue_dequeue_fram_fu_263</InstName>
 <ModuleName>enqueue_dequeue_fram</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>243</ID>
+<ID>263</ID>
 </Instance>
 <Instance>
-<InstName>grp_compose_mac_frame_fu_271</InstName>
+<InstName>grp_compose_mac_frame_fu_291</InstName>
 <ModuleName>compose_mac_frame</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>271</ID>
+<ID>291</ID>
+</Instance>
+<Instance>
+<InstName>grp_ma_unitdatax_status_s_fu_299</InstName>
+<ModuleName>ma_unitdatax_status_s</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>299</ID>
 </Instance>
 </InstancesList>
 </TopModule>
 </RTLDesignHierarchy>
 
 <ModuleInformation>
+<Module>
+<Name>ma_unitdatax_status_s</Name>
+<PerformanceEstimates>
+<SummaryOfTimingAnalysis>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>1.25</ClockUncertainty>
+<EstimatedClockPeriod>2.115</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<Best-caseLatency>0</Best-caseLatency>
+<Average-caseLatency>0</Average-caseLatency>
+<Worst-caseLatency>0</Worst-caseLatency>
+<Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>0</PipelineInitiationInterval>
+<PipelineType>none</PipelineType>
+</SummaryOfOverallLatency>
+</PerformanceEstimates>
+<AreaEstimates>
+<Resources>
+<FF>49</FF>
+<LUT>135</LUT>
+<BRAM_18K>0</BRAM_18K>
+<DSP48E>0</DSP48E>
+<URAM>0</URAM>
+</Resources>
+</AreaEstimates>
+<InterfaceSummary>
+<RtlPorts>
+<name>ap_clk</name>
+<Object>ma_unitdatax_status_</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_rst</name>
+<Object>ma_unitdatax_status_</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_start</name>
+<Object>ma_unitdatax_status_</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_done</name>
+<Object>ma_unitdatax_status_</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_idle</name>
+<Object>ma_unitdatax_status_</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_ready</name>
+<Object>ma_unitdatax_status_</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>trans_sts</name>
+<Object>trans_sts</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>3</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+</InterfaceSummary>
+</Module>
 <Module>
 <Name>compose_mac_frame</Name>
 <PerformanceEstimates>
@@ -312,10 +426,10 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>1</Best-caseLatency>
-<Average-caseLatency>102</Average-caseLatency>
+<Average-caseLatency>90</Average-caseLatency>
 <Worst-caseLatency>202</Worst-caseLatency>
 <Best-caseRealTimeLatency>10.000 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.020 us</Average-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.900 us</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>2.020 us</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>1 ~ 202</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
@@ -355,8 +469,8 @@
 <Resources>
 <BRAM_18K>1</BRAM_18K>
 <DSP48E>0</DSP48E>
-<FF>172</FF>
-<LUT>661</LUT>
+<FF>176</FF>
+<LUT>686</LUT>
 <URAM>0</URAM>
 </Resources>
 </AreaEstimates>
@@ -435,7 +549,7 @@
 <IOProtocol>ap_ctrl_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>1</Bits>
+<Bits>3</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -493,13 +607,13 @@
 <EstimatedClockPeriod>7.180</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>1</Best-caseLatency>
-<Average-caseLatency>1088</Average-caseLatency>
+<Best-caseLatency>2</Best-caseLatency>
+<Average-caseLatency>998</Average-caseLatency>
 <Worst-caseLatency>1563</Worst-caseLatency>
-<Best-caseRealTimeLatency>10.000 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>10.880 us</Average-caseRealTimeLatency>
+<Best-caseRealTimeLatency>20.000 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>9.980 us</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>15.630 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>2 ~ 1564</PipelineInitiationInterval>
+<PipelineInitiationInterval>3 ~ 1564</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -516,8 +630,8 @@
 <Resources>
 <BRAM_18K>2</BRAM_18K>
 <DSP48E>8</DSP48E>
-<FF>862</FF>
-<LUT>2737</LUT>
+<FF>923</FF>
+<LUT>2972</LUT>
 <URAM>0</URAM>
 </Resources>
 </AreaEstimates>
@@ -915,43 +1029,43 @@
 <RtlPorts>
 <name>t_slot</name>
 <Object>t_slot</Object>
-<Type>pointer</Type>
+<Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>2</Bits>
 <Attribute>data</Attribute>
-<CType>int</CType>
+<CType>uint</CType>
 </RtlPorts>
 <RtlPorts>
 <name>d_rate</name>
 <Object>d_rate</Object>
-<Type>pointer</Type>
+<Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>7</Bits>
 <Attribute>data</Attribute>
-<CType>int</CType>
+<CType>uint</CType>
 </RtlPorts>
 <RtlPorts>
 <name>tx_power_lvl</name>
 <Object>tx_power_lvl</Object>
-<Type>pointer</Type>
+<Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>4</Bits>
 <Attribute>data</Attribute>
-<CType>int</CType>
+<CType>uint</CType>
 </RtlPorts>
 <RtlPorts>
 <name>expiry_time</name>
 <Object>expiry_time</Object>
-<Type>pointer</Type>
+<Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>

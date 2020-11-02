@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace E:/FYP/HLS/MAC_SAP/fyp/solution1 opened at Fri Oct 30 21:09:59 +0530 2020
+INFO-FLOW: Workspace E:/FYP/HLS/MAC_SAP/fyp/solution1 opened at Mon Nov 02 20:51:09 +0530 2020
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -40,11 +40,10 @@ Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/interfac
 Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
 Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.103 sec.
 Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.144 sec.
-Command     ap_source done; 0.144 sec.
+Command       ap_source done; 0.141 sec.
+Command     ap_source done; 0.141 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib D:/Xilinx/Vivado/2019.2/common/technology/xilinx/artix7/artix7_fpv6 
 Execute       source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
@@ -59,7 +58,7 @@ Execute     source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/artix7/artix
 Execute       source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xc7a35t-cpg236-1 
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data single -quiet 
-Command       ap_part_info done; 0.738 sec.
+Command       ap_part_info done; 0.734 sec.
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
 Execute       add_library xilinx/artix7/artix7:xc7a35t:-cpg236:-1 
 Execute         get_default_platform 
@@ -75,7 +74,7 @@ Execute         get_default_platform
 INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 0.942 sec.
+Command     set_part done; 0.927 sec.
 Execute     ap_part_info -data single -name xc7a35t-cpg236-1 
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data resources 
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
@@ -83,7 +82,7 @@ Execute     ap_part_info -name xc7a35t-cpg236-1 -data info
 Execute     config_chip_info -quiet -resource {SLICE 8150} {LUT 20800} {FF 41600} {DSP48E 90} {BRAM 100} {URAM 0} 
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
 Execute     config_chip_info -quiet -speed slow 
-Command   open_solution done; 1.192 sec.
+Command   open_solution done; 1.185 sec.
 Execute   set_part xc7a35t-cpg236-1 
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data single -quiet 
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
@@ -100,7 +99,7 @@ Execute     add_library xilinx/artix7/artix7_fpv6
 Execute       get_default_platform 
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
 Execute     get_default_platform 
-Command   set_part done; 0.181 sec.
+Command   set_part done; 0.218 sec.
 Execute   create_clock -period 10 -name default 
 Execute   csynth_design 
 Execute     get_config_compile -dump_cfg 
@@ -117,6 +116,55 @@ Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0
 Execute       get_config_schedule -relax_ii_for_timing 
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_STATUS_indication.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling fyp/MA_UNITDATAX_STATUS_indication.c as C
+Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
+Execute       is_encrypted fyp/MA_UNITDATAX_STATUS_indication.c 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "fyp/MA_UNITDATAX_STATUS_indication.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E fyp/MA_UNITDATAX_STATUS_indication.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c
+Command       clang done; 1.351 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.161 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c"  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.331 sec.
+INFO-FLOW: Done: GCC PP time: 2.8 seconds per iteration
+Execute       source D:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source D:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source D:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.158 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.16 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.MA_UNITDATAX_STATUS_indication.pp.0.c.diag.yml E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.MA_UNITDATAX_STATUS_indication.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.MA_UNITDATAX_STATUS_indication.pp.0.c.err.log 
+Command       ap_eval done; 0.152 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c std=gnu89 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.MA_UNITDATAX_STATUS_indication.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.MA_UNITDATAX_STATUS_indication.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.MA_UNITDATAX_STATUS_indication.pp.0.c.err.log 
+Command         ap_eval done; 0.154 sec.
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.MA_UNITDATAX_STATUS_indication.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.MA_UNITDATAX_STATUS_indication.pp.0.c.err.log 
+Command         ap_eval done; 0.144 sec.
+Command       tidy_31 done; 0.304 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.6 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pragma.1.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.16 sec.
+Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pragma.2.c  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.bc" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.bc
+Command       clang done; 1.311 sec.
 INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -127,47 +175,44 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "fyp/MA_UNITDATAX_request.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E fyp/MA_UNITDATAX_request.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c
-Command       clang done; 1.355 sec.
+Command       clang done; 1.327 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.154 sec.
+Command       tidy_31 done; 0.157 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c"  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc
-Command       clang done; 1.321 sec.
+Command       clang done; 1.312 sec.
 INFO-FLOW: Done: GCC PP time: 2.8 seconds per iteration
-Execute       source D:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
-Execute       source D:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
-Execute         source D:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.151 sec.
+Command       tidy_31 done; 0.157 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.151 sec.
+Command       tidy_31 done; 0.159 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.MA_UNITDATAX_request.pp.0.c.diag.yml E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.MA_UNITDATAX_request.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.MA_UNITDATAX_request.pp.0.c.err.log 
-Command       ap_eval done; 0.148 sec.
+Command       ap_eval done; 0.149 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c std=gnu89 
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.MA_UNITDATAX_request.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.MA_UNITDATAX_request.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.MA_UNITDATAX_request.pp.0.c.err.log 
-Command         ap_eval done; 0.237 sec.
+Command         ap_eval done; 0.248 sec.
 Execute         source D:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
 Execute           source D:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.MA_UNITDATAX_request.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.MA_UNITDATAX_request.pp.0.c.err.log 
-Command         ap_eval done; 0.143 sec.
-Command       tidy_31 done; 0.409 sec.
+Command         ap_eval done; 0.152 sec.
+Command       tidy_31 done; 0.436 sec.
 INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.7 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pragma.1.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.156 sec.
+Command       tidy_31 done; 0.167 sec.
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: Processing labels
 Execute       clang -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pragma.2.c  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.bc" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.bc
-Command       clang done; 1.313 sec.
+Command       clang done; 1.331 sec.
 INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -178,42 +223,42 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "fyp/compose_mac_frame.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E fyp/compose_mac_frame.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c
-Command       clang done; 1.343 sec.
+Command       clang done; 1.337 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.159 sec.
+Command       tidy_31 done; 0.156 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c"  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc
-Command       clang done; 1.329 sec.
+Command       clang done; 1.32 sec.
 INFO-FLOW: Done: GCC PP time: 2.8 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.15 sec.
+Command       tidy_31 done; 0.164 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.153 sec.
+Command       tidy_31 done; 0.171 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.compose_mac_frame.pp.0.c.diag.yml E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.compose_mac_frame.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.compose_mac_frame.pp.0.c.err.log 
-Command       ap_eval done; 0.143 sec.
+Command       ap_eval done; 0.164 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c std=gnu89 
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.compose_mac_frame.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.compose_mac_frame.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.compose_mac_frame.pp.0.c.err.log 
-Command         ap_eval done; 0.24 sec.
+Command         ap_eval done; 0.272 sec.
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.compose_mac_frame.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.compose_mac_frame.pp.0.c.err.log 
-Command         ap_eval done; 0.139 sec.
-Command       tidy_31 done; 0.405 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.7 seconds per iteration
+Command         ap_eval done; 0.143 sec.
+Command       tidy_31 done; 0.446 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.8 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pragma.1.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.158 sec.
+Command       tidy_31 done; 0.169 sec.
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: Processing labels
 Execute       clang -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pragma.2.c  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.bc" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.bc
-Command       clang done; 1.416 sec.
+Command       clang done; 1.325 sec.
 INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -224,42 +269,42 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "fyp/crc_32.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E fyp/crc_32.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c
-Command       clang done; 1.322 sec.
+Command       clang done; 1.302 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.131 sec.
+Command       tidy_31 done; 0.144 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c"  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc
-Command       clang done; 1.325 sec.
+Command       clang done; 1.313 sec.
 INFO-FLOW: Done: GCC PP time: 2.8 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.131 sec.
+Command       tidy_31 done; 0.141 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.13 sec.
+Command       tidy_31 done; 0.143 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.crc_32.pp.0.c.diag.yml E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.crc_32.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.crc_32.pp.0.c.err.log 
-Command       ap_eval done; 0.127 sec.
+Command       ap_eval done; 0.151 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c std=gnu89 
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.crc_32.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.crc_32.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.crc_32.pp.0.c.err.log 
-Command         ap_eval done; 0.143 sec.
+Command         ap_eval done; 0.15 sec.
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.crc_32.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.crc_32.pp.0.c.err.log 
-Command         ap_eval done; 0.127 sec.
-Command       tidy_31 done; 0.283 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.5 seconds per iteration
+Command         ap_eval done; 0.132 sec.
+Command       tidy_31 done; 0.302 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.6 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pragma.1.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.143 sec.
+Command       tidy_31 done; 0.138 sec.
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: Processing labels
 Execute       clang -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pragma.2.c  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.bc" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.bc
-Command       clang done; 1.32 sec.
+Command       clang done; 1.33 sec.
 INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -270,42 +315,42 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "fyp/crc_32_validate.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E fyp/crc_32_validate.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c
-Command       clang done; 1.313 sec.
+Command       clang done; 1.314 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.133 sec.
+Command       tidy_31 done; 0.153 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c"  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc
-Command       clang done; 1.325 sec.
+Command       clang done; 1.319 sec.
 INFO-FLOW: Done: GCC PP time: 2.8 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.131 sec.
+Command       tidy_31 done; 0.143 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.132 sec.
+Command       tidy_31 done; 0.142 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.crc_32_validate.pp.0.c.diag.yml E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.crc_32_validate.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.crc_32_validate.pp.0.c.err.log 
-Command       ap_eval done; 0.125 sec.
+Command       ap_eval done; 0.129 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c std=gnu89 
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.crc_32_validate.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.crc_32_validate.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.crc_32_validate.pp.0.c.err.log 
-Command         ap_eval done; 0.142 sec.
+Command         ap_eval done; 0.15 sec.
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.crc_32_validate.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.crc_32_validate.pp.0.c.err.log 
-Command         ap_eval done; 0.129 sec.
-Command       tidy_31 done; 0.285 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.5 seconds per iteration
+Command         ap_eval done; 0.143 sec.
+Command       tidy_31 done; 0.314 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.6 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pragma.1.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.134 sec.
+Command       tidy_31 done; 0.149 sec.
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: Processing labels
 Execute       clang -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pragma.2.c  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.bc" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.bc
-Command       clang done; 1.323 sec.
+Command       clang done; 1.328 sec.
 INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -316,42 +361,42 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "fyp/decompose_mac_frame.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E fyp/decompose_mac_frame.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c
-Command       clang done; 1.345 sec.
+Command       clang done; 1.359 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.149 sec.
+Command       tidy_31 done; 0.157 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c"  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc
-Command       clang done; 1.322 sec.
-INFO-FLOW: Done: GCC PP time: 2.8 seconds per iteration
+Command       clang done; 1.343 sec.
+INFO-FLOW: Done: GCC PP time: 2.9 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.149 sec.
+Command       tidy_31 done; 0.155 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.15 sec.
+Command       tidy_31 done; 0.162 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.decompose_mac_frame.pp.0.c.diag.yml E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.decompose_mac_frame.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.decompose_mac_frame.pp.0.c.err.log 
-Command       ap_eval done; 0.144 sec.
+Command       ap_eval done; 0.149 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c std=gnu89 
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.decompose_mac_frame.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.decompose_mac_frame.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.decompose_mac_frame.pp.0.c.err.log 
-Command         ap_eval done; 0.26 sec.
+Command         ap_eval done; 0.243 sec.
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.decompose_mac_frame.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.decompose_mac_frame.pp.0.c.err.log 
-Command         ap_eval done; 0.136 sec.
-Command       tidy_31 done; 0.416 sec.
+Command         ap_eval done; 0.146 sec.
+Command       tidy_31 done; 0.409 sec.
 INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.7 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pragma.1.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.156 sec.
+Command       tidy_31 done; 0.163 sec.
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: Processing labels
 Execute       clang -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pragma.2.c  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.bc" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.bc
-Command       clang done; 1.338 sec.
+Command       clang done; 1.333 sec.
 INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -362,42 +407,42 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "fyp/edca.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E fyp/edca.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c
-Command       clang done; 1.345 sec.
+Command       clang done; 1.359 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.157 sec.
+Command       tidy_31 done; 0.162 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c"  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc
-Command       clang done; 1.322 sec.
+Command       clang done; 1.32 sec.
 INFO-FLOW: Done: GCC PP time: 2.8 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.157 sec.
+Command       tidy_31 done; 0.159 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.157 sec.
+Command       tidy_31 done; 0.164 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.edca.pp.0.c.diag.yml E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.edca.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.edca.pp.0.c.err.log 
-Command       ap_eval done; 0.149 sec.
+Command       ap_eval done; 0.157 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c std=gnu89 
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.edca.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.edca.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.edca.pp.0.c.err.log 
-Command         ap_eval done; 0.25 sec.
+Command         ap_eval done; 0.252 sec.
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.edca.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.edca.pp.0.c.err.log 
-Command         ap_eval done; 0.143 sec.
-Command       tidy_31 done; 0.411 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.7 seconds per iteration
+Command         ap_eval done; 0.164 sec.
+Command       tidy_31 done; 0.437 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.8 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pragma.1.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.16 sec.
+Command       tidy_31 done; 0.176 sec.
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: Processing labels
 Execute       clang -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pragma.2.c  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.bc" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.bc
-Command       clang done; 1.348 sec.
+Command       clang done; 1.342 sec.
 INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -408,42 +453,42 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "fyp/mac_layer.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E fyp/mac_layer.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c
-Command       clang done; 1.318 sec.
+Command       clang done; 1.3 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.13 sec.
+Command       tidy_31 done; 0.138 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c"  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc
-Command       clang done; 1.327 sec.
+Command       clang done; 1.323 sec.
 INFO-FLOW: Done: GCC PP time: 2.8 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.129 sec.
+Command       tidy_31 done; 0.136 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.134 sec.
+Command       tidy_31 done; 0.136 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.mac_layer.pp.0.c.diag.yml E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.mac_layer.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.mac_layer.pp.0.c.err.log 
-Command       ap_eval done; 0.12 sec.
+Command       ap_eval done; 0.13 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c std=gnu89 
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.mac_layer.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.mac_layer.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.mac_layer.pp.0.c.err.log 
-Command         ap_eval done; 0.127 sec.
+Command         ap_eval done; 0.154 sec.
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.mac_layer.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.mac_layer.pp.0.c.err.log 
-Command         ap_eval done; 0.123 sec.
-Command       tidy_31 done; 0.255 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.5 seconds per iteration
+Command         ap_eval done; 0.129 sec.
+Command       tidy_31 done; 0.287 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.6 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pragma.1.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.132 sec.
+Command       tidy_31 done; 0.136 sec.
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: Processing labels
 Execute       clang -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pragma.2.c  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.bc" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.bc
-Command       clang done; 1.317 sec.
+Command       clang done; 1.315 sec.
 INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -454,42 +499,42 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "fyp/r_n_g.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E fyp/r_n_g.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c
-Command       clang done; 1.346 sec.
+Command       clang done; 1.349 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.156 sec.
+Command       tidy_31 done; 0.158 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c"  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc
-Command       clang done; 1.338 sec.
-INFO-FLOW: Done: GCC PP time: 2.8 seconds per iteration
+Command       clang done; 1.342 sec.
+INFO-FLOW: Done: GCC PP time: 2.9 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.151 sec.
+Command       tidy_31 done; 0.161 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.166 sec.
+Command       tidy_31 done; 0.157 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.r_n_g.pp.0.c.diag.yml E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.r_n_g.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.r_n_g.pp.0.c.err.log 
-Command       ap_eval done; 0.141 sec.
+Command       ap_eval done; 0.151 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c std=gnu89 
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.r_n_g.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.r_n_g.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.r_n_g.pp.0.c.err.log 
-Command         ap_eval done; 0.234 sec.
+Command         ap_eval done; 0.252 sec.
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.r_n_g.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.r_n_g.pp.0.c.err.log 
-Command         ap_eval done; 0.135 sec.
-Command       tidy_31 done; 0.383 sec.
+Command         ap_eval done; 0.142 sec.
+Command       tidy_31 done; 0.426 sec.
 INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.7 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pragma.1.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.159 sec.
+Command       tidy_31 done; 0.161 sec.
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: Processing labels
 Execute       clang -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pragma.2.c  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.bc" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.bc
-Command       clang done; 1.323 sec.
+Command       clang done; 1.332 sec.
 INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -500,58 +545,58 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "fyp/timer.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E fyp/timer.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c
-Command       clang done; 1.354 sec.
+Command       clang done; 1.367 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.149 sec.
+Command       tidy_31 done; 0.157 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c"  -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/useless.bc
-Command       clang done; 1.329 sec.
-INFO-FLOW: Done: GCC PP time: 2.8 seconds per iteration
+Command       clang done; 1.37 sec.
+INFO-FLOW: Done: GCC PP time: 2.9 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.149 sec.
+Command       tidy_31 done; 0.163 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c std=gnu89 -directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/all.directive.json -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.153 sec.
+Command       tidy_31 done; 0.157 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.timer.pp.0.c.diag.yml E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.timer.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-dataflow-lawyer.timer.pp.0.c.err.log 
-Command       ap_eval done; 0.143 sec.
+Command       ap_eval done; 0.148 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c std=gnu89 
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.timer.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.timer.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/tidy-3.1.timer.pp.0.c.err.log 
-Command         ap_eval done; 0.149 sec.
+Command         ap_eval done; 0.158 sec.
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.timer.pp.0.c.out.log 2> E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/xilinx-legacy-rewriter.timer.pp.0.c.err.log 
-Command         ap_eval done; 0.135 sec.
-Command       tidy_31 done; 0.288 sec.
+Command         ap_eval done; 0.141 sec.
+Command       tidy_31 done; 0.305 sec.
 INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.6 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pragma.1.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.15 sec.
+Command       tidy_31 done; 0.161 sec.
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: Processing labels
 Execute       clang -src E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pragma.2.c  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.bc" 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot -I D:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.bc
-Command       clang done; 1.334 sec.
+Command       clang done; 1.329 sec.
 INFO-FLOW: Linking Debug ...
-Execute       llvm-ld E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.g.bc -hls-opt -except-internalize ma_unitdatax_request -LD:/Xilinx/Vivado/2019.2/win64/lib -lhlsm -lhlsmc++ -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.g 
-Command       llvm-ld done; 1.081 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 188.094 ; gain = 98.957
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 188.094 ; gain = 98.957
+Execute       llvm-ld E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_STATUS_indication.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/MA_UNITDATAX_request.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/crc_32_validate.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/decompose_mac_frame.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/edca.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/mac_layer.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/r_n_g.g.bc E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/timer.g.bc -hls-opt -except-internalize ma_unitdatax_request -LD:/Xilinx/Vivado/2019.2/win64/lib -lhlsm -lhlsmc++ -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 1.068 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:56 . Memory (MB): peak = 188.328 ; gain = 95.918
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:56 . Memory (MB): peak = 188.328 ; gain = 95.918
 Execute       get_config_sdx -target 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.pp.bc -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.pp.0.bc -f 
 Execute         llvm-ld E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LD:/Xilinx/Vivado/2019.2/win64/lib -lfloatconversion -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld done; 1.175 sec.
+Command         llvm-ld done; 1.183 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top ma_unitdatax_request -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.g.0.bc -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command         transform done; 0.709 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 188.340 ; gain = 99.203
+Command         transform done; 0.718 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:58 . Memory (MB): peak = 188.809 ; gain = 96.398
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.g.1.bc -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.g.2.prechk.bc -f 
@@ -569,12 +614,12 @@ INFO: [XFORM 203-602] Inlining function 'random_int_gen' into 'start_backoff_vi'
 INFO: [XFORM 203-602] Inlining function '__hls_fptoui_float_i16' into 'start_backoff_vi' (fyp/edca.c:323) automatically.
 INFO: [XFORM 203-602] Inlining function 'random_int_gen' into 'start_backoff_vo' (fyp/edca.c:312) automatically.
 INFO: [XFORM 203-602] Inlining function '__hls_fptoui_float_i16' into 'start_backoff_vo' (fyp/edca.c:312) automatically.
-Command         transform done; 0.312 sec.
+Command         transform done; 0.314 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.g.2.prechk.bc -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-WARNING: [SYNCHK 200-77] The top function 'ma_unitdatax_request' (fyp/MA_UNITDATAX_request.c:8) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+WARNING: [SYNCHK 200-77] The top function 'ma_unitdatax_request' (fyp/MA_UNITDATAX_request.c:9) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
 INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:52 . Memory (MB): peak = 199.031 ; gain = 109.895
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:58 . Memory (MB): peak = 199.988 ; gain = 107.578
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.g.1.bc to E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -585,20 +630,21 @@ INFO: [XFORM 203-602] Inlining function 'random_int_gen' into 'start_backoff_bk'
 INFO: [XFORM 203-602] Inlining function 'random_int_gen' into 'start_backoff_be' (fyp/edca.c:334) automatically.
 INFO: [XFORM 203-602] Inlining function 'random_int_gen' into 'start_backoff_vi' (fyp/edca.c:323) automatically.
 INFO: [XFORM 203-602] Inlining function 'random_int_gen' into 'start_backoff_vo' (fyp/edca.c:312) automatically.
-INFO: [XFORM 203-602] Inlining function 'start_backoff_bk' into 'ma_unitdatax_request' (fyp/MA_UNITDATAX_request.c:44) automatically.
-INFO: [XFORM 203-602] Inlining function 'start_backoff_be' into 'ma_unitdatax_request' (fyp/MA_UNITDATAX_request.c:57) automatically.
-INFO: [XFORM 203-602] Inlining function 'start_backoff_vi' into 'ma_unitdatax_request' (fyp/MA_UNITDATAX_request.c:70) automatically.
-INFO: [XFORM 203-602] Inlining function 'start_backoff_vo' into 'ma_unitdatax_request' (fyp/MA_UNITDATAX_request.c:83) automatically.
-Command         transform done; 0.491 sec.
+INFO: [XFORM 203-602] Inlining function 'start_backoff_bk' into 'ma_unitdatax_request' (fyp/MA_UNITDATAX_request.c:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'start_backoff_be' into 'ma_unitdatax_request' (fyp/MA_UNITDATAX_request.c:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'start_backoff_vi' into 'ma_unitdatax_request' (fyp/MA_UNITDATAX_request.c:71) automatically.
+INFO: [XFORM 203-602] Inlining function 'start_backoff_vo' into 'ma_unitdatax_request' (fyp/MA_UNITDATAX_request.c:84) automatically.
+Command         transform done; 0.544 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.o.1.tmp.bc -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
-Command         transform done; 0.16 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 231.578 ; gain = 142.441
+Command         transform done; 0.179 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:59 . Memory (MB): peak = 232.563 ; gain = 140.152
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.o.2.bc -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 INFO: [XFORM 203-151] Mapping array 'edca_fifo_bk' with offset 0, array 'edca_fifo_be' with offset 400, array 'edca_fifo_vi' with offset 800 and array 'edca_fifo_vo' with offset 1200 into array 'edca_queues' horizontally.
+WARNING: [XFORM 203-631] Renaming function 'ma_unitdatax_status_indication' to 'ma_unitdatax_status_' (fyp/MA_UNITDATAX_STATUS_indication.c:13:2)
 WARNING: [XFORM 203-631] Renaming function 'enqueue_dequeue_frame' to 'enqueue_dequeue_fram' (fyp/edca.c:52:39)
-INFO: [HLS 200-472] Inferring partial write operation for 'llc_data' (fyp/MA_UNITDATAX_request.c:35:3)
+INFO: [HLS 200-472] Inferring partial write operation for 'llc_data' (fyp/MA_UNITDATAX_request.c:36:3)
 INFO: [HLS 200-472] Inferring partial write operation for 'edca_queues' (fyp/edca.c:57:6)
 INFO: [HLS 200-472] Inferring partial write operation for 'edca_queues' (fyp/edca.c:70:6)
 INFO: [HLS 200-472] Inferring partial write operation for 'edca_queues' (fyp/edca.c:83:6)
@@ -631,22 +677,27 @@ INFO: [HLS 200-472] Inferring partial write operation for 'mac_frame' (fyp/compo
 INFO: [HLS 200-472] Inferring partial write operation for 'mac_frame' (fyp/compose_mac_frame.c:54:2)
 INFO: [HLS 200-472] Inferring partial write operation for 'mac_frame' (fyp/compose_mac_frame.c:66:3)
 INFO: [HLS 200-472] Inferring partial write operation for 'mac_frame' (fyp/compose_mac_frame.c:73:3)
-Command         transform done; 0.632 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:54 . Memory (MB): peak = 245.570 ; gain = 156.434
+Command         transform done; 0.71 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:01:00 . Memory (MB): peak = 255.484 ; gain = 163.074
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 3.597 sec.
-Command     elaborate done; 51.577 sec.
+Command       opt_and_import_c done; 3.764 sec.
+Command     elaborate done; 57.528 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
 INFO: [HLS 200-10] Synthesizing 'ma_unitdatax_request' ...
 Execute       ap_set_top_model ma_unitdatax_request 
+WARNING: [SYN 201-103] Legalizing function name 'ma_unitdatax_status_' to 'ma_unitdatax_status_s'.
 Execute       get_model_list ma_unitdatax_request -filter all-wo-channel -topdown 
 Execute       preproc_iomode -model ma_unitdatax_request 
 Execute       preproc_iomode -model enqueue_dequeue_fram 
 Execute       preproc_iomode -model compose_mac_frame 
+Execute       preproc_iomode -model ma_unitdatax_status_ 
 Execute       get_model_list ma_unitdatax_request -filter all-wo-channel 
-INFO-FLOW: Model list for configure: compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request
+INFO-FLOW: Model list for configure: ma_unitdatax_status_ compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request
+INFO-FLOW: Configuring Module : ma_unitdatax_status_ ...
+Execute       set_default_model ma_unitdatax_status_ 
+Execute       apply_spec_resource_limit ma_unitdatax_status_ 
 INFO-FLOW: Configuring Module : compose_mac_frame ...
 Execute       set_default_model compose_mac_frame 
 Execute       apply_spec_resource_limit compose_mac_frame 
@@ -656,7 +707,11 @@ Execute       apply_spec_resource_limit enqueue_dequeue_fram
 INFO-FLOW: Configuring Module : ma_unitdatax_request ...
 Execute       set_default_model ma_unitdatax_request 
 Execute       apply_spec_resource_limit ma_unitdatax_request 
-INFO-FLOW: Model list for preprocess: compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request
+INFO-FLOW: Model list for preprocess: ma_unitdatax_status_ compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request
+INFO-FLOW: Preprocessing Module: ma_unitdatax_status_ ...
+Execute       set_default_model ma_unitdatax_status_ 
+Execute       cdfg_preprocess -model ma_unitdatax_status_ 
+Execute       rtl_gen_preprocess ma_unitdatax_status_ 
 INFO-FLOW: Preprocessing Module: compose_mac_frame ...
 Execute       set_default_model compose_mac_frame 
 Execute       cdfg_preprocess -model compose_mac_frame 
@@ -669,7 +724,30 @@ INFO-FLOW: Preprocessing Module: ma_unitdatax_request ...
 Execute       set_default_model ma_unitdatax_request 
 Execute       cdfg_preprocess -model ma_unitdatax_request 
 Execute       rtl_gen_preprocess ma_unitdatax_request 
-INFO-FLOW: Model list for synthesis: compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request
+INFO-FLOW: Model list for synthesis: ma_unitdatax_status_ compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ma_unitdatax_status_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model ma_unitdatax_status_ 
+Execute       schedule -model ma_unitdatax_status_ 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 59.702 seconds; current allocated memory: 196.052 MB.
+Execute       syn_report -verbosereport -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s.verbose.sched.rpt 
+Execute       db_write -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s.sched.adb -f 
+INFO-FLOW: Finish scheduling ma_unitdatax_status_.
+Execute       set_default_model ma_unitdatax_status_ 
+Execute       bind -model ma_unitdatax_status_ 
+BIND OPTION: model=ma_unitdatax_status_
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.116 seconds; current allocated memory: 196.168 MB.
+Execute       syn_report -verbosereport -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s.verbose.bind.rpt 
+Execute       db_write -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s.bind.adb -f 
+INFO-FLOW: Finish binding ma_unitdatax_status_.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compose_mac_frame' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -677,7 +755,7 @@ Execute       set_default_model compose_mac_frame
 Execute       schedule -model compose_mac_frame 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 53.707 seconds; current allocated memory: 186.173 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.179 seconds; current allocated memory: 196.553 MB.
 Execute       syn_report -verbosereport -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.verbose.sched.rpt 
 Execute       db_write -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.sched.adb -f 
 INFO-FLOW: Finish scheduling compose_mac_frame.
@@ -689,7 +767,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.186 seconds; current allocated memory: 186.549 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.201 seconds; current allocated memory: 196.923 MB.
 Execute       syn_report -verbosereport -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.verbose.bind.rpt 
 Execute       db_write -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.bind.adb -f 
 INFO-FLOW: Finish binding compose_mac_frame.
@@ -700,7 +778,7 @@ Execute       set_default_model enqueue_dequeue_fram
 Execute       schedule -model enqueue_dequeue_fram 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.234 seconds; current allocated memory: 186.961 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.258 seconds; current allocated memory: 197.337 MB.
 Execute       syn_report -verbosereport -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/enqueue_dequeue_fram.verbose.sched.rpt 
 Execute       db_write -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/enqueue_dequeue_fram.sched.adb -f 
 INFO-FLOW: Finish scheduling enqueue_dequeue_fram.
@@ -712,7 +790,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.164 seconds; current allocated memory: 187.330 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.202 seconds; current allocated memory: 197.710 MB.
 Execute       syn_report -verbosereport -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/enqueue_dequeue_fram.verbose.bind.rpt 
 Execute       db_write -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/enqueue_dequeue_fram.bind.adb -f 
 INFO-FLOW: Finish binding enqueue_dequeue_fram.
@@ -723,7 +801,7 @@ Execute       set_default_model ma_unitdatax_request
 Execute       schedule -model ma_unitdatax_request 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.264 seconds; current allocated memory: 187.862 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.277 seconds; current allocated memory: 198.335 MB.
 Execute       syn_report -verbosereport -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.verbose.sched.rpt 
 Execute       db_write -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.sched.adb -f 
 INFO-FLOW: Finish scheduling ma_unitdatax_request.
@@ -735,18 +813,42 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.108 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.273 seconds; current allocated memory: 188.560 MB.
+Command       bind done; 0.123 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.303 seconds; current allocated memory: 199.123 MB.
 Execute       syn_report -verbosereport -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.verbose.bind.rpt 
-Command       syn_report done; 0.155 sec.
+Command       syn_report done; 0.162 sec.
 Execute       db_write -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.bind.adb -f 
 INFO-FLOW: Finish binding ma_unitdatax_request.
 Execute       get_model_list ma_unitdatax_request -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess ma_unitdatax_status_ 
 Execute       rtl_gen_preprocess compose_mac_frame 
 Execute       rtl_gen_preprocess enqueue_dequeue_fram 
 Execute       rtl_gen_preprocess ma_unitdatax_request 
-INFO-FLOW: Model list for RTL generation: compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request
+INFO-FLOW: Model list for RTL generation: ma_unitdatax_status_ compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ma_unitdatax_status_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model ma_unitdatax_status_ -vendor xilinx -mg_file E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'successful' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'unsupported_priority' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'unsupported_service_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'unsupported_channel_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'unsupported_tx_param' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'queue_full' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ma_unitdatax_status_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.373 seconds; current allocated memory: 199.456 MB.
+Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.rtl_wrap.cfg.tcl 
+Execute       gen_rtl ma_unitdatax_status_ -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/systemc/ma_unitdatax_status_s -synmodules ma_unitdatax_status_ compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request 
+Execute       gen_rtl ma_unitdatax_status_ -style xilinx -f -lang vhdl -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/vhdl/ma_unitdatax_status_s 
+Execute       gen_rtl ma_unitdatax_status_ -style xilinx -f -lang vlog -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/verilog/ma_unitdatax_status_s 
+Execute       syn_report -csynth -model ma_unitdatax_status_ -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/report/ma_unitdatax_status_s_csynth.rpt 
+Execute       syn_report -rtlxml -model ma_unitdatax_status_ -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/report/ma_unitdatax_status_s_csynth.xml 
+Execute       syn_report -verbosereport -model ma_unitdatax_status_ -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s.verbose.rpt 
+Execute       db_write -model ma_unitdatax_status_ -f -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s.adb 
+Execute       gen_tb_info ma_unitdatax_status_ -p E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compose_mac_frame' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -754,9 +856,9 @@ Execute       get_config_rtl -module_prefix
 Execute       get_config_rtl -module_auto_prefix 
 Execute       create_rtl_model compose_mac_frame -vendor xilinx -mg_file E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compose_mac_frame'.
-INFO: [HLS 200-111]  Elapsed time: 0.331 seconds; current allocated memory: 189.272 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.245 seconds; current allocated memory: 200.172 MB.
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.rtl_wrap.cfg.tcl 
-Execute       gen_rtl compose_mac_frame -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/systemc/compose_mac_frame -synmodules compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request 
+Execute       gen_rtl compose_mac_frame -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/systemc/compose_mac_frame -synmodules ma_unitdatax_status_ compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request 
 Execute       gen_rtl compose_mac_frame -style xilinx -f -lang vhdl -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/vhdl/compose_mac_frame 
 Execute       gen_rtl compose_mac_frame -style xilinx -f -lang vlog -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/verilog/compose_mac_frame 
 Execute       syn_report -csynth -model compose_mac_frame -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/report/compose_mac_frame_csynth.rpt 
@@ -780,9 +882,10 @@ WARNING: [RTGEN 206-101] Register 'write_pointer_vi' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'available_spaces_vo' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'write_pointer_vo' is power-on initialization.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'enqueue_dequeue_fram'.
-INFO: [HLS 200-111]  Elapsed time: 0.503 seconds; current allocated memory: 190.089 MB.
+Command       create_rtl_model done; 0.106 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.527 seconds; current allocated memory: 200.892 MB.
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.rtl_wrap.cfg.tcl 
-Execute       gen_rtl enqueue_dequeue_fram -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/systemc/enqueue_dequeue_fram -synmodules compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request 
+Execute       gen_rtl enqueue_dequeue_fram -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/systemc/enqueue_dequeue_fram -synmodules ma_unitdatax_status_ compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request 
 Execute       gen_rtl enqueue_dequeue_fram -style xilinx -f -lang vhdl -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/vhdl/enqueue_dequeue_fram 
 Execute       gen_rtl enqueue_dequeue_fram -style xilinx -f -lang vlog -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/verilog/enqueue_dequeue_fram 
 Execute       syn_report -csynth -model enqueue_dequeue_fram -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/report/enqueue_dequeue_fram_csynth.rpt 
@@ -876,21 +979,22 @@ WARNING: [RTGEN 206-101] Port 'ma_unitdatax_request/expiry_time' has no fanin or
                Please use C simulation to confirm this function argument can be read from or written to.
 INFO: [RTGEN 206-100] Generating core module 'ma_unitdatax_requeOg': 4 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'ma_unitdatax_request'.
-Command       create_rtl_model done; 0.509 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.012 seconds; current allocated memory: 191.576 MB.
+Command       create_rtl_model done; 0.537 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.041 seconds; current allocated memory: 202.505 MB.
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.rtl_wrap.cfg.tcl 
-Execute       gen_rtl ma_unitdatax_request -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/systemc/ma_unitdatax_request -synmodules compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request 
+Execute       gen_rtl ma_unitdatax_request -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/systemc/ma_unitdatax_request -synmodules ma_unitdatax_status_ compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request 
 Execute       gen_rtl ma_unitdatax_request -istop -style xilinx -f -lang vhdl -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/vhdl/ma_unitdatax_request 
 Execute       gen_rtl ma_unitdatax_request -istop -style xilinx -f -lang vlog -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/verilog/ma_unitdatax_request 
 Execute       syn_report -csynth -model ma_unitdatax_request -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/report/ma_unitdatax_request_csynth.rpt 
 Execute       syn_report -rtlxml -model ma_unitdatax_request -o E:/FYP/HLS/MAC_SAP/fyp/solution1/syn/report/ma_unitdatax_request_csynth.xml 
 Execute       syn_report -verbosereport -model ma_unitdatax_request -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.verbose.rpt 
-Command       syn_report done; 0.17 sec.
+Command       syn_report done; 0.185 sec.
 Execute       db_write -model ma_unitdatax_request -f -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.adb 
-Command       db_write done; 0.124 sec.
+Command       db_write done; 0.148 sec.
 Execute       gen_tb_info ma_unitdatax_request -p E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request 
 Execute       export_constraint_db -f -tool general -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.constraint.tcl 
 Execute       syn_report -designview -model ma_unitdatax_request -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.design.xml 
+Command       syn_report done; 0.102 sec.
 Execute       get_config_rtl -disable_wave_debug 
 Execute       syn_report -wcfg -model ma_unitdatax_request -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request_dataflow_ana.wcfg 
 Execute       syn_report -protoinst -model ma_unitdatax_request -o E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.protoinst 
@@ -898,7 +1002,9 @@ Execute       get_config_debug -directory
 Execute       sc_get_clocks ma_unitdatax_request 
 Execute       get_config_export -vivado_clock 
 Execute       sc_get_portdomain ma_unitdatax_request 
-INFO-FLOW: Model list for RTL component generation: compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request
+INFO-FLOW: Model list for RTL component generation: ma_unitdatax_status_ compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request
+INFO-FLOW: Handling components in module [ma_unitdatax_status_s] ... 
+Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s.compgen.tcl 
 INFO-FLOW: Handling components in module [compose_mac_frame] ... 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.compgen.tcl 
 INFO-FLOW: Handling components in module [enqueue_dequeue_fram] ... 
@@ -913,15 +1019,17 @@ INFO-FLOW: Found component ma_unitdatax_requcud.
 INFO-FLOW: Append model ma_unitdatax_requcud
 INFO-FLOW: Found component ma_unitdatax_requdEe.
 INFO-FLOW: Append model ma_unitdatax_requdEe
+INFO-FLOW: Append model ma_unitdatax_status_s
 INFO-FLOW: Append model compose_mac_frame
 INFO-FLOW: Append model enqueue_dequeue_fram
 INFO-FLOW: Append model ma_unitdatax_request
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: enqueue_dequeue_fbkb ma_unitdatax_requeOg ma_unitdatax_requcud ma_unitdatax_requdEe compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request
+INFO-FLOW: All models in this session: enqueue_dequeue_fbkb ma_unitdatax_requeOg ma_unitdatax_requcud ma_unitdatax_requdEe ma_unitdatax_status_s compose_mac_frame enqueue_dequeue_fram ma_unitdatax_request
 INFO-FLOW: To file: write model enqueue_dequeue_fbkb
 INFO-FLOW: To file: write model ma_unitdatax_requeOg
 INFO-FLOW: To file: write model ma_unitdatax_requcud
 INFO-FLOW: To file: write model ma_unitdatax_requdEe
+INFO-FLOW: To file: write model ma_unitdatax_status_s
 INFO-FLOW: To file: write model compose_mac_frame
 INFO-FLOW: To file: write model enqueue_dequeue_fram
 INFO-FLOW: To file: write model ma_unitdatax_request
@@ -959,8 +1067,8 @@ Execute           source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/uti
 Execute           source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute           source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.133 sec.
-Command       ap_source done; 0.133 sec.
+Command         ap_source done; 0.143 sec.
+Command       ap_source done; 0.143 sec.
 Execute       source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
 Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
@@ -970,6 +1078,7 @@ Execute       ap_part_info -name xc7a35t-cpg236-1 -data names -quiet
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info -quiet 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s.compgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.compgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/enqueue_dequeue_fram.compgen.tcl 
 INFO: [RTMG 210-278] Implementing memory 'enqueue_dequeue_fbkb_ram (RAM)' using block RAMs with power-on initialization.
@@ -984,7 +1093,7 @@ Execute         ap_part_info -name xc7a35t-cpg236-1 -data info -quiet
 INFO: [RTMG 210-278] Implementing memory 'ma_unitdatax_requdEe_ram (RAM)' using block RAMs.
 Execute         ap_part_info -name xc7a35t-cpg236-1 -data names -quiet 
 Execute         ap_part_info -name xc7a35t-cpg236-1 -data info -quiet 
-Command       ap_source done; 0.186 sec.
+Command       ap_source done; 0.19 sec.
 INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d E:/FYP/HLS/MAC_SAP/fyp/solution1
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:CMD: read_platform_lib E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl
@@ -1009,8 +1118,8 @@ Execute           source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/uti
 Execute           source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute           source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.136 sec.
-Command       ap_source done; 0.136 sec.
+Command         ap_source done; 0.139 sec.
+Command       ap_source done; 0.139 sec.
 Execute       source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
 Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=ma_unitdatax_request xml_exists=0
@@ -1022,11 +1131,13 @@ Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax
 INFO-FLOW: DBG:CMD:       export_impl_rtl
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s.compgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.compgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/enqueue_dequeue_fram.compgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.compgen.tcl 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s.compgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.compgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/enqueue_dequeue_fram.compgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.compgen.tcl 
@@ -1057,11 +1168,12 @@ Execute         ap_part_info -name xc7a35t-cpg236-1 -data names -quiet
 Execute         ap_part_info -name xc7a35t-cpg236-1 -data info -quiet 
 Execute         ap_part_info -name xc7a35t-cpg236-1 -data names -quiet 
 Execute         ap_part_info -name xc7a35t-cpg236-1 -data info -quiet 
-Command       ap_source done; 0.265 sec.
+Command       ap_source done; 0.281 sec.
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data names -quiet 
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info -quiet 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s.compgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.compgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/enqueue_dequeue_fram.compgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.compgen.tcl 
@@ -1076,7 +1188,7 @@ Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.tbgen.tcl 
 INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=16
 INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=11
-INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=7 #gSsdmPorts=16
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=8 #gSsdmPorts=16
 Execute       source D:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl 
@@ -1100,6 +1212,7 @@ Execute       ap_part_info -name xc7a35t-cpg236-1 -data names -quiet
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info -quiet 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl 
 Execute       get_config_debug -directory 
+Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_status_s.tbgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/compose_mac_frame.tbgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/enqueue_dequeue_fram.tbgen.tcl 
 Execute       source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.tbgen.tcl 
@@ -1110,14 +1223,14 @@ Execute       get_config_rtl -stall_sig_gen
 Execute       get_config_rtl -profile 
 INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:08 ; elapsed = 00:00:59 . Memory (MB): peak = 266.918 ; gain = 177.781
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:01:06 . Memory (MB): peak = 278.977 ; gain = 186.566
 INFO: [VHDL 208-304] Generating VHDL RTL for ma_unitdatax_request.
 INFO: [VLOG 209-307] Generating Verilog RTL for ma_unitdatax_request.
-Command     autosyn done; 5.78 sec.
-Command   csynth_design done; 57.372 sec.
-Command ap_source done; 58.995 sec.
+Command     autosyn done; 6.737 sec.
+Command   csynth_design done; 64.279 sec.
+Command ap_source done; 65.966 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace E:/FYP/HLS/MAC_SAP/fyp/solution1 opened at Fri Oct 30 21:11:15 +0530 2020
+INFO-FLOW: Workspace E:/FYP/HLS/MAC_SAP/fyp/solution1 opened at Mon Nov 02 20:52:26 +0530 2020
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -1159,11 +1272,11 @@ Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/interfac
 Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
 Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.103 sec.
+Command         ap_source done; 0.102 sec.
 Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.143 sec.
-Command     ap_source done; 0.143 sec.
+Command       ap_source done; 0.142 sec.
+Command     ap_source done; 0.142 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib D:/Xilinx/Vivado/2019.2/common/technology/xilinx/artix7/artix7_fpv6 
 Execute       source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
@@ -1178,7 +1291,7 @@ Execute     source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/artix7/artix
 Execute       source D:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xc7a35t-cpg236-1 
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data single -quiet 
-Command       ap_part_info done; 0.748 sec.
+Command       ap_part_info done; 0.733 sec.
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
 Execute       add_library xilinx/artix7/artix7:xc7a35t:-cpg236:-1 
 Execute         get_default_platform 
@@ -1194,7 +1307,7 @@ Execute         get_default_platform
 INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
 Execute       ap_part_info -name xc7a35t-cpg236-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 0.952 sec.
+Command     set_part done; 0.926 sec.
 Execute     ap_part_info -data single -name xc7a35t-cpg236-1 
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data resources 
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
@@ -1202,7 +1315,7 @@ Execute     ap_part_info -name xc7a35t-cpg236-1 -data info
 Execute     config_chip_info -quiet -resource {SLICE 8150} {LUT 20800} {FF 41600} {DSP48E 90} {BRAM 100} {URAM 0} 
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
 Execute     config_chip_info -quiet -speed slow 
-Command   open_solution done; 1.205 sec.
+Command   open_solution done; 1.165 sec.
 Execute   cosim_design -trace_level all 
 Execute     source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl 
 Execute     source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl 
@@ -1239,22 +1352,25 @@ Execute     ap_part_info -name xc7a35t-cpg236-1 -data info -quiet
 Execute     source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl 
 Execute     source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.rtl_wrap.cfg.tcl 
 Execute     source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.tbgen.tcl 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request_test.c 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/compose_mac_frame_test.c 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/compose_mac_header_test.c 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/crc_32_test.c 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/crc_32_validate_test.c 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/decompose_mac_frame_test.c 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/edca_test.c 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/input_data.bin 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/input_message.bin 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/input_message_crc.bin 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/mac_frame.bin 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/mac_layer_test.c 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/r_n_g_test.c 
-Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/slot_boundary_timing_test.c 
 Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/timer_test.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/slot_boundary_timing_test.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/r_n_g_test.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/mac_layer_test.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/mac_frame.bin 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/input_message_crc.bin 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/input_message.bin 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/input_data.bin 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/edca_test.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/decompose_mac_frame_test.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/crc_32_validate_test.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/crc_32_test.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/compose_mac_header_test.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/compose_mac_frame_test.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request_test.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_STATUS_indication_test.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_STATUS_indication.c 
+Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_STATUS_indication.h 
 Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request.c 
 Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request.h 
 Execute     is_encrypted E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATA_indication.h 
@@ -1279,106 +1395,122 @@ Execute     source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_r
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
 INFO: [COSIM 212-14] Instrumenting C test bench ...
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
-INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request_test.c_pre.c
-Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request_test.c_pre.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.168 sec.
-Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request_test.c_pre.c.tb.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.266 sec.
-Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
-INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/backoff_test.c_pre.c
-Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/backoff_test.c_pre.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/backoff_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.167 sec.
-Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/backoff_test.c_pre.c.tb.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/backoff_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.166 sec.
-Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
-INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/compose_mac_frame_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame_test.c_pre.c
-Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame_test.c_pre.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/timer_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer_test.c_pre.c
+Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer_test.c_pre.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.156 sec.
+Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer_test.c_pre.c.tb.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
 Command     tidy_31 done; 0.134 sec.
-Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame_test.c_pre.c.tb.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.133 sec.
-Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
-INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/compose_mac_header_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_header_test.c_pre.c
-Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_header_test.c_pre.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_header_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.131 sec.
-Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_header_test.c_pre.c.tb.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_header_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.13 sec.
-Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
-INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/crc_32_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_test.c_pre.c
-Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_test.c_pre.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.13 sec.
-Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_test.c_pre.c.tb.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.131 sec.
-Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
-INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/crc_32_validate_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate_test.c_pre.c
-Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate_test.c_pre.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.129 sec.
-Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate_test.c_pre.c.tb.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.13 sec.
-Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
-INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/decompose_mac_frame_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame_test.c_pre.c
-Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame_test.c_pre.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.136 sec.
-Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame_test.c_pre.c.tb.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.131 sec.
-Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
-INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/edca_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca_test.c_pre.c
-Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca_test.c_pre.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.129 sec.
-Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca_test.c_pre.c.tb.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.143 sec.
-Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
-INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/mac_layer_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer_test.c_pre.c
-Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer_test.c_pre.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.128 sec.
-Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer_test.c_pre.c.tb.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.131 sec.
-Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
-INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/r_n_g_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g_test.c_pre.c
-Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g_test.c_pre.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.129 sec.
-Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g_test.c_pre.c.tb.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.133 sec.
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/slot_boundary_timing_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/slot_boundary_timing_test.c_pre.c
 Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/slot_boundary_timing_test.c_pre.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/slot_boundary_timing_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.13 sec.
+Command     tidy_31 done; 0.134 sec.
 Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/slot_boundary_timing_test.c_pre.c.tb.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/slot_boundary_timing_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.133 sec.
+Command     tidy_31 done; 0.136 sec.
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
-INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/timer_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer_test.c_pre.c
-Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer_test.c_pre.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.135 sec.
-Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer_test.c_pre.c.tb.c std=gnu89 
-INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/r_n_g_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g_test.c_pre.c
+Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g_test.c_pre.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
 Command     tidy_31 done; 0.137 sec.
+Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g_test.c_pre.c.tb.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.139 sec.
+Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
+INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/mac_layer_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer_test.c_pre.c
+Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer_test.c_pre.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.135 sec.
+Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer_test.c_pre.c.tb.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.139 sec.
+Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
+INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/edca_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca_test.c_pre.c
+Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca_test.c_pre.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.136 sec.
+Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca_test.c_pre.c.tb.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.137 sec.
+Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
+INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/decompose_mac_frame_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame_test.c_pre.c
+Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame_test.c_pre.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.138 sec.
+Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame_test.c_pre.c.tb.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.136 sec.
+Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
+INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/crc_32_validate_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate_test.c_pre.c
+Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate_test.c_pre.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.137 sec.
+Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate_test.c_pre.c.tb.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.142 sec.
+Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
+INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/crc_32_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_test.c_pre.c
+Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_test.c_pre.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.136 sec.
+Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_test.c_pre.c.tb.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.137 sec.
+Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
+INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/compose_mac_header_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_header_test.c_pre.c
+Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_header_test.c_pre.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_header_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.136 sec.
+Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_header_test.c_pre.c.tb.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_header_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.142 sec.
+Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
+INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/compose_mac_frame_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame_test.c_pre.c
+Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame_test.c_pre.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.135 sec.
+Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame_test.c_pre.c.tb.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.137 sec.
+Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
+INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/backoff_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/backoff_test.c_pre.c
+Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/backoff_test.c_pre.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/backoff_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.169 sec.
+Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/backoff_test.c_pre.c.tb.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/backoff_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.18 sec.
+Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
+INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request_test.c_pre.c
+Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request_test.c_pre.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.166 sec.
+Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request_test.c_pre.c.tb.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.281 sec.
+Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
+INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_STATUS_indication_test.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_STATUS_indication_test.c_pre.c
+Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_STATUS_indication_test.c_pre.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_STATUS_indication_test.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.136 sec.
+Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_STATUS_indication_test.c_pre.c.tb.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_STATUS_indication_test.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.137 sec.
+Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
+INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_STATUS_indication.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_STATUS_indication.c_pre.c
+Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_STATUS_indication.c_pre.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_STATUS_indication.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.172 sec.
+Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_STATUS_indication.c_pre.c.tb.c std=gnu89 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_STATUS_indication.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
+Command     tidy_31 done; 0.179 sec.
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request.c_pre.c
 Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request.c_pre.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.163 sec.
+Command     tidy_31 done; 0.174 sec.
 Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request.c_pre.c.tb.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/MA_UNITDATAX_request.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
 Command     tidy_31 done; 0.176 sec.
@@ -1386,26 +1518,26 @@ Execute     ap_part_info -name xc7a35t-cpg236-1 -data info
 INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/compose_mac_frame.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame.c_pre.c
 Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame.c_pre.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.165 sec.
+Command     tidy_31 done; 0.173 sec.
 Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame.c_pre.c.tb.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/compose_mac_frame.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.169 sec.
+Command     tidy_31 done; 0.187 sec.
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/crc_32.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32.c_pre.c
 Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32.c_pre.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.137 sec.
+Command     tidy_31 done; 0.14 sec.
 Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32.c_pre.c.tb.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.134 sec.
+Command     tidy_31 done; 0.142 sec.
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/crc_32_validate.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate.c_pre.c
 Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate.c_pre.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.133 sec.
+Command     tidy_31 done; 0.141 sec.
 Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate.c_pre.c.tb.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/crc_32_validate.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.13 sec.
+Command     tidy_31 done; 0.142 sec.
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/decompose_mac_frame.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame.c_pre.c
 Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame.c_pre.c std=gnu89 
@@ -1413,12 +1545,12 @@ INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.
 Command     tidy_31 done; 0.169 sec.
 Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame.c_pre.c.tb.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/decompose_mac_frame.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.172 sec.
+Command     tidy_31 done; 0.179 sec.
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/edca.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca.c_pre.c
 Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca.c_pre.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.168 sec.
+Command     tidy_31 done; 0.175 sec.
 Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca.c_pre.c.tb.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/edca.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
 Command     tidy_31 done; 0.187 sec.
@@ -1426,26 +1558,26 @@ Execute     ap_part_info -name xc7a35t-cpg236-1 -data info
 INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer.c_pre.c
 Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer.c_pre.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.13 sec.
+Command     tidy_31 done; 0.143 sec.
 Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer.c_pre.c.tb.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/mac_layer.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.131 sec.
+Command     tidy_31 done; 0.151 sec.
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/r_n_g.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g.c_pre.c
 Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g.c_pre.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.16 sec.
+Command     tidy_31 done; 0.175 sec.
 Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g.c_pre.c.tb.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/r_n_g.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.166 sec.
+Command     tidy_31 done; 0.184 sec.
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
 INFO-FLOW: TB processing: E:/FYP/HLS/MAC_SAP/fyp/timer.c E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer.c_pre.c
 Execute     tidy_31 xilinx-tb-xfmat E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer.c_pre.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer.c_pre.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.159 sec.
+Command     tidy_31 done; 0.175 sec.
 Execute     tidy_31 xilinx-tb31-process E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer.c_pre.c.tb.c std=gnu89 
 INFO-FLOW: exec D:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors E:/FYP/HLS/MAC_SAP/fyp/solution1/./sim/autowrap/testbench/timer.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
-Command     tidy_31 done; 0.165 sec.
+Command     tidy_31 done; 0.178 sec.
 Execute     source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/global.setting.tcl 
 Execute     source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.rtl_wrap.cfg.tcl 
 Execute     source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.rtl_wrap.cfg.tcl 
@@ -1456,7 +1588,7 @@ Execute     ap_part_info -name xc7a35t-cpg236-1 -data info
 Execute     source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.rtl_wrap.cfg.tcl 
 Execute     source .run_sim.tcl 
 INFO: [COSIM 212-302] Starting C TB testing ... 
-Command     ap_source done; 0.335 sec.
+Command     ap_source done; 0.321 sec.
 INFO: [COSIM 212-333] Generating C post check test bench ...
 Execute     ap_part_info -name xc7a35t-cpg236-1 -data info 
 Execute     source E:/FYP/HLS/MAC_SAP/fyp/solution1/.autopilot/db/ma_unitdatax_request.rtl_wrap.cfg.tcl 
@@ -1503,9 +1635,8 @@ INFO: [COSIM 212-323] Starting verilog simulation.
 INFO: [COSIM 212-15] Starting XSIM ...
 INFO: [COSIM 212-316] Starting C post checking ...
 ERROR: [COSIM 212-361] C TB post check failed, nonzero return value '1'.
-Command     ap_source done; error code: 1; 17.433 sec.
+Command     ap_source done; error code: 1; 17.629 sec.
 ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
-INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-Command   cosim_design done; error code: 2; 143.635 sec.
-Command ap_source done; error code: 1; 144.852 sec.
+Command   cosim_design done; error code: 2; 156.211 sec.
+Command ap_source done; error code: 1; 157.382 sec.
 Execute cleanup_all 

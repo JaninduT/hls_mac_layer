@@ -7,4 +7,4 @@ set depth_list {
 {d_rate 1}
 {tx_power_lvl 1}
 }
-set trans_num 1
+set trans_num 2

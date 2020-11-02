@@ -1,5 +1,6 @@
 #include "MA_UNITDATAX_request.h"
 
+
 int main(){
 	FILE *fp;
 	if((fp = fopen("input_data.bin","rb")) == NULL){
@@ -27,9 +28,11 @@ int main(){
 		fread(&data[i], 1, 1, fp);
 	}
 	fclose(fp);
-	ma_unitdatax_request(&my_mac, &bcast_wcard_mac, data, up, QOS_NOACK, ci, &ts, &dr, &tx_p_l, &exp);
+	ma_unitdatax_request(my_mac, bcast_wcard_mac, data, up, QOS_NOACK, ci, ts, dr, tx_p_l, exp);
+	up = 2;
+	ma_unitdatax_request(my_mac, bcast_wcard_mac, data, up, QOS_NOACK, ci, ts, dr, tx_p_l, exp);
 
-	bool res = enqueue_dequeue_frame(1, 3, frame, &io_d_rate, &io_tx_pwr_lvl);
+	uint4 res = enqueue_dequeue_frame(1, 3, frame, &io_d_rate, &io_tx_pwr_lvl);
 
 	printf("res: %d, d_rate : %d, tx_pwr : %d\n",res, io_d_rate, io_tx_pwr_lvl);
 

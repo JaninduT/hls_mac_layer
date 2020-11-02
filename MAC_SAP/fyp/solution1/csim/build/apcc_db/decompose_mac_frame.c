@@ -467,7 +467,7 @@ printf("\n  store i8 %%33, i8* %%35, align 1, !dbg !4 for 0x%I64xth hint within 
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", llvm_cbe_tmp__23);
 if (AESL_DEBUG_TRACE)
-printf("\n  %%36 = add nsw i32 %%storemerge12, 1, !dbg !6 for 0x%I64xth hint within @decompose_mac_frame  --> \n", ++aesl_llvm_cbe_57_count);
+printf("\n  %%36 = add nsw i32 %%storemerge12, 1, !dbg !5 for 0x%I64xth hint within @decompose_mac_frame  --> \n", ++aesl_llvm_cbe_57_count);
   llvm_cbe_tmp__26 = (unsigned int )((unsigned int )(llvm_cbe_storemerge12&4294967295ull)) + ((unsigned int )(1u&4294967295ull));
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", ((unsigned int )(llvm_cbe_tmp__26&4294967295ull)));

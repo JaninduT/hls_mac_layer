@@ -27,6 +27,8 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/soluti
 INFO: [VRFC 10-311] analyzing module apatb_ma_unitdatax_request_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_request.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ma_unitdatax_request
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_status_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ma_unitdatax_status_s
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
@@ -41,6 +43,7 @@ Compiling module xil_defaultlib.enqueue_dequeue_fbkb_ram
 Compiling module xil_defaultlib.enqueue_dequeue_fbkb(DataWidth=8...
 Compiling module xil_defaultlib.enqueue_dequeue_fram
 Compiling module xil_defaultlib.compose_mac_frame
+Compiling module xil_defaultlib.ma_unitdatax_status_s
 Compiling module xil_defaultlib.ma_unitdatax_requeOg_DSP48_0
 Compiling module xil_defaultlib.ma_unitdatax_requeOg(ID=1,NUM_ST...
 Compiling module xil_defaultlib.ma_unitdatax_request

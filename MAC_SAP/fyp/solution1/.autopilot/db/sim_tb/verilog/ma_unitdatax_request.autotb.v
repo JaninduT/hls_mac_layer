@@ -24,10 +24,10 @@
 `define AESL_DEPTH_s_class 1
 `define AESL_DEPTH_c_identifier_operating_class 1
 `define AESL_DEPTH_c_identifier_channel_number 1
-`define AESL_DEPTH_t_slot 0
+`define AESL_DEPTH_t_slot 1
 `define AESL_DEPTH_d_rate 1
 `define AESL_DEPTH_tx_power_lvl 1
-`define AESL_DEPTH_expiry_time 0
+`define AESL_DEPTH_expiry_time 1
 `define AUTOTB_TVIN_data  "./c.ma_unitdatax_request.autotvin_data.dat"
 `define AUTOTB_TVIN_up  "./c.ma_unitdatax_request.autotvin_up.dat"
 `define AUTOTB_TVIN_s_class  "./c.ma_unitdatax_request.autotvin_s_class.dat"
@@ -44,7 +44,7 @@
 `define AUTOTB_TVIN_tx_power_lvl_out_wrapc  "./rtl.ma_unitdatax_request.autotvin_tx_power_lvl.dat"
 module `AUTOTB_TOP;
 
-parameter AUTOTB_TRANSACTION_NUM = 1;
+parameter AUTOTB_TRANSACTION_NUM = 2;
 parameter PROGRESS_TIMEOUT = 10000000;
 parameter LATENCY_ESTIMATION = 1563;
 parameter LENGTH_data = 70;

@@ -8,4 +8,5 @@ sv xil_defaultlib "ma_unitdatax_requdEe.v"
 sv xil_defaultlib "ma_unitdatax_requeOg.v"
 sv xil_defaultlib "ma_unitdatax_request.autotb.v"
 sv xil_defaultlib "ma_unitdatax_request.v"
+sv xil_defaultlib "ma_unitdatax_status_s.v"
 

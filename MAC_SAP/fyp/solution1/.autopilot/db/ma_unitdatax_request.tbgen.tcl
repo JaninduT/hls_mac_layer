@@ -21,10 +21,10 @@ set C_modelArgList {
 	{ s_class uint 1 regular  }
 	{ c_identifier_operating_class int 8 regular  }
 	{ c_identifier_channel_number int 8 regular  }
-	{ t_slot int 2 unused {pointer 0}  }
-	{ d_rate int 7 regular {pointer 0}  }
-	{ tx_power_lvl int 4 regular {pointer 0}  }
-	{ expiry_time int 64 unused {pointer 0}  }
+	{ t_slot uint 2 unused  }
+	{ d_rate uint 7 regular  }
+	{ tx_power_lvl uint 4 regular  }
+	{ expiry_time int 64 unused  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "source_addr_mac", "interface" : "memory", "bitwidth" : 8, "direction" : "NONE", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "source_addr.mac","cData": "unsigned char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 5,"step" : 1}]}]}]} , 
@@ -34,10 +34,10 @@ set C_modelArgMapList {[
  	{ "Name" : "s_class", "interface" : "wire", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "s_class","cData": "enum service_class","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
  	{ "Name" : "c_identifier_operating_class", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "c_identifier.operating_class","cData": "unsigned char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
  	{ "Name" : "c_identifier_channel_number", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "c_identifier.channel_number","cData": "unsigned char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
- 	{ "Name" : "t_slot", "interface" : "wire", "bitwidth" : 2, "direction" : "READONLY", "bitSlice":[{"low":0,"up":1,"cElement": [{"cName": "t_slot","cData": "enum time_slot","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
- 	{ "Name" : "d_rate", "interface" : "wire", "bitwidth" : 7, "direction" : "READONLY", "bitSlice":[{"low":0,"up":6,"cElement": [{"cName": "d_rate","cData": "uint7","bit_use": { "low": 0,"up": 6},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
- 	{ "Name" : "tx_power_lvl", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY", "bitSlice":[{"low":0,"up":3,"cElement": [{"cName": "tx_power_lvl","cData": "uint4","bit_use": { "low": 0,"up": 3},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
- 	{ "Name" : "expiry_time", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "expiry_time","cData": "long long int","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} ]}
+ 	{ "Name" : "t_slot", "interface" : "wire", "bitwidth" : 2, "direction" : "READONLY", "bitSlice":[{"low":0,"up":1,"cElement": [{"cName": "t_slot","cData": "enum time_slot","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
+ 	{ "Name" : "d_rate", "interface" : "wire", "bitwidth" : 7, "direction" : "READONLY", "bitSlice":[{"low":0,"up":6,"cElement": [{"cName": "d_rate","cData": "uint7","bit_use": { "low": 0,"up": 6},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
+ 	{ "Name" : "tx_power_lvl", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY", "bitSlice":[{"low":0,"up":3,"cElement": [{"cName": "tx_power_lvl","cData": "uint4","bit_use": { "low": 0,"up": 3},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
+ 	{ "Name" : "expiry_time", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "expiry_time","cData": "long long int","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} ]}
 # RTL Port declarations: 
 set portNum 37
 set portList { 
@@ -119,13 +119,13 @@ set NewPortList {[
  	{ "name": "expiry_time", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "expiry_time", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "5", "6", "7", "8", "9"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "5", "6", "7", "8", "9", "10"],
 		"CDFG" : "ma_unitdatax_request",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "1563",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2", "EstimateLatencyMax" : "1563",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -133,11 +133,11 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
 		"WaitState" : [
-			{"State" : "ap_ST_fsm_state6", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243"},
-			{"State" : "ap_ST_fsm_state10", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243"},
-			{"State" : "ap_ST_fsm_state13", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243"},
-			{"State" : "ap_ST_fsm_state16", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243"},
-			{"State" : "ap_ST_fsm_state4", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_compose_mac_frame_fu_271"}],
+			{"State" : "ap_ST_fsm_state8", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263"},
+			{"State" : "ap_ST_fsm_state13", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263"},
+			{"State" : "ap_ST_fsm_state17", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263"},
+			{"State" : "ap_ST_fsm_state21", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263"},
+			{"State" : "ap_ST_fsm_state6", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_compose_mac_frame_fu_291"}],
 		"Port" : [
 			{"Name" : "source_addr_mac", "Type" : "Memory", "Direction" : "X"},
 			{"Name" : "dest_addr_mac", "Type" : "Memory", "Direction" : "X"},
@@ -150,39 +150,57 @@ set RtlHierarchyInfo {[
 			{"Name" : "d_rate", "Type" : "None", "Direction" : "I"},
 			{"Name" : "tx_power_lvl", "Type" : "None", "Direction" : "I"},
 			{"Name" : "expiry_time", "Type" : "None", "Direction" : "I"},
+			{"Name" : "successful", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "6", "SubInstance" : "grp_ma_unitdatax_status_s_fu_299", "Port" : "successful"}]},
+			{"Name" : "unsupported_priority", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "6", "SubInstance" : "grp_ma_unitdatax_status_s_fu_299", "Port" : "unsupported_priority"}]},
+			{"Name" : "unsupported_service_s", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "6", "SubInstance" : "grp_ma_unitdatax_status_s_fu_299", "Port" : "unsupported_service_s"}]},
+			{"Name" : "unsupported_channel_s", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "6", "SubInstance" : "grp_ma_unitdatax_status_s_fu_299", "Port" : "unsupported_channel_s"}]},
+			{"Name" : "unsupported_tx_param", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "6", "SubInstance" : "grp_ma_unitdatax_status_s_fu_299", "Port" : "unsupported_tx_param"}]},
+			{"Name" : "queue_full", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "6", "SubInstance" : "grp_ma_unitdatax_status_s_fu_299", "Port" : "queue_full"}]},
 			{"Name" : "seq_number", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "available_spaces_bk", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "available_spaces_bk"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "available_spaces_bk"}]},
 			{"Name" : "write_pointer_bk", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "write_pointer_bk"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "write_pointer_bk"}]},
 			{"Name" : "edca_queues", "Type" : "Memory", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "edca_queues"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "edca_queues"}]},
 			{"Name" : "available_spaces_be", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "available_spaces_be"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "available_spaces_be"}]},
 			{"Name" : "write_pointer_be", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "write_pointer_be"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "write_pointer_be"}]},
 			{"Name" : "available_spaces_vi", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "available_spaces_vi"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "available_spaces_vi"}]},
 			{"Name" : "write_pointer_vi", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "write_pointer_vi"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "write_pointer_vi"}]},
 			{"Name" : "available_spaces_vo", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "available_spaces_vo"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "available_spaces_vo"}]},
 			{"Name" : "write_pointer_vo", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "write_pointer_vo"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "write_pointer_vo"}]},
 			{"Name" : "medium_state", "Type" : "None", "Direction" : "I"},
 			{"Name" : "rand_state", "Type" : "OVld", "Direction" : "IO"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.llc_data_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_data_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_enqueue_dequeue_fram_fu_243", "Parent" : "0", "Child" : ["4"],
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_enqueue_dequeue_fram_fu_263", "Parent" : "0", "Child" : ["4"],
 		"CDFG" : "enqueue_dequeue_fram",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -207,8 +225,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "write_pointer_vi", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "available_spaces_vo", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "write_pointer_vo", "Type" : "OVld", "Direction" : "IO"}]},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_enqueue_dequeue_fram_fu_243.edca_queues_U", "Parent" : "3"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_compose_mac_frame_fu_271", "Parent" : "0",
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_enqueue_dequeue_fram_fu_263.edca_queues_U", "Parent" : "3"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_compose_mac_frame_fu_291", "Parent" : "0",
 		"CDFG" : "compose_mac_frame",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -226,10 +244,31 @@ set RtlHierarchyInfo {[
 			{"Name" : "up", "Type" : "None", "Direction" : "I"},
 			{"Name" : "data", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "mac_frame", "Type" : "Memory", "Direction" : "IO"}]},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ma_unitdatax_requeOg_U8", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_ma_unitdatax_status_s_fu_299", "Parent" : "0",
+		"CDFG" : "ma_unitdatax_status_s",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "trans_sts", "Type" : "None", "Direction" : "I"},
+			{"Name" : "successful", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "unsupported_priority", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "unsupported_service_s", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "unsupported_channel_s", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "unsupported_tx_param", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "queue_full", "Type" : "OVld", "Direction" : "IO"}]},
 	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ma_unitdatax_requeOg_U9", "Parent" : "0"},
 	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ma_unitdatax_requeOg_U10", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ma_unitdatax_requeOg_U11", "Parent" : "0"}]}
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ma_unitdatax_requeOg_U11", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ma_unitdatax_requeOg_U12", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -245,6 +284,12 @@ set ArgLastReadFirstWriteLatency {
 		d_rate {Type I LastRead 0 FirstWrite -1}
 		tx_power_lvl {Type I LastRead 0 FirstWrite -1}
 		expiry_time {Type I LastRead -1 FirstWrite -1}
+		successful {Type IO LastRead -1 FirstWrite -1}
+		unsupported_priority {Type IO LastRead -1 FirstWrite -1}
+		unsupported_service_s {Type IO LastRead -1 FirstWrite -1}
+		unsupported_channel_s {Type IO LastRead -1 FirstWrite -1}
+		unsupported_tx_param {Type IO LastRead -1 FirstWrite -1}
+		queue_full {Type IO LastRead -1 FirstWrite -1}
 		seq_number {Type IO LastRead -1 FirstWrite -1}
 		available_spaces_bk {Type IO LastRead -1 FirstWrite -1}
 		write_pointer_bk {Type IO LastRead -1 FirstWrite -1}
@@ -273,13 +318,21 @@ set ArgLastReadFirstWriteLatency {
 		seqnumber {Type I LastRead 11 FirstWrite -1}
 		up {Type I LastRead 12 FirstWrite -1}
 		data {Type I LastRead 13 FirstWrite -1}
-		mac_frame {Type IO LastRead 14 FirstWrite 0}}}
+		mac_frame {Type IO LastRead 14 FirstWrite 0}}
+	ma_unitdatax_status_s {
+		trans_sts {Type I LastRead 0 FirstWrite -1}
+		successful {Type IO LastRead -1 FirstWrite -1}
+		unsupported_priority {Type IO LastRead -1 FirstWrite -1}
+		unsupported_service_s {Type IO LastRead -1 FirstWrite -1}
+		unsupported_channel_s {Type IO LastRead -1 FirstWrite -1}
+		unsupported_tx_param {Type IO LastRead -1 FirstWrite -1}
+		queue_full {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1", "Max" : "1563"}
-	, {"Name" : "Interval", "Min" : "2", "Max" : "1564"}
+	{"Name" : "Latency", "Min" : "2", "Max" : "1563"}
+	, {"Name" : "Interval", "Min" : "3", "Max" : "1564"}
 ]}
 
 set PipelineEnableSignalInfo {[

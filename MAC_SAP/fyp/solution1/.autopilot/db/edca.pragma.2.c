@@ -4526,8 +4526,8 @@ enum time_slot {
  EITHER = 3
 };
 
-static const mac48 my_mac = {.mac[0]=0xff, .mac[1]=0xab, .mac[2]=0xbc, .mac[3]=0xcd, .mac[4]=0xde, .mac[5]=0xef};
-static const mac48 bcast_wcard_mac = {.mac[0]=0xff, .mac[1]=0xff, .mac[2]=0xff, .mac[3]=0xff, .mac[4]=0xff, .mac[5]=0xff};
+static mac48 my_mac = {.mac[0]=0xff, .mac[1]=0xab, .mac[2]=0xbc, .mac[3]=0xcd, .mac[4]=0xde, .mac[5]=0xef};
+static mac48 bcast_wcard_mac = {.mac[0]=0xff, .mac[1]=0xff, .mac[2]=0xff, .mac[3]=0xff, .mac[4]=0xff, .mac[5]=0xff};
 
 static const uint8 SIFS = 2;
 static const uint8 rx_ok = 2;
@@ -4536,7 +4536,7 @@ static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
 # 5 "fyp/edca.h" 2
 
-uint1 enqueue_dequeue_frame(
+uint4 enqueue_dequeue_frame(
   uint2 operation,
   uint2 ac,
   unsigned char inout_frame[100],
@@ -4628,14 +4628,13 @@ static uint2 write_pointer_vo = 0;
 static uint3 available_spaces_vo = 4;
 static uint2 read_pointer_vi = 0;
 static uint2 write_pointer_vi = 0;
-static uint3 available_spaces_vi = 3;
+static uint3 available_spaces_vi = 4;
 static uint2 read_pointer_be = 0;
 static uint2 write_pointer_be = 0;
 static uint3 available_spaces_be = 4;
 static uint2 read_pointer_bk = 0;
 static uint2 write_pointer_bk = 0;
 static uint3 available_spaces_bk = 4;
-
 static uint10 CW_vo = 15;
 static uint10 CW_vi = 15;
 static uint10 CW_be = 15;
@@ -4648,8 +4647,9 @@ static uint10 bk_backoff_counter = 0;
 
 static uint32 rand_state = 123456789;
 
-uint1 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame[100],
+uint4 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame[100],
   uint7 *io_d_rate, uint4 *io_tx_pwr_lvl){_ssdm_SpecArrayDimSize(inout_frame, 100);
+_ssdm_InlineSelf(2, "");
 _ssdm_SpecArrayMap( &edca_fifo_bk, "edca_queues", -1, "HORIZONTAL", "");
 _ssdm_SpecArrayMap( &edca_fifo_be, "edca_queues", -1, "HORIZONTAL", "");
 _ssdm_SpecArrayMap( &edca_fifo_vi, "edca_queues", -1, "HORIZONTAL", "");
@@ -4667,10 +4667,10 @@ _ssdm_SpecArrayMap( &edca_fifo_vo, "edca_queues", -1, "HORIZONTAL", "");
 
    write_pointer_bk = (write_pointer_bk + 1) % 4;
    available_spaces_bk = available_spaces_bk - 1;
-   return 1;
+   return 14;
   }else if (ac == 1){
    if(available_spaces_be == 0){
-    return 0;
+    return 1;
    }
    write_to_be:for (int be=0; be<100; be++){
      edca_fifo_be[(write_pointer_be*100)+be] = inout_frame[be];
@@ -4680,10 +4680,10 @@ _ssdm_SpecArrayMap( &edca_fifo_vo, "edca_queues", -1, "HORIZONTAL", "");
 
    write_pointer_be = (write_pointer_be + 1) % 4;
    available_spaces_be = available_spaces_be - 1;
-   return 1;
+   return 14;
   }else if (ac == 2){
    if(available_spaces_vi == 0){
-    return 0;
+    return 2;
    }
    write_to_vi:for (int vi=0; vi<100; vi++){
      edca_fifo_vi[(write_pointer_vi*100)+vi] = inout_frame[vi];
@@ -4693,10 +4693,10 @@ _ssdm_SpecArrayMap( &edca_fifo_vo, "edca_queues", -1, "HORIZONTAL", "");
 
    write_pointer_vi = (write_pointer_vi + 1) % 4;
    available_spaces_vi = available_spaces_vi - 1;
-   return 1;
+   return 14;
   }else if (ac == 3){
    if(available_spaces_vo == 0){
-    return 0;
+    return 3;
    }
    write_to_vo:for (int vo=0; vo<100; vo++){
      edca_fifo_vo[(write_pointer_vo*100)+vo] = inout_frame[vo];
@@ -4706,14 +4706,14 @@ _ssdm_SpecArrayMap( &edca_fifo_vo, "edca_queues", -1, "HORIZONTAL", "");
 
    write_pointer_vo = (write_pointer_vo + 1) % 4;
    available_spaces_vo = available_spaces_vo - 1;
-   return 1;
+   return 14;
   }else{
    return 0;
   }
  }else if(operation == 1){
   if (ac == 0){
    if(available_spaces_bk == 4){
-    return 0;
+    return 10;
    }
    read_from_bk:for (int bk=0; bk<100; bk++){
      inout_frame[bk] = edca_fifo_bk[(read_pointer_bk*100)+bk];
@@ -4723,10 +4723,10 @@ _ssdm_SpecArrayMap( &edca_fifo_vo, "edca_queues", -1, "HORIZONTAL", "");
 
    read_pointer_bk = (read_pointer_bk + 1) % 4;
    available_spaces_bk = available_spaces_bk + 1;
-   return 1;
+   return 14;
   }else if (ac == 1){
    if(available_spaces_be == 4){
-    return 0;
+    return 11;
    }
    read_from_be:for (int be=0; be<100; be++){
      inout_frame[be] = edca_fifo_be[(read_pointer_be*100)+be];
@@ -4736,10 +4736,10 @@ _ssdm_SpecArrayMap( &edca_fifo_vo, "edca_queues", -1, "HORIZONTAL", "");
 
    read_pointer_be = (read_pointer_be + 1) % 4;
    available_spaces_be = available_spaces_be + 1;
-   return 1;
+   return 14;
   }else if (ac == 2){
    if(available_spaces_vi == 4){
-    return 0;
+    return 12;
    }
    read_from_vi:for (int vi=0; vi<100; vi++){
      inout_frame[vi] = edca_fifo_vi[(read_pointer_vi*100)+vi];
@@ -4749,10 +4749,10 @@ _ssdm_SpecArrayMap( &edca_fifo_vo, "edca_queues", -1, "HORIZONTAL", "");
 
    read_pointer_vi = (read_pointer_vi + 1) % 4;
    available_spaces_vi = available_spaces_vi + 1;
-   return 1;
+   return 14;
   }else if (ac == 3){
    if(available_spaces_vo == 4){
-    return 0;
+    return 13;
    }
    read_from_vo:for (int vo=0; vo<100; vo++){
      inout_frame[vo] = edca_fifo_vo[(read_pointer_vo*100)+vo];
@@ -4762,7 +4762,7 @@ _ssdm_SpecArrayMap( &edca_fifo_vo, "edca_queues", -1, "HORIZONTAL", "");
 
    read_pointer_vo = (read_pointer_vo + 1) % 4;
    available_spaces_vo = available_spaces_vo + 1;
-   return 1;
+   return 14;
   }else{
    return 0;
   }
@@ -4779,9 +4779,9 @@ _ssdm_SpecArrayMap( &edca_fifo_vo, "edca_queues", -1, "HORIZONTAL", "");
   read_pointer_bk = 0;
   write_pointer_bk = 0;
   available_spaces_bk = 4;
-  return 1;
+  return 14;
  }else{
-  return 0;
+  return 5;
  }
 }
 

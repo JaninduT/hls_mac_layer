@@ -21,13 +21,13 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1</Best-caseLatency>
-<Average-caseLatency>1088</Average-caseLatency>
+<Best-caseLatency>2</Best-caseLatency>
+<Average-caseLatency>998</Average-caseLatency>
 <Worst-caseLatency>1563</Worst-caseLatency>
-<Best-caseRealTimeLatency>10.000 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>10.880 us</Average-caseRealTimeLatency>
+<Best-caseRealTimeLatency>20.000 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>9.980 us</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>15.630 us</Worst-caseRealTimeLatency>
-<Interval-min>2</Interval-min>
+<Interval-min>3</Interval-min>
 <Interval-max>1564</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -43,8 +43,8 @@
 <Resources>
 <BRAM_18K>2</BRAM_18K>
 <DSP48E>8</DSP48E>
-<FF>862</FF>
-<LUT>2737</LUT>
+<FF>923</FF>
+<LUT>2972</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -450,43 +450,43 @@
 <RtlPorts>
 <name>t_slot</name>
 <Object>t_slot</Object>
-<Type>pointer</Type>
+<Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>2</Bits>
 <Attribute>data</Attribute>
-<CType>int</CType>
+<CType>uint</CType>
 </RtlPorts>
 <RtlPorts>
 <name>d_rate</name>
 <Object>d_rate</Object>
-<Type>pointer</Type>
+<Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>7</Bits>
 <Attribute>data</Attribute>
-<CType>int</CType>
+<CType>uint</CType>
 </RtlPorts>
 <RtlPorts>
 <name>tx_power_lvl</name>
 <Object>tx_power_lvl</Object>
-<Type>pointer</Type>
+<Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>4</Bits>
 <Attribute>data</Attribute>
-<CType>int</CType>
+<CType>uint</CType>
 </RtlPorts>
 <RtlPorts>
 <name>expiry_time</name>
 <Object>expiry_time</Object>
-<Type>pointer</Type>
+<Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>

@@ -37,37 +37,53 @@
          <obj_property name="Render_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request//AESL_inst_ma_unitdatax_request_activity.dataflowTxWaveData.Cycles</obj_property>
          <obj_property name="Value_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request//AESL_inst_ma_unitdatax_request_activity.dataflowTxWaveData.OutStanding</obj_property>
          <obj_property name="Detail_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request//AESL_inst_ma_unitdatax_request_activity.dataflowTxTooltipData</obj_property>
-         <wvobject type="group" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_243/grp_enqueue_dequeue_fram_fu_243_activity">
-            <obj_property name="label">grp_enqueue_dequeue_fram_fu_243_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_263/grp_enqueue_dequeue_fram_fu_263_activity">
+            <obj_property name="label">grp_enqueue_dequeue_fram_fu_263_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_enqueue_dequeue_fram_fu_243_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_enqueue_dequeue_fram_fu_243_activity</obj_property>
+            <obj_property name="ElementShortName">grp_enqueue_dequeue_fram_fu_263_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_enqueue_dequeue_fram_fu_263_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_243/grp_enqueue_dequeue_fram_fu_243_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_243/grp_enqueue_dequeue_fram_fu_243_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_243/grp_enqueue_dequeue_fram_fu_243_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_263/grp_enqueue_dequeue_fram_fu_263_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_263/grp_enqueue_dequeue_fram_fu_263_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_263/grp_enqueue_dequeue_fram_fu_263_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_271/grp_compose_mac_frame_fu_271_activity">
-            <obj_property name="label">grp_compose_mac_frame_fu_271_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_291/grp_compose_mac_frame_fu_291_activity">
+            <obj_property name="label">grp_compose_mac_frame_fu_291_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_compose_mac_frame_fu_271_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_compose_mac_frame_fu_271_activity</obj_property>
+            <obj_property name="ElementShortName">grp_compose_mac_frame_fu_291_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_compose_mac_frame_fu_291_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_271/grp_compose_mac_frame_fu_271_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_271/grp_compose_mac_frame_fu_271_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_271/grp_compose_mac_frame_fu_271_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_291/grp_compose_mac_frame_fu_291_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_291/grp_compose_mac_frame_fu_291_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_291/grp_compose_mac_frame_fu_291_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_ma_unitdatax_status_s_fu_299/grp_ma_unitdatax_status_s_fu_299_activity">
+            <obj_property name="label">grp_ma_unitdatax_status_s_fu_299_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ma_unitdatax_status_s_fu_299_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ma_unitdatax_status_s_fu_299_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_ma_unitdatax_status_s_fu_299/grp_ma_unitdatax_status_s_fu_299_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_ma_unitdatax_status_s_fu_299/grp_ma_unitdatax_status_s_fu_299_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_ma_unitdatax_status_s_fu_299/grp_ma_unitdatax_status_s_fu_299_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
       </wvobject>
    </wvobject>
@@ -78,13 +94,17 @@
    <wvobject type="group" fp_name="AESL_inst_ma_unitdatax_request_group">
       <obj_property name="label">AESL_inst_ma_unitdatax_request</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="protoinst" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_243/grp_enqueue_dequeue_fram_fu_243_activity">
-         <obj_property name="ElementShortName">grp_enqueue_dequeue_fram_fu_243_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_enqueue_dequeue_fram_fu_243_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_263/grp_enqueue_dequeue_fram_fu_263_activity">
+         <obj_property name="ElementShortName">grp_enqueue_dequeue_fram_fu_263_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_enqueue_dequeue_fram_fu_263_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_271/grp_compose_mac_frame_fu_271_activity">
-         <obj_property name="ElementShortName">grp_compose_mac_frame_fu_271_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_compose_mac_frame_fu_271_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_291/grp_compose_mac_frame_fu_291_activity">
+         <obj_property name="ElementShortName">grp_compose_mac_frame_fu_291_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_compose_mac_frame_fu_291_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_ma_unitdatax_status_s_fu_299/grp_ma_unitdatax_status_s_fu_299_activity">
+         <obj_property name="ElementShortName">grp_ma_unitdatax_status_s_fu_299_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ma_unitdatax_status_s_fu_299_activity</obj_property>
       </wvobject>
       <wvobject type="group" fp_name="AESL_inst_ma_unitdatax_request_Handshake_group">
          <obj_property name="label">Block-level handshake</obj_property>
@@ -102,41 +122,61 @@
             <obj_property name="ObjectShortName">ap_done</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_enqueue_dequeue_fram_fu_243_group">
-         <obj_property name="label">grp_enqueue_dequeue_fram_fu_243</obj_property>
+      <wvobject type="group" fp_name="grp_enqueue_dequeue_fram_fu_263_group">
+         <obj_property name="label">grp_enqueue_dequeue_fram_fu_263</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_enqueue_dequeue_fram_fu_243_Handshake_group">
+         <wvobject type="group" fp_name="grp_enqueue_dequeue_fram_fu_263_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_243/ap_start">
+            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_263/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_243/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_263/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_243/ap_done">
+            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_enqueue_dequeue_fram_fu_263/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_compose_mac_frame_fu_271_group">
-         <obj_property name="label">grp_compose_mac_frame_fu_271</obj_property>
+      <wvobject type="group" fp_name="grp_compose_mac_frame_fu_291_group">
+         <obj_property name="label">grp_compose_mac_frame_fu_291</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_compose_mac_frame_fu_271_Handshake_group">
+         <wvobject type="group" fp_name="grp_compose_mac_frame_fu_291_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_271/ap_start">
+            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_291/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_271/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_291/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_271/ap_done">
+            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_compose_mac_frame_fu_291/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ma_unitdatax_status_s_fu_299_group">
+         <obj_property name="label">grp_ma_unitdatax_status_s_fu_299</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ma_unitdatax_status_s_fu_299_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_ma_unitdatax_status_s_fu_299/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_ma_unitdatax_status_s_fu_299/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/grp_ma_unitdatax_status_s_fu_299/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>

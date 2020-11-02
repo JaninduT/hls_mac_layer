@@ -123,8 +123,8 @@ class INTER_TCL_FILE {
 };
 
 extern "C" void ma_unitdatax_request (
-mac48* source_addr,
-mac48* dest_addr,
+mac48 source_addr,
+mac48 dest_addr,
 char data[70],
 uint4 up,
 
@@ -141,14 +141,14 @@ char
 #else
 time_slot
 #endif
-* t_slot,
-uint7* d_rate,
-uint4* tx_power_lvl,
-long long int* expiry_time);
+ t_slot,
+uint7 d_rate,
+uint4 tx_power_lvl,
+long long int expiry_time);
 
 extern "C" void AESL_WRAP_ma_unitdatax_request (
-mac48* source_addr,
-mac48* dest_addr,
+mac48 source_addr,
+mac48 dest_addr,
 char data[70],
 uint4 up,
 
@@ -165,10 +165,10 @@ char
 #else
 time_slot
 #endif
-* t_slot,
-uint7* d_rate,
-uint4* tx_power_lvl,
-long long int* expiry_time)
+ t_slot,
+uint7 d_rate,
+uint4 tx_power_lvl,
+long long int expiry_time)
 {
 	refine_signal_handler();
 	fstream wrapc_switch_file_token;
@@ -444,30 +444,27 @@ long long int* expiry_time)
 		sprintf(tvin_d_rate, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_d_rate, tvin_d_rate);
 
-		sc_bv<7>* d_rate_tvin_wrapc_buffer = new sc_bv<7>[1];
+		sc_bv<7> d_rate_tvin_wrapc_buffer;
 
 		// RTL Name: d_rate
 		{
 			// bitslice(6, 0)
 			{
-				int hls_map_index = 0;
 				// celement: d_rate(6, 0)
 				{
-					// carray: (0) => (0) @ (1)
-					for (int i_0 = 0; i_0 <= 0; i_0 += 1)
+					// carray: (0) => (0) @ (0)
 					{
-						// sub                   : i_0
-						// ori_name              : d_rate[i_0]
-						// sub_1st_elem          : 0
-						// ori_name_1st_elem     : d_rate[0]
+						// sub                   : 
+						// ori_name              : d_rate
+						// sub_1st_elem          : 
+						// ori_name_1st_elem     : d_rate
 						// regulate_c_name       : d_rate
-						// input_type_conversion : d_rate[i_0]
-						if (&(d_rate[0]) != NULL) // check the null address if the c port is array or others
+						// input_type_conversion : d_rate
+						if (&(d_rate) != NULL) // check the null address if the c port is array or others
 						{
 							sc_lv<7> d_rate_tmp_mem;
-							d_rate_tmp_mem = d_rate[i_0];
-							d_rate_tvin_wrapc_buffer[hls_map_index].range(6, 0) = d_rate_tmp_mem.range(6, 0);
-                                 	       hls_map_index++;
+							d_rate_tmp_mem = d_rate;
+							d_rate_tvin_wrapc_buffer.range(6, 0) = d_rate_tmp_mem.range(6, 0);
 						}
 					}
 				}
@@ -477,7 +474,7 @@ long long int* expiry_time)
 		// dump tv to file
 		for (int i = 0; i < 1; i++)
 		{
-			sprintf(tvin_d_rate, "%s\n", (d_rate_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
+			sprintf(tvin_d_rate, "%s\n", (d_rate_tvin_wrapc_buffer).to_string(SC_HEX).c_str());
 			aesl_fh.write(AUTOTB_TVIN_d_rate, tvin_d_rate);
 		}
 
@@ -485,37 +482,31 @@ long long int* expiry_time)
 		sprintf(tvin_d_rate, "[[/transaction]] \n");
 		aesl_fh.write(AUTOTB_TVIN_d_rate, tvin_d_rate);
 
-		// release memory allocation
-		delete [] d_rate_tvin_wrapc_buffer;
-
 		// [[transaction]]
 		sprintf(tvin_tx_power_lvl, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_tx_power_lvl, tvin_tx_power_lvl);
 
-		sc_bv<4>* tx_power_lvl_tvin_wrapc_buffer = new sc_bv<4>[1];
+		sc_bv<4> tx_power_lvl_tvin_wrapc_buffer;
 
 		// RTL Name: tx_power_lvl
 		{
 			// bitslice(3, 0)
 			{
-				int hls_map_index = 0;
 				// celement: tx_power_lvl(3, 0)
 				{
-					// carray: (0) => (0) @ (1)
-					for (int i_0 = 0; i_0 <= 0; i_0 += 1)
+					// carray: (0) => (0) @ (0)
 					{
-						// sub                   : i_0
-						// ori_name              : tx_power_lvl[i_0]
-						// sub_1st_elem          : 0
-						// ori_name_1st_elem     : tx_power_lvl[0]
+						// sub                   : 
+						// ori_name              : tx_power_lvl
+						// sub_1st_elem          : 
+						// ori_name_1st_elem     : tx_power_lvl
 						// regulate_c_name       : tx_power_lvl
-						// input_type_conversion : tx_power_lvl[i_0]
-						if (&(tx_power_lvl[0]) != NULL) // check the null address if the c port is array or others
+						// input_type_conversion : tx_power_lvl
+						if (&(tx_power_lvl) != NULL) // check the null address if the c port is array or others
 						{
 							sc_lv<4> tx_power_lvl_tmp_mem;
-							tx_power_lvl_tmp_mem = tx_power_lvl[i_0];
-							tx_power_lvl_tvin_wrapc_buffer[hls_map_index].range(3, 0) = tx_power_lvl_tmp_mem.range(3, 0);
-                                 	       hls_map_index++;
+							tx_power_lvl_tmp_mem = tx_power_lvl;
+							tx_power_lvl_tvin_wrapc_buffer.range(3, 0) = tx_power_lvl_tmp_mem.range(3, 0);
 						}
 					}
 				}
@@ -525,16 +516,13 @@ long long int* expiry_time)
 		// dump tv to file
 		for (int i = 0; i < 1; i++)
 		{
-			sprintf(tvin_tx_power_lvl, "%s\n", (tx_power_lvl_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
+			sprintf(tvin_tx_power_lvl, "%s\n", (tx_power_lvl_tvin_wrapc_buffer).to_string(SC_HEX).c_str());
 			aesl_fh.write(AUTOTB_TVIN_tx_power_lvl, tvin_tx_power_lvl);
 		}
 
 		tcl_file.set_num(1, &tcl_file.tx_power_lvl_depth);
 		sprintf(tvin_tx_power_lvl, "[[/transaction]] \n");
 		aesl_fh.write(AUTOTB_TVIN_tx_power_lvl, tvin_tx_power_lvl);
-
-		// release memory allocation
-		delete [] tx_power_lvl_tvin_wrapc_buffer;
 
 // [call_c_dut] ---------->
 
