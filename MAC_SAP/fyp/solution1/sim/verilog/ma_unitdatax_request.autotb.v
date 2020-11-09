@@ -28,6 +28,8 @@
 `define AESL_DEPTH_d_rate 1
 `define AESL_DEPTH_tx_power_lvl 1
 `define AESL_DEPTH_expiry_time 1
+`define AESL_DEPTH_medium_state 1
+`define AUTOTB_TVIN_source_addr_mac  "../tv/cdatafile/c.ma_unitdatax_request.autotvin_source_addr_mac.dat"
 `define AUTOTB_TVIN_data  "../tv/cdatafile/c.ma_unitdatax_request.autotvin_data.dat"
 `define AUTOTB_TVIN_up  "../tv/cdatafile/c.ma_unitdatax_request.autotvin_up.dat"
 `define AUTOTB_TVIN_s_class  "../tv/cdatafile/c.ma_unitdatax_request.autotvin_s_class.dat"
@@ -35,6 +37,8 @@
 `define AUTOTB_TVIN_c_identifier_channel_number  "../tv/cdatafile/c.ma_unitdatax_request.autotvin_c_identifier_channel_number.dat"
 `define AUTOTB_TVIN_d_rate  "../tv/cdatafile/c.ma_unitdatax_request.autotvin_d_rate.dat"
 `define AUTOTB_TVIN_tx_power_lvl  "../tv/cdatafile/c.ma_unitdatax_request.autotvin_tx_power_lvl.dat"
+`define AUTOTB_TVIN_medium_state  "../tv/cdatafile/c.ma_unitdatax_request.autotvin_medium_state.dat"
+`define AUTOTB_TVIN_source_addr_mac_out_wrapc  "../tv/rtldatafile/rtl.ma_unitdatax_request.autotvin_source_addr_mac.dat"
 `define AUTOTB_TVIN_data_out_wrapc  "../tv/rtldatafile/rtl.ma_unitdatax_request.autotvin_data.dat"
 `define AUTOTB_TVIN_up_out_wrapc  "../tv/rtldatafile/rtl.ma_unitdatax_request.autotvin_up.dat"
 `define AUTOTB_TVIN_s_class_out_wrapc  "../tv/rtldatafile/rtl.ma_unitdatax_request.autotvin_s_class.dat"
@@ -42,11 +46,13 @@
 `define AUTOTB_TVIN_c_identifier_channel_number_out_wrapc  "../tv/rtldatafile/rtl.ma_unitdatax_request.autotvin_c_identifier_channel_number.dat"
 `define AUTOTB_TVIN_d_rate_out_wrapc  "../tv/rtldatafile/rtl.ma_unitdatax_request.autotvin_d_rate.dat"
 `define AUTOTB_TVIN_tx_power_lvl_out_wrapc  "../tv/rtldatafile/rtl.ma_unitdatax_request.autotvin_tx_power_lvl.dat"
+`define AUTOTB_TVIN_medium_state_out_wrapc  "../tv/rtldatafile/rtl.ma_unitdatax_request.autotvin_medium_state.dat"
 module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 2;
 parameter PROGRESS_TIMEOUT = 10000000;
 parameter LATENCY_ESTIMATION = 1563;
+parameter LENGTH_source_addr_mac = 6;
 parameter LENGTH_data = 70;
 parameter LENGTH_up = 1;
 parameter LENGTH_s_class = 1;
@@ -54,6 +60,7 @@ parameter LENGTH_c_identifier_operating_class = 1;
 parameter LENGTH_c_identifier_channel_number = 1;
 parameter LENGTH_d_rate = 1;
 parameter LENGTH_tx_power_lvl = 1;
+parameter LENGTH_medium_state = 1;
 
 task read_token;
     input integer fp;
@@ -89,13 +96,9 @@ wire ap_idle;
 wire ap_ready;
 wire [2 : 0] source_addr_mac_address0;
 wire  source_addr_mac_ce0;
-wire  source_addr_mac_we0;
-wire [7 : 0] source_addr_mac_d0;
 wire [7 : 0] source_addr_mac_q0;
 wire [2 : 0] source_addr_mac_address1;
 wire  source_addr_mac_ce1;
-wire  source_addr_mac_we1;
-wire [7 : 0] source_addr_mac_d1;
 wire [7 : 0] source_addr_mac_q1;
 wire [2 : 0] dest_addr_mac_address0;
 wire  dest_addr_mac_ce0;
@@ -118,6 +121,7 @@ wire [1 : 0] t_slot;
 wire [6 : 0] d_rate;
 wire [3 : 0] tx_power_lvl;
 wire [63 : 0] expiry_time;
+wire [0 : 0] medium_state;
 integer done_cnt = 0;
 integer AESL_ready_cnt = 0;
 integer ready_cnt = 0;
@@ -141,13 +145,9 @@ wire ap_rst_n;
     .ap_ready(ap_ready),
     .source_addr_mac_address0(source_addr_mac_address0),
     .source_addr_mac_ce0(source_addr_mac_ce0),
-    .source_addr_mac_we0(source_addr_mac_we0),
-    .source_addr_mac_d0(source_addr_mac_d0),
     .source_addr_mac_q0(source_addr_mac_q0),
     .source_addr_mac_address1(source_addr_mac_address1),
     .source_addr_mac_ce1(source_addr_mac_ce1),
-    .source_addr_mac_we1(source_addr_mac_we1),
-    .source_addr_mac_d1(source_addr_mac_d1),
     .source_addr_mac_q1(source_addr_mac_q1),
     .dest_addr_mac_address0(dest_addr_mac_address0),
     .dest_addr_mac_ce0(dest_addr_mac_ce0),
@@ -169,7 +169,8 @@ wire ap_rst_n;
     .t_slot(t_slot),
     .d_rate(d_rate),
     .tx_power_lvl(tx_power_lvl),
-    .expiry_time(expiry_time));
+    .expiry_time(expiry_time),
+    .medium_state(medium_state));
 
 // Assignment for control signal
 assign ap_clk = AESL_clock;
@@ -212,7 +213,35 @@ wire    [7 : 0]    arraysource_addr_mac_dout0, arraysource_addr_mac_dout1;
 wire    arraysource_addr_mac_ready;
 wire    arraysource_addr_mac_done;
 
+`AESL_MEM_source_addr_mac `AESL_MEM_INST_source_addr_mac(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arraysource_addr_mac_ce0),
+    .we0        (arraysource_addr_mac_we0),
+    .address0   (arraysource_addr_mac_address0),
+    .din0       (arraysource_addr_mac_din0),
+    .dout0      (arraysource_addr_mac_dout0),
+    .ce1        (arraysource_addr_mac_ce1),
+    .we1        (arraysource_addr_mac_we1),
+    .address1   (arraysource_addr_mac_address1),
+    .din1       (arraysource_addr_mac_din1),
+    .dout1      (arraysource_addr_mac_dout1),
+    .ready      (arraysource_addr_mac_ready),
+    .done    (arraysource_addr_mac_done)
+);
+
 // Assignment between dut and arraysource_addr_mac
+assign arraysource_addr_mac_address0 = source_addr_mac_address0;
+assign arraysource_addr_mac_ce0 = source_addr_mac_ce0;
+assign source_addr_mac_q0 = arraysource_addr_mac_dout0;
+assign arraysource_addr_mac_we0 = 0;
+assign arraysource_addr_mac_din0 = 0;
+assign arraysource_addr_mac_address1 = source_addr_mac_address1;
+assign arraysource_addr_mac_ce1 = source_addr_mac_ce1;
+assign source_addr_mac_q1 = arraysource_addr_mac_dout1;
+assign arraysource_addr_mac_we1 = 0;
+assign arraysource_addr_mac_din1 = 0;
+assign arraysource_addr_mac_ready=    ready;
 assign arraysource_addr_mac_done = 0;
 
 
@@ -603,6 +632,60 @@ end
 reg [63: 0] AESL_REG_expiry_time = 0;
 assign expiry_time = AESL_REG_expiry_time;
 
+// The signal of port medium_state
+reg [0: 0] AESL_REG_medium_state = 0;
+assign medium_state = AESL_REG_medium_state;
+initial begin : read_file_process_medium_state
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [247  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_medium_state,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_medium_state);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_medium_state);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
 initial begin : generate_AESL_ready_cnt_proc
     AESL_ready_cnt = 0;
     wait(AESL_reset === 0);
@@ -665,6 +748,9 @@ initial begin
 end
 
 
+reg end_source_addr_mac;
+reg [31:0] size_source_addr_mac;
+reg [31:0] size_source_addr_mac_backup;
 reg end_data;
 reg [31:0] size_data;
 reg [31:0] size_data_backup;
@@ -686,6 +772,9 @@ reg [31:0] size_d_rate_backup;
 reg end_tx_power_lvl;
 reg [31:0] size_tx_power_lvl;
 reg [31:0] size_tx_power_lvl_backup;
+reg end_medium_state;
+reg [31:0] size_medium_state;
+reg [31:0] size_medium_state_backup;
 
 initial begin : initial_process
     integer proc_rand;

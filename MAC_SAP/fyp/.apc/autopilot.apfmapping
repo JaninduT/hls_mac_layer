@@ -17,6 +17,12 @@
     <originFiles name="compose_mac_frame.h" path="E:\FYP\HLS\MAC_SAP\fyp\compose_mac_frame.h"/>
     <originFiles name="compose_mac_frame.c" path="E:\FYP\HLS\MAC_SAP\fyp\compose_mac_frame.c"/>
     <originFiles name="common.h" path="E:\FYP\HLS\MAC_SAP\fyp\common.h"/>
+    <originFiles name="PHY_TXEND_confirm.h" path="E:\FYP\HLS\MAC_SAP\fyp\PHY_TXEND_confirm.h"/>
+    <originFiles name="PHY_TXEND_confirm.c" path="E:\FYP\HLS\MAC_SAP\fyp\PHY_TXEND_confirm.c"/>
+    <originFiles name="PHY_RXEND_indication.h" path="E:\FYP\HLS\MAC_SAP\fyp\PHY_RXEND_indication.h"/>
+    <originFiles name="PHY_RXEND_indication.c" path="E:\FYP\HLS\MAC_SAP\fyp\PHY_RXEND_indication.c"/>
+    <originFiles name="PHY_CCA_indication.h" path="E:\FYP\HLS\MAC_SAP\fyp\PHY_CCA_indication.h"/>
+    <originFiles name="PHY_CCA_indication.c" path="E:\FYP\HLS\MAC_SAP\fyp\PHY_CCA_indication.c"/>
     <originFiles name="MA_UNITDATA_indication.h" path="E:\FYP\HLS\MAC_SAP\fyp\MA_UNITDATA_indication.h"/>
     <originFiles name="MA_UNITDATAX_request.h" path="E:\FYP\HLS\MAC_SAP\fyp\MA_UNITDATAX_request.h"/>
     <originFiles name="MA_UNITDATAX_request.c" path="E:\FYP\HLS\MAC_SAP\fyp\MA_UNITDATAX_request.c"/>
@@ -39,6 +45,9 @@
     <originFiles name="compose_mac_header_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\compose_mac_header_test.c"/>
     <originFiles name="compose_mac_frame_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\compose_mac_frame_test.c"/>
     <originFiles name="backoff_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\backoff_test.c"/>
+    <originFiles name="PHY_TXEND_confirm_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\PHY_TXEND_confirm_test.c"/>
+    <originFiles name="PHY_RXEND_indication_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\PHY_RXEND_indication_test.c"/>
+    <originFiles name="PHY_CCA_indication_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\PHY_CCA_indication_test.c"/>
     <originFiles name="MA_UNITDATAX_request_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\MA_UNITDATAX_request_test.c"/>
     <originFiles name="MA_UNITDATAX_STATUS_indication_test.c" path="E:\FYP\HLS\MAC_SAP\fyp\MA_UNITDATAX_STATUS_indication_test.c"/>
   </testbench>

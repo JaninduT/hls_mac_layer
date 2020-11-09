@@ -148,38 +148,38 @@ float random_int_gen(signed int *);
 
 
 /* Global Variable Definitions and Initialization */
+static  char aesl_internal_bk_data_rate[4];
 static unsigned char aesl_internal_available_spaces_bk = ((unsigned char )4u);
-static unsigned short aesl_internal_be_backoff_counter;
-static  char aesl_internal_vo_data_rate[4];
-static unsigned short aesl_internal_CW_vo = ((unsigned short )15);
-static unsigned char aesl_internal_read_pointer_bk;
-static  char aesl_internal_edca_fifo_vo[400];
-static  char aesl_internal_vo_tx_pwr_lvl[4];
-static unsigned char aesl_internal_read_pointer_vi;
-static unsigned char aesl_internal_read_pointer_vo;
-static unsigned char aesl_internal_read_pointer_be;
-static unsigned short aesl_internal_bk_backoff_counter;
-static unsigned short aesl_internal_vo_backoff_counter;
-static unsigned short aesl_internal_vi_backoff_counter;
 static unsigned char aesl_internal_write_pointer_bk;
 static  char aesl_internal_edca_fifo_bk[400];
-static  char aesl_internal_bk_data_rate[4];
+static unsigned char aesl_internal_read_pointer_be;
+static unsigned char aesl_internal_available_spaces_vo = ((unsigned char )4u);
+static  char aesl_internal_vo_tx_pwr_lvl[4];
+static unsigned char aesl_internal_read_pointer_vi;
+static unsigned short aesl_internal_vo_backoff_counter;
+static unsigned char aesl_internal_read_pointer_vo;
+static unsigned short aesl_internal_vi_backoff_counter;
+static unsigned short aesl_internal_be_backoff_counter;
+static  char aesl_internal_edca_fifo_vo[400];
+static unsigned char aesl_internal_read_pointer_bk;
+static unsigned char aesl_internal_write_pointer_vo;
+static  char aesl_internal_vo_data_rate[4];
 static  char aesl_internal_bk_tx_pwr_lvl[4];
 static unsigned char aesl_internal_available_spaces_vi = ((unsigned char )4u);
 static unsigned char aesl_internal_available_spaces_be = ((unsigned char )4u);
 static unsigned char aesl_internal_write_pointer_be;
-static  char aesl_internal_vi_tx_pwr_lvl[4];
 static  char aesl_internal_edca_fifo_be[400];
 static  char aesl_internal_be_data_rate[4];
 static  char aesl_internal_be_tx_pwr_lvl[4];
 static unsigned char aesl_internal_write_pointer_vi;
 static  char aesl_internal_edca_fifo_vi[400];
 static  char aesl_internal_vi_data_rate[4];
-static unsigned char aesl_internal_available_spaces_vo = ((unsigned char )4u);
-static unsigned char aesl_internal_write_pointer_vo;
+static  char aesl_internal_vi_tx_pwr_lvl[4];
+static unsigned short aesl_internal_bk_backoff_counter;
+static unsigned short aesl_internal_CW_vo = ((unsigned short )15);
+static unsigned short aesl_internal_CW_be = ((unsigned short )15);
 static unsigned short aesl_internal_CW_bk = ((unsigned short )15);
 static unsigned int aesl_internal_rand_state = 123456789u;
-static unsigned short aesl_internal_CW_be = ((unsigned short )15);
 static unsigned short aesl_internal_CW_vi = ((unsigned short )15);
 
 

@@ -344,5 +344,3 @@ void start_backoff_bk(uint1 invoke_reason){
 	}
 	bk_backoff_counter = CW_bk * random_int_gen(&rand_state);
 }
-
-

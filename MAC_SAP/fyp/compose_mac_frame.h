@@ -8,6 +8,7 @@ typedef uint4 frame_subtype_t;
 typedef uint12 sequence_number_t;
 
 void compose_mac_header(
+		mac48 source_addr,
 		frame_type_t ftype,
 		frame_subtype_t fstype,
 		sequence_number_t seqnumber,
@@ -16,6 +17,7 @@ void compose_mac_header(
 		);
 
 void compose_mac_frame(
+		mac48 source_addr,
 		frame_type_t ftype,
 		frame_subtype_t fstype,
 		sequence_number_t seqnumber,

@@ -4502,6 +4502,7 @@ __extension__ typedef unsigned long long uintmax_t;
 # 33 "D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
 # 6 "fyp/common.h" 2
 
+
 typedef uint4 user_priority_t;
 typedef uint7 data_rate_t;
 typedef uint4 txpwr_lvl_t;
@@ -4540,16 +4541,17 @@ float random_int_gen(uint32 *state);
 # 2 "fyp/r_n_g.c" 2
 
 float random_int_gen(uint32 *state){
+_ssdm_InlineSelf(2, "");
  const uint32 A = 48271;
  uint32 low = (*state & 0x7fff);
 #pragma 
  
-{ _ssdm_RegionBegin("?Mul_low_Region_fyp/r_n_g.c:7:2");
-# 7 "fyp/r_n_g.c"
+{ _ssdm_RegionBegin("?Mul_low_Region_fyp/r_n_g.c:8:2");
+# 8 "fyp/r_n_g.c"
 low = low * A;
-_ssdm_op_SpecResource(low, "?Mul_low_Region_fyp/r_n_g.c:7:2", "", "Mul", "", -1, "", "", "", "", "");
-_ssdm_RegionEnd("?Mul_low_Region_fyp/r_n_g.c:7:2"); }
-# 7 "fyp/r_n_g.c"
+_ssdm_op_SpecResource(low, "?Mul_low_Region_fyp/r_n_g.c:8:2", "", "Mul", "", -1, "", "", "", "", "");
+_ssdm_RegionEnd("?Mul_low_Region_fyp/r_n_g.c:8:2"); }
+# 8 "fyp/r_n_g.c"
 
  uint32 high = (*state >> 15);
  high = high * A;

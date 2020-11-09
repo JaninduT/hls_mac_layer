@@ -67,6 +67,36 @@
 			<location>E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATA_indication.h</location>
 		</link>
 		<link>
+			<name>source/PHY_CCA_indication.c</name>
+			<type>1</type>
+			<location>E:/FYP/HLS/MAC_SAP/fyp/PHY_CCA_indication.c</location>
+		</link>
+		<link>
+			<name>source/PHY_CCA_indication.h</name>
+			<type>1</type>
+			<location>E:/FYP/HLS/MAC_SAP/fyp/PHY_CCA_indication.h</location>
+		</link>
+		<link>
+			<name>source/PHY_RXEND_indication.c</name>
+			<type>1</type>
+			<location>E:/FYP/HLS/MAC_SAP/fyp/PHY_RXEND_indication.c</location>
+		</link>
+		<link>
+			<name>source/PHY_RXEND_indication.h</name>
+			<type>1</type>
+			<location>E:/FYP/HLS/MAC_SAP/fyp/PHY_RXEND_indication.h</location>
+		</link>
+		<link>
+			<name>source/PHY_TXEND_confirm.c</name>
+			<type>1</type>
+			<location>E:/FYP/HLS/MAC_SAP/fyp/PHY_TXEND_confirm.c</location>
+		</link>
+		<link>
+			<name>source/PHY_TXEND_confirm.h</name>
+			<type>1</type>
+			<location>E:/FYP/HLS/MAC_SAP/fyp/PHY_TXEND_confirm.h</location>
+		</link>
+		<link>
 			<name>source/common.h</name>
 			<type>1</type>
 			<location>E:/FYP/HLS/MAC_SAP/fyp/common.h</location>
@@ -155,6 +185,21 @@
 			<name>testbench/MA_UNITDATAX_request_test.c</name>
 			<type>1</type>
 			<location>E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request_test.c</location>
+		</link>
+		<link>
+			<name>testbench/PHY_CCA_indication_test.c</name>
+			<type>1</type>
+			<location>E:/FYP/HLS/MAC_SAP/fyp/PHY_CCA_indication_test.c</location>
+		</link>
+		<link>
+			<name>testbench/PHY_RXEND_indication_test.c</name>
+			<type>1</type>
+			<location>E:/FYP/HLS/MAC_SAP/fyp/PHY_RXEND_indication_test.c</location>
+		</link>
+		<link>
+			<name>testbench/PHY_TXEND_confirm_test.c</name>
+			<type>1</type>
+			<location>E:/FYP/HLS/MAC_SAP/fyp/PHY_TXEND_confirm_test.c</location>
 		</link>
 		<link>
 			<name>testbench/backoff_test.c</name>

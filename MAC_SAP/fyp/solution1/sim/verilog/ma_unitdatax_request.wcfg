@@ -22,6 +22,15 @@
          <obj_property name="label">C Inputs</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="group3" type="group">
+            <obj_property name="label">medium_state(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/medium_state" type="array">
+               <obj_property name="ElementShortName">medium_state[0:0]</obj_property>
+               <obj_property name="ObjectShortName">medium_state[0:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group5" type="group">
             <obj_property name="label">expiry_time(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/expiry_time" type="array">
@@ -30,7 +39,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group5" type="group">
+         <wvobject fp_name="group7" type="group">
             <obj_property name="label">tx_power_lvl(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/tx_power_lvl" type="array">
@@ -39,7 +48,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group7" type="group">
+         <wvobject fp_name="group9" type="group">
             <obj_property name="label">d_rate(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/d_rate" type="array">
@@ -48,7 +57,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group9" type="group">
+         <wvobject fp_name="group11" type="group">
             <obj_property name="label">t_slot(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/t_slot" type="array">
@@ -57,7 +66,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group11" type="group">
+         <wvobject fp_name="group13" type="group">
             <obj_property name="label">c_identifier(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/c_identifier_channel_number" type="array">
@@ -71,7 +80,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group14" type="group">
+         <wvobject fp_name="group16" type="group">
             <obj_property name="label">s_class(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/s_class" type="array">
@@ -80,7 +89,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group16" type="group">
+         <wvobject fp_name="group18" type="group">
             <obj_property name="label">up(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/up" type="array">
@@ -89,7 +98,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group18" type="group">
+         <wvobject fp_name="group20" type="group">
             <obj_property name="label">data(memory)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/data_q0" type="array">
@@ -109,8 +118,44 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
+         <wvobject fp_name="group24" type="group">
+            <obj_property name="label">source_addr(memory)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_q1" type="array">
+               <obj_property name="ElementShortName">source_addr_mac_q1[7:0]</obj_property>
+               <obj_property name="ObjectShortName">source_addr_mac_q1[7:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_ce1" type="logic">
+               <obj_property name="ElementShortName">source_addr_mac_ce1</obj_property>
+               <obj_property name="ObjectShortName">source_addr_mac_ce1</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_address1" type="array">
+               <obj_property name="ElementShortName">source_addr_mac_address1[2:0]</obj_property>
+               <obj_property name="ObjectShortName">source_addr_mac_address1[2:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_q0" type="array">
+               <obj_property name="ElementShortName">source_addr_mac_q0[7:0]</obj_property>
+               <obj_property name="ObjectShortName">source_addr_mac_q0[7:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_ce0" type="logic">
+               <obj_property name="ElementShortName">source_addr_mac_ce0</obj_property>
+               <obj_property name="ObjectShortName">source_addr_mac_ce0</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_address0" type="array">
+               <obj_property name="ElementShortName">source_addr_mac_address0[2:0]</obj_property>
+               <obj_property name="ObjectShortName">source_addr_mac_address0[2:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
       </wvobject>
-      <wvobject fp_name="group22" type="group">
+      <wvobject fp_name="group31" type="group">
          <obj_property name="label">Block-level IO Handshake</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_start" type="logic">
@@ -130,7 +175,7 @@
             <obj_property name="ObjectShortName">ap_ready</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group27" type="group">
+      <wvobject fp_name="group36" type="group">
          <obj_property name="label">Reset</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_rst" type="logic">
@@ -138,7 +183,7 @@
             <obj_property name="ObjectShortName">ap_rst</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group29" type="group">
+      <wvobject fp_name="group38" type="group">
          <obj_property name="label">Clock</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_clk" type="logic">
@@ -147,13 +192,13 @@
          </wvobject>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group31" type="group">
+   <wvobject fp_name="group40" type="group">
       <obj_property name="label">Test Bench Signals</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group32" type="group">
+      <wvobject fp_name="group41" type="group">
          <obj_property name="label">Internal Signals</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group33" type="group">
+         <wvobject fp_name="group42" type="group">
             <obj_property name="label">Simulation Status</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/AUTOTB_TRANSACTION_NUM" type="array">
@@ -172,9 +217,14 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group34" type="group">
+         <wvobject fp_name="group43" type="group">
             <obj_property name="label">Port Depth</obj_property>
             <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/LENGTH_source_addr_mac" type="array">
+               <obj_property name="ElementShortName">LENGTH_source_addr_mac[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_source_addr_mac[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/LENGTH_data" type="array">
                <obj_property name="ElementShortName">LENGTH_data[31:0]</obj_property>
                <obj_property name="ObjectShortName">LENGTH_data[31:0]</obj_property>
@@ -210,12 +260,26 @@
                <obj_property name="ObjectShortName">LENGTH_tx_power_lvl[31:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/LENGTH_medium_state" type="array">
+               <obj_property name="ElementShortName">LENGTH_medium_state[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_medium_state[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group45" type="group">
+      <wvobject fp_name="group56" type="group">
          <obj_property name="label">C Inputs</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group46" type="group">
+         <wvobject fp_name="group57" type="group">
+            <obj_property name="label">medium_state(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/medium_state" type="array">
+               <obj_property name="ElementShortName">medium_state[0:0]</obj_property>
+               <obj_property name="ObjectShortName">medium_state[0:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group59" type="group">
             <obj_property name="label">expiry_time(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/expiry_time" type="array">
@@ -224,7 +288,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group48" type="group">
+         <wvobject fp_name="group61" type="group">
             <obj_property name="label">tx_power_lvl(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/tx_power_lvl" type="array">
@@ -233,7 +297,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group50" type="group">
+         <wvobject fp_name="group63" type="group">
             <obj_property name="label">d_rate(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/d_rate" type="array">
@@ -242,7 +306,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group52" type="group">
+         <wvobject fp_name="group65" type="group">
             <obj_property name="label">t_slot(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/t_slot" type="array">
@@ -251,7 +315,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group54" type="group">
+         <wvobject fp_name="group67" type="group">
             <obj_property name="label">c_identifier(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/c_identifier_channel_number" type="array">
@@ -265,7 +329,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group57" type="group">
+         <wvobject fp_name="group70" type="group">
             <obj_property name="label">s_class(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/s_class" type="array">
@@ -274,7 +338,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group59" type="group">
+         <wvobject fp_name="group72" type="group">
             <obj_property name="label">up(wire)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/up" type="array">
@@ -283,7 +347,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group61" type="group">
+         <wvobject fp_name="group74" type="group">
             <obj_property name="label">data(memory)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/data_q0" type="array">
@@ -300,6 +364,42 @@
             <wvobject fp_name="/apatb_ma_unitdatax_request_top/data_address0" type="array">
                <obj_property name="ElementShortName">data_address0[6:0]</obj_property>
                <obj_property name="ObjectShortName">data_address0[6:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group78" type="group">
+            <obj_property name="label">source_addr(memory)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/source_addr_mac_q1" type="array">
+               <obj_property name="ElementShortName">source_addr_mac_q1[7:0]</obj_property>
+               <obj_property name="ObjectShortName">source_addr_mac_q1[7:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/source_addr_mac_ce1" type="logic">
+               <obj_property name="ElementShortName">source_addr_mac_ce1</obj_property>
+               <obj_property name="ObjectShortName">source_addr_mac_ce1</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/source_addr_mac_address1" type="array">
+               <obj_property name="ElementShortName">source_addr_mac_address1[2:0]</obj_property>
+               <obj_property name="ObjectShortName">source_addr_mac_address1[2:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/source_addr_mac_q0" type="array">
+               <obj_property name="ElementShortName">source_addr_mac_q0[7:0]</obj_property>
+               <obj_property name="ObjectShortName">source_addr_mac_q0[7:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/source_addr_mac_ce0" type="logic">
+               <obj_property name="ElementShortName">source_addr_mac_ce0</obj_property>
+               <obj_property name="ObjectShortName">source_addr_mac_ce0</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_ma_unitdatax_request_top/source_addr_mac_address0" type="array">
+               <obj_property name="ElementShortName">source_addr_mac_address0[2:0]</obj_property>
+               <obj_property name="ObjectShortName">source_addr_mac_address0[2:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>

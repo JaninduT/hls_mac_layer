@@ -187,10 +187,22 @@ set Interface9 "wire"
 set DataType9 "long long int"
 set Port9 [list $PortName9 $Interface9 $DataType9 $Pointer9 $Dims9 $Const9 $Volatile9 $ArrayOpt9]
 lappend PortList $Port9
+set PortName10 "medium_state"
+set BitWidth10 "64"
+set ArrayOpt10 ""
+set Const10 "0"
+set Volatile10 "1"
+set Pointer10 "1"
+set Reference10 "0"
+set Dims10 [list 0]
+set Interface10 "wire"
+set DataType10 "uint1"
+set Port10 [list $PortName10 $Interface10 $DataType10 $Pointer10 $Dims10 $Const10 $Volatile10 $ArrayOpt10]
+lappend PortList $Port10
 set globalAPint "" 
 set returnAPInt "" 
 set hasCPPAPInt 0 
-set argAPInt [list  uint4 uint7 ]
+set argAPInt [list  uint1 uint4 uint7 ]
 set hasCPPAPFix 0 
 set hasSCFix 0 
 set hasCBool 0 

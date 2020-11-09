@@ -2,7 +2,6 @@
 //#include <stdio.h>
 //#include "crc_32.h"
 //#include "compose_mac_frame.h"
-//#include "edca.h"
 //
 //int main(){
 //	FILE *fp;
@@ -24,14 +23,11 @@
 //
 //	fclose(fp);
 //
-//	reset_pointers();
-//
-//	compose_mac_frame(ftype, fstype, seqn, up, data, frame);
+//	compose_mac_frame(my_mac, ftype, fstype, seqn, up, data, frame);
 //
 //
 //	for (int j=0; j<100; j++){
 //		printf("%d\n",frame[j]);
-//		printf("%d\n",edca_fifo_vo[j]);
 //	}
 //
 //	unsigned int crc = validate_crc(frame);

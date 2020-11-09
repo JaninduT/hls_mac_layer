@@ -2,6 +2,8 @@
 log_wave -r /
 set designtopgroup [add_wave_group "Design Top Signals"]
 set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+set medium_state_group [add_wave_group medium_state(wire) -into $cinputgroup]
+add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/medium_state -into $medium_state_group -radix hex
 set expiry_time_group [add_wave_group expiry_time(wire) -into $cinputgroup]
 add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/expiry_time -into $expiry_time_group -radix hex
 set tx_power_lvl_group [add_wave_group tx_power_lvl(wire) -into $cinputgroup]
@@ -21,6 +23,13 @@ set data_group [add_wave_group data(memory) -into $cinputgroup]
 add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/data_q0 -into $data_group -radix hex
 add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/data_ce0 -into $data_group -color #ffff00 -radix hex
 add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/data_address0 -into $data_group -radix hex
+set source_addr_group [add_wave_group source_addr(memory) -into $cinputgroup]
+add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_q1 -into $source_addr_group -radix hex
+add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_ce1 -into $source_addr_group -color #ffff00 -radix hex
+add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_address1 -into $source_addr_group -radix hex
+add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_q0 -into $source_addr_group -radix hex
+add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_ce0 -into $source_addr_group -color #ffff00 -radix hex
+add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_address0 -into $source_addr_group -radix hex
 set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
 add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_start -into $blocksiggroup
 add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_done -into $blocksiggroup
@@ -37,6 +46,7 @@ set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
 add_wave /apatb_ma_unitdatax_request_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
 add_wave /apatb_ma_unitdatax_request_top/ready_cnt -into $tb_simstatus_group -radix hex
 add_wave /apatb_ma_unitdatax_request_top/done_cnt -into $tb_simstatus_group -radix hex
+add_wave /apatb_ma_unitdatax_request_top/LENGTH_source_addr_mac -into $tb_portdepth_group -radix hex
 add_wave /apatb_ma_unitdatax_request_top/LENGTH_data -into $tb_portdepth_group -radix hex
 add_wave /apatb_ma_unitdatax_request_top/LENGTH_up -into $tb_portdepth_group -radix hex
 add_wave /apatb_ma_unitdatax_request_top/LENGTH_s_class -into $tb_portdepth_group -radix hex
@@ -44,7 +54,10 @@ add_wave /apatb_ma_unitdatax_request_top/LENGTH_c_identifier_operating_class -in
 add_wave /apatb_ma_unitdatax_request_top/LENGTH_c_identifier_channel_number -into $tb_portdepth_group -radix hex
 add_wave /apatb_ma_unitdatax_request_top/LENGTH_d_rate -into $tb_portdepth_group -radix hex
 add_wave /apatb_ma_unitdatax_request_top/LENGTH_tx_power_lvl -into $tb_portdepth_group -radix hex
+add_wave /apatb_ma_unitdatax_request_top/LENGTH_medium_state -into $tb_portdepth_group -radix hex
 set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+set tb_medium_state_group [add_wave_group medium_state(wire) -into $tbcinputgroup]
+add_wave /apatb_ma_unitdatax_request_top/medium_state -into $tb_medium_state_group -radix hex
 set tb_expiry_time_group [add_wave_group expiry_time(wire) -into $tbcinputgroup]
 add_wave /apatb_ma_unitdatax_request_top/expiry_time -into $tb_expiry_time_group -radix hex
 set tb_tx_power_lvl_group [add_wave_group tx_power_lvl(wire) -into $tbcinputgroup]
@@ -64,6 +77,13 @@ set tb_data_group [add_wave_group data(memory) -into $tbcinputgroup]
 add_wave /apatb_ma_unitdatax_request_top/data_q0 -into $tb_data_group -radix hex
 add_wave /apatb_ma_unitdatax_request_top/data_ce0 -into $tb_data_group -color #ffff00 -radix hex
 add_wave /apatb_ma_unitdatax_request_top/data_address0 -into $tb_data_group -radix hex
+set tb_source_addr_group [add_wave_group source_addr(memory) -into $tbcinputgroup]
+add_wave /apatb_ma_unitdatax_request_top/source_addr_mac_q1 -into $tb_source_addr_group -radix hex
+add_wave /apatb_ma_unitdatax_request_top/source_addr_mac_ce1 -into $tb_source_addr_group -color #ffff00 -radix hex
+add_wave /apatb_ma_unitdatax_request_top/source_addr_mac_address1 -into $tb_source_addr_group -radix hex
+add_wave /apatb_ma_unitdatax_request_top/source_addr_mac_q0 -into $tb_source_addr_group -radix hex
+add_wave /apatb_ma_unitdatax_request_top/source_addr_mac_ce0 -into $tb_source_addr_group -color #ffff00 -radix hex
+add_wave /apatb_ma_unitdatax_request_top/source_addr_mac_address0 -into $tb_source_addr_group -radix hex
 save_wave_config ma_unitdatax_request.wcfg
 run all
 quit

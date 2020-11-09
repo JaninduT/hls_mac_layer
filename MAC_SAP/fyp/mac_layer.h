@@ -8,12 +8,18 @@
 #include "edca.h"
 
 void send_frame(
-		frame_type_t ftype,
-		frame_subtype_t fstype,
-		sequence_number_t seqnumber,
-		user_priority_t up,
+		mac48 source_addr,
+		mac48 dest_addr,
 		unsigned char data[70],
-		unsigned char mac_frame[100]
+		user_priority_t up,
+		enum service_class s_class,
+		channel_identifier c_identifier,
+		enum time_slot t_slot,
+		data_rate_t d_rate,
+		txpwr_lvl_t tx_power_lvl,
+		int64_t expiry_time,
+		unsigned char mac_frame[100],
+		volatile uint1 *medium_state
 		);
 
 #endif

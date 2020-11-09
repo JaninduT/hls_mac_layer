@@ -1,21 +1,123 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../timer_test.c in debug mode
-   Compiling ../../../mac_layer_test.c in debug mode
-   Compiling ../../../edca_test.c in debug mode
-   Compiling ../../../decompose_mac_frame_test.c in debug mode
-   Compiling ../../../crc_32_validate_test.c in debug mode
-   Compiling ../../../crc_32_test.c in debug mode
-   Compiling ../../../compose_mac_header_test.c in debug mode
-   Compiling ../../../compose_mac_frame_test.c in debug mode
-   Compiling ../../../timer.c in debug mode
-   Compiling ../../../mac_layer.c in debug mode
-   Compiling ../../../edca.c in debug mode
-   Compiling ../../../decompose_mac_frame.c in debug mode
-   Compiling ../../../crc_32_validate.c in debug mode
-   Compiling ../../../crc_32.c in debug mode
-   Compiling ../../../compose_mac_frame.c in debug mode
-   Compiling ../../../MA_UNITDATAX_request.c in debug mode
+   Compiling(apcc) ../../../mac_layer_test.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Sun Nov 08 19:47:22 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../PHY_CCA_indication.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Sun Nov 08 19:47:28 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../mac_layer.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Sun Nov 08 19:47:33 +0530 2020
+INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP/fyp/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
    Generating csim.exe
-INFO: [SIM 1] CSim file generation done with 0 errors.
+17
+0
+0
+0
+255
+255
+255
+255
+255
+255
+255
+171
+188
+205
+222
+239
+255
+255
+255
+255
+255
+255
+0
+0
+100
+0
+9
+139
+87
+176
+92
+95
+178
+87
+120
+23
+169
+81
+45
+79
+57
+53
+6
+119
+228
+15
+44
+39
+176
+88
+136
+178
+114
+37
+40
+254
+76
+158
+228
+147
+117
+178
+65
+241
+56
+9
+149
+39
+64
+58
+108
+161
+18
+63
+43
+66
+219
+38
+243
+179
+108
+8
+200
+250
+131
+63
+243
+78
+76
+212
+164
+41
+39
+55
+220
+160
+0
+103
+158
+253
+INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

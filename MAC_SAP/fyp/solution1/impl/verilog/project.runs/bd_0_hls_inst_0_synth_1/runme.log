@@ -1,0 +1,665 @@
+
+*** Running vivado
+    with args -log bd_0_hls_inst_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source bd_0_hls_inst_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top bd_0_hls_inst_0 -part xc7a35tcpg236-1 -directive sdx_optimization_effort_high -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2212 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 981.027 ; gain = 235.730
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_request' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_request.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 17'b00000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 17'b00000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 17'b00000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 17'b00000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 17'b00000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 17'b00000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 17'b00000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 17'b00000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 17'b00000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 17'b00000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 17'b00000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 17'b00000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 17'b00001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 17'b00010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 17'b00100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 17'b01000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 17'b10000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_request.v:107]
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_requdEe' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requdEe.v:37]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 70 - type: integer 
+	Parameter AddressWidth bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_requdEe_ram' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requdEe.v:6]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 7 - type: integer 
+	Parameter MEM_SIZE bound to: 70 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requdEe.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_requdEe_ram' (1#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requdEe.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_requdEe' (2#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requdEe.v:37]
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_requeOg' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requeOg.v:52]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 100 - type: integer 
+	Parameter AddressWidth bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_requeOg_ram' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requeOg.v:6]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 7 - type: integer 
+	Parameter MEM_SIZE bound to: 100 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requeOg.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_requeOg_ram' (3#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requeOg.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_requeOg' (4#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requeOg.v:52]
+INFO: [Synth 8-6157] synthesizing module 'enqueue_dequeue_fram' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/enqueue_dequeue_fram.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 10'b0000000001 
+	Parameter ap_ST_fsm_state2 bound to: 10'b0000000010 
+	Parameter ap_ST_fsm_state3 bound to: 10'b0000000100 
+	Parameter ap_ST_fsm_state4 bound to: 10'b0000001000 
+	Parameter ap_ST_fsm_state5 bound to: 10'b0000010000 
+	Parameter ap_ST_fsm_state6 bound to: 10'b0000100000 
+	Parameter ap_ST_fsm_state7 bound to: 10'b0001000000 
+	Parameter ap_ST_fsm_state8 bound to: 10'b0010000000 
+	Parameter ap_ST_fsm_state9 bound to: 10'b0100000000 
+	Parameter ap_ST_fsm_state10 bound to: 10'b1000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/enqueue_dequeue_fram.v:54]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/enqueue_dequeue_fram.v:180]
+INFO: [Synth 8-6157] synthesizing module 'enqueue_dequeue_fbkb' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/enqueue_dequeue_fbkb.v:38]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 1600 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/enqueue_dequeue_fbkb.v:58]
+INFO: [Synth 8-6157] synthesizing module 'enqueue_dequeue_fbkb_ram' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/enqueue_dequeue_fbkb.v:6]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 1600 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/enqueue_dequeue_fbkb.v:18]
+INFO: [Synth 8-3876] $readmem data file './enqueue_dequeue_fbkb_ram.dat' is read successfully [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/enqueue_dequeue_fbkb.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'enqueue_dequeue_fbkb_ram' (5#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/enqueue_dequeue_fbkb.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'enqueue_dequeue_fbkb' (6#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/enqueue_dequeue_fbkb.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'enqueue_dequeue_fram' (7#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/enqueue_dequeue_fram.v:10]
+INFO: [Synth 8-6157] synthesizing module 'compose_mac_frame' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/compose_mac_frame.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 19'b0000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 19'b0000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 19'b0000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 19'b0000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 19'b0000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 19'b0000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 19'b0000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 19'b0000000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 19'b0000000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 19'b0000000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 19'b0000000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 19'b0000000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 19'b0000001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 19'b0000010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 19'b0000100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 19'b0001000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 19'b0010000000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 19'b0100000000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 19'b1000000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/compose_mac_frame.v:103]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/compose_mac_frame.v:606]
+INFO: [Synth 8-6155] done synthesizing module 'compose_mac_frame' (8#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/compose_mac_frame.v:10]
+INFO: [Synth 8-6157] synthesizing module 'random_int_gen' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/random_int_gen.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/random_int_gen.v:33]
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_requcud' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requcud.v:13]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 17 - type: integer 
+	Parameter din1_WIDTH bound to: 17 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_requcud_DSP48_0' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requcud.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_requcud_DSP48_0' (9#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requcud.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_requcud' (10#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_requcud.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'random_int_gen' (11#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/random_int_gen.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_status_s' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_status_s.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_status_s.v:34]
+WARNING: [Synth 8-6014] Unused sequential element queue_full_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_status_s.v:76]
+WARNING: [Synth 8-6014] Unused sequential element successful_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_status_s.v:82]
+WARNING: [Synth 8-6014] Unused sequential element unsupported_channel_s_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_status_s.v:88]
+WARNING: [Synth 8-6014] Unused sequential element unsupported_priority_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_status_s.v:94]
+WARNING: [Synth 8-6014] Unused sequential element unsupported_service_s_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_status_s.v:100]
+WARNING: [Synth 8-6014] Unused sequential element unsupported_tx_param_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_status_s.v:106]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_status_s' (12#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_status_s.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_request' (13#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/ma_unitdatax_request.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (14#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:57]
+WARNING: [Synth 8-3331] design ma_unitdatax_status_s has unconnected port trans_sts[2]
+WARNING: [Synth 8-3331] design ma_unitdatax_status_s has unconnected port trans_sts[1]
+WARNING: [Synth 8-3331] design ma_unitdatax_status_s has unconnected port trans_sts[0]
+WARNING: [Synth 8-3331] design compose_mac_frame has unconnected port up[3]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port addr0[10]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port addr0[9]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port addr0[8]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port addr0[7]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port addr0[6]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port addr0[5]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port addr0[4]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port addr0[3]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port addr0[2]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port addr0[1]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port addr0[0]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port ce0
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port d0[7]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port d0[6]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port d0[5]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port d0[4]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port d0[3]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port d0[2]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port d0[1]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port d0[0]
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port we0
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb_ram has unconnected port clk
+WARNING: [Synth 8-3331] design enqueue_dequeue_fbkb has unconnected port reset
+WARNING: [Synth 8-3331] design ma_unitdatax_requeOg has unconnected port reset
+WARNING: [Synth 8-3331] design ma_unitdatax_requdEe has unconnected port reset
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q0[7]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q0[6]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q0[5]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q0[4]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q0[3]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q0[2]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q0[1]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q0[0]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q1[7]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q1[6]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q1[5]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q1[4]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q1[3]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q1[2]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q1[1]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port dest_addr_mac_q1[0]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port t_slot[1]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port t_slot[0]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[63]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[62]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[61]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[60]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[59]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[58]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[57]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[56]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[55]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[54]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[53]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[52]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[51]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[50]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[49]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[48]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[47]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[46]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[45]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[44]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[43]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[42]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[41]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[40]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[39]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[38]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[37]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[36]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[35]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[34]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[33]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[32]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[31]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[30]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[29]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[28]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[27]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[26]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[25]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[24]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[23]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[22]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[21]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[20]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[19]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[18]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[17]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[16]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[15]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[14]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[13]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[12]
+WARNING: [Synth 8-3331] design ma_unitdatax_request has unconnected port expiry_time[11]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1057.223 ; gain = 311.926
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1057.223 ; gain = 311.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1057.223 ; gain = 311.926
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1057.223 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/ma_unitdatax_request_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/ma_unitdatax_request_ooc.xdc] for cell 'inst'
+Parsing XDC File [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1157.547 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 1170.109 ; gain = 12.563
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1170.109 ; gain = 424.813
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1170.109 ; gain = 424.813
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1170.109 ; gain = 424.813
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'high_2_reg_144_reg' and it is trimmed from '32' to '16' bits. [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/8d10/hdl/verilog/random_int_gen.v:90]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-3971] The signal "ma_unitdatax_requeOg_ram:/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1170.109 ; gain = 424.813
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 8     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 5     
+	   2 Input      2 Bit       Adders := 4     
++---XORs : 
+	   2 Input     32 Bit         XORs := 3     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               19 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 15    
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 11    
+	                2 Bit    Registers := 9     
+	                1 Bit    Registers := 20    
++---Multipliers : 
+	                32x32  Multipliers := 1     
+	                  9x9  Multipliers := 4     
++---RAMs : 
+	              800 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     19 Bit        Muxes := 2     
+	  20 Input     19 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   6 Input     17 Bit        Muxes := 1     
+	  18 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   6 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 4     
+	   6 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 5     
+	   2 Input      6 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 41    
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ma_unitdatax_requdEe_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module ma_unitdatax_requeOg_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---RAMs : 
+	              800 Bit         RAMs := 1     
+Module enqueue_dequeue_fram 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 4     
+	   2 Input      3 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 4     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 4     
+	                7 Bit    Registers := 8     
+	                3 Bit    Registers := 10    
+	                2 Bit    Registers := 8     
++---Multipliers : 
+	                  9x9  Multipliers := 4     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 3     
+	   6 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 12    
+	   5 Input      1 Bit        Muxes := 1     
+Module compose_mac_frame 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 3     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               19 Bit    Registers := 1     
+	                7 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     19 Bit        Muxes := 2     
+	  20 Input     19 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+Module random_int_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module ma_unitdatax_status_s 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module ma_unitdatax_request 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               17 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	                7 Bit    Registers := 3     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   6 Input     17 Bit        Muxes := 1     
+	  18 Input     17 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   6 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 24    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3971] The signal "inst/mac_data_U/ma_unitdatax_requeOg_ram_U/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1170.109 ; gain = 424.813
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1170.109 ; gain = 424.813
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1170.109 ; gain = 424.813
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1170.109 ; gain = 424.813
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1173.063 ; gain = 427.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1173.063 ; gain = 427.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1173.063 ; gain = 427.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1173.063 ; gain = 427.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1173.063 ; gain = 427.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1173.063 ; gain = 427.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     8|
+|2     |LUT2 |    22|
+|3     |LUT3 |    43|
+|4     |LUT4 |    52|
+|5     |LUT5 |    55|
+|6     |LUT6 |    42|
+|7     |FDRE |   198|
+|8     |FDSE |     4|
++------+-----+------+
+
+Report Instance Areas: 
++------+------------------------------------+---------------------+------+
+|      |Instance                            |Module               |Cells |
++------+------------------------------------+---------------------+------+
+|1     |top                                 |                     |   424|
+|2     |  inst                              |ma_unitdatax_request |   424|
+|3     |    grp_compose_mac_frame_fu_271    |compose_mac_frame    |   110|
+|4     |    grp_enqueue_dequeue_fram_fu_243 |enqueue_dequeue_fram |   213|
+|5     |    grp_random_int_gen_fu_281       |random_int_gen       |    10|
++------+------------------------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1173.063 ; gain = 427.766
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 92 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1173.063 ; gain = 314.879
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1173.063 ; gain = 427.766
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1185.121 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1186.133 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+58 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1186.133 ; gain = 706.309
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1186.133 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = 7a908c2a50dae1e8
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1186.133 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  8 21:13:01 2020...

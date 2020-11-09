@@ -4502,6 +4502,7 @@ __extension__ typedef unsigned long long uintmax_t;
 # 33 "D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
 # 6 "fyp/common.h" 2
 
+
 typedef uint4 user_priority_t;
 typedef uint7 data_rate_t;
 typedef uint4 txpwr_lvl_t;
@@ -4541,6 +4542,7 @@ typedef uint4 frame_subtype_t;
 typedef uint12 sequence_number_t;
 
 void compose_mac_header(
+  mac48 source_addr,
   frame_type_t ftype,
   frame_subtype_t fstype,
   sequence_number_t seqnumber,
@@ -4549,6 +4551,7 @@ void compose_mac_header(
   );
 
 void compose_mac_frame(
+  mac48 source_addr,
   frame_type_t ftype,
   frame_subtype_t fstype,
   sequence_number_t seqnumber,
@@ -4624,9 +4627,9 @@ void start_backoff_bk(
 # 4 "fyp/compose_mac_frame.c" 2
 
 
-void compose_mac_header(frame_type_t ftype, frame_subtype_t fstype,
-  sequence_number_t seqnumber, user_priority_t up,
-  unsigned char frame_buffer[100]){_ssdm_SpecArrayDimSize(frame_buffer, 100);
+void compose_mac_header(mac48 source_addr, frame_type_t ftype,
+  frame_subtype_t fstype, sequence_number_t seqnumber,
+  user_priority_t up, unsigned char frame_buffer[100]){_ssdm_SpecArrayDimSize(frame_buffer, 100);
  unsigned char byte_one = 0x00;
  unsigned char cftype = ftype;
  unsigned char cfstype = fstype;
@@ -4647,12 +4650,12 @@ void compose_mac_header(frame_type_t ftype, frame_subtype_t fstype,
  frame_buffer[8] = bcast_wcard_mac.mac[4];
  frame_buffer[9] = bcast_wcard_mac.mac[5];
 
- frame_buffer[10] = my_mac.mac[0];
- frame_buffer[11] = my_mac.mac[1];
- frame_buffer[12] = my_mac.mac[2];
- frame_buffer[13] = my_mac.mac[3];
- frame_buffer[14] = my_mac.mac[4];
- frame_buffer[15] = my_mac.mac[5];
+ frame_buffer[10] = source_addr.mac[0];
+ frame_buffer[11] = source_addr.mac[1];
+ frame_buffer[12] = source_addr.mac[2];
+ frame_buffer[13] = source_addr.mac[3];
+ frame_buffer[14] = source_addr.mac[4];
+ frame_buffer[15] = source_addr.mac[5];
 
  frame_buffer[16] = bcast_wcard_mac.mac[0];
  frame_buffer[17] = bcast_wcard_mac.mac[1];
@@ -4677,11 +4680,12 @@ void compose_mac_header(frame_type_t ftype, frame_subtype_t fstype,
  return;
 }
 
-void compose_mac_frame(frame_type_t ftype, frame_subtype_t fstype,
-  sequence_number_t seqnumber, user_priority_t up,
-  unsigned char data[70], unsigned char mac_frame[100]){_ssdm_SpecArrayDimSize(data, 70);_ssdm_SpecArrayDimSize(mac_frame, 100);
+void compose_mac_frame(mac48 source_addr, frame_type_t ftype,
+  frame_subtype_t fstype, sequence_number_t seqnumber,
+  user_priority_t up, unsigned char data[70],
+  unsigned char mac_frame[100]){_ssdm_SpecArrayDimSize(data, 70);_ssdm_SpecArrayDimSize(mac_frame, 100);
 
- compose_mac_header(ftype, fstype, seqnumber, up, mac_frame);
+ compose_mac_header(source_addr, ftype, fstype, seqnumber, up, mac_frame);
 
  for(int j=0; j<70;j++){
   mac_frame[26+j] = data[j];

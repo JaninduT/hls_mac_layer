@@ -13,7 +13,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_compose_mac_frame_fu_70/grp_compose_mac_frame_fu_70_activity": {
+				"grp_enqueue_dequeue_fram_fu_190/grp_enqueue_dequeue_fram_fu_190_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -23,7 +23,47 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_enqueue_dequeue_fram_fu_86/grp_enqueue_dequeue_fram_fu_86_activity": {
+				"grp_ma_unitdatax_request_fu_126/grp_compose_mac_frame_fu_279/grp_compose_mac_frame_fu_279_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ma_unitdatax_request_fu_126/grp_enqueue_dequeue_fram_fu_241/grp_enqueue_dequeue_fram_fu_241_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ma_unitdatax_request_fu_126/grp_ma_unitdatax_request_fu_126_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ma_unitdatax_request_fu_126/grp_ma_unitdatax_status_s_fu_295/grp_ma_unitdatax_status_s_fu_295_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_ma_unitdatax_request_fu_126/grp_random_int_gen_fu_289/grp_random_int_gen_fu_289_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

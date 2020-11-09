@@ -5457,6 +5457,7 @@ __extension__ typedef unsigned long long uintmax_t;
 # 33 "D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
 # 6 "E:/FYP/HLS/MAC_SAP/fyp/common.h" 2
 
+
 typedef uint4 user_priority_t;
 typedef uint7 data_rate_t;
 typedef uint4 txpwr_lvl_t;
@@ -5501,7 +5502,8 @@ void ma_unitdatax_request (
   enum time_slot t_slot,
   data_rate_t d_rate,
   txpwr_lvl_t tx_power_lvl,
-  int64_t expiry_time
+  int64_t expiry_time,
+  volatile uint1 *medium_state
   );
 # 2 "E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request.c" 2
 # 1 "E:/FYP/HLS/MAC_SAP/fyp/compose_mac_frame.h" 1
@@ -5515,6 +5517,7 @@ typedef uint4 frame_subtype_t;
 typedef uint12 sequence_number_t;
 
 void compose_mac_header(
+  mac48 source_addr,
   frame_type_t ftype,
   frame_subtype_t fstype,
   sequence_number_t seqnumber,
@@ -5523,6 +5526,7 @@ void compose_mac_header(
   );
 
 void compose_mac_frame(
+  mac48 source_addr,
   frame_type_t ftype,
   frame_subtype_t fstype,
   sequence_number_t seqnumber,
@@ -5608,13 +5612,13 @@ void ma_unitdatax_status_indication(
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request.c" 2
 
 static sequence_number_t seq_number = 0;
-static volatile uint1 medium_state = 0;
 
 void ma_unitdatax_request (mac48 source_addr, mac48 dest_addr,
   unsigned char data[70], user_priority_t up,
   enum service_class s_class, channel_identifier c_identifier,
   enum time_slot t_slot, data_rate_t d_rate,
-  txpwr_lvl_t tx_power_lvl, int64_t expiry_time){
+  txpwr_lvl_t tx_power_lvl, int64_t expiry_time,
+  volatile uint1 *medium_state){
 
  if(up > 7){
   ma_unitdatax_status_indication(source_addr, dest_addr, 1, up, s_class);
@@ -5640,12 +5644,12 @@ void ma_unitdatax_request (mac48 source_addr, mac48 dest_addr,
   llc_data[i] = data[i];
  }
 
- compose_mac_frame(1, 1, seq_number, up, llc_data, mac_data);
+ compose_mac_frame(source_addr, 1, 1, seq_number, up, llc_data, mac_data);
 
  if((up == 1) || (up == 2)){
   uint4 enqueue_res_bk = enqueue_dequeue_frame(0, 0, mac_data, &d_rate, &tx_power_lvl);
   if(enqueue_res_bk == 14){
-   if(medium_state == 0){
+   if(*medium_state == 0){
     start_backoff_bk(0);
    }
    ma_unitdatax_status_indication(source_addr, dest_addr, 0, up, s_class);
@@ -5658,7 +5662,7 @@ void ma_unitdatax_request (mac48 source_addr, mac48 dest_addr,
  }else if((up == 0) || (up == 3)){
   uint4 enqueue_res_be = enqueue_dequeue_frame(0, 1, mac_data, &d_rate, &tx_power_lvl);
   if(enqueue_res_be == 14){
-   if(medium_state == 0){
+   if(*medium_state == 0){
     start_backoff_be(0);
    }
    ma_unitdatax_status_indication(source_addr, dest_addr, 0, up, s_class);
@@ -5671,7 +5675,7 @@ void ma_unitdatax_request (mac48 source_addr, mac48 dest_addr,
  }else if((up == 4) || (up == 5)){
   uint4 enqueue_res_vi = enqueue_dequeue_frame(0, 2, mac_data, &d_rate, &tx_power_lvl);
   if(enqueue_res_vi == 14){
-   if(medium_state == 0){
+   if(*medium_state == 0){
     start_backoff_vi(0);
    }
    ma_unitdatax_status_indication(source_addr, dest_addr, 0, up, s_class);
@@ -5684,7 +5688,7 @@ void ma_unitdatax_request (mac48 source_addr, mac48 dest_addr,
  }else if((up == 6) || (up == 7)){
   uint4 enqueue_res_vo = enqueue_dequeue_frame(0, 3, mac_data, &d_rate, &tx_power_lvl);
   if(enqueue_res_vo == 14){
-   if(medium_state == 0){
+   if(*medium_state == 0){
     start_backoff_vo(0);
    }
    ma_unitdatax_status_indication(source_addr, dest_addr, 0, up, s_class);

@@ -14,18 +14,20 @@ set isEnableWaveformDebug 1
 set C_modelName {compose_mac_frame}
 set C_modelType { void 0 }
 set C_modelArgList {
+	{ source_addr_mac int 8 regular {array 6 { 1 1 } 1 1 }  }
 	{ seqnumber uint 12 regular  }
 	{ up uint 4 regular  }
 	{ data int 8 regular {array 70 { 1 3 } 1 1 }  }
 	{ mac_frame int 8 regular {array 100 { 0 2 } 1 1 }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "seqnumber", "interface" : "wire", "bitwidth" : 12, "direction" : "READONLY"} , 
+	{ "Name" : "source_addr_mac", "interface" : "memory", "bitwidth" : 8, "direction" : "READONLY"} , 
+ 	{ "Name" : "seqnumber", "interface" : "wire", "bitwidth" : 12, "direction" : "READONLY"} , 
  	{ "Name" : "up", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY"} , 
  	{ "Name" : "data", "interface" : "memory", "bitwidth" : 8, "direction" : "READONLY"} , 
  	{ "Name" : "mac_frame", "interface" : "memory", "bitwidth" : 8, "direction" : "READWRITE"} ]}
 # RTL Port declarations: 
-set portNum 20
+set portNum 26
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -33,20 +35,26 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ seqnumber sc_in sc_lv 12 signal 0 } 
-	{ up sc_in sc_lv 4 signal 1 } 
-	{ data_address0 sc_out sc_lv 7 signal 2 } 
-	{ data_ce0 sc_out sc_logic 1 signal 2 } 
-	{ data_q0 sc_in sc_lv 8 signal 2 } 
-	{ mac_frame_address0 sc_out sc_lv 7 signal 3 } 
-	{ mac_frame_ce0 sc_out sc_logic 1 signal 3 } 
-	{ mac_frame_we0 sc_out sc_logic 1 signal 3 } 
-	{ mac_frame_d0 sc_out sc_lv 8 signal 3 } 
-	{ mac_frame_address1 sc_out sc_lv 7 signal 3 } 
-	{ mac_frame_ce1 sc_out sc_logic 1 signal 3 } 
-	{ mac_frame_we1 sc_out sc_logic 1 signal 3 } 
-	{ mac_frame_d1 sc_out sc_lv 8 signal 3 } 
-	{ mac_frame_q1 sc_in sc_lv 8 signal 3 } 
+	{ source_addr_mac_address0 sc_out sc_lv 3 signal 0 } 
+	{ source_addr_mac_ce0 sc_out sc_logic 1 signal 0 } 
+	{ source_addr_mac_q0 sc_in sc_lv 8 signal 0 } 
+	{ source_addr_mac_address1 sc_out sc_lv 3 signal 0 } 
+	{ source_addr_mac_ce1 sc_out sc_logic 1 signal 0 } 
+	{ source_addr_mac_q1 sc_in sc_lv 8 signal 0 } 
+	{ seqnumber sc_in sc_lv 12 signal 1 } 
+	{ up sc_in sc_lv 4 signal 2 } 
+	{ data_address0 sc_out sc_lv 7 signal 3 } 
+	{ data_ce0 sc_out sc_logic 1 signal 3 } 
+	{ data_q0 sc_in sc_lv 8 signal 3 } 
+	{ mac_frame_address0 sc_out sc_lv 7 signal 4 } 
+	{ mac_frame_ce0 sc_out sc_logic 1 signal 4 } 
+	{ mac_frame_we0 sc_out sc_logic 1 signal 4 } 
+	{ mac_frame_d0 sc_out sc_lv 8 signal 4 } 
+	{ mac_frame_address1 sc_out sc_lv 7 signal 4 } 
+	{ mac_frame_ce1 sc_out sc_logic 1 signal 4 } 
+	{ mac_frame_we1 sc_out sc_logic 1 signal 4 } 
+	{ mac_frame_d1 sc_out sc_lv 8 signal 4 } 
+	{ mac_frame_q1 sc_in sc_lv 8 signal 4 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -55,6 +63,12 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
+ 	{ "name": "source_addr_mac_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "address0" }} , 
+ 	{ "name": "source_addr_mac_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "ce0" }} , 
+ 	{ "name": "source_addr_mac_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "q0" }} , 
+ 	{ "name": "source_addr_mac_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "address1" }} , 
+ 	{ "name": "source_addr_mac_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "ce1" }} , 
+ 	{ "name": "source_addr_mac_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "q1" }} , 
  	{ "name": "seqnumber", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "seqnumber", "role": "default" }} , 
  	{ "name": "up", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "up", "role": "default" }} , 
  	{ "name": "data_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "data", "role": "address0" }} , 
@@ -85,6 +99,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
+			{"Name" : "source_addr_mac", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "seqnumber", "Type" : "None", "Direction" : "I"},
 			{"Name" : "up", "Type" : "None", "Direction" : "I"},
 			{"Name" : "data", "Type" : "Memory", "Direction" : "I"},
@@ -93,8 +108,9 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	compose_mac_frame {
-		seqnumber {Type I LastRead 11 FirstWrite -1}
-		up {Type I LastRead 12 FirstWrite -1}
+		source_addr_mac {Type I LastRead 12 FirstWrite -1}
+		seqnumber {Type I LastRead 8 FirstWrite -1}
+		up {Type I LastRead 9 FirstWrite -1}
 		data {Type I LastRead 13 FirstWrite -1}
 		mac_frame {Type IO LastRead 14 FirstWrite 0}}}
 
@@ -109,6 +125,7 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
+	source_addr_mac { ap_memory {  { source_addr_mac_address0 mem_address 1 3 }  { source_addr_mac_ce0 mem_ce 1 1 }  { source_addr_mac_q0 mem_dout 0 8 }  { source_addr_mac_address1 MemPortADDR2 1 3 }  { source_addr_mac_ce1 MemPortCE2 1 1 }  { source_addr_mac_q1 MemPortDOUT2 0 8 } } }
 	seqnumber { ap_none {  { seqnumber in_data 0 12 } } }
 	up { ap_none {  { up in_data 0 4 } } }
 	data { ap_memory {  { data_address0 mem_address 1 7 }  { data_ce0 mem_ce 1 1 }  { data_q0 mem_dout 0 8 } } }

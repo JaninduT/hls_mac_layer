@@ -1,85 +1,9 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 9
-set name ma_unitdatax_requeOg
-set corename simcore_mul
-set op mul
-set stage_num 1
-set max_latency -1
-set registered_input 1
-set in0_width 17
-set in0_signed 0
-set in1_width 17
-set in1_signed 0
-set out_width 32
-set exp i0*i1
-set arg_lists {i0 {17 0 +} i1 {17 0 +} p {32 0 +} acc {0} }
-set TrueReset 0
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
-eval "ap_gen_simcore_mul { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler ${name}
-}
-
-
-set op mul
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
 # Memory (RAM/ROM)  definition:
-set ID 14
+set ID 12
 set hasByteEnable 0
-set MemName ma_unitdatax_requcud
+set MemName ma_unitdatax_requdEe
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 8
@@ -162,9 +86,9 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 15
+set ID 13
 set hasByteEnable 0
-set MemName ma_unitdatax_requdEe
+set MemName ma_unitdatax_requeOg
 set CoreName ap_simcore_mem
 set PortList { 2 2 }
 set DataWd 8
@@ -258,7 +182,26 @@ set axilite_register_dict [dict create]
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 16 \
+    id 14 \
+    name source_addr_mac \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename source_addr_mac \
+    op interface \
+    ports { source_addr_mac_address0 { O 3 vector } source_addr_mac_ce0 { O 1 bit } source_addr_mac_q0 { I 8 vector } source_addr_mac_address1 { O 3 vector } source_addr_mac_ce1 { O 1 bit } source_addr_mac_q1 { I 8 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'source_addr_mac'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 15 \
     name data \
     reset_level 1 \
     sync_rst true \
@@ -276,7 +219,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 17 \
+    id 16 \
     name up \
     type other \
     dir I \
@@ -291,7 +234,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 18 \
+    id 17 \
     name s_class \
     type other \
     dir I \
@@ -306,7 +249,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 19 \
+    id 18 \
     name c_identifier_operating_class \
     type other \
     dir I \
@@ -321,7 +264,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 20 \
+    id 19 \
     name c_identifier_channel_number \
     type other \
     dir I \
@@ -336,7 +279,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 21 \
+    id 20 \
     name d_rate \
     type other \
     dir I \
@@ -351,7 +294,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 22 \
+    id 21 \
     name tx_power_lvl \
     type other \
     dir I \
@@ -360,6 +303,21 @@ eval "cg_default_interface_gen_dc { \
     corename dc_tx_power_lvl \
     op interface \
     ports { tx_power_lvl { I 4 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 22 \
+    name medium_state \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_medium_state \
+    op interface \
+    ports { medium_state { I 1 vector } } \
 } "
 }
 

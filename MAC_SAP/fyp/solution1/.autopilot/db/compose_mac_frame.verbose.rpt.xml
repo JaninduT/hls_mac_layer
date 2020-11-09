@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'compose_mac_frame'" level="0">
-<item name = "Date">Mon Nov  2 20:52:11 2020
+<item name = "Date">Sun Nov  8 21:11:01 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">fyp</item>
@@ -55,7 +55,7 @@
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 360, -</column>
+<column name="Multiplexer">-, -, -, 388, -</column>
 <column name="Register">-, -, 118, -, -</column>
 <specialColumn name="Available">100, 90, 41600, 20800, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, 3, 0</specialColumn>
@@ -81,49 +81,51 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln66_fu_566_p2">+, 0, 0, 15, 7, 5</column>
-<column name="i_fu_583_p2">+, 0, 0, 15, 7, 1</column>
-<column name="j_1_fu_625_p2">+, 0, 0, 13, 4, 1</column>
-<column name="j_fu_550_p2">+, 0, 0, 15, 7, 1</column>
-<column name="k_fu_674_p2">+, 0, 0, 12, 3, 1</column>
-<column name="sub_ln73_fu_706_p2">-, 0, 0, 15, 6, 6</column>
-<column name="icmp_ln11_fu_619_p2">icmp, 0, 0, 11, 4, 5</column>
-<column name="icmp_ln65_fu_544_p2">icmp, 0, 0, 11, 7, 7</column>
-<column name="icmp_ln72_fu_668_p2">icmp, 0, 0, 9, 3, 4</column>
-<column name="icmp_ln8_fu_577_p2">icmp, 0, 0, 11, 7, 7</column>
-<column name="lshr_ln73_fu_696_p2">lshr, 0, 0, 101, 32, 32</column>
-<column name="qos_h_1_fu_533_p2">or, 0, 0, 7, 7, 3</column>
-<column name="remainder_3_fu_651_p3">select, 0, 0, 32, 1, 32</column>
-<column name="crc_1_fu_594_p2">xor, 0, 0, 32, 32, 2</column>
-<column name="remainder_2_fu_645_p2">xor, 0, 0, 32, 32, 27</column>
-<column name="remainder_fu_608_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="add_ln67_fu_618_p2">+, 0, 0, 15, 7, 5</column>
+<column name="i_fu_635_p2">+, 0, 0, 15, 7, 1</column>
+<column name="j_1_fu_677_p2">+, 0, 0, 13, 4, 1</column>
+<column name="j_fu_602_p2">+, 0, 0, 15, 7, 1</column>
+<column name="k_fu_726_p2">+, 0, 0, 12, 3, 1</column>
+<column name="sub_ln74_fu_758_p2">-, 0, 0, 15, 6, 6</column>
+<column name="icmp_ln11_fu_671_p2">icmp, 0, 0, 11, 4, 5</column>
+<column name="icmp_ln66_fu_596_p2">icmp, 0, 0, 11, 7, 7</column>
+<column name="icmp_ln73_fu_720_p2">icmp, 0, 0, 9, 3, 4</column>
+<column name="icmp_ln8_fu_629_p2">icmp, 0, 0, 11, 7, 7</column>
+<column name="lshr_ln74_fu_748_p2">lshr, 0, 0, 101, 32, 32</column>
+<column name="qos_h_1_fu_585_p2">or, 0, 0, 7, 7, 3</column>
+<column name="remainder_3_fu_703_p3">select, 0, 0, 32, 1, 32</column>
+<column name="crc_1_fu_646_p2">xor, 0, 0, 32, 32, 2</column>
+<column name="remainder_2_fu_697_p2">xor, 0, 0, 32, 32, 27</column>
+<column name="remainder_fu_660_p2">xor, 0, 0, 32, 32, 32</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">97, 20, 1, 20</column>
-<column name="crc_fu_146">15, 3, 32, 96</column>
-<column name="i_0_i_reg_465">9, 2, 7, 14</column>
-<column name="j_0_i_reg_476">9, 2, 4, 8</column>
-<column name="j_0_reg_453">9, 2, 7, 14</column>
-<column name="k_0_reg_487">9, 2, 3, 6</column>
+<column name="crc_fu_138">15, 3, 32, 96</column>
+<column name="i_0_i_reg_517">9, 2, 7, 14</column>
+<column name="j_0_i_reg_528">9, 2, 4, 8</column>
+<column name="j_0_reg_505">9, 2, 7, 14</column>
+<column name="k_0_reg_539">9, 2, 3, 6</column>
 <column name="mac_frame_address0">65, 16, 7, 112</column>
 <column name="mac_frame_address1">62, 15, 7, 105</column>
-<column name="mac_frame_d0">47, 10, 8, 80</column>
-<column name="mac_frame_d1">38, 7, 8, 56</column>
+<column name="mac_frame_d0">44, 9, 8, 72</column>
+<column name="mac_frame_d1">27, 5, 8, 40</column>
+<column name="source_addr_mac_address0">21, 4, 3, 12</column>
+<column name="source_addr_mac_address1">21, 4, 3, 12</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">19, 0, 19, 0</column>
-<column name="crc_1_reg_755">32, 0, 32, 0</column>
-<column name="crc_fu_146">32, 0, 32, 0</column>
-<column name="i_0_i_reg_465">7, 0, 7, 0</column>
-<column name="i_reg_745">7, 0, 7, 0</column>
-<column name="j_0_i_reg_476">4, 0, 4, 0</column>
-<column name="j_0_reg_453">7, 0, 7, 0</column>
-<column name="j_reg_724">7, 0, 7, 0</column>
-<column name="k_0_reg_487">3, 0, 3, 0</column>
+<column name="crc_1_reg_837">32, 0, 32, 0</column>
+<column name="crc_fu_138">32, 0, 32, 0</column>
+<column name="i_0_i_reg_517">7, 0, 7, 0</column>
+<column name="i_reg_827">7, 0, 7, 0</column>
+<column name="j_0_i_reg_528">4, 0, 4, 0</column>
+<column name="j_0_reg_505">7, 0, 7, 0</column>
+<column name="j_reg_806">7, 0, 7, 0</column>
+<column name="k_0_reg_539">3, 0, 3, 0</column>
 </table>
 </item>
 </section>
@@ -139,6 +141,12 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, compose_mac_frame, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, compose_mac_frame, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, compose_mac_frame, return value</column>
+<column name="source_addr_mac_address0">out, 3, ap_memory, source_addr_mac, array</column>
+<column name="source_addr_mac_ce0">out, 1, ap_memory, source_addr_mac, array</column>
+<column name="source_addr_mac_q0">in, 8, ap_memory, source_addr_mac, array</column>
+<column name="source_addr_mac_address1">out, 3, ap_memory, source_addr_mac, array</column>
+<column name="source_addr_mac_ce1">out, 1, ap_memory, source_addr_mac, array</column>
+<column name="source_addr_mac_q1">in, 8, ap_memory, source_addr_mac, array</column>
 <column name="seqnumber">in, 12, ap_none, seqnumber, scalar</column>
 <column name="up">in, 4, ap_none, up, scalar</column>
 <column name="data_address0">out, 7, ap_memory, data, array</column>

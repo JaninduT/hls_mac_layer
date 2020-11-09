@@ -6,7 +6,7 @@
 void ma_unitdata_indication (
 		mac48 source_addr,
 		mac48 dest_addr,
-		msdu_t data,
+		unsigned char data[70],
 		user_priority_t priority,
 		enum service_class s_class
 		);

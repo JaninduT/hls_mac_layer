@@ -1,68 +1,35 @@
-// ==============================================================
-// Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
-// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-// ==============================================================
+
 `timescale 1 ns / 1 ps
-module ma_unitdatax_requcud_ram (addr0, ce0, d0, we0, q0,  clk);
 
-parameter DWIDTH = 8;
-parameter AWIDTH = 7;
-parameter MEM_SIZE = 70;
+  module ma_unitdatax_requcud_DSP48_0(a, b, p);
+input [17 - 1 : 0] a;
+input [17 - 1 : 0] b;
+output [32 - 1 : 0] p;
 
-input[AWIDTH-1:0] addr0;
-input ce0;
-input[DWIDTH-1:0] d0;
-input we0;
-output reg[DWIDTH-1:0] q0;
-input clk;
-
-(* ram_style = "distributed" *)reg [DWIDTH-1:0] ram[0:MEM_SIZE-1];
-
-
-
-
-always @(posedge clk)  
-begin 
-    if (ce0) begin
-        if (we0) 
-            ram[addr0] <= d0; 
-        q0 <= ram[addr0];
-    end
-end
-
+assign p = $unsigned (a) * $unsigned (b);
 
 endmodule
-
 `timescale 1 ns / 1 ps
 module ma_unitdatax_requcud(
-    reset,
-    clk,
-    address0,
-    ce0,
-    we0,
-    d0,
-    q0);
+    din0,
+    din1,
+    dout);
 
-parameter DataWidth = 32'd8;
-parameter AddressRange = 32'd70;
-parameter AddressWidth = 32'd7;
-input reset;
-input clk;
-input[AddressWidth - 1:0] address0;
-input ce0;
-input we0;
-input[DataWidth - 1:0] d0;
-output[DataWidth - 1:0] q0;
+parameter ID = 32'd1;
+parameter NUM_STAGE = 32'd1;
+parameter din0_WIDTH = 32'd1;
+parameter din1_WIDTH = 32'd1;
+parameter dout_WIDTH = 32'd1;
+input[din0_WIDTH - 1:0] din0;
+input[din1_WIDTH - 1:0] din1;
+output[dout_WIDTH - 1:0] dout;
 
 
 
-ma_unitdatax_requcud_ram ma_unitdatax_requcud_ram_U(
-    .clk( clk ),
-    .addr0( address0 ),
-    .ce0( ce0 ),
-    .we0( we0 ),
-    .d0( d0 ),
-    .q0( q0 ));
+ma_unitdatax_requcud_DSP48_0 ma_unitdatax_requcud_DSP48_0_U(
+    .a( din0 ),
+    .b( din1 ),
+    .p( dout ));
 
 endmodule
 

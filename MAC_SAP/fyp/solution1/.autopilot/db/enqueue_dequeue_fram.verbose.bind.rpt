@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'enqueue_dequeue_fram'
 ================================================================
-* Date:           Mon Nov  2 20:52:09 2020
+* Date:           Sun Nov  8 21:11:00 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        fyp
@@ -134,7 +134,7 @@ State 2 <SV = 1> <Delay = 2.22>
 ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%vo_0 = phi i7 [ %vo, %14 ], [ 0, %.preheader4.preheader ]"   --->   Operation 48 'phi' 'vo_0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln95 = zext i7 %vo_0 to i9" [fyp/edca.c:95]   --->   Operation 49 'zext' 'zext_ln95' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 50 [1/1] (1.46ns)   --->   "%icmp_ln95 = icmp eq i7 %vo_0, -28" [fyp/edca.c:95]   --->   Operation 50 'icmp' 'icmp_ln95' <Predicate = true> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.46> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%empty_38 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)"   --->   Operation 51 'speclooptripcount' 'empty_38' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%empty_34 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)"   --->   Operation 51 'speclooptripcount' 'empty_34' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 52 [1/1] (2.03ns)   --->   "%vo = add i7 %vo_0, 1" [fyp/edca.c:95]   --->   Operation 52 'add' 'vo' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.68> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 53 [1/1] (0.00ns)   --->   "br i1 %icmp_ln95, label %15, label %14" [fyp/edca.c:95]   --->   Operation 53 'br' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%zext_ln96_1 = zext i7 %vo_0 to i64" [fyp/edca.c:96]   --->   Operation 54 'zext' 'zext_ln96_1' <Predicate = (!icmp_ln95)> <Delay = 0.00>
@@ -148,7 +148,7 @@ ST_2 : Operation 61 [1/1] (0.00ns)   --->   "store i3 %add_ln102, i3* @available
 ST_2 : Operation 62 [1/1] (1.79ns)   --->   "br label %._crit_edge" [fyp/edca.c:103]   --->   Operation 62 'br' <Predicate = (icmp_ln95)> <Delay = 1.79>
 
 State 3 <SV = 2> <Delay = 5.48>
-ST_3 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str68) nounwind" [fyp/edca.c:95]   --->   Operation 63 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str6) nounwind" [fyp/edca.c:95]   --->   Operation 63 'specloopname' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 64 [1/2] (2.22ns)   --->   "%inout_frame_load_3 = load i8* %inout_frame_addr_3, align 1" [fyp/edca.c:96]   --->   Operation 64 'load' 'inout_frame_load_3' <Predicate = true> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1600> <RAM>
 ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%zext_ln96_2 = zext i9 %add_ln96 to i11" [fyp/edca.c:96]   --->   Operation 65 'zext' 'zext_ln96_2' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 66 [1/1] (2.12ns)   --->   "%add_ln96_1 = add i11 %zext_ln96_2, -848" [fyp/edca.c:96]   --->   Operation 66 'add' 'add_ln96_1' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.68> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
@@ -161,7 +161,7 @@ State 4 <SV = 1> <Delay = 2.22>
 ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%vi_0 = phi i7 [ %vi, %10 ], [ 0, %.preheader5.preheader ]"   --->   Operation 71 'phi' 'vi_0' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%zext_ln82 = zext i7 %vi_0 to i9" [fyp/edca.c:82]   --->   Operation 72 'zext' 'zext_ln82' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 73 [1/1] (1.46ns)   --->   "%icmp_ln82 = icmp eq i7 %vi_0, -28" [fyp/edca.c:82]   --->   Operation 73 'icmp' 'icmp_ln82' <Predicate = true> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.46> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%empty_37 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)"   --->   Operation 74 'speclooptripcount' 'empty_37' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%empty_33 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)"   --->   Operation 74 'speclooptripcount' 'empty_33' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 75 [1/1] (2.03ns)   --->   "%vi = add i7 %vi_0, 1" [fyp/edca.c:82]   --->   Operation 75 'add' 'vi' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.68> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_4 : Operation 76 [1/1] (0.00ns)   --->   "br i1 %icmp_ln82, label %11, label %10" [fyp/edca.c:82]   --->   Operation 76 'br' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 77 [1/1] (0.00ns)   --->   "%zext_ln83_1 = zext i7 %vi_0 to i64" [fyp/edca.c:83]   --->   Operation 77 'zext' 'zext_ln83_1' <Predicate = (!icmp_ln82)> <Delay = 0.00>
@@ -188,7 +188,7 @@ State 6 <SV = 1> <Delay = 2.22>
 ST_6 : Operation 94 [1/1] (0.00ns)   --->   "%be_0 = phi i7 [ %be, %6 ], [ 0, %.preheader6.preheader ]"   --->   Operation 94 'phi' 'be_0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 95 [1/1] (0.00ns)   --->   "%zext_ln69 = zext i7 %be_0 to i9" [fyp/edca.c:69]   --->   Operation 95 'zext' 'zext_ln69' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 96 [1/1] (1.46ns)   --->   "%icmp_ln69 = icmp eq i7 %be_0, -28" [fyp/edca.c:69]   --->   Operation 96 'icmp' 'icmp_ln69' <Predicate = true> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.46> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 97 [1/1] (0.00ns)   --->   "%empty_36 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)"   --->   Operation 97 'speclooptripcount' 'empty_36' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 97 [1/1] (0.00ns)   --->   "%empty_32 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)"   --->   Operation 97 'speclooptripcount' 'empty_32' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 98 [1/1] (2.03ns)   --->   "%be = add i7 %be_0, 1" [fyp/edca.c:69]   --->   Operation 98 'add' 'be' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.68> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_6 : Operation 99 [1/1] (0.00ns)   --->   "br i1 %icmp_ln69, label %7, label %6" [fyp/edca.c:69]   --->   Operation 99 'br' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 100 [1/1] (0.00ns)   --->   "%zext_ln70_1 = zext i7 %be_0 to i64" [fyp/edca.c:70]   --->   Operation 100 'zext' 'zext_ln70_1' <Predicate = (!icmp_ln69)> <Delay = 0.00>
@@ -202,7 +202,7 @@ ST_6 : Operation 107 [1/1] (0.00ns)   --->   "store i3 %add_ln76, i3* @available
 ST_6 : Operation 108 [1/1] (1.79ns)   --->   "br label %._crit_edge" [fyp/edca.c:77]   --->   Operation 108 'br' <Predicate = (icmp_ln69)> <Delay = 1.79>
 
 State 7 <SV = 2> <Delay = 5.48>
-ST_7 : Operation 109 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str4) nounwind" [fyp/edca.c:69]   --->   Operation 109 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 109 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str48) nounwind" [fyp/edca.c:69]   --->   Operation 109 'specloopname' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 110 [1/2] (2.22ns)   --->   "%inout_frame_load_1 = load i8* %inout_frame_addr_1, align 1" [fyp/edca.c:70]   --->   Operation 110 'load' 'inout_frame_load_1' <Predicate = true> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1600> <RAM>
 ST_7 : Operation 111 [1/1] (0.00ns)   --->   "%zext_ln70_2 = zext i9 %add_ln70 to i10" [fyp/edca.c:70]   --->   Operation 111 'zext' 'zext_ln70_2' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 112 [1/1] (2.12ns)   --->   "%add_ln70_1 = add i10 %zext_ln70_2, 400" [fyp/edca.c:70]   --->   Operation 112 'add' 'add_ln70_1' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.68> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
@@ -229,7 +229,7 @@ ST_8 : Operation 130 [1/1] (0.00ns)   --->   "store i3 %add_ln63, i3* @available
 ST_8 : Operation 131 [1/1] (1.79ns)   --->   "br label %._crit_edge" [fyp/edca.c:64]   --->   Operation 131 'br' <Predicate = (icmp_ln56)> <Delay = 1.79>
 
 State 9 <SV = 2> <Delay = 5.48>
-ST_9 : Operation 132 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str3) nounwind" [fyp/edca.c:56]   --->   Operation 132 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 132 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str37) nounwind" [fyp/edca.c:56]   --->   Operation 132 'specloopname' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 133 [1/2] (2.22ns)   --->   "%inout_frame_load = load i8* %inout_frame_addr, align 1" [fyp/edca.c:57]   --->   Operation 133 'load' 'inout_frame_load' <Predicate = true> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1600> <RAM>
 ST_9 : Operation 134 [1/1] (0.00ns)   --->   "%zext_ln57_2 = zext i9 %add_ln57 to i64" [fyp/edca.c:57]   --->   Operation 134 'zext' 'zext_ln57_2' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 135 [1/1] (0.00ns)   --->   "%edca_queues_addr = getelementptr [1600 x i8]* @edca_queues, i64 0, i64 %zext_ln57_2" [fyp/edca.c:57]   --->   Operation 135 'getelementptr' 'edca_queues_addr' <Predicate = true> <Delay = 0.00>
@@ -309,7 +309,7 @@ br_ln56               (br               ) [ 01000000110]
 vo_0                  (phi              ) [ 00100000000]
 zext_ln95             (zext             ) [ 00000000000]
 icmp_ln95             (icmp             ) [ 00110000000]
-empty_38              (speclooptripcount) [ 00000000000]
+empty_34              (speclooptripcount) [ 00000000000]
 vo                    (add              ) [ 01110000000]
 br_ln95               (br               ) [ 00000000000]
 zext_ln96_1           (zext             ) [ 00000000000]
@@ -331,7 +331,7 @@ br_ln95               (br               ) [ 01110000000]
 vi_0                  (phi              ) [ 00001000000]
 zext_ln82             (zext             ) [ 00000000000]
 icmp_ln82             (icmp             ) [ 00001100000]
-empty_37              (speclooptripcount) [ 00000000000]
+empty_33              (speclooptripcount) [ 00000000000]
 vi                    (add              ) [ 01001100000]
 br_ln82               (br               ) [ 00000000000]
 zext_ln83_1           (zext             ) [ 00000000000]
@@ -353,7 +353,7 @@ br_ln82               (br               ) [ 01001100000]
 be_0                  (phi              ) [ 00000010000]
 zext_ln69             (zext             ) [ 00000000000]
 icmp_ln69             (icmp             ) [ 00000011000]
-empty_36              (speclooptripcount) [ 00000000000]
+empty_32              (speclooptripcount) [ 00000000000]
 be                    (add              ) [ 01000011000]
 br_ln69               (br               ) [ 00000000000]
 zext_ln70_1           (zext             ) [ 00000000000]
@@ -640,7 +640,7 @@ ret_ln180             (ret              ) [ 00000000000]
 <pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str68"/></StgValue>
+<StgValue><ssdm name="p_str6"/></StgValue>
 </bind>
 </comp>
 
@@ -676,7 +676,7 @@ ret_ln180             (ret              ) [ 00000000000]
 <pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str4"/></StgValue>
+<StgValue><ssdm name="p_str48"/></StgValue>
 </bind>
 </comp>
 
@@ -694,7 +694,7 @@ ret_ln180             (ret              ) [ 00000000000]
 <pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str3"/></StgValue>
+<StgValue><ssdm name="p_str37"/></StgValue>
 </bind>
 </comp>
 

@@ -53,6 +53,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
+                                    <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
+                                    									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/systemc/include"/>
@@ -86,6 +88,8 @@
                                 <option id="gnu.c.compiler.option.include.paths.1619308353" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
                                     									
@@ -277,6 +281,66 @@
                         					
                     </fileInfo>
                     					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.282391169.715886947" name="PHY_CCA_indication_test.c" rcbsApplicability="disable" resourcePath="testbench/PHY_CCA_indication_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010.875394135">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010.875394135" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010">
+                            							
+                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.1416631987" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
+                            							
+                            <option id="gnu.c.compiler.option.include.paths.1551970069" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/ap_sysc"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.c.compiler.option.misc.other.1016319100" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.640312155" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.282391169.424276008" name="PHY_TXEND_confirm_test.c" rcbsApplicability="disable" resourcePath="testbench/PHY_TXEND_confirm_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010.778821290">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010.778821290" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010">
+                            							
+                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.946766763" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
+                            							
+                            <option id="gnu.c.compiler.option.include.paths.884933785" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/ap_sysc"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.c.compiler.option.misc.other.1263593365" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1194391470" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.282391169.1520441259" name="compose_mac_frame_test.c" rcbsApplicability="disable" resourcePath="testbench/compose_mac_frame_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010.1087078471">
                         						
                         <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010.1087078471" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010">
@@ -302,6 +366,36 @@
                             <option id="gnu.c.compiler.option.misc.other.1694465342" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1502611246" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.282391169.666572272" name="MA_UNITDATAX_STATUS_indication_test.c" rcbsApplicability="disable" resourcePath="testbench/MA_UNITDATAX_STATUS_indication_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010.1096162365">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010.1096162365" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010">
+                            							
+                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.1102610616" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
+                            							
+                            <option id="gnu.c.compiler.option.include.paths.1885810410" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/ap_sysc"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.c.compiler.option.misc.other.1321133139" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.637559438" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
                             						
                         </tool>
                         					
@@ -428,6 +522,36 @@
                             <option id="gnu.c.compiler.option.misc.other.607291497" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.289949153" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.282391169.898161913" name="PHY_RXEND_indication_test.c" rcbsApplicability="disable" resourcePath="testbench/PHY_RXEND_indication_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010.1510299849">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010.1510299849" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.78641010">
+                            							
+                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.260050546" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
+                            							
+                            <option id="gnu.c.compiler.option.include.paths.949458422" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/ap_sysc"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.c.compiler.option.misc.other.498465058" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1719802756" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
                             						
                         </tool>
                         					
@@ -589,6 +713,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
+                                    <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
+                                    									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/systemc/include"/>
@@ -612,6 +738,8 @@
                                 <option id="gnu.c.compiler.option.include.paths.1963456088" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
                                     									
@@ -793,6 +921,66 @@
                         					
                     </fileInfo>
                     					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.139251490.1753364686" name="PHY_CCA_indication_test.c" rcbsApplicability="disable" resourcePath="testbench/PHY_CCA_indication_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497.1007199863">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497.1007199863" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497">
+                            							
+                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.974983617" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
+                            							
+                            <option id="gnu.c.compiler.option.include.paths.733265848" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/ap_sysc"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.c.compiler.option.misc.other.182688360" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1347404988" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.139251490.1726583604" name="PHY_TXEND_confirm_test.c" rcbsApplicability="disable" resourcePath="testbench/PHY_TXEND_confirm_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497.263965234">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497.263965234" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497">
+                            							
+                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.351556686" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
+                            							
+                            <option id="gnu.c.compiler.option.include.paths.438392353" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/ap_sysc"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.c.compiler.option.misc.other.1857267623" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1689557112" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.release.139251490.587557605" name="compose_mac_frame_test.c" rcbsApplicability="disable" resourcePath="testbench/compose_mac_frame_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497.1891205023">
                         						
                         <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497.1891205023" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497">
@@ -818,6 +1006,36 @@
                             <option id="gnu.c.compiler.option.misc.other.1513378050" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1281772223" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.139251490.1359771504" name="MA_UNITDATAX_STATUS_indication_test.c" rcbsApplicability="disable" resourcePath="testbench/MA_UNITDATAX_STATUS_indication_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497.1356210866">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497.1356210866" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497">
+                            							
+                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.1080740360" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
+                            							
+                            <option id="gnu.c.compiler.option.include.paths.2023558193" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/ap_sysc"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.c.compiler.option.misc.other.761771842" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.244370840" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
                             						
                         </tool>
                         					
@@ -944,6 +1162,36 @@
                             <option id="gnu.c.compiler.option.misc.other.2036149041" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1087610396" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.139251490.740724419" name="PHY_RXEND_indication_test.c" rcbsApplicability="disable" resourcePath="testbench/PHY_RXEND_indication_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497.1678818020">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497.1678818020" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release.147076497">
+                            							
+                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.171867712" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
+                            							
+                            <option id="gnu.c.compiler.option.include.paths.940794046" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/ap_sysc"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.c.compiler.option.misc.other.1425749494" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1745208774" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
                             						
                         </tool>
                         					

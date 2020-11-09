@@ -8,7 +8,7 @@
 //	sequence_number_t seqn = 2096;
 //	user_priority_t up = 7;
 //
-//	compose_mac_header(ftype, fstype, seqn, up, header_buf);
+//	compose_mac_header(my_mac, ftype, fstype, seqn, up, header_buf);
 //
 //	for (int i=0; i<26; i++){
 //		printf("%d\n",header_buf[i]);

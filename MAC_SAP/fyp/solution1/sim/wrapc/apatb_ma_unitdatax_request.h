@@ -13,4 +13,5 @@ channel_identifier c_identifier,
 enum time_slot t_slot,
 uint7 d_rate,
 uint4 tx_power_lvl,
-long long int expiry_time);
+long long int expiry_time,
+volatile uint1* medium_state);

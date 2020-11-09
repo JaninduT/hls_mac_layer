@@ -22,6 +22,8 @@ using namespace std;
 using namespace sc_core;
 using namespace sc_dt;
 
+// apint = uint1
+#define uint1 bool
 // apint = uint4
 #define uint4 char
 // apint = uint7
@@ -46,6 +48,8 @@ typedef enum {AESL_AUTO_0} service_class;
 typedef enum {AESL_AUTO_1} time_slot;
 
 
+// wrapc file define: "source_addr_mac"
+#define AUTOTB_TVIN_source_addr_mac  "../tv/cdatafile/c.ma_unitdatax_request.autotvin_source_addr_mac.dat"
 // wrapc file define: "data"
 #define AUTOTB_TVIN_data  "../tv/cdatafile/c.ma_unitdatax_request.autotvin_data.dat"
 // wrapc file define: "up"
@@ -60,6 +64,8 @@ typedef enum {AESL_AUTO_1} time_slot;
 #define AUTOTB_TVIN_d_rate  "../tv/cdatafile/c.ma_unitdatax_request.autotvin_d_rate.dat"
 // wrapc file define: "tx_power_lvl"
 #define AUTOTB_TVIN_tx_power_lvl  "../tv/cdatafile/c.ma_unitdatax_request.autotvin_tx_power_lvl.dat"
+// wrapc file define: "medium_state"
+#define AUTOTB_TVIN_medium_state  "../tv/cdatafile/c.ma_unitdatax_request.autotvin_medium_state.dat"
 
 #define INTER_TCL  "../tv/cdatafile/ref.tcl"
 
@@ -68,6 +74,7 @@ class INTER_TCL_FILE {
 	public:
 		INTER_TCL_FILE(const char* name) {
 			mName = name;
+			source_addr_mac_depth = 0;
 			data_depth = 0;
 			up_depth = 0;
 			s_class_depth = 0;
@@ -75,6 +82,7 @@ class INTER_TCL_FILE {
 			c_identifier_channel_number_depth = 0;
 			d_rate_depth = 0;
 			tx_power_lvl_depth = 0;
+			medium_state_depth = 0;
 			trans_num =0;
 		}
 
@@ -94,6 +102,7 @@ class INTER_TCL_FILE {
 
 		string get_depth_list () {
 			stringstream total_list;
+			total_list << "{source_addr_mac " << source_addr_mac_depth << "}\n";
 			total_list << "{data " << data_depth << "}\n";
 			total_list << "{up " << up_depth << "}\n";
 			total_list << "{s_class " << s_class_depth << "}\n";
@@ -101,6 +110,7 @@ class INTER_TCL_FILE {
 			total_list << "{c_identifier_channel_number " << c_identifier_channel_number_depth << "}\n";
 			total_list << "{d_rate " << d_rate_depth << "}\n";
 			total_list << "{tx_power_lvl " << tx_power_lvl_depth << "}\n";
+			total_list << "{medium_state " << medium_state_depth << "}\n";
 			return total_list.str();
 		}
 
@@ -108,6 +118,7 @@ class INTER_TCL_FILE {
 			(*class_num) = (*class_num) > num ? (*class_num) : num;
 		}
 	public:
+		int source_addr_mac_depth;
 		int data_depth;
 		int up_depth;
 		int s_class_depth;
@@ -115,6 +126,7 @@ class INTER_TCL_FILE {
 		int c_identifier_channel_number_depth;
 		int d_rate_depth;
 		int tx_power_lvl_depth;
+		int medium_state_depth;
 		int trans_num;
 
 	private:
@@ -144,7 +156,8 @@ time_slot
  t_slot,
 uint7 d_rate,
 uint4 tx_power_lvl,
-long long int expiry_time);
+long long int expiry_time,
+uint1* medium_state);
 
 extern "C" void AESL_WRAP_ma_unitdatax_request (
 mac48 source_addr,
@@ -168,7 +181,8 @@ time_slot
  t_slot,
 uint7 d_rate,
 uint4 tx_power_lvl,
-long long int expiry_time)
+long long int expiry_time,
+uint1* medium_state)
 {
 	refine_signal_handler();
 	fstream wrapc_switch_file_token;
@@ -191,6 +205,10 @@ long long int expiry_time)
 		static unsigned AESL_transaction;
 
 		static AESL_FILE_HANDLER aesl_fh;
+
+		// "source_addr_mac"
+		char* tvin_source_addr_mac = new char[50];
+		aesl_fh.touch(AUTOTB_TVIN_source_addr_mac);
 
 		// "data"
 		char* tvin_data = new char[50];
@@ -220,9 +238,61 @@ long long int expiry_time)
 		char* tvin_tx_power_lvl = new char[50];
 		aesl_fh.touch(AUTOTB_TVIN_tx_power_lvl);
 
+		// "medium_state"
+		char* tvin_medium_state = new char[50];
+		aesl_fh.touch(AUTOTB_TVIN_medium_state);
+
 		CodeState = DUMP_INPUTS;
 		static INTER_TCL_FILE tcl_file(INTER_TCL);
 		int leading_zero;
+
+		// [[transaction]]
+		sprintf(tvin_source_addr_mac, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(AUTOTB_TVIN_source_addr_mac, tvin_source_addr_mac);
+
+		sc_bv<8>* source_addr_mac_tvin_wrapc_buffer = new sc_bv<8>[6];
+
+		// RTL Name: source_addr_mac
+		{
+			// bitslice(7, 0)
+			{
+				int hls_map_index = 0;
+				// celement: source_addr.mac(7, 0)
+				{
+					// carray: (0) => (5) @ (1)
+					for (int i_0 = 0; i_0 <= 5; i_0 += 1)
+					{
+						// sub                   : i_0
+						// ori_name              : source_addr.mac[i_0]
+						// sub_1st_elem          : 0
+						// ori_name_1st_elem     : source_addr.mac[0]
+						// regulate_c_name       : source_addr_mac
+						// input_type_conversion : source_addr.mac[i_0]
+						if (&(source_addr.mac[0]) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<8> source_addr_mac_tmp_mem;
+							source_addr_mac_tmp_mem = source_addr.mac[i_0];
+							source_addr_mac_tvin_wrapc_buffer[hls_map_index].range(7, 0) = source_addr_mac_tmp_mem.range(7, 0);
+                                 	       hls_map_index++;
+						}
+					}
+				}
+			}
+		}
+
+		// dump tv to file
+		for (int i = 0; i < 6; i++)
+		{
+			sprintf(tvin_source_addr_mac, "%s\n", (source_addr_mac_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
+			aesl_fh.write(AUTOTB_TVIN_source_addr_mac, tvin_source_addr_mac);
+		}
+
+		tcl_file.set_num(6, &tcl_file.source_addr_mac_depth);
+		sprintf(tvin_source_addr_mac, "[[/transaction]] \n");
+		aesl_fh.write(AUTOTB_TVIN_source_addr_mac, tvin_source_addr_mac);
+
+		// release memory allocation
+		delete [] source_addr_mac_tvin_wrapc_buffer;
 
 		// [[transaction]]
 		sprintf(tvin_data, "[[transaction]] %d\n", AESL_transaction);
@@ -524,14 +594,64 @@ long long int expiry_time)
 		sprintf(tvin_tx_power_lvl, "[[/transaction]] \n");
 		aesl_fh.write(AUTOTB_TVIN_tx_power_lvl, tvin_tx_power_lvl);
 
+		// [[transaction]]
+		sprintf(tvin_medium_state, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(AUTOTB_TVIN_medium_state, tvin_medium_state);
+
+		sc_bv<1>* medium_state_tvin_wrapc_buffer = new sc_bv<1>[1];
+
+		// RTL Name: medium_state
+		{
+			// bitslice(0, 0)
+			{
+				int hls_map_index = 0;
+				// celement: medium_state(0, 0)
+				{
+					// carray: (0) => (0) @ (1)
+					for (int i_0 = 0; i_0 <= 0; i_0 += 1)
+					{
+						// sub                   : i_0
+						// ori_name              : medium_state[i_0]
+						// sub_1st_elem          : 0
+						// ori_name_1st_elem     : medium_state[0]
+						// regulate_c_name       : medium_state
+						// input_type_conversion : medium_state[i_0]
+						if (&(medium_state[0]) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<1> medium_state_tmp_mem;
+							medium_state_tmp_mem = medium_state[i_0];
+							medium_state_tvin_wrapc_buffer[hls_map_index].range(0, 0) = medium_state_tmp_mem.range(0, 0);
+                                 	       hls_map_index++;
+						}
+					}
+				}
+			}
+		}
+
+		// dump tv to file
+		for (int i = 0; i < 1; i++)
+		{
+			sprintf(tvin_medium_state, "%s\n", (medium_state_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
+			aesl_fh.write(AUTOTB_TVIN_medium_state, tvin_medium_state);
+		}
+
+		tcl_file.set_num(1, &tcl_file.medium_state_depth);
+		sprintf(tvin_medium_state, "[[/transaction]] \n");
+		aesl_fh.write(AUTOTB_TVIN_medium_state, tvin_medium_state);
+
+		// release memory allocation
+		delete [] medium_state_tvin_wrapc_buffer;
+
 // [call_c_dut] ---------->
 
 		CodeState = CALL_C_DUT;
-		ma_unitdatax_request(source_addr, dest_addr, data, up, s_class, c_identifier, t_slot, d_rate, tx_power_lvl, expiry_time);
+		ma_unitdatax_request(source_addr, dest_addr, data, up, s_class, c_identifier, t_slot, d_rate, tx_power_lvl, expiry_time, medium_state);
 
 		CodeState = DUMP_OUTPUTS;
 
 		CodeState = DELETE_CHAR_BUFFERS;
+		// release memory allocation: "source_addr_mac"
+		delete [] tvin_source_addr_mac;
 		// release memory allocation: "data"
 		delete [] tvin_data;
 		// release memory allocation: "up"
@@ -546,6 +666,8 @@ long long int expiry_time)
 		delete [] tvin_d_rate;
 		// release memory allocation: "tx_power_lvl"
 		delete [] tvin_tx_power_lvl;
+		// release memory allocation: "medium_state"
+		delete [] tvin_medium_state;
 
 		AESL_transaction++;
 
@@ -553,6 +675,9 @@ long long int expiry_time)
 	}
 }
 
+
+// apint = uint1
+#undef uint1
 
 // apint = uint4
 #undef uint4

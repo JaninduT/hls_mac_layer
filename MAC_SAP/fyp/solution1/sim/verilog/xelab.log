@@ -7,6 +7,8 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/soluti
 INFO: [VRFC 10-311] analyzing module glbl
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/AESL_automem_data.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_data
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/AESL_automem_source_addr_mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_source_addr_mac
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/compose_mac_frame.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module compose_mac_frame
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_fbkb.v" into library xil_defaultlib
@@ -15,13 +17,13 @@ INFO: [VRFC 10-311] analyzing module enqueue_dequeue_fbkb
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_fram.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module enqueue_dequeue_fram
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_requcud.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ma_unitdatax_requcud_ram
+INFO: [VRFC 10-311] analyzing module ma_unitdatax_requcud_DSP48_0
 INFO: [VRFC 10-311] analyzing module ma_unitdatax_requcud
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_requdEe.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ma_unitdatax_requdEe_ram
 INFO: [VRFC 10-311] analyzing module ma_unitdatax_requdEe
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_requeOg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ma_unitdatax_requeOg_DSP48_0
+INFO: [VRFC 10-311] analyzing module ma_unitdatax_requeOg_ram
 INFO: [VRFC 10-311] analyzing module ma_unitdatax_requeOg
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_request.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_ma_unitdatax_request_top
@@ -29,24 +31,28 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/soluti
 INFO: [VRFC 10-311] analyzing module ma_unitdatax_request
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_status_s.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ma_unitdatax_status_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/random_int_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module random_int_gen
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ma_unitdatax_requcud_ram
-Compiling module xil_defaultlib.ma_unitdatax_requcud(DataWidth=8...
 Compiling module xil_defaultlib.ma_unitdatax_requdEe_ram
 Compiling module xil_defaultlib.ma_unitdatax_requdEe(DataWidth=8...
+Compiling module xil_defaultlib.ma_unitdatax_requeOg_ram
+Compiling module xil_defaultlib.ma_unitdatax_requeOg(DataWidth=8...
 Compiling module xil_defaultlib.enqueue_dequeue_fbkb_ram
 Compiling module xil_defaultlib.enqueue_dequeue_fbkb(DataWidth=8...
 Compiling module xil_defaultlib.enqueue_dequeue_fram
 Compiling module xil_defaultlib.compose_mac_frame
+Compiling module xil_defaultlib.ma_unitdatax_requcud_DSP48_0
+Compiling module xil_defaultlib.ma_unitdatax_requcud(ID=1,NUM_ST...
+Compiling module xil_defaultlib.random_int_gen
 Compiling module xil_defaultlib.ma_unitdatax_status_s
-Compiling module xil_defaultlib.ma_unitdatax_requeOg_DSP48_0
-Compiling module xil_defaultlib.ma_unitdatax_requeOg(ID=1,NUM_ST...
 Compiling module xil_defaultlib.ma_unitdatax_request
+Compiling module xil_defaultlib.AESL_automem_source_addr_mac
 Compiling module xil_defaultlib.AESL_automem_data
 Compiling module xil_defaultlib.apatb_ma_unitdatax_request_top
 Compiling module work.glbl

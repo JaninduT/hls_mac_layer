@@ -857,10 +857,10 @@
 
 <Node id="40" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader4:3  %empty_38 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)
+.preheader4:3  %empty_34 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)
 
 ]]></Node>
-<StgValue><ssdm name="empty_38"/></StgValue>
+<StgValue><ssdm name="empty_34"/></StgValue>
 </operation>
 
 <operation id="52" st_id="2" stage="1" lat="1">
@@ -1049,7 +1049,7 @@
 
 <Node id="44" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str68) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str6) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln95"/></StgValue>
@@ -1217,10 +1217,10 @@
 
 <Node id="74" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader5:3  %empty_37 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)
+.preheader5:3  %empty_33 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)
 
 ]]></Node>
-<StgValue><ssdm name="empty_37"/></StgValue>
+<StgValue><ssdm name="empty_33"/></StgValue>
 </operation>
 
 <operation id="75" st_id="4" stage="1" lat="1">
@@ -1577,10 +1577,10 @@
 
 <Node id="108" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader6:3  %empty_36 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)
+.preheader6:3  %empty_32 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)
 
 ]]></Node>
-<StgValue><ssdm name="empty_36"/></StgValue>
+<StgValue><ssdm name="empty_32"/></StgValue>
 </operation>
 
 <operation id="98" st_id="6" stage="1" lat="1">
@@ -1769,7 +1769,7 @@
 
 <Node id="112" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str4) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str48) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln69"/></StgValue>
@@ -2129,7 +2129,7 @@
 
 <Node id="146" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str3) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str37) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln56"/></StgValue>

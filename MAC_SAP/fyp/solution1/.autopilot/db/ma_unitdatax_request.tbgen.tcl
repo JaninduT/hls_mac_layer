@@ -14,7 +14,7 @@ set isEnableWaveformDebug 1
 set C_modelName {ma_unitdatax_request}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ source_addr_mac int 8 unused {array 6 { } 0 1 }  }
+	{ source_addr_mac int 8 regular {array 6 { 1 1 } 1 1 }  }
 	{ dest_addr_mac int 8 unused {array 6 { } 0 1 }  }
 	{ data int 8 regular {array 70 { 1 3 } 1 1 }  }
 	{ up uint 4 regular  }
@@ -25,9 +25,10 @@ set C_modelArgList {
 	{ d_rate uint 7 regular  }
 	{ tx_power_lvl uint 4 regular  }
 	{ expiry_time int 64 unused  }
+	{ medium_state int 1 regular {pointer 0 volatile }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "source_addr_mac", "interface" : "memory", "bitwidth" : 8, "direction" : "NONE", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "source_addr.mac","cData": "unsigned char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 5,"step" : 1}]}]}]} , 
+	{ "Name" : "source_addr_mac", "interface" : "memory", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "source_addr.mac","cData": "unsigned char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 5,"step" : 1}]}]}]} , 
  	{ "Name" : "dest_addr_mac", "interface" : "memory", "bitwidth" : 8, "direction" : "NONE", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "dest_addr.mac","cData": "unsigned char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 5,"step" : 1}]}]}]} , 
  	{ "Name" : "data", "interface" : "memory", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "data","cData": "unsigned char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 69,"step" : 1}]}]}]} , 
  	{ "Name" : "up", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY", "bitSlice":[{"low":0,"up":3,"cElement": [{"cName": "up","cData": "uint4","bit_use": { "low": 0,"up": 3},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
@@ -37,9 +38,10 @@ set C_modelArgMapList {[
  	{ "Name" : "t_slot", "interface" : "wire", "bitwidth" : 2, "direction" : "READONLY", "bitSlice":[{"low":0,"up":1,"cElement": [{"cName": "t_slot","cData": "enum time_slot","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
  	{ "Name" : "d_rate", "interface" : "wire", "bitwidth" : 7, "direction" : "READONLY", "bitSlice":[{"low":0,"up":6,"cElement": [{"cName": "d_rate","cData": "uint7","bit_use": { "low": 0,"up": 6},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
  	{ "Name" : "tx_power_lvl", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY", "bitSlice":[{"low":0,"up":3,"cElement": [{"cName": "tx_power_lvl","cData": "uint4","bit_use": { "low": 0,"up": 3},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
- 	{ "Name" : "expiry_time", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "expiry_time","cData": "long long int","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} ]}
+ 	{ "Name" : "expiry_time", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "expiry_time","cData": "long long int","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
+ 	{ "Name" : "medium_state", "interface" : "wire", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "medium_state","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} ]}
 # RTL Port declarations: 
-set portNum 37
+set portNum 34
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -49,13 +51,9 @@ set portList {
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ source_addr_mac_address0 sc_out sc_lv 3 signal 0 } 
 	{ source_addr_mac_ce0 sc_out sc_logic 1 signal 0 } 
-	{ source_addr_mac_we0 sc_out sc_logic 1 signal 0 } 
-	{ source_addr_mac_d0 sc_out sc_lv 8 signal 0 } 
 	{ source_addr_mac_q0 sc_in sc_lv 8 signal 0 } 
 	{ source_addr_mac_address1 sc_out sc_lv 3 signal 0 } 
 	{ source_addr_mac_ce1 sc_out sc_logic 1 signal 0 } 
-	{ source_addr_mac_we1 sc_out sc_logic 1 signal 0 } 
-	{ source_addr_mac_d1 sc_out sc_lv 8 signal 0 } 
 	{ source_addr_mac_q1 sc_in sc_lv 8 signal 0 } 
 	{ dest_addr_mac_address0 sc_out sc_lv 3 signal 1 } 
 	{ dest_addr_mac_ce0 sc_out sc_logic 1 signal 1 } 
@@ -78,6 +76,7 @@ set portList {
 	{ d_rate sc_in sc_lv 7 signal 8 } 
 	{ tx_power_lvl sc_in sc_lv 4 signal 9 } 
 	{ expiry_time sc_in sc_lv 64 signal 10 } 
+	{ medium_state sc_in sc_lv 1 signal 11 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -88,13 +87,9 @@ set NewPortList {[
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "source_addr_mac_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "address0" }} , 
  	{ "name": "source_addr_mac_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "ce0" }} , 
- 	{ "name": "source_addr_mac_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "we0" }} , 
- 	{ "name": "source_addr_mac_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "d0" }} , 
  	{ "name": "source_addr_mac_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "q0" }} , 
  	{ "name": "source_addr_mac_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "address1" }} , 
  	{ "name": "source_addr_mac_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "ce1" }} , 
- 	{ "name": "source_addr_mac_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "we1" }} , 
- 	{ "name": "source_addr_mac_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "d1" }} , 
  	{ "name": "source_addr_mac_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "source_addr_mac", "role": "q1" }} , 
  	{ "name": "dest_addr_mac_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "dest_addr_mac", "role": "address0" }} , 
  	{ "name": "dest_addr_mac_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "dest_addr_mac", "role": "ce0" }} , 
@@ -116,10 +111,11 @@ set NewPortList {[
  	{ "name": "t_slot", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "t_slot", "role": "default" }} , 
  	{ "name": "d_rate", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "d_rate", "role": "default" }} , 
  	{ "name": "tx_power_lvl", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "tx_power_lvl", "role": "default" }} , 
- 	{ "name": "expiry_time", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "expiry_time", "role": "default" }}  ]}
+ 	{ "name": "expiry_time", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "expiry_time", "role": "default" }} , 
+ 	{ "name": "medium_state", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "medium_state", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "5", "6", "7", "8", "9", "10"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "5", "6", "8"],
 		"CDFG" : "ma_unitdatax_request",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -133,13 +129,19 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
 		"WaitState" : [
-			{"State" : "ap_ST_fsm_state8", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263"},
-			{"State" : "ap_ST_fsm_state13", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263"},
-			{"State" : "ap_ST_fsm_state17", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263"},
-			{"State" : "ap_ST_fsm_state21", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263"},
-			{"State" : "ap_ST_fsm_state6", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_compose_mac_frame_fu_291"}],
+			{"State" : "ap_ST_fsm_state8", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243"},
+			{"State" : "ap_ST_fsm_state11", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243"},
+			{"State" : "ap_ST_fsm_state13", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243"},
+			{"State" : "ap_ST_fsm_state15", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243"},
+			{"State" : "ap_ST_fsm_state6", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_compose_mac_frame_fu_271"},
+			{"State" : "ap_ST_fsm_state9", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_random_int_gen_fu_281"},
+			{"State" : "ap_ST_fsm_state9", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_random_int_gen_fu_281"},
+			{"State" : "ap_ST_fsm_state9", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_random_int_gen_fu_281"},
+			{"State" : "ap_ST_fsm_state9", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_random_int_gen_fu_281"}],
 		"Port" : [
-			{"Name" : "source_addr_mac", "Type" : "Memory", "Direction" : "X"},
+			{"Name" : "source_addr_mac", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "5", "SubInstance" : "grp_compose_mac_frame_fu_271", "Port" : "source_addr_mac"}]},
 			{"Name" : "dest_addr_mac", "Type" : "Memory", "Direction" : "X"},
 			{"Name" : "data", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "up", "Type" : "None", "Direction" : "I"},
@@ -150,57 +152,59 @@ set RtlHierarchyInfo {[
 			{"Name" : "d_rate", "Type" : "None", "Direction" : "I"},
 			{"Name" : "tx_power_lvl", "Type" : "None", "Direction" : "I"},
 			{"Name" : "expiry_time", "Type" : "None", "Direction" : "I"},
+			{"Name" : "medium_state", "Type" : "None", "Direction" : "I"},
 			{"Name" : "successful", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_ma_unitdatax_status_s_fu_299", "Port" : "successful"}]},
+					{"ID" : "8", "SubInstance" : "grp_ma_unitdatax_status_s_fu_287", "Port" : "successful"}]},
 			{"Name" : "unsupported_priority", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_ma_unitdatax_status_s_fu_299", "Port" : "unsupported_priority"}]},
+					{"ID" : "8", "SubInstance" : "grp_ma_unitdatax_status_s_fu_287", "Port" : "unsupported_priority"}]},
 			{"Name" : "unsupported_service_s", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_ma_unitdatax_status_s_fu_299", "Port" : "unsupported_service_s"}]},
+					{"ID" : "8", "SubInstance" : "grp_ma_unitdatax_status_s_fu_287", "Port" : "unsupported_service_s"}]},
 			{"Name" : "unsupported_channel_s", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_ma_unitdatax_status_s_fu_299", "Port" : "unsupported_channel_s"}]},
+					{"ID" : "8", "SubInstance" : "grp_ma_unitdatax_status_s_fu_287", "Port" : "unsupported_channel_s"}]},
 			{"Name" : "unsupported_tx_param", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_ma_unitdatax_status_s_fu_299", "Port" : "unsupported_tx_param"}]},
+					{"ID" : "8", "SubInstance" : "grp_ma_unitdatax_status_s_fu_287", "Port" : "unsupported_tx_param"}]},
 			{"Name" : "queue_full", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_ma_unitdatax_status_s_fu_299", "Port" : "queue_full"}]},
+					{"ID" : "8", "SubInstance" : "grp_ma_unitdatax_status_s_fu_287", "Port" : "queue_full"}]},
 			{"Name" : "seq_number", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "available_spaces_bk", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "available_spaces_bk"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "available_spaces_bk"}]},
 			{"Name" : "write_pointer_bk", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "write_pointer_bk"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "write_pointer_bk"}]},
 			{"Name" : "edca_queues", "Type" : "Memory", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "edca_queues"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "edca_queues"}]},
 			{"Name" : "available_spaces_be", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "available_spaces_be"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "available_spaces_be"}]},
 			{"Name" : "write_pointer_be", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "write_pointer_be"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "write_pointer_be"}]},
 			{"Name" : "available_spaces_vi", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "available_spaces_vi"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "available_spaces_vi"}]},
 			{"Name" : "write_pointer_vi", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "write_pointer_vi"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "write_pointer_vi"}]},
 			{"Name" : "available_spaces_vo", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "available_spaces_vo"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "available_spaces_vo"}]},
 			{"Name" : "write_pointer_vo", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_263", "Port" : "write_pointer_vo"}]},
-			{"Name" : "medium_state", "Type" : "None", "Direction" : "I"},
-			{"Name" : "rand_state", "Type" : "OVld", "Direction" : "IO"}]},
+					{"ID" : "3", "SubInstance" : "grp_enqueue_dequeue_fram_fu_243", "Port" : "write_pointer_vo"}]},
+			{"Name" : "rand_state", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "6", "SubInstance" : "grp_random_int_gen_fu_281", "Port" : "rand_state"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.llc_data_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_data_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_enqueue_dequeue_fram_fu_263", "Parent" : "0", "Child" : ["4"],
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_enqueue_dequeue_fram_fu_243", "Parent" : "0", "Child" : ["4"],
 		"CDFG" : "enqueue_dequeue_fram",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -225,8 +229,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "write_pointer_vi", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "available_spaces_vo", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "write_pointer_vo", "Type" : "OVld", "Direction" : "IO"}]},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_enqueue_dequeue_fram_fu_263.edca_queues_U", "Parent" : "3"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_compose_mac_frame_fu_291", "Parent" : "0",
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_enqueue_dequeue_fram_fu_243.edca_queues_U", "Parent" : "3"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_compose_mac_frame_fu_271", "Parent" : "0",
 		"CDFG" : "compose_mac_frame",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -240,11 +244,28 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
+			{"Name" : "source_addr_mac", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "seqnumber", "Type" : "None", "Direction" : "I"},
 			{"Name" : "up", "Type" : "None", "Direction" : "I"},
 			{"Name" : "data", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "mac_frame", "Type" : "Memory", "Direction" : "IO"}]},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_ma_unitdatax_status_s_fu_299", "Parent" : "0",
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_random_int_gen_fu_281", "Parent" : "0", "Child" : ["7"],
+		"CDFG" : "random_int_gen",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "rand_state", "Type" : "OVld", "Direction" : "IO"}]},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_random_int_gen_fu_281.ma_unitdatax_requcud_U10", "Parent" : "6"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_ma_unitdatax_status_s_fu_287", "Parent" : "0",
 		"CDFG" : "ma_unitdatax_status_s",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -264,16 +285,12 @@ set RtlHierarchyInfo {[
 			{"Name" : "unsupported_service_s", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "unsupported_channel_s", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "unsupported_tx_param", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "queue_full", "Type" : "OVld", "Direction" : "IO"}]},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ma_unitdatax_requeOg_U9", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ma_unitdatax_requeOg_U10", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ma_unitdatax_requeOg_U11", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ma_unitdatax_requeOg_U12", "Parent" : "0"}]}
+			{"Name" : "queue_full", "Type" : "OVld", "Direction" : "IO"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	ma_unitdatax_request {
-		source_addr_mac {Type X LastRead -1 FirstWrite -1}
+		source_addr_mac {Type I LastRead 12 FirstWrite -1}
 		dest_addr_mac {Type X LastRead -1 FirstWrite -1}
 		data {Type I LastRead 1 FirstWrite -1}
 		up {Type I LastRead 0 FirstWrite -1}
@@ -284,6 +301,7 @@ set ArgLastReadFirstWriteLatency {
 		d_rate {Type I LastRead 0 FirstWrite -1}
 		tx_power_lvl {Type I LastRead 0 FirstWrite -1}
 		expiry_time {Type I LastRead -1 FirstWrite -1}
+		medium_state {Type I LastRead 4 FirstWrite -1}
 		successful {Type IO LastRead -1 FirstWrite -1}
 		unsupported_priority {Type IO LastRead -1 FirstWrite -1}
 		unsupported_service_s {Type IO LastRead -1 FirstWrite -1}
@@ -300,7 +318,6 @@ set ArgLastReadFirstWriteLatency {
 		write_pointer_vi {Type IO LastRead -1 FirstWrite -1}
 		available_spaces_vo {Type IO LastRead -1 FirstWrite -1}
 		write_pointer_vo {Type IO LastRead -1 FirstWrite -1}
-		medium_state {Type I LastRead -1 FirstWrite -1}
 		rand_state {Type IO LastRead -1 FirstWrite -1}}
 	enqueue_dequeue_fram {
 		ac {Type I LastRead 0 FirstWrite -1}
@@ -315,10 +332,13 @@ set ArgLastReadFirstWriteLatency {
 		available_spaces_vo {Type IO LastRead -1 FirstWrite -1}
 		write_pointer_vo {Type IO LastRead -1 FirstWrite -1}}
 	compose_mac_frame {
-		seqnumber {Type I LastRead 11 FirstWrite -1}
-		up {Type I LastRead 12 FirstWrite -1}
+		source_addr_mac {Type I LastRead 12 FirstWrite -1}
+		seqnumber {Type I LastRead 8 FirstWrite -1}
+		up {Type I LastRead 9 FirstWrite -1}
 		data {Type I LastRead 13 FirstWrite -1}
 		mac_frame {Type IO LastRead 14 FirstWrite 0}}
+	random_int_gen {
+		rand_state {Type IO LastRead -1 FirstWrite -1}}
 	ma_unitdatax_status_s {
 		trans_sts {Type I LastRead 0 FirstWrite -1}
 		successful {Type IO LastRead -1 FirstWrite -1}
@@ -339,7 +359,7 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	source_addr_mac { ap_memory {  { source_addr_mac_address0 mem_address 1 3 }  { source_addr_mac_ce0 mem_ce 1 1 }  { source_addr_mac_we0 mem_we 1 1 }  { source_addr_mac_d0 mem_din 1 8 }  { source_addr_mac_q0 mem_dout 0 8 }  { source_addr_mac_address1 MemPortADDR2 1 3 }  { source_addr_mac_ce1 MemPortCE2 1 1 }  { source_addr_mac_we1 MemPortWE2 1 1 }  { source_addr_mac_d1 MemPortDIN2 1 8 }  { source_addr_mac_q1 MemPortDOUT2 0 8 } } }
+	source_addr_mac { ap_memory {  { source_addr_mac_address0 mem_address 1 3 }  { source_addr_mac_ce0 mem_ce 1 1 }  { source_addr_mac_q0 mem_dout 0 8 }  { source_addr_mac_address1 MemPortADDR2 1 3 }  { source_addr_mac_ce1 MemPortCE2 1 1 }  { source_addr_mac_q1 MemPortDOUT2 0 8 } } }
 	dest_addr_mac { ap_memory {  { dest_addr_mac_address0 mem_address 1 3 }  { dest_addr_mac_ce0 mem_ce 1 1 }  { dest_addr_mac_we0 mem_we 1 1 }  { dest_addr_mac_d0 mem_din 1 8 }  { dest_addr_mac_q0 mem_dout 0 8 }  { dest_addr_mac_address1 MemPortADDR2 1 3 }  { dest_addr_mac_ce1 MemPortCE2 1 1 }  { dest_addr_mac_we1 MemPortWE2 1 1 }  { dest_addr_mac_d1 MemPortDIN2 1 8 }  { dest_addr_mac_q1 MemPortDOUT2 0 8 } } }
 	data { ap_memory {  { data_address0 mem_address 1 7 }  { data_ce0 mem_ce 1 1 }  { data_q0 mem_dout 0 8 } } }
 	up { ap_none {  { up in_data 0 4 } } }
@@ -350,6 +370,7 @@ set Spec2ImplPortList {
 	d_rate { ap_none {  { d_rate in_data 0 7 } } }
 	tx_power_lvl { ap_none {  { tx_power_lvl in_data 0 4 } } }
 	expiry_time { ap_none {  { expiry_time in_data 0 64 } } }
+	medium_state { ap_none {  { medium_state in_data 0 1 } } }
 }
 
 set busDeadlockParameterList { 

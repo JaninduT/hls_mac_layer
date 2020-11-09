@@ -13,7 +13,8 @@ void ma_unitdatax_request (
 		enum time_slot t_slot,
 		data_rate_t d_rate,
 		txpwr_lvl_t tx_power_lvl,
-		int64_t expiry_time
+		int64_t expiry_time,
+		volatile uint1 *medium_state
 		);
 
 #endif

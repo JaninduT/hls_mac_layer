@@ -1,0 +1,140 @@
+
+
+================================================================
+== Vivado HLS Report for 'random_int_gen'
+================================================================
+* Date:           Sun Nov  8 21:11:00 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        fyp
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.485 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        1|        1| 10.000 ns | 10.000 ns |    1|    1|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.18>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%rand_state_load = load i32* @rand_state, align 4" [fyp/r_n_g.c:6]   --->   Operation 3 'load' 'rand_state_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%low = trunc i32 %rand_state_load to i15" [fyp/r_n_g.c:6]   --->   Operation 4 'trunc' 'low' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%zext_ln6 = zext i15 %low to i32" [fyp/r_n_g.c:6]   --->   Operation 5 'zext' 'zext_ln6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (5.57ns)   --->   "%low_1 = mul i32 %zext_ln6, 48271" [fyp/r_n_g.c:8]   --->   Operation 6 'mul' 'low_1' <Predicate = true> <Delay = 5.57> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%high = call i17 @_ssdm_op_PartSelect.i17.i32.i32.i32(i32 %rand_state_load, i32 15, i32 31)" [fyp/r_n_g.c:9]   --->   Operation 7 'partselect' 'high' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%high_1 = zext i17 %high to i32" [fyp/r_n_g.c:9]   --->   Operation 8 'zext' 'high_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (7.18ns) (root node of the DSP)   --->   "%high_2 = mul i32 48271, %high_1" [fyp/r_n_g.c:10]   --->   Operation 9 'mul' 'high_2' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%trunc_ln1 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %high_2, i32 16, i32 31)" [fyp/r_n_g.c:11]   --->   Operation 10 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 8.48>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str1) nounwind" [fyp/r_n_g.c:9]   --->   Operation 11 'specregionbegin' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecFUCore(i32 %low_1, [1 x i8]* @p_str, [4 x i8]* @p_str3, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [fyp/r_n_g.c:8]   --->   Operation 12 'specfucore' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str1, i32 %tmp) nounwind" [fyp/r_n_g.c:10]   --->   Operation 13 'specregionend' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns) (grouped into LUT with out node x_1)   --->   "%trunc_ln10 = trunc i32 %high_2 to i16" [fyp/r_n_g.c:10]   --->   Operation 14 'trunc' 'trunc_ln10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns) (grouped into LUT with out node x_1)   --->   "%zext_ln11 = zext i16 %trunc_ln10 to i32" [fyp/r_n_g.c:11]   --->   Operation 15 'zext' 'zext_ln11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (2.14ns)   --->   "%add_ln11 = add i16 15, %trunc_ln1" [fyp/r_n_g.c:11]   --->   Operation 16 'add' 'add_ln11' <Predicate = true> <Delay = 2.14> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.66> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 17 [1/1] (0.00ns) (grouped into LUT with out node x_1)   --->   "%zext_ln11_1 = zext i16 %add_ln11 to i32" [fyp/r_n_g.c:11]   --->   Operation 17 'zext' 'zext_ln11_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns) (grouped into LUT with out node x_1)   --->   "%x = shl i32 %zext_ln11, %zext_ln11_1" [fyp/r_n_g.c:11]   --->   Operation 18 'shl' 'x' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.67> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (3.67ns) (out node of the LUT)   --->   "%x_1 = add i32 %low_1, %x" [fyp/r_n_g.c:12]   --->   Operation 19 'add' 'x_1' <Predicate = true> <Delay = 3.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.66> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln12 = trunc i32 %x_1 to i31" [fyp/r_n_g.c:12]   --->   Operation 20 'trunc' 'trunc_ln12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%zext_ln13 = zext i31 %trunc_ln12 to i32" [fyp/r_n_g.c:13]   --->   Operation 21 'zext' 'zext_ln13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_1 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %x_1, i32 31)" [fyp/r_n_g.c:13]   --->   Operation 22 'bitselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln13_1 = zext i1 %tmp_1 to i32" [fyp/r_n_g.c:13]   --->   Operation 23 'zext' 'zext_ln13_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (2.66ns)   --->   "%x_2 = add i32 %zext_ln13_1, %zext_ln13" [fyp/r_n_g.c:13]   --->   Operation 24 'add' 'x_2' <Predicate = true> <Delay = 2.66> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.66> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "store i32 %x_2, i32* @rand_state, align 4" [fyp/r_n_g.c:14]   --->   Operation 25 'store' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 26 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 7.18ns
+The critical path consists of the following:
+	'load' operation ('rand_state_load', fyp/r_n_g.c:6) on static variable 'rand_state' [3]  (0 ns)
+	'mul' operation of DSP[12] ('high', fyp/r_n_g.c:10) [12]  (7.18 ns)
+
+ <State 2>: 8.49ns
+The critical path consists of the following:
+	'add' operation ('add_ln11', fyp/r_n_g.c:11) [16]  (2.15 ns)
+	'shl' operation ('x', fyp/r_n_g.c:11) [18]  (0 ns)
+	'add' operation ('x', fyp/r_n_g.c:12) [19]  (3.67 ns)
+	'add' operation ('x', fyp/r_n_g.c:13) [24]  (2.67 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

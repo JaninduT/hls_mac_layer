@@ -5457,6 +5457,7 @@ __extension__ typedef unsigned long long uintmax_t;
 # 33 "D:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
 # 6 "E:/FYP/HLS/MAC_SAP/fyp/common.h" 2
 
+
 typedef uint4 user_priority_t;
 typedef uint7 data_rate_t;
 typedef uint4 txpwr_lvl_t;
@@ -5501,9 +5502,11 @@ void ma_unitdatax_request (
   enum time_slot t_slot,
   data_rate_t d_rate,
   txpwr_lvl_t tx_power_lvl,
-  int64_t expiry_time
+  int64_t expiry_time,
+  volatile uint1 *medium_state
   );
 # 2 "E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request_test.c" 2
+
 
 
 int main(){
@@ -5529,13 +5532,15 @@ int main(){
  uint7 io_d_rate = 0;
  uint4 io_tx_pwr_lvl = 0;
 
+ uint1 med_sts = 1;
+
  for (int i=0; i<70; i++){
   fread(&data[i], 1, 1, fp);
  }
  fclose(fp);
- ma_unitdatax_request(my_mac, bcast_wcard_mac, data, up, QOS_NOACK, ci, ts, dr, tx_p_l, exp);
+ ma_unitdatax_request(my_mac, bcast_wcard_mac, data, up, QOS_NOACK, ci, ts, dr, tx_p_l, exp, &med_sts);
  up = 2;
- ma_unitdatax_request(my_mac, bcast_wcard_mac, data, up, QOS_NOACK, ci, ts, dr, tx_p_l, exp);
+ ma_unitdatax_request(my_mac, bcast_wcard_mac, data, up, QOS_NOACK, ci, ts, dr, tx_p_l, exp, &med_sts);
 
  uint4 res = enqueue_dequeue_frame(1, 3, frame, &io_d_rate, &io_tx_pwr_lvl);
 

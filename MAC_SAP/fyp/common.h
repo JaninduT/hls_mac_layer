@@ -4,6 +4,7 @@
 #include <ap_cint.h>
 #include "stdint.h"
 
+
 typedef uint4 user_priority_t;
 typedef uint7 data_rate_t;
 typedef uint4 txpwr_lvl_t;
@@ -36,6 +37,7 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
+
 
 #define aCWmin 15
 #define aCWmax 1023

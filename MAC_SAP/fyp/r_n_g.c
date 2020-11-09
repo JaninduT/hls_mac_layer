@@ -1,6 +1,7 @@
 #include "r_n_g.h"
 
 float random_int_gen(uint32 *state){
+#pragma HLS INLINE off
 	const uint32 A = 48271;
 	uint32 low = (*state & 0x7fff);
 #pragma HLS RESOURCE variable=low core=Mul

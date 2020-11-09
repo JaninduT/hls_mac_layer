@@ -126,11 +126,28 @@ typedef union {
   float Float;
   double Double;
 } llvmBitCastUnion;
+/* Structure forward decls */
+typedef struct l_struct_OC_mac48 l_struct_OC_mac48;
+typedef struct l_struct_OC_channel_identifier l_struct_OC_channel_identifier;
+
+/* Structure contents */
+struct l_struct_OC_mac48 {
+   char field0[6];
+};
+
+struct l_struct_OC_channel_identifier {
+  unsigned char field0;
+  unsigned char field1;
+};
+
 
 /* Function Declarations */
 double fmod(double, double);
 float fmodf(float, float);
 long double fmodl(long double, long double);
+void send_frame(l_struct_OC_mac48 llvm_cbe_source_addr, l_struct_OC_mac48 llvm_cbe_dest_addr,  char *llvm_cbe_data,  char llvm_cbe_up, bool llvm_cbe_s_class, l_struct_OC_channel_identifier llvm_cbe_c_identifier,  char llvm_cbe_t_slot,  char llvm_cbe_d_rate,  char llvm_cbe_tx_power_lvl, signed long long llvm_cbe_expiry_time,  char *llvm_cbe_mac_frame, bool *llvm_cbe_medium_state);
+void AESL_WRAP_ma_unitdatax_request(l_struct_OC_mac48 , l_struct_OC_mac48 ,  char *,  char , bool , l_struct_OC_channel_identifier ,  char ,  char ,  char , signed long long , bool *);
+unsigned char enqueue_dequeue_frame( char ,  char ,  char *,  char *,  char *);
 
 
 /* Function Bodies */
@@ -148,3 +165,87 @@ static inline int llvm_fcmp_olt(double X, double Y) { return X <  Y ; }
 static inline int llvm_fcmp_ogt(double X, double Y) { return X >  Y ; }
 static inline int llvm_fcmp_ole(double X, double Y) { return X <= Y ; }
 static inline int llvm_fcmp_oge(double X, double Y) { return X >= Y ; }
+
+void send_frame(l_struct_OC_mac48 llvm_cbe_source_addr, l_struct_OC_mac48 llvm_cbe_dest_addr,  char *llvm_cbe_data,  char llvm_cbe_up, bool llvm_cbe_s_class, l_struct_OC_channel_identifier llvm_cbe_c_identifier,  char llvm_cbe_t_slot,  char llvm_cbe_d_rate,  char llvm_cbe_tx_power_lvl, signed long long llvm_cbe_expiry_time,  char *llvm_cbe_mac_frame, bool *llvm_cbe_medium_state) {
+  static  unsigned long long aesl_llvm_cbe_1_count = 0;
+   char llvm_cbe_tmp__1;    /* Address-exposed local */
+  static  unsigned long long aesl_llvm_cbe_2_count = 0;
+   char llvm_cbe_tmp__2;    /* Address-exposed local */
+  static  unsigned long long aesl_llvm_cbe_3_count = 0;
+  static  unsigned long long aesl_llvm_cbe_4_count = 0;
+  static  unsigned long long aesl_llvm_cbe_5_count = 0;
+  static  unsigned long long aesl_llvm_cbe_6_count = 0;
+  static  unsigned long long aesl_llvm_cbe_7_count = 0;
+  static  unsigned long long aesl_llvm_cbe_8_count = 0;
+  static  unsigned long long aesl_llvm_cbe_9_count = 0;
+  static  unsigned long long aesl_llvm_cbe_10_count = 0;
+  static  unsigned long long aesl_llvm_cbe_11_count = 0;
+  static  unsigned long long aesl_llvm_cbe_12_count = 0;
+  static  unsigned long long aesl_llvm_cbe_13_count = 0;
+  static  unsigned long long aesl_llvm_cbe_14_count = 0;
+  static  unsigned long long aesl_llvm_cbe_15_count = 0;
+  static  unsigned long long aesl_llvm_cbe_16_count = 0;
+  static  unsigned long long aesl_llvm_cbe_17_count = 0;
+  static  unsigned long long aesl_llvm_cbe_18_count = 0;
+  static  unsigned long long aesl_llvm_cbe_19_count = 0;
+  static  unsigned long long aesl_llvm_cbe_20_count = 0;
+  static  unsigned long long aesl_llvm_cbe_21_count = 0;
+  static  unsigned long long aesl_llvm_cbe_22_count = 0;
+  static  unsigned long long aesl_llvm_cbe_23_count = 0;
+  static  unsigned long long aesl_llvm_cbe_24_count = 0;
+  static  unsigned long long aesl_llvm_cbe_25_count = 0;
+  static  unsigned long long aesl_llvm_cbe_26_count = 0;
+  static  unsigned long long aesl_llvm_cbe_27_count = 0;
+  static  unsigned long long aesl_llvm_cbe_28_count = 0;
+  static  unsigned long long aesl_llvm_cbe_29_count = 0;
+  static  unsigned long long aesl_llvm_cbe_30_count = 0;
+  static  unsigned long long aesl_llvm_cbe_31_count = 0;
+  static  unsigned long long aesl_llvm_cbe_32_count = 0;
+  static  unsigned long long aesl_llvm_cbe_33_count = 0;
+  static  unsigned long long aesl_llvm_cbe_34_count = 0;
+  static  unsigned long long aesl_llvm_cbe_35_count = 0;
+  static  unsigned long long aesl_llvm_cbe_36_count = 0;
+  static  unsigned long long aesl_llvm_cbe_37_count = 0;
+  static  unsigned long long aesl_llvm_cbe_38_count = 0;
+  static  unsigned long long aesl_llvm_cbe_39_count = 0;
+  static  unsigned long long aesl_llvm_cbe_40_count = 0;
+  unsigned char llvm_cbe_tmp__3;
+  static  unsigned long long aesl_llvm_cbe_41_count = 0;
+
+const char* AESL_DEBUG_TRACE = getenv("DEBUG_TRACE");
+if (AESL_DEBUG_TRACE)
+printf("\n\{ BEGIN @send_frame\n");
+if (AESL_DEBUG_TRACE)
+printf("\n  store i7 %%d_rate, i7* %%1, align  for 0x%I64xth hint within @send_frame  --> \n", ++aesl_llvm_cbe_20_count);
+  *(&llvm_cbe_tmp__1) = ((llvm_cbe_d_rate) & 127ull);
+if (AESL_DEBUG_TRACE)
+printf("\nd_rate = 0x%X\n", llvm_cbe_d_rate);
+if (AESL_DEBUG_TRACE)
+printf("\n  store i4 %%tx_power_lvl, i4* %%2, align  for 0x%I64xth hint within @send_frame  --> \n", ++aesl_llvm_cbe_28_count);
+  *(&llvm_cbe_tmp__2) = ((llvm_cbe_tx_power_lvl) & 15ull);
+if (AESL_DEBUG_TRACE)
+printf("\ntx_power_lvl = 0x%X\n", llvm_cbe_tx_power_lvl);
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @AESL_WRAP_ma_unitdatax_request(%%struct.mac48* byval %%source_addr, %%struct.mac48* byval %%dest_addr, i8* %%data, i4 zeroext %%up, i1 zeroext %%s_class, %%struct.channel_identifier* byval %%c_identifier, i2 zeroext %%t_slot, i7 zeroext %%d_rate, i4 zeroext %%tx_power_lvl, i64 %%expiry_time, i1* %%medium_state) nounwind, !dbg !6 for 0x%I64xth hint within @send_frame  --> \n", ++aesl_llvm_cbe_39_count);
+  AESL_WRAP_ma_unitdatax_request(llvm_cbe_source_addr, llvm_cbe_dest_addr, ( char *)llvm_cbe_data, llvm_cbe_up, llvm_cbe_s_class, llvm_cbe_c_identifier, llvm_cbe_t_slot, llvm_cbe_d_rate, llvm_cbe_tx_power_lvl, llvm_cbe_expiry_time, (bool *)llvm_cbe_medium_state);
+if (AESL_DEBUG_TRACE) {
+printf("\nArgument up = 0x%X",llvm_cbe_up);
+printf("\nArgument s_class = 0x%X",llvm_cbe_s_class);
+printf("\nArgument t_slot = 0x%X",llvm_cbe_t_slot);
+printf("\nArgument d_rate = 0x%X",llvm_cbe_d_rate);
+printf("\nArgument tx_power_lvl = 0x%X",llvm_cbe_tx_power_lvl);
+printf("\nArgument expiry_time = 0x%I64X",llvm_cbe_expiry_time);
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  %%3 = call zeroext i4 @enqueue_dequeue_frame(i2 zeroext 1, i2 zeroext -1, i8* %%mac_frame, i7* %%1, i4* %%2) nounwind, !dbg !8 for 0x%I64xth hint within @send_frame  --> \n", ++aesl_llvm_cbe_40_count);
+  enqueue_dequeue_frame(((unsigned char )1), ((unsigned char )-1), ( char *)llvm_cbe_mac_frame, ( char *)(&llvm_cbe_tmp__1), ( char *)(&llvm_cbe_tmp__2));
+if (AESL_DEBUG_TRACE) {
+printf("\nArgument  = 0x%X",((unsigned char )1));
+printf("\nArgument  = 0x%X",((unsigned char )-1));
+printf("\nReturn  = 0x%X",llvm_cbe_tmp__3);
+}
+  if (AESL_DEBUG_TRACE)
+      printf("\nEND @send_frame}\n");
+  return;
+}
+
