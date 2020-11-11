@@ -1,6 +1,7 @@
 #include "edca.h"
 #include "timer.h"
 #include "r_n_g.h"
+#include "PHY_TXSTART_request.h"
 
 static unsigned char edca_fifo_vo[400];
 static unsigned char edca_fifo_vi[400];
@@ -309,7 +310,7 @@ void start_backoff_vo(uint1 invoke_reason){
 			CW_vo = ((CW_vo+1)*2) - 1;
 		}
 	}
-	vo_backoff_counter = CW_vo * random_int_gen(&rand_state);
+	vo_backoff_counter = random_int_gen(&rand_state, CW_vo);
 }
 
 void start_backoff_vi(uint1 invoke_reason){
@@ -320,7 +321,7 @@ void start_backoff_vi(uint1 invoke_reason){
 			CW_vi = ((CW_vi+1)*2) - 1;
 		}
 	}
-	vi_backoff_counter = CW_vi * random_int_gen(&rand_state);
+	vi_backoff_counter = random_int_gen(&rand_state, CW_vi);
 }
 
 void start_backoff_be(uint1 invoke_reason){
@@ -331,7 +332,7 @@ void start_backoff_be(uint1 invoke_reason){
 			CW_be = ((CW_be+1)*2) - 1;
 		}
 	}
-	be_backoff_counter = CW_be * random_int_gen(&rand_state);
+	be_backoff_counter = random_int_gen(&rand_state, CW_be);
 }
 
 void start_backoff_bk(uint1 invoke_reason){
@@ -342,5 +343,19 @@ void start_backoff_bk(uint1 invoke_reason){
 			CW_bk = ((CW_bk+1)*2) - 1;
 		}
 	}
-	bk_backoff_counter = CW_bk * random_int_gen(&rand_state);
+	bk_backoff_counter = random_int_gen(&rand_state, CW_bk);
+}
+
+void start_tx(uint3 current_txop_holder, unsigned char tx_frame[100]){
+	uint7 d_rate;
+	uint4 tx_pwr_l;
+	uint4 deq_result = enqueue_dequeue_frame(1, current_txop_holder-1, tx_frame, &d_rate, &tx_pwr_l);
+	if(deq_result == 14){
+		tx_vector tx_v;
+		tx_v.data_Rate = d_rate;
+		tx_v.length = 100;
+		tx_v.tx_power_level = tx_pwr_l;
+		phy_txstart_request(tx_v);
+	}
+	return;
 }

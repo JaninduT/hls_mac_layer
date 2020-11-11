@@ -3,6 +3,9 @@
 
 #include "common.h"
 
-float random_int_gen(uint32 *state);
+uint10 random_int_gen(
+		uint32 *state,
+		uint10 max_val
+		);
 
 #endif

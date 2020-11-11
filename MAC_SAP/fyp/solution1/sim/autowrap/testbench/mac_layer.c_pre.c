@@ -5595,7 +5595,16 @@ void start_backoff_be(
 void start_backoff_bk(
   uint1 invoke_reason
   );
+
+void start_tx(
+  uint3 current_txop_holder,
+  unsigned char tx_frame[100]
+  );
 # 9 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.h" 2
+
+enum mac_operation{
+ MA_UNITDATAX_request = 0
+};
 
 void send_frame(
   mac48 source_addr,

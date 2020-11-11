@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../PHY_TXSTART_confirm_test.c in debug mode
+   Compiling ../../../r_n_g.c in debug mode
+   Compiling ../../../PHY_TXSTART_confirm.c in debug mode
+   Compiling ../../../PHY_DATA_request.c in debug mode
+   Generating csim.exe
+INFO: [SIM 1] CSim file generation done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

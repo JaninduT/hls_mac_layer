@@ -1,274 +1,90 @@
-res: 14, d_rate : 6, tx_pwr : 4
-17
-0
-0
-0
-255
-255
-255
-255
-255
-255
-255
-171
-188
-205
-222
-239
-255
-255
-255
-255
-255
-255
-0
-0
-100
-0
-9
-139
-87
-176
-92
-95
-178
-87
-120
-23
-169
-81
-45
-79
-57
-53
-6
-119
-228
-15
-44
-39
-176
-88
-136
-178
-114
-37
-40
-254
-76
-158
-228
-147
-117
-178
-65
-241
-56
-9
-149
-39
-64
-58
-108
-161
-18
-63
-43
-66
-219
-38
-243
-179
-108
-8
-200
-250
-131
-63
-243
-78
-76
-212
-164
-41
-39
-55
-220
-160
-0
-103
-158
-253
 
 E:\FYP\HLS\MAC_SAP\fyp\solution1\sim\verilog>set PATH= 
 
-E:\FYP\HLS\MAC_SAP\fyp\solution1\sim\verilog>call D:/Xilinx/Vivado/2019.2/bin/xelab xil_defaultlib.apatb_ma_unitdatax_request_top glbl -prj ma_unitdatax_request.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s ma_unitdatax_request -debug wave 
+E:\FYP\HLS\MAC_SAP\fyp\solution1\sim\verilog>call D:/Xilinx/Vivado/2019.2/bin/xelab xil_defaultlib.apatb_phy_data_confirm_top glbl -prj phy_data_confirm.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s phy_data_confirm -debug wave 
 INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_ma_unitdatax_request_top glbl -prj ma_unitdatax_request.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s ma_unitdatax_request -debug wave 
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_phy_data_confirm_top glbl -prj phy_data_confirm.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s phy_data_confirm -debug wave 
 Multi-threading is on. Using 10 slave threads.
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/AESL_automem_data.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_data
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/AESL_automem_source_addr_mac.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_source_addr_mac
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/compose_mac_frame.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module compose_mac_frame
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_fbkb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module enqueue_dequeue_fbkb_ram
-INFO: [VRFC 10-311] analyzing module enqueue_dequeue_fbkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/enqueue_dequeue_fram.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module enqueue_dequeue_fram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_requcud.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ma_unitdatax_requcud_DSP48_0
-INFO: [VRFC 10-311] analyzing module ma_unitdatax_requcud
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_requdEe.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ma_unitdatax_requdEe_ram
-INFO: [VRFC 10-311] analyzing module ma_unitdatax_requdEe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_requeOg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ma_unitdatax_requeOg_ram
-INFO: [VRFC 10-311] analyzing module ma_unitdatax_requeOg
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_request.autotb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module apatb_ma_unitdatax_request_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_request.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ma_unitdatax_request
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_status_s.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ma_unitdatax_status_s
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/random_int_gen.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module random_int_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/AESL_automem_frame_to_transfer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_frame_to_transfer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/phy_data_confirm.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_phy_data_confirm_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/phy_data_confirm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module phy_data_confirm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/phy_data_confirm_bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module phy_data_confirm_bkb_ram
+INFO: [VRFC 10-311] analyzing module phy_data_confirm_bkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/phy_data_request.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module phy_data_request
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ma_unitdatax_requdEe_ram
-Compiling module xil_defaultlib.ma_unitdatax_requdEe(DataWidth=8...
-Compiling module xil_defaultlib.ma_unitdatax_requeOg_ram
-Compiling module xil_defaultlib.ma_unitdatax_requeOg(DataWidth=8...
-Compiling module xil_defaultlib.enqueue_dequeue_fbkb_ram
-Compiling module xil_defaultlib.enqueue_dequeue_fbkb(DataWidth=8...
-Compiling module xil_defaultlib.enqueue_dequeue_fram
-Compiling module xil_defaultlib.compose_mac_frame
-Compiling module xil_defaultlib.ma_unitdatax_requcud_DSP48_0
-Compiling module xil_defaultlib.ma_unitdatax_requcud(ID=1,NUM_ST...
-Compiling module xil_defaultlib.random_int_gen
-Compiling module xil_defaultlib.ma_unitdatax_status_s
-Compiling module xil_defaultlib.ma_unitdatax_request
-Compiling module xil_defaultlib.AESL_automem_source_addr_mac
-Compiling module xil_defaultlib.AESL_automem_data
-Compiling module xil_defaultlib.apatb_ma_unitdatax_request_top
+Compiling module xil_defaultlib.phy_data_confirm_bkb_ram
+Compiling module xil_defaultlib.phy_data_confirm_bkb(DataWidth=8...
+Compiling module xil_defaultlib.phy_data_request
+Compiling module xil_defaultlib.phy_data_confirm
+Compiling module xil_defaultlib.AESL_automem_frame_to_transfer
+Compiling module xil_defaultlib.apatb_phy_data_confirm_top
 Compiling module work.glbl
-Built simulation snapshot ma_unitdatax_request
+Built simulation snapshot phy_data_confirm
 
 ****** Webtalk v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/ma_unitdatax_request/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/ma_unitdatax_request/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Nov  8 20:04:39 2020. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Sun Nov  8 20:04:39 2020...
+source E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/phy_data_confirm/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/xsim.dir/phy_data_confirm/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Nov 11 13:35:23 2020. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Nov 11 13:35:23 2020...
 
 ****** xsim v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source xsim.dir/ma_unitdatax_request/xsim_script.tcl
-# xsim {ma_unitdatax_request} -autoloadwcfg -tclbatch {ma_unitdatax_request.tcl}
+source xsim.dir/phy_data_confirm/xsim_script.tcl
+# xsim {phy_data_confirm} -autoloadwcfg -tclbatch {phy_data_confirm.tcl}
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-source ma_unitdatax_request.tcl
+source phy_data_confirm.tcl
 ## log_wave -r /
 WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
 ## set designtopgroup [add_wave_group "Design Top Signals"]
 ## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
-## set medium_state_group [add_wave_group medium_state(wire) -into $cinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/medium_state -into $medium_state_group -radix hex
-## set expiry_time_group [add_wave_group expiry_time(wire) -into $cinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/expiry_time -into $expiry_time_group -radix hex
-## set tx_power_lvl_group [add_wave_group tx_power_lvl(wire) -into $cinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/tx_power_lvl -into $tx_power_lvl_group -radix hex
-## set d_rate_group [add_wave_group d_rate(wire) -into $cinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/d_rate -into $d_rate_group -radix hex
-## set t_slot_group [add_wave_group t_slot(wire) -into $cinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/t_slot -into $t_slot_group -radix hex
-## set c_identifier_group [add_wave_group c_identifier(wire) -into $cinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/c_identifier_channel_number -into $c_identifier_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/c_identifier_operating_class -into $c_identifier_group -radix hex
-## set s_class_group [add_wave_group s_class(wire) -into $cinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/s_class -into $s_class_group -radix hex
-## set up_group [add_wave_group up(wire) -into $cinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/up -into $up_group -radix hex
-## set data_group [add_wave_group data(memory) -into $cinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/data_q0 -into $data_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/data_ce0 -into $data_group -color #ffff00 -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/data_address0 -into $data_group -radix hex
-## set source_addr_group [add_wave_group source_addr(memory) -into $cinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_q1 -into $source_addr_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_ce1 -into $source_addr_group -color #ffff00 -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_address1 -into $source_addr_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_q0 -into $source_addr_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_ce0 -into $source_addr_group -color #ffff00 -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/source_addr_mac_address0 -into $source_addr_group -radix hex
+## set frame_to_transfer_group [add_wave_group frame_to_transfer(memory) -into $cinputgroup]
+## add_wave /apatb_phy_data_confirm_top/AESL_inst_phy_data_confirm/frame_to_transfer_q0 -into $frame_to_transfer_group -radix hex
+## add_wave /apatb_phy_data_confirm_top/AESL_inst_phy_data_confirm/frame_to_transfer_ce0 -into $frame_to_transfer_group -color #ffff00 -radix hex
+## add_wave /apatb_phy_data_confirm_top/AESL_inst_phy_data_confirm/frame_to_transfer_address0 -into $frame_to_transfer_group -radix hex
 ## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_start -into $blocksiggroup
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_done -into $blocksiggroup
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_idle -into $blocksiggroup
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_ready -into $blocksiggroup
+## add_wave /apatb_phy_data_confirm_top/AESL_inst_phy_data_confirm/ap_start -into $blocksiggroup
+## add_wave /apatb_phy_data_confirm_top/AESL_inst_phy_data_confirm/ap_done -into $blocksiggroup
+## add_wave /apatb_phy_data_confirm_top/AESL_inst_phy_data_confirm/ap_idle -into $blocksiggroup
+## add_wave /apatb_phy_data_confirm_top/AESL_inst_phy_data_confirm/ap_ready -into $blocksiggroup
 ## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_rst -into $resetgroup
+## add_wave /apatb_phy_data_confirm_top/AESL_inst_phy_data_confirm/ap_rst -into $resetgroup
 ## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
-## add_wave /apatb_ma_unitdatax_request_top/AESL_inst_ma_unitdatax_request/ap_clk -into $clockgroup
+## add_wave /apatb_phy_data_confirm_top/AESL_inst_phy_data_confirm/ap_clk -into $clockgroup
 ## set testbenchgroup [add_wave_group "Test Bench Signals"]
 ## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
 ## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
 ## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
-## add_wave /apatb_ma_unitdatax_request_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/ready_cnt -into $tb_simstatus_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/done_cnt -into $tb_simstatus_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/LENGTH_source_addr_mac -into $tb_portdepth_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/LENGTH_data -into $tb_portdepth_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/LENGTH_up -into $tb_portdepth_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/LENGTH_s_class -into $tb_portdepth_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/LENGTH_c_identifier_operating_class -into $tb_portdepth_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/LENGTH_c_identifier_channel_number -into $tb_portdepth_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/LENGTH_d_rate -into $tb_portdepth_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/LENGTH_tx_power_lvl -into $tb_portdepth_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/LENGTH_medium_state -into $tb_portdepth_group -radix hex
+## add_wave /apatb_phy_data_confirm_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_phy_data_confirm_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_phy_data_confirm_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_phy_data_confirm_top/LENGTH_frame_to_transfer -into $tb_portdepth_group -radix hex
 ## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
-## set tb_medium_state_group [add_wave_group medium_state(wire) -into $tbcinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/medium_state -into $tb_medium_state_group -radix hex
-## set tb_expiry_time_group [add_wave_group expiry_time(wire) -into $tbcinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/expiry_time -into $tb_expiry_time_group -radix hex
-## set tb_tx_power_lvl_group [add_wave_group tx_power_lvl(wire) -into $tbcinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/tx_power_lvl -into $tb_tx_power_lvl_group -radix hex
-## set tb_d_rate_group [add_wave_group d_rate(wire) -into $tbcinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/d_rate -into $tb_d_rate_group -radix hex
-## set tb_t_slot_group [add_wave_group t_slot(wire) -into $tbcinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/t_slot -into $tb_t_slot_group -radix hex
-## set tb_c_identifier_group [add_wave_group c_identifier(wire) -into $tbcinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/c_identifier_channel_number -into $tb_c_identifier_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/c_identifier_operating_class -into $tb_c_identifier_group -radix hex
-## set tb_s_class_group [add_wave_group s_class(wire) -into $tbcinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/s_class -into $tb_s_class_group -radix hex
-## set tb_up_group [add_wave_group up(wire) -into $tbcinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/up -into $tb_up_group -radix hex
-## set tb_data_group [add_wave_group data(memory) -into $tbcinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/data_q0 -into $tb_data_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/data_ce0 -into $tb_data_group -color #ffff00 -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/data_address0 -into $tb_data_group -radix hex
-## set tb_source_addr_group [add_wave_group source_addr(memory) -into $tbcinputgroup]
-## add_wave /apatb_ma_unitdatax_request_top/source_addr_mac_q1 -into $tb_source_addr_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/source_addr_mac_ce1 -into $tb_source_addr_group -color #ffff00 -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/source_addr_mac_address1 -into $tb_source_addr_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/source_addr_mac_q0 -into $tb_source_addr_group -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/source_addr_mac_ce0 -into $tb_source_addr_group -color #ffff00 -radix hex
-## add_wave /apatb_ma_unitdatax_request_top/source_addr_mac_address0 -into $tb_source_addr_group -radix hex
-## save_wave_config ma_unitdatax_request.wcfg
+## set tb_frame_to_transfer_group [add_wave_group frame_to_transfer(memory) -into $tbcinputgroup]
+## add_wave /apatb_phy_data_confirm_top/frame_to_transfer_q0 -into $tb_frame_to_transfer_group -radix hex
+## add_wave /apatb_phy_data_confirm_top/frame_to_transfer_ce0 -into $tb_frame_to_transfer_group -color #ffff00 -radix hex
+## add_wave /apatb_phy_data_confirm_top/frame_to_transfer_address0 -into $tb_frame_to_transfer_group -radix hex
+## save_wave_config phy_data_confirm.wcfg
 ## run all
 ////////////////////////////////////////////////////////////////////////////////////
 // Inter-Transaction Progress: Completed Transaction / Total Transaction
@@ -276,111 +92,11 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 //
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
-// RTL Simulation : 0 / 2 [0.00%] @ "125000"
-// RTL Simulation : 1 / 2 [100.00%] @ "15765000"
-// RTL Simulation : 2 / 2 [100.00%] @ "31395000"
+// RTL Simulation : 0 / 3 [0.00%] @ "125000"
+// RTL Simulation : 1 / 3 [100.00%] @ "2175000"
+// RTL Simulation : 2 / 3 [100.00%] @ "2215000"
+// RTL Simulation : 3 / 3 [100.00%] @ "2255000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 31435 ns : File "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/ma_unitdatax_request.autotb.v" Line 742
+$finish called at time : 2295 ns : File "E:/FYP/HLS/MAC_SAP/fyp/solution1/sim/verilog/phy_data_confirm.autotb.v" Line 211
 ## quit
-INFO: [Common 17-206] Exiting xsim at Sun Nov  8 20:04:48 2020...
-res: 13, d_rate : 0, tx_pwr : 0
-216
-54
-64
-0
-0
-0
-0
-0
-96
-144
-80
-0
-0
-0
-0
-0
-0
-145
-80
-0
-0
-0
-0
-0
-1
-0
-0
-0
-0
-0
-0
-0
-255
-255
-255
-255
-255
-255
-255
-255
-73
-74
-206
-111
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-233
-233
-75
-0
-0
-0
-0
-0
-48
-151
-224
-1
-0
-0
-0
-0
-224
-253
-100
-1
-0
-0
-0
-0
-1
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-96
-144
-80
-0
+INFO: [Common 17-206] Exiting xsim at Wed Nov 11 13:35:31 2020...

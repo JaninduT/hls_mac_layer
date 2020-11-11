@@ -1,7 +1,0 @@
-Running: xsim.dir/ma_unitdatax_request/xsimk.exe -simmode gui -wdb ma_unitdatax_request.wdb -simrunnum 0 -socket 63471
-Design successfully loaded
-Design Loading Memory Usage: 5648 KB (Peak: 5648 KB)
-Design Loading CPU Usage: 46 ms
-Simulation completed
-Simulation Memory Usage: 11156 KB (Peak: 11156 KB)
-Simulation CPU Usage: 140 ms

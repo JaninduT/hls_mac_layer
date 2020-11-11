@@ -53,8 +53,6 @@
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
-                                    									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/systemc/include"/>
@@ -88,8 +86,6 @@
                                 <option id="gnu.c.compiler.option.include.paths.1619308353" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
                                     									
@@ -713,8 +709,6 @@
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
-                                    									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/systemc/include"/>
@@ -738,8 +732,6 @@
                                 <option id="gnu.c.compiler.option.include.paths.1963456088" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/include/etc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="E:/FYP/HLS/MAC_SAP"/>
                                     									
                                     <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
                                     									

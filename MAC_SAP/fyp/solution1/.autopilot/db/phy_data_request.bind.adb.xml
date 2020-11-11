@@ -1,0 +1,146 @@
+<stg><name>phy_data_request</name>
+
+
+<trans_list>
+
+<trans id="9" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="7" op_0_bw="7" op_1_bw="7">
+<![CDATA[
+:0  %data_offset_read = call i7 @_ssdm_op_Read.ap_auto.i7(i7 %data_offset)
+
+]]></Node>
+<StgValue><ssdm name="data_offset_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="64" op_0_bw="7">
+<![CDATA[
+:1  %data_offset_cast = zext i7 %data_offset_read to i64
+
+]]></Node>
+<StgValue><ssdm name="data_offset_cast"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="7" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %data_addr = getelementptr [100 x i8]* %data, i64 0, i64 %data_offset_cast
+
+]]></Node>
+<StgValue><ssdm name="data_addr"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="8" op_0_bw="7">
+<![CDATA[
+:3  %tx_0_0 = load volatile i8* %data_addr, align 1
+
+]]></Node>
+<StgValue><ssdm name="tx_0_0"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="7" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="8" op_0_bw="7">
+<![CDATA[
+:3  %tx_0_0 = load volatile i8* %data_addr, align 1
+
+]]></Node>
+<StgValue><ssdm name="tx_0_0"/></StgValue>
+</operation>
+
+<operation id="8" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="0">
+<![CDATA[
+:4  ret void
+
+]]></Node>
+<StgValue><ssdm name="ret_ln8"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="10" name="data" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="data"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="11" name="data_offset" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="data_offset"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="13" from="_ssdm_op_Read.ap_auto.i7" to="data_offset_read" fromId="12" toId="3">
+</dataflow>
+<dataflow id="14" from="data_offset" to="data_offset_read" fromId="11" toId="3">
+</dataflow>
+<dataflow id="15" from="data_offset_read" to="data_offset_cast" fromId="3" toId="4">
+</dataflow>
+<dataflow id="16" from="data" to="data_addr" fromId="10" toId="5">
+</dataflow>
+<dataflow id="18" from="StgValue_17" to="data_addr" fromId="17" toId="5">
+</dataflow>
+<dataflow id="19" from="data_offset_cast" to="data_addr" fromId="4" toId="5">
+</dataflow>
+<dataflow id="20" from="data_addr" to="tx_0_0" fromId="5" toId="6">
+</dataflow>
+<dataflow id="21" from="data_addr" to="tx_0_0" fromId="5" toId="7">
+</dataflow>
+</dataflows>
+
+
+</stg>

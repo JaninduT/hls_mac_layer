@@ -4624,6 +4624,11 @@ void start_backoff_be(
 void start_backoff_bk(
   uint1 invoke_reason
   );
+
+void start_tx(
+  uint3 current_txop_holder,
+  unsigned char tx_frame[100]
+  );
 # 4 "fyp/compose_mac_frame.c" 2
 
 

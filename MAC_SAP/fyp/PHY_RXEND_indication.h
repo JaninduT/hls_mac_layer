@@ -1,7 +1,7 @@
 #ifndef PHY_RXEND_INDICATION_H_
 #define PHY_RXEND_INDICATION_H_
 
-#include "stdbool.h"
+#include "common.h"
 
 enum rx_error{
 	NO_ERROR = 0,
@@ -12,8 +12,9 @@ enum rx_error{
 
 void phy_rxend_indication(
 		enum rx_error rec_error,
-		bool *receive_error,
-		bool *start_edca
+		volatile uint1 *medium_state,
+		uint3 *current_txop_holder,
+		unsigned char frame_to_transfer[100]
 		);
 
 #endif

@@ -7,6 +7,10 @@
 #include "decompose_mac_frame.h"
 #include "edca.h"
 
+enum mac_operation{
+	MA_UNITDATAX_request = 0
+};
+
 void send_frame(
 		mac48 source_addr,
 		mac48 dest_addr,

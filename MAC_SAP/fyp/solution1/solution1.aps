@@ -5,11 +5,8 @@
     <downStreamTool>
         <DownStreamTool name="vivado"/>
     </downStreamTool>
-    <clockList>
-        <clock default="false" name="default" period="10"/>
-    </clockList>
     <config>
-        <schedule model="ma_unitdatax_request"/>
+        <schedule model="phy_data_confirm"/>
         <config_export format="ip_catalog" rtl="verilog" vendor="jt"/>
     </config>
     <UIConfigurations>
@@ -71,5 +68,8 @@
         <library name="DefaultPlatform" value="xilinx/artix7/artix7"/>
         <library name="DefaultPlatform" value="xilinx/artix7/artix7_fpv6"/>
     </libraryList>
+    <clockList>
+        <clock name="default" default="false" period="10"/>
+    </clockList>
 </solution>
 

@@ -1,6 +1,8 @@
 #include "r_n_g.h"
 
-float random_int_gen(uint32 *state){
+//div value - 2147483647
+
+uint10 random_int_gen(uint32 *state, uint10 max_val){
 #pragma HLS INLINE off
 	const uint32 A = 48271;
 	uint32 low = (*state & 0x7fff);
@@ -12,5 +14,6 @@ float random_int_gen(uint32 *state){
 	x = x + low;
 	x = (x & 0x7fffffff) + (x >> 31);
 	*state = x;
-	return (float)x / 2147483647;
+	uint10 ret_val = x % max_val;
+	return ret_val;
 }

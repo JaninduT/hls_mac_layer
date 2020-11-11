@@ -5599,7 +5599,16 @@ void start_backoff_be(
 void start_backoff_bk(
   uint1 invoke_reason
   );
+
+void start_tx(
+  uint3 current_txop_holder,
+  unsigned char tx_frame[100]
+  );
 # 9 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.h" 2
+
+enum mac_operation{
+ MA_UNITDATAX_request = 0
+};
 
 void send_frame(
   mac48 source_addr,
@@ -5617,31 +5626,15 @@ void send_frame(
   );
 # 2 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c" 2
 
-#ifndef HLS_FASTSIM
-#ifndef HLS_FASTSIM
-#include "apatb_ma_unitdatax_request.h"
-#endif
-# 3 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c"
 void send_frame(mac48 source_addr, mac48 dest_addr, unsigned char data[70],
   user_priority_t up, enum service_class s_class, channel_identifier c_identifier,
   enum time_slot t_slot, data_rate_t d_rate, txpwr_lvl_t tx_power_lvl,
   int64_t expiry_time, unsigned char mac_frame[100], volatile uint1 *medium_state){
 
- 
-#ifndef HLS_FASTSIM
-#define ma_unitdatax_request AESL_WRAP_ma_unitdatax_request
-#endif
-# 8 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c"
-ma_unitdatax_request(source_addr, dest_addr, data, up, s_class, c_identifier, t_slot, d_rate,
+ ma_unitdatax_request(source_addr, dest_addr, data, up, s_class, c_identifier, t_slot, d_rate,
    tx_power_lvl, expiry_time, medium_state);
-#undef ma_unitdatax_request
-# 8 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c"
-
 
  uint1 res2 = enqueue_dequeue_frame(1, 3, mac_frame, &d_rate, &tx_power_lvl);
 
  return;
 }
-#endif
-# 14 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c"
-

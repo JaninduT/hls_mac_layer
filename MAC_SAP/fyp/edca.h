@@ -49,4 +49,9 @@ void start_backoff_bk(
 		uint1 invoke_reason
 		);
 
+void start_tx(
+		uint3 current_txop_holder,
+		unsigned char tx_frame[100]
+		);
+
 #endif

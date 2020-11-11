@@ -1,0 +1,14 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../PHY_DATA_request.c in debug mode
+csim.mk:249: recipe for target 'obj/PHY_DATA_request.o' failed
+../../../PHY_DATA_request.c:5:6: error: conflicting types for 'phy_data_request'
+ void phy_data_request(unsigned char *data){
+      ^~~~~~~~~~~~~~~~
+In file included from ../../../PHY_DATA_request.c:1:0:
+../../../PHY_DATA_request.h:4:6: note: previous declaration of 'phy_data_request' was here
+ void phy_data_request(
+      ^~~~~~~~~~~~~~~~
+make: *** [obj/PHY_DATA_request.o] Error 1
+ERR: [SIM 100] CSim file generation failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

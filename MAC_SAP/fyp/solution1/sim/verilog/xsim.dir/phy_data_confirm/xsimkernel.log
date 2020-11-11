@@ -1,0 +1,7 @@
+Running: xsim.dir/phy_data_confirm/xsimk.exe -simmode gui -wdb phy_data_confirm.wdb -simrunnum 0 -socket 62337
+Design successfully loaded
+Design Loading Memory Usage: 5908 KB (Peak: 5908 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 8012 KB (Peak: 8012 KB)
+Simulation CPU Usage: 46 ms

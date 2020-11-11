@@ -131,7 +131,13 @@ typedef union {
 double fmod(double, double);
 float fmodf(float, float);
 long double fmodl(long double, long double);
-void phy_rxend_indication( char llvm_cbe_rec_error, bool *llvm_cbe_receive_error, bool *llvm_cbe_start_edca);
+void phy_rxend_indication( char llvm_cbe_rec_error, bool *llvm_cbe_medium_state,  char *llvm_cbe_current_txop_holder,  char *llvm_cbe_frame_to_transfer);
+void slot_boundary_timing( char , bool *, bool *);
+void backoff_vo( char *);
+void backoff_vi( char *);
+void backoff_be( char *);
+void backoff_bk( char *);
+void start_tx( char ,  char *);
 
 
 /* Function Bodies */
@@ -150,7 +156,9 @@ static inline int llvm_fcmp_ogt(double X, double Y) { return X >  Y ; }
 static inline int llvm_fcmp_ole(double X, double Y) { return X <= Y ; }
 static inline int llvm_fcmp_oge(double X, double Y) { return X >= Y ; }
 
-void phy_rxend_indication( char llvm_cbe_rec_error, bool *llvm_cbe_receive_error, bool *llvm_cbe_start_edca) {
+void phy_rxend_indication( char llvm_cbe_rec_error, bool *llvm_cbe_medium_state,  char *llvm_cbe_current_txop_holder,  char *llvm_cbe_frame_to_transfer) {
+  static  unsigned long long aesl_llvm_cbe_idle_waited_count = 0;
+  bool llvm_cbe_idle_waited;    /* Address-exposed local */
   static  unsigned long long aesl_llvm_cbe_1_count = 0;
   static  unsigned long long aesl_llvm_cbe_2_count = 0;
   static  unsigned long long aesl_llvm_cbe_3_count = 0;
@@ -159,19 +167,258 @@ void phy_rxend_indication( char llvm_cbe_rec_error, bool *llvm_cbe_receive_error
   static  unsigned long long aesl_llvm_cbe_6_count = 0;
   static  unsigned long long aesl_llvm_cbe_7_count = 0;
   static  unsigned long long aesl_llvm_cbe_8_count = 0;
-  static  unsigned long long aesl_llvm_cbe_not_2e__count = 0;
   static  unsigned long long aesl_llvm_cbe_9_count = 0;
   static  unsigned long long aesl_llvm_cbe_10_count = 0;
   static  unsigned long long aesl_llvm_cbe_11_count = 0;
+  static  unsigned long long aesl_llvm_cbe_12_count = 0;
+  static  unsigned long long aesl_llvm_cbe_13_count = 0;
+  static  unsigned long long aesl_llvm_cbe_14_count = 0;
+  static  unsigned long long aesl_llvm_cbe_15_count = 0;
+  static  unsigned long long aesl_llvm_cbe_16_count = 0;
+  static  unsigned long long aesl_llvm_cbe_17_count = 0;
+  static  unsigned long long aesl_llvm_cbe_18_count = 0;
+  static  unsigned long long aesl_llvm_cbe_19_count = 0;
+  static  unsigned long long aesl_llvm_cbe_20_count = 0;
+  static  unsigned long long aesl_llvm_cbe_21_count = 0;
+  static  unsigned long long aesl_llvm_cbe_22_count = 0;
+  static  unsigned long long aesl_llvm_cbe_23_count = 0;
+  static  unsigned long long aesl_llvm_cbe_24_count = 0;
+  static  unsigned long long aesl_llvm_cbe_25_count = 0;
+  static  unsigned long long aesl_llvm_cbe_26_count = 0;
+  static  unsigned long long aesl_llvm_cbe_27_count = 0;
+  static  unsigned long long aesl_llvm_cbe_28_count = 0;
+  static  unsigned long long aesl_llvm_cbe_29_count = 0;
+  static  unsigned long long aesl_llvm_cbe_30_count = 0;
+  static  unsigned long long aesl_llvm_cbe_31_count = 0;
+  static  unsigned long long aesl_llvm_cbe_32_count = 0;
+  static  unsigned long long aesl_llvm_cbe_33_count = 0;
+  static  unsigned long long aesl_llvm_cbe_34_count = 0;
+  static  unsigned long long aesl_llvm_cbe_35_count = 0;
+  static  unsigned long long aesl_llvm_cbe_36_count = 0;
+  static  unsigned long long aesl_llvm_cbe_37_count = 0;
+  static  unsigned long long aesl_llvm_cbe_38_count = 0;
+  static  unsigned long long aesl_llvm_cbe_39_count = 0;
+  static  unsigned long long aesl_llvm_cbe_40_count = 0;
+  static  unsigned long long aesl_llvm_cbe_41_count = 0;
+  static  unsigned long long aesl_llvm_cbe_42_count = 0;
+  static  unsigned long long aesl_llvm_cbe_43_count = 0;
+  static  unsigned long long aesl_llvm_cbe_44_count = 0;
+  bool llvm_cbe_tmp__1;
+  static  unsigned long long aesl_llvm_cbe_45_count = 0;
+  static  unsigned long long aesl_llvm_cbe_46_count = 0;
+  static  unsigned long long aesl_llvm_cbe_47_count = 0;
+  static  unsigned long long aesl_llvm_cbe_48_count = 0;
+  static  unsigned long long aesl_llvm_cbe_49_count = 0;
+  static  unsigned long long aesl_llvm_cbe_50_count = 0;
+  unsigned char llvm_cbe_tmp__2;
+  static  unsigned long long aesl_llvm_cbe_51_count = 0;
+  static  unsigned long long aesl_llvm_cbe_52_count = 0;
+  static  unsigned long long aesl_llvm_cbe_53_count = 0;
+  static  unsigned long long aesl_llvm_cbe_54_count = 0;
+  static  unsigned long long aesl_llvm_cbe_55_count = 0;
+  static  unsigned long long aesl_llvm_cbe_56_count = 0;
+  static  unsigned long long aesl_llvm_cbe_57_count = 0;
+  static  unsigned long long aesl_llvm_cbe_58_count = 0;
+  static  unsigned long long aesl_llvm_cbe_59_count = 0;
+  static  unsigned long long aesl_llvm_cbe_60_count = 0;
+  static  unsigned long long aesl_llvm_cbe_61_count = 0;
+  static  unsigned long long aesl_llvm_cbe_62_count = 0;
+  static  unsigned long long aesl_llvm_cbe_63_count = 0;
+  static  unsigned long long aesl_llvm_cbe_64_count = 0;
+  static  unsigned long long aesl_llvm_cbe_65_count = 0;
+  static  unsigned long long aesl_llvm_cbe_66_count = 0;
+  bool llvm_cbe_tmp__3;
+  static  unsigned long long aesl_llvm_cbe_67_count = 0;
+  static  unsigned long long aesl_llvm_cbe_68_count = 0;
+  static  unsigned long long aesl_llvm_cbe_69_count = 0;
+  static  unsigned long long aesl_llvm_cbe_70_count = 0;
+  static  unsigned long long aesl_llvm_cbe_71_count = 0;
+  static  unsigned long long aesl_llvm_cbe_72_count = 0;
+  unsigned char llvm_cbe_tmp__4;
+  static  unsigned long long aesl_llvm_cbe_73_count = 0;
+  static  unsigned long long aesl_llvm_cbe_74_count = 0;
+  static  unsigned long long aesl_llvm_cbe_75_count = 0;
+  static  unsigned long long aesl_llvm_cbe_76_count = 0;
+  static  unsigned long long aesl_llvm_cbe_77_count = 0;
+  static  unsigned long long aesl_llvm_cbe_78_count = 0;
+  static  unsigned long long aesl_llvm_cbe_79_count = 0;
+  static  unsigned long long aesl_llvm_cbe_80_count = 0;
+  static  unsigned long long aesl_llvm_cbe_81_count = 0;
+
 const char* AESL_DEBUG_TRACE = getenv("DEBUG_TRACE");
 if (AESL_DEBUG_TRACE)
 printf("\n\{ BEGIN @phy_rxend_indication\n");
 if (AESL_DEBUG_TRACE)
-printf("\n  store i1 %%not., i1* %%receive_error, align 1, !dbg !3 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_9_count);
-  *llvm_cbe_receive_error = ((((llvm_cbe_rec_error&3U) != (((unsigned char )0)&3U))) & 1ull);
+printf("\n  store i1 false, i1* %%idle_waited, align 1, !dbg !8 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_32_count);
+  *(&llvm_cbe_idle_waited) = ((0) & 1ull);
 if (AESL_DEBUG_TRACE)
-printf("\n  store i1 %%not., i1* %%start_edca, align 1, !dbg !4 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_10_count);
-  *llvm_cbe_start_edca = ((((llvm_cbe_rec_error&3U) != (((unsigned char )0)&3U))) & 1ull);
+printf("\n = 0x%X\n", 0);
+  if (((llvm_cbe_rec_error&3U) == (((unsigned char )0)&3U))) {
+    goto llvm_cbe_tmp__5;
+  } else {
+    goto llvm_cbe_tmp__6;
+  }
+
+llvm_cbe_tmp__5:
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @slot_boundary_timing(i2 zeroext 0, i1* %%idle_waited, i1* %%medium_state) nounwind, !dbg !4 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_36_count);
+  slot_boundary_timing(((unsigned char )0), (bool *)(&llvm_cbe_idle_waited), (bool *)llvm_cbe_medium_state);
+if (AESL_DEBUG_TRACE) {
+printf("\nArgument  = 0x%X",((unsigned char )0));
+}
+  goto llvm_cbe_tmp__7;
+
+  do {     /* Syntactic loop '' to make GCC happy */
+llvm_cbe_tmp__7:
+if (AESL_DEBUG_TRACE)
+printf("\n  %%4 = load i1* %%idle_waited, align 1, !dbg !8 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_44_count);
+  llvm_cbe_tmp__1 = (bool )((*(&llvm_cbe_idle_waited))&1);
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__1);
+  if (llvm_cbe_tmp__1) {
+    goto llvm_cbe_tmp__8;
+  } else {
+    goto llvm_cbe__2e_loopexit;
+  }
+
+llvm_cbe_tmp__9:
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @slot_boundary_timing(i2 zeroext -1, i1* %%idle_waited, i1* %%medium_state) nounwind, !dbg !5 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_56_count);
+  slot_boundary_timing(((unsigned char )-1), (bool *)(&llvm_cbe_idle_waited), (bool *)llvm_cbe_medium_state);
+if (AESL_DEBUG_TRACE) {
+printf("\nArgument  = 0x%X",((unsigned char )-1));
+}
+  goto llvm_cbe_tmp__7;
+
+llvm_cbe_tmp__8:
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @backoff_vo(i3* %%current_txop_holder) nounwind, !dbg !6 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_46_count);
+  backoff_vo(( char *)llvm_cbe_current_txop_holder);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @backoff_vi(i3* %%current_txop_holder) nounwind, !dbg !6 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_47_count);
+  backoff_vi(( char *)llvm_cbe_current_txop_holder);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @backoff_be(i3* %%current_txop_holder) nounwind, !dbg !6 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_48_count);
+  backoff_be(( char *)llvm_cbe_current_txop_holder);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @backoff_bk(i3* %%current_txop_holder) nounwind, !dbg !6 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_49_count);
+  backoff_bk(( char *)llvm_cbe_current_txop_holder);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  %%6 = load i3* %%current_txop_holder, align 1, !dbg !6 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_50_count);
+  llvm_cbe_tmp__2 = (unsigned char )*llvm_cbe_current_txop_holder;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__2);
+  if (((llvm_cbe_tmp__2&7U) == (((unsigned char )0)&7U))) {
+    goto llvm_cbe_tmp__9;
+  } else {
+    goto llvm_cbe_tmp__10;
+  }
+
+  } while (1); /* end of syntactic loop '' */
+llvm_cbe_tmp__10:
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @start_tx(i3 zeroext %%6, i8* %%frame_to_transfer) nounwind, !dbg !6 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_53_count);
+  start_tx(llvm_cbe_tmp__2, ( char *)llvm_cbe_frame_to_transfer);
+if (AESL_DEBUG_TRACE) {
+printf("\nArgument  = 0x%X",llvm_cbe_tmp__2);
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  store i3 0, i3* %%current_txop_holder, align 1, !dbg !6 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_54_count);
+  *llvm_cbe_current_txop_holder = ((((unsigned char )0)) & 7ull);
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", ((unsigned char )0));
+  goto llvm_cbe_tmp__11;
+
+llvm_cbe_tmp__6:
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @slot_boundary_timing(i2 zeroext 1, i1* %%idle_waited, i1* %%medium_state) nounwind, !dbg !5 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_58_count);
+  slot_boundary_timing(((unsigned char )1), (bool *)(&llvm_cbe_idle_waited), (bool *)llvm_cbe_medium_state);
+if (AESL_DEBUG_TRACE) {
+printf("\nArgument  = 0x%X",((unsigned char )1));
+}
+  goto llvm_cbe_tmp__12;
+
+  do {     /* Syntactic loop '' to make GCC happy */
+llvm_cbe_tmp__12:
+if (AESL_DEBUG_TRACE)
+printf("\n  %%12 = load i1* %%idle_waited, align 1, !dbg !8 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_66_count);
+  llvm_cbe_tmp__3 = (bool )((*(&llvm_cbe_idle_waited))&1);
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__3);
+  if (llvm_cbe_tmp__3) {
+    goto llvm_cbe_tmp__13;
+  } else {
+    goto llvm_cbe__2e_loopexit;
+  }
+
+llvm_cbe_tmp__14:
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @slot_boundary_timing(i2 zeroext -1, i1* %%idle_waited, i1* %%medium_state) nounwind, !dbg !5 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_78_count);
+  slot_boundary_timing(((unsigned char )-1), (bool *)(&llvm_cbe_idle_waited), (bool *)llvm_cbe_medium_state);
+if (AESL_DEBUG_TRACE) {
+printf("\nArgument  = 0x%X",((unsigned char )-1));
+}
+  goto llvm_cbe_tmp__12;
+
+llvm_cbe_tmp__13:
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @backoff_vo(i3* %%current_txop_holder) nounwind, !dbg !6 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_68_count);
+  backoff_vo(( char *)llvm_cbe_current_txop_holder);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @backoff_vi(i3* %%current_txop_holder) nounwind, !dbg !7 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_69_count);
+  backoff_vi(( char *)llvm_cbe_current_txop_holder);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @backoff_be(i3* %%current_txop_holder) nounwind, !dbg !7 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_70_count);
+  backoff_be(( char *)llvm_cbe_current_txop_holder);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @backoff_bk(i3* %%current_txop_holder) nounwind, !dbg !7 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_71_count);
+  backoff_bk(( char *)llvm_cbe_current_txop_holder);
+if (AESL_DEBUG_TRACE) {
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  %%14 = load i3* %%current_txop_holder, align 1, !dbg !7 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_72_count);
+  llvm_cbe_tmp__4 = (unsigned char )*llvm_cbe_current_txop_holder;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__4);
+  if (((llvm_cbe_tmp__4&7U) == (((unsigned char )0)&7U))) {
+    goto llvm_cbe_tmp__14;
+  } else {
+    goto llvm_cbe_tmp__15;
+  }
+
+  } while (1); /* end of syntactic loop '' */
+llvm_cbe_tmp__15:
+if (AESL_DEBUG_TRACE)
+printf("\n  call void @start_tx(i3 zeroext %%14, i8* %%frame_to_transfer) nounwind, !dbg !7 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_75_count);
+  start_tx(llvm_cbe_tmp__4, ( char *)llvm_cbe_frame_to_transfer);
+if (AESL_DEBUG_TRACE) {
+printf("\nArgument  = 0x%X",llvm_cbe_tmp__4);
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  store i3 0, i3* %%current_txop_holder, align 1, !dbg !7 for 0x%I64xth hint within @phy_rxend_indication  --> \n", ++aesl_llvm_cbe_76_count);
+  *llvm_cbe_current_txop_holder = ((((unsigned char )0)) & 7ull);
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", ((unsigned char )0));
+  goto llvm_cbe_tmp__11;
+
+llvm_cbe__2e_loopexit:
+  goto llvm_cbe_tmp__11;
+
+llvm_cbe_tmp__11:
   if (AESL_DEBUG_TRACE)
       printf("\nEND @phy_rxend_indication}\n");
   return;

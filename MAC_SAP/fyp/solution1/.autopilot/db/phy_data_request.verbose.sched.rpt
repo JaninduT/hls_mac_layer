@@ -1,0 +1,120 @@
+
+
+================================================================
+== Vivado HLS Report for 'phy_data_request'
+================================================================
+* Date:           Wed Nov 11 13:42:26 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        fyp
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 2.228 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        1|        1| 10.000 ns | 10.000 ns |    1|    1|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.22>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%data_offset_read = call i7 @_ssdm_op_Read.ap_auto.i7(i7 %data_offset)"   --->   Operation 3 'read' 'data_offset_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%data_offset_cast = zext i7 %data_offset_read to i64"   --->   Operation 4 'zext' 'data_offset_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%data_addr = getelementptr [100 x i8]* %data, i64 0, i64 %data_offset_cast" [fyp/PHY_DATA_request.c:5]   --->   Operation 5 'getelementptr' 'data_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [2/2] (2.22ns)   --->   "%tx_0_0 = load volatile i8* %data_addr, align 1" [fyp/PHY_DATA_request.c:7]   --->   Operation 6 'load' 'tx_0_0' <Predicate = true> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.22> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+
+State 2 <SV = 1> <Delay = 2.22>
+ST_2 : Operation 7 [1/2] (2.22ns)   --->   "%tx_0_0 = load volatile i8* %data_addr, align 1" [fyp/PHY_DATA_request.c:7]   --->   Operation 7 'load' 'tx_0_0' <Predicate = true> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.22> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "ret void" [fyp/PHY_DATA_request.c:8]   --->   Operation 8 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.23ns
+The critical path consists of the following:
+	wire read on port 'data_offset' [3]  (0 ns)
+	'getelementptr' operation ('data_addr', fyp/PHY_DATA_request.c:5) [5]  (0 ns)
+	'load' operation ('tx_0_0', fyp/PHY_DATA_request.c:7) on array 'data' [6]  (2.23 ns)
+
+ <State 2>: 2.23ns
+The critical path consists of the following:
+	'load' operation ('tx_0_0', fyp/PHY_DATA_request.c:7) on array 'data' [6]  (2.23 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

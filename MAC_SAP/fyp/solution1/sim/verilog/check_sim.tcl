@@ -80,15 +80,7 @@ proc check_tvin_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "c.ma_unitdatax_request.autotvin_source_addr_mac.dat"
-         "c.ma_unitdatax_request.autotvin_data.dat"
-         "c.ma_unitdatax_request.autotvin_up.dat"
-         "c.ma_unitdatax_request.autotvin_s_class.dat"
-         "c.ma_unitdatax_request.autotvin_c_identifier_operating_class.dat"
-         "c.ma_unitdatax_request.autotvin_c_identifier_channel_number.dat"
-         "c.ma_unitdatax_request.autotvin_d_rate.dat"
-         "c.ma_unitdatax_request.autotvin_tx_power_lvl.dat"
-         "c.ma_unitdatax_request.autotvin_medium_state.dat"
+         "c.phy_data_confirm.autotvin_frame_to_transfer.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {
