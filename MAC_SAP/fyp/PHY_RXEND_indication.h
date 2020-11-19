@@ -14,7 +14,8 @@ void phy_rxend_indication(
 		enum rx_error rec_error,
 		volatile uint1 *medium_state,
 		uint3 *current_txop_holder,
-		unsigned char frame_to_transfer[100]
+		unsigned char frame_to_transfer[100],
+		unsigned char received_frame[100]
 		);
 
 #endif

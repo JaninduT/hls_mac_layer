@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'phy_data_request'
 ================================================================
-* Date:           Wed Nov 11 13:42:26 2020
+* Date:           Thu Nov 19 12:13:08 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        fyp
@@ -79,10 +79,10 @@ State 1 <SV = 0> <Delay = 2.22>
 ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%data_offset_read = call i7 @_ssdm_op_Read.ap_auto.i7(i7 %data_offset)"   --->   Operation 3 'read' 'data_offset_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%data_offset_cast = zext i7 %data_offset_read to i64"   --->   Operation 4 'zext' 'data_offset_cast' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%data_addr = getelementptr [100 x i8]* %data, i64 0, i64 %data_offset_cast" [fyp/PHY_DATA_request.c:5]   --->   Operation 5 'getelementptr' 'data_addr' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [2/2] (2.22ns)   --->   "%tx_0_0 = load volatile i8* %data_addr, align 1" [fyp/PHY_DATA_request.c:7]   --->   Operation 6 'load' 'tx_0_0' <Predicate = true> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.22> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_1 : Operation 6 [2/2] (2.22ns)   --->   "%data_load = load volatile i8* %data_addr, align 1" [fyp/PHY_DATA_request.c:7]   --->   Operation 6 'load' 'data_load' <Predicate = true> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.22> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
 
 State 2 <SV = 1> <Delay = 2.22>
-ST_2 : Operation 7 [1/2] (2.22ns)   --->   "%tx_0_0 = load volatile i8* %data_addr, align 1" [fyp/PHY_DATA_request.c:7]   --->   Operation 7 'load' 'tx_0_0' <Predicate = true> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.22> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_2 : Operation 7 [1/2] (2.22ns)   --->   "%data_load = load volatile i8* %data_addr, align 1" [fyp/PHY_DATA_request.c:7]   --->   Operation 7 'load' 'data_load' <Predicate = true> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.22> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
 ST_2 : Operation 8 [1/1] (0.00ns)   --->   "ret void" [fyp/PHY_DATA_request.c:8]   --->   Operation 8 'ret' <Predicate = true> <Delay = 0.00>
 
 
@@ -95,11 +95,11 @@ Target clock period: 10ns, clock uncertainty: 1.25ns.
 The critical path consists of the following:
 	wire read on port 'data_offset' [3]  (0 ns)
 	'getelementptr' operation ('data_addr', fyp/PHY_DATA_request.c:5) [5]  (0 ns)
-	'load' operation ('tx_0_0', fyp/PHY_DATA_request.c:7) on array 'data' [6]  (2.23 ns)
+	'load' operation ('data_load', fyp/PHY_DATA_request.c:7) on array 'data' [6]  (2.23 ns)
 
  <State 2>: 2.23ns
 The critical path consists of the following:
-	'load' operation ('tx_0_0', fyp/PHY_DATA_request.c:7) on array 'data' [6]  (2.23 ns)
+	'load' operation ('data_load', fyp/PHY_DATA_request.c:7) on array 'data' [6]  (2.23 ns)
 
 
 ============================================================

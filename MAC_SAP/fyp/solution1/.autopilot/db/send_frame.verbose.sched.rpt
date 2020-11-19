@@ -1,0 +1,286 @@
+
+
+================================================================
+== Vivado HLS Report for 'send_frame'
+================================================================
+* Date:           Thu Nov 19 12:13:09 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        fyp
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.017 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |      300|    20400|  3 ~ 204 |          -|          -|   100|    no    |
+        | + Loop 1.1  |      200|      200|         2|          -|          -|   100|    no    |
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 14 11 
+11 --> 12 13 
+12 --> 11 
+13 --> 10 
+14 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.06>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tx_power_lvl_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %tx_power_lvl)"   --->   Operation 15 'read' 'tx_power_lvl_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%d_rate_read = call i7 @_ssdm_op_Read.ap_auto.i7(i7 %d_rate)"   --->   Operation 16 'read' 'd_rate_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%c_identifier_channel = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %c_identifier_channel_number)"   --->   Operation 17 'read' 'c_identifier_channel' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%c_identifier_operati = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %c_identifier_operating_class)"   --->   Operation 18 'read' 'c_identifier_operati' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%s_class_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %s_class)"   --->   Operation 19 'read' 's_class_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%up_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %up)"   --->   Operation 20 'read' 'up_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%data_1 = alloca i8, align 1" [fyp/PHY_TXSTART_confirm.c:5->fyp/mac_layer.c:21]   --->   Operation 21 'alloca' 'data_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [2/2] (5.06ns)   --->   "call fastcc void @ma_unitdatax_request([6 x i8]* %source_addr_mac, [70 x i8]* %data, i4 %up_read, i1 %s_class_read, i8 %c_identifier_operati, i8 %c_identifier_channel, i7 %d_rate_read, i4 %tx_power_lvl_read, i1* %medium_state)" [fyp/mac_layer.c:11]   --->   Operation 22 'call' <Predicate = true> <Delay = 5.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 23 [1/2] (0.00ns)   --->   "call fastcc void @ma_unitdatax_request([6 x i8]* %source_addr_mac, [70 x i8]* %data, i4 %up_read, i1 %s_class_read, i8 %c_identifier_operati, i8 %c_identifier_channel, i7 %d_rate_read, i4 %tx_power_lvl_read, i1* %medium_state)" [fyp/mac_layer.c:11]   --->   Operation 23 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 5.06>
+ST_3 : Operation 24 [2/2] (5.06ns)   --->   "call fastcc void @ma_unitdatax_request([6 x i8]* %source_addr_mac, [70 x i8]* %data, i4 %up_read, i1 %s_class_read, i8 %c_identifier_operati, i8 %c_identifier_channel, i7 %d_rate_read, i4 %tx_power_lvl_read, i1* %medium_state)" [fyp/mac_layer.c:13]   --->   Operation 24 'call' <Predicate = true> <Delay = 5.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 25 [1/2] (0.00ns)   --->   "call fastcc void @ma_unitdatax_request([6 x i8]* %source_addr_mac, [70 x i8]* %data, i4 %up_read, i1 %s_class_read, i8 %c_identifier_operati, i8 %c_identifier_channel, i7 %d_rate_read, i4 %tx_power_lvl_read, i1* %medium_state)" [fyp/mac_layer.c:13]   --->   Operation 25 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 4.44>
+ST_5 : Operation 26 [2/2] (4.44ns)   --->   "call fastcc void @initial_edca_process(i1* %medium_state, i3* %current_txop_holder, [100 x i8]* %mac_frame)" [fyp/mac_layer.c:19]   --->   Operation 26 'call' <Predicate = true> <Delay = 4.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 27 [1/2] (0.00ns)   --->   "call fastcc void @initial_edca_process(i1* %medium_state, i3* %current_txop_holder, [100 x i8]* %mac_frame)" [fyp/mac_layer.c:19]   --->   Operation 27 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 2.22>
+ST_7 : Operation 28 [1/1] (0.00ns)   --->   "%mac_frame_addr = getelementptr [100 x i8]* %mac_frame, i64 0, i64 0" [fyp/mac_layer.c:8]   --->   Operation 28 'getelementptr' 'mac_frame_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 29 [2/2] (2.22ns)   --->   "%data_0 = load i8* %mac_frame_addr, align 1" [fyp/mac_layer.c:20]   --->   Operation 29 'load' 'data_0' <Predicate = true> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.22> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+
+State 8 <SV = 7> <Delay = 2.22>
+ST_8 : Operation 30 [1/2] (2.22ns)   --->   "%data_0 = load i8* %mac_frame_addr, align 1" [fyp/mac_layer.c:20]   --->   Operation 30 'load' 'data_0' <Predicate = true> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.22> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_8 : Operation 31 [1/1] (0.00ns)   --->   "store volatile i8 %data_0, i8* %data_1, align 1" [fyp/PHY_TXSTART_confirm.c:5->fyp/mac_layer.c:21]   --->   Operation 31 'store' <Predicate = true> <Delay = 0.00>
+
+State 9 <SV = 8> <Delay = 1.66>
+ST_9 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([6 x i8]* %source_addr_mac), !map !125"   --->   Operation 32 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([6 x i8]* %dest_addr_mac), !map !131"   --->   Operation 33 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([70 x i8]* %data), !map !135"   --->   Operation 34 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4 %up), !map !141"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %s_class), !map !147"   --->   Operation 36 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 %c_identifier_operating_class), !map !151"   --->   Operation 37 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 %c_identifier_channel_number), !map !155"   --->   Operation 38 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2 %t_slot), !map !159"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i7 %d_rate), !map !163"   --->   Operation 40 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4 %tx_power_lvl), !map !167"   --->   Operation 41 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %expiry_time), !map !171"   --->   Operation 42 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([100 x i8]* %mac_frame), !map !175"   --->   Operation 43 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %medium_state), !map !181"   --->   Operation 44 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i3* %current_txop_holder), !map !185"   --->   Operation 45 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([100 x i8]* %received_frame), !map !189"   --->   Operation 46 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @send_frame_str) nounwind"   --->   Operation 47 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 48 [1/1] (0.00ns)   --->   "call fastcc void @phy_data_request.1(i8* %data_1) nounwind" [fyp/PHY_TXSTART_confirm.c:6->fyp/mac_layer.c:21]   --->   Operation 48 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 49 [1/1] (1.66ns)   --->   "br label %1" [fyp/mac_layer.c:22]   --->   Operation 49 'br' <Predicate = true> <Delay = 1.66>
+
+State 10 <SV = 9> <Delay = 4.44>
+ST_10 : Operation 50 [1/1] (0.00ns)   --->   "%i_0 = phi i7 [ 0, %0 ], [ %i, %phy_data_confirm.exit ]"   --->   Operation 50 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 51 [1/1] (1.46ns)   --->   "%icmp_ln22 = icmp eq i7 %i_0, -28" [fyp/mac_layer.c:22]   --->   Operation 51 'icmp' 'icmp_ln22' <Predicate = true> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.46> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 52 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)"   --->   Operation 52 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 53 [1/1] (2.03ns)   --->   "%i = add i7 %i_0, 1" [fyp/mac_layer.c:22]   --->   Operation 53 'add' 'i' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 54 [1/1] (0.00ns)   --->   "br i1 %icmp_ln22, label %6, label %2" [fyp/mac_layer.c:22]   --->   Operation 54 'br' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 55 [1/1] (0.00ns)   --->   "%count_load = load i7* @count, align 1" [fyp/PHY_DATA_confirm.c:10->fyp/mac_layer.c:23]   --->   Operation 55 'load' 'count_load' <Predicate = (!icmp_ln22)> <Delay = 0.00>
+ST_10 : Operation 56 [1/1] (1.46ns)   --->   "%icmp_ln10 = icmp eq i7 %count_load, 0" [fyp/PHY_DATA_confirm.c:10->fyp/mac_layer.c:23]   --->   Operation 56 'icmp' 'icmp_ln10' <Predicate = (!icmp_ln22)> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.46> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 57 [1/1] (0.00ns)   --->   "br i1 %icmp_ln10, label %.preheader.i.preheader, label %.loopexit.i" [fyp/PHY_DATA_confirm.c:10->fyp/mac_layer.c:23]   --->   Operation 57 'br' <Predicate = (!icmp_ln22)> <Delay = 0.00>
+ST_10 : Operation 58 [1/1] (1.66ns)   --->   "br label %.preheader.i" [fyp/PHY_DATA_confirm.c:11->fyp/mac_layer.c:23]   --->   Operation 58 'br' <Predicate = (!icmp_ln22 & icmp_ln10)> <Delay = 1.66>
+ST_10 : Operation 59 [2/2] (4.44ns)   --->   "call fastcc void @phy_txend_confirm(i1* %medium_state, i3* %current_txop_holder, [100 x i8]* %mac_frame)" [fyp/mac_layer.c:25]   --->   Operation 59 'call' <Predicate = (icmp_ln22)> <Delay = 4.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 4.25>
+ST_11 : Operation 60 [1/1] (0.00ns)   --->   "%q_0_i = phi i7 [ %q, %3 ], [ 0, %.preheader.i.preheader ]"   --->   Operation 60 'phi' 'q_0_i' <Predicate = (icmp_ln10)> <Delay = 0.00>
+ST_11 : Operation 61 [1/1] (1.46ns)   --->   "%icmp_ln11 = icmp eq i7 %q_0_i, -28" [fyp/PHY_DATA_confirm.c:11->fyp/mac_layer.c:23]   --->   Operation 61 'icmp' 'icmp_ln11' <Predicate = (icmp_ln10)> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.46> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 62 [1/1] (0.00ns)   --->   "%empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)"   --->   Operation 62 'speclooptripcount' 'empty_11' <Predicate = (icmp_ln10)> <Delay = 0.00>
+ST_11 : Operation 63 [1/1] (2.03ns)   --->   "%q = add i7 %q_0_i, 1" [fyp/PHY_DATA_confirm.c:11->fyp/mac_layer.c:23]   --->   Operation 63 'add' 'q' <Predicate = (icmp_ln10)> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 64 [1/1] (0.00ns)   --->   "br i1 %icmp_ln11, label %.loopexit.i.loopexit, label %3" [fyp/PHY_DATA_confirm.c:11->fyp/mac_layer.c:23]   --->   Operation 64 'br' <Predicate = (icmp_ln10)> <Delay = 0.00>
+ST_11 : Operation 65 [1/1] (0.00ns)   --->   "%zext_ln12 = zext i7 %q_0_i to i64" [fyp/PHY_DATA_confirm.c:12->fyp/mac_layer.c:23]   --->   Operation 65 'zext' 'zext_ln12' <Predicate = (icmp_ln10 & !icmp_ln11)> <Delay = 0.00>
+ST_11 : Operation 66 [1/1] (0.00ns)   --->   "%mac_frame_addr_1 = getelementptr [100 x i8]* %mac_frame, i64 0, i64 %zext_ln12" [fyp/PHY_DATA_confirm.c:12->fyp/mac_layer.c:23]   --->   Operation 66 'getelementptr' 'mac_frame_addr_1' <Predicate = (icmp_ln10 & !icmp_ln11)> <Delay = 0.00>
+ST_11 : Operation 67 [2/2] (2.22ns)   --->   "%mac_frame_load = load i8* %mac_frame_addr_1, align 1" [fyp/PHY_DATA_confirm.c:12->fyp/mac_layer.c:23]   --->   Operation 67 'load' 'mac_frame_load' <Predicate = (icmp_ln10 & !icmp_ln11)> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.22> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_11 : Operation 68 [1/1] (0.00ns)   --->   "br label %.loopexit.i"   --->   Operation 68 'br' <Predicate = (icmp_ln10 & icmp_ln11)> <Delay = 0.00>
+ST_11 : Operation 69 [1/1] (2.03ns)   --->   "%add_ln15 = add i7 %count_load, 1" [fyp/PHY_DATA_confirm.c:15->fyp/mac_layer.c:23]   --->   Operation 69 'add' 'add_ln15' <Predicate = (icmp_ln11) | (!icmp_ln10)> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 70 [1/1] (1.46ns)   --->   "%icmp_ln16 = icmp eq i7 %add_ln15, -28" [fyp/PHY_DATA_confirm.c:16->fyp/mac_layer.c:23]   --->   Operation 70 'icmp' 'icmp_ln16' <Predicate = (icmp_ln11) | (!icmp_ln10)> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.46> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 71 [1/1] (0.00ns)   --->   "br i1 %icmp_ln16, label %4, label %5" [fyp/PHY_DATA_confirm.c:16->fyp/mac_layer.c:23]   --->   Operation 71 'br' <Predicate = (icmp_ln11) | (!icmp_ln10)> <Delay = 0.00>
+ST_11 : Operation 72 [2/2] (2.22ns)   --->   "call fastcc void @phy_data_request([100 x i8]* @frame, i7 %add_ln15)" [fyp/PHY_DATA_confirm.c:21->fyp/mac_layer.c:23]   --->   Operation 72 'call' <Predicate = (icmp_ln11 & !icmp_ln16) | (!icmp_ln10 & !icmp_ln16)> <Delay = 2.22> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 4.45>
+ST_12 : Operation 73 [1/2] (2.22ns)   --->   "%mac_frame_load = load i8* %mac_frame_addr_1, align 1" [fyp/PHY_DATA_confirm.c:12->fyp/mac_layer.c:23]   --->   Operation 73 'load' 'mac_frame_load' <Predicate = true> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.22> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_12 : Operation 74 [1/1] (0.00ns)   --->   "%frame_addr = getelementptr inbounds [100 x i8]* @frame, i64 0, i64 %zext_ln12" [fyp/PHY_DATA_confirm.c:12->fyp/mac_layer.c:23]   --->   Operation 74 'getelementptr' 'frame_addr' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 75 [1/1] (2.22ns)   --->   "store i8 %mac_frame_load, i8* %frame_addr, align 1" [fyp/PHY_DATA_confirm.c:12->fyp/mac_layer.c:23]   --->   Operation 75 'store' <Predicate = true> <Delay = 2.22> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.22> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_12 : Operation 76 [1/1] (0.00ns)   --->   "br label %.preheader.i" [fyp/PHY_DATA_confirm.c:11->fyp/mac_layer.c:23]   --->   Operation 76 'br' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 11> <Delay = 1.66>
+ST_13 : Operation 77 [1/2] (0.00ns)   --->   "call fastcc void @phy_data_request([100 x i8]* @frame, i7 %add_ln15)" [fyp/PHY_DATA_confirm.c:21->fyp/mac_layer.c:23]   --->   Operation 77 'call' <Predicate = (!icmp_ln16)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 78 [1/1] (1.66ns)   --->   "br label %phy_data_confirm.exit" [fyp/PHY_DATA_confirm.c:22->fyp/mac_layer.c:23]   --->   Operation 78 'br' <Predicate = (!icmp_ln16)> <Delay = 1.66>
+ST_13 : Operation 79 [1/1] (0.00ns)   --->   "call fastcc void @phy_txend_request()" [fyp/PHY_DATA_confirm.c:17->fyp/mac_layer.c:23]   --->   Operation 79 'call' <Predicate = (icmp_ln16)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 80 [1/1] (1.66ns)   --->   "br label %phy_data_confirm.exit" [fyp/PHY_DATA_confirm.c:19->fyp/mac_layer.c:23]   --->   Operation 80 'br' <Predicate = (icmp_ln16)> <Delay = 1.66>
+ST_13 : Operation 81 [1/1] (0.00ns)   --->   "%count_new_0_i = phi i7 [ 0, %4 ], [ %add_ln15, %5 ]" [fyp/PHY_DATA_confirm.c:15->fyp/mac_layer.c:23]   --->   Operation 81 'phi' 'count_new_0_i' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 82 [1/1] (0.00ns)   --->   "store i7 %count_new_0_i, i7* @count, align 1" [fyp/PHY_DATA_confirm.c:15->fyp/mac_layer.c:23]   --->   Operation 82 'store' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 83 [1/1] (0.00ns)   --->   "br label %1" [fyp/mac_layer.c:22]   --->   Operation 83 'br' <Predicate = true> <Delay = 0.00>
+
+State 14 <SV = 10> <Delay = 0.00>
+ST_14 : Operation 84 [1/2] (0.00ns)   --->   "call fastcc void @phy_txend_confirm(i1* %medium_state, i3* %current_txop_holder, [100 x i8]* %mac_frame)" [fyp/mac_layer.c:25]   --->   Operation 84 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 85 [1/1] (0.00ns)   --->   "ret void" [fyp/mac_layer.c:26]   --->   Operation 85 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 5.06ns
+The critical path consists of the following:
+	wire read on port 'tx_power_lvl' [58]  (0 ns)
+	'call' operation ('call_ln11', fyp/mac_layer.c:11) to 'ma_unitdatax_request' [82]  (5.06 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 5.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln13', fyp/mac_layer.c:13) to 'ma_unitdatax_request' [83]  (5.06 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 4.44ns
+The critical path consists of the following:
+	'call' operation ('call_ln19', fyp/mac_layer.c:19) to 'initial_edca_process' [84]  (4.44 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 2.23ns
+The critical path consists of the following:
+	'getelementptr' operation ('mac_frame_addr', fyp/mac_layer.c:8) [80]  (0 ns)
+	'load' operation ('data_0', fyp/mac_layer.c:20) on array 'mac_frame' [85]  (2.23 ns)
+
+ <State 8>: 2.23ns
+The critical path consists of the following:
+	'load' operation ('data_0', fyp/mac_layer.c:20) on array 'mac_frame' [85]  (2.23 ns)
+
+ <State 9>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', fyp/mac_layer.c:22) [90]  (1.66 ns)
+
+ <State 10>: 4.44ns
+The critical path consists of the following:
+	'call' operation ('call_ln25', fyp/mac_layer.c:25) to 'phy_txend_confirm' [131]  (4.44 ns)
+
+ <State 11>: 4.26ns
+The critical path consists of the following:
+	'add' operation ('add_ln15', fyp/PHY_DATA_confirm.c:15->fyp/mac_layer.c:23) [117]  (2.03 ns)
+	'call' operation ('call_ln21', fyp/PHY_DATA_confirm.c:21->fyp/mac_layer.c:23) to 'phy_data_request' [121]  (2.23 ns)
+
+ <State 12>: 4.46ns
+The critical path consists of the following:
+	'load' operation ('mac_frame_load', fyp/PHY_DATA_confirm.c:12->fyp/mac_layer.c:23) on array 'mac_frame' [110]  (2.23 ns)
+	'store' operation ('store_ln12', fyp/PHY_DATA_confirm.c:12->fyp/mac_layer.c:23) of variable 'mac_frame_load', fyp/PHY_DATA_confirm.c:12->fyp/mac_layer.c:23 on array 'frame' [112]  (2.23 ns)
+
+ <State 13>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('count_new_0_i', fyp/PHY_DATA_confirm.c:15->fyp/mac_layer.c:23) with incoming values : ('add_ln15', fyp/PHY_DATA_confirm.c:15->fyp/mac_layer.c:23) [127]  (1.66 ns)
+	'phi' operation ('count_new_0_i', fyp/PHY_DATA_confirm.c:15->fyp/mac_layer.c:23) with incoming values : ('add_ln15', fyp/PHY_DATA_confirm.c:15->fyp/mac_layer.c:23) [127]  (0 ns)
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

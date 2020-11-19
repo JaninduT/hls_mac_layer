@@ -31,12 +31,12 @@ if {$ret == 1} {
 	return -code error -errorcode $::errorCode
 }
 
-if {[file isfile phy_data_confirm.autotvin.dat]} {
-	file delete -force phy_data_confirm.autotvin.dat
+if {[file isfile send_frame.autotvin.dat]} {
+	file delete -force send_frame.autotvin.dat
 }
 
-if {[file isfile phy_data_confirm.autotvout.dat]} {
-	file delete -force phy_data_confirm.autotvout.dat
+if {[file isfile send_frame.autotvout.dat]} {
+	file delete -force send_frame.autotvout.dat
 }
 
 sc_sim_check $ret $err "temp0.log"

@@ -1,0 +1,299 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'ma_unitdatax_request'" level="0">
+<item name = "Date">Thu Nov 19 12:13:13 2020
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">fyp</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35t-cpg236-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.502 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2, 1599, 20.000 ns, 15.990 us, 2, 1599, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_enqueue_dequeue_fram_fu_257">enqueue_dequeue_fram, 1, 202, 10.000 ns, 2.020 us, 1, 202, none</column>
+<column name="grp_random_int_gen_fu_295">random_int_gen, 37, 37, 0.370 us, 0.370 us, 37, 37, none</column>
+<column name="grp_compose_mac_frame_fu_303">compose_mac_frame, 1215, 1215, 12.150 us, 12.150 us, 1215, 1215, none</column>
+<column name="grp_ma_unitdatax_status_s_fu_313">ma_unitdatax_status_s, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">140, 140, 2, -, -, 70, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 294, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 2, 979, 2948, -</column>
+<column name="Memory">1, -, 16, 9, 0</column>
+<column name="Multiplexer">-, -, -, 550, -</column>
+<column name="Register">-, -, 81, -, -</column>
+<specialColumn name="Available">100, 90, 41600, 20800, 0</specialColumn>
+<specialColumn name="Utilization (%)">1, 2, 2, 18, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="grp_compose_mac_frame_fu_303">compose_mac_frame, 0, 0, 118, 751, 0</column>
+<column name="grp_enqueue_dequeue_fram_fu_257">enqueue_dequeue_fram, 0, 0, 258, 1425, 0</column>
+<column name="grp_ma_unitdatax_status_s_fu_313">ma_unitdatax_status_s, 0, 0, 49, 135, 0</column>
+<column name="grp_random_int_gen_fu_295">random_int_gen, 0, 2, 554, 637, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="llc_data_U">ma_unitdatax_requdEe, 0, 16, 9, 0, 70, 8, 1, 560</column>
+<column name="mac_data_U">ma_unitdatax_requeOg, 1, 0, 0, 0, 100, 8, 1, 800</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln41_fu_521_p2">+, 0, 0, 13, 4, 2</column>
+<column name="add_ln80_fu_567_p2">+, 0, 0, 13, 4, 4</column>
+<column name="grp_fu_342_p2">+, 0, 0, 19, 12, 1</column>
+<column name="i_fu_505_p2">+, 0, 0, 15, 7, 1</column>
+<column name="and_ln23_fu_373_p2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_931">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_936">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_941">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_946">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_950">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op108_call_state9">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op117_call_state9">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op126_call_state9">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op99_call_state9">and, 0, 0, 2, 1, 1</column>
+<column name="empty_12_fu_385_p2">icmp, 0, 0, 11, 7, 4</column>
+<column name="empty_14_fu_397_p2">icmp, 0, 0, 11, 7, 3</column>
+<column name="empty_16_fu_409_p2">icmp, 0, 0, 9, 4, 2</column>
+<column name="empty_17_fu_415_p2">icmp, 0, 0, 9, 4, 3</column>
+<column name="empty_19_fu_427_p2">icmp, 0, 0, 9, 4, 3</column>
+<column name="empty_21_fu_439_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="empty_23_fu_451_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="empty_25_fu_463_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="empty_27_fu_475_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="empty_29_fu_487_p2">icmp, 0, 0, 9, 4, 1</column>
+<column name="empty_32_fu_542_p2">icmp, 0, 0, 9, 4, 2</column>
+<column name="empty_33_fu_547_p2">icmp, 0, 0, 9, 4, 1</column>
+<column name="empty_fu_379_p2">icmp, 0, 0, 11, 7, 5</column>
+<column name="grp_fu_336_p2">icmp, 0, 0, 9, 4, 3</column>
+<column name="icmp_ln23_1_fu_367_p2">icmp, 0, 0, 11, 8, 8</column>
+<column name="icmp_ln23_fu_361_p2">icmp, 0, 0, 11, 8, 5</column>
+<column name="icmp_ln35_fu_499_p2">icmp, 0, 0, 11, 7, 7</column>
+<column name="icmp_ln41_fu_536_p2">icmp, 0, 0, 9, 3, 1</column>
+<column name="icmp_ln67_fu_561_p2">icmp, 0, 0, 9, 3, 3</column>
+<column name="icmp_ln80_fu_582_p2">icmp, 0, 0, 9, 3, 1</column>
+<column name="ap_block_state9_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+<column name="empty_13_fu_391_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_15_fu_403_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_18_fu_421_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_20_fu_433_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_22_fu_445_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_24_fu_457_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_26_fu_469_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_28_fu_481_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_30_fu_493_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_34_fu_552_p2">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">89, 18, 1, 18</column>
+<column name="available_spaces_be_o">9, 2, 3, 6</column>
+<column name="available_spaces_be_o_ap_vld">9, 2, 1, 2</column>
+<column name="available_spaces_bk_o">9, 2, 3, 6</column>
+<column name="available_spaces_bk_o_ap_vld">9, 2, 1, 2</column>
+<column name="available_spaces_vi_o">9, 2, 3, 6</column>
+<column name="available_spaces_vi_o_ap_vld">9, 2, 1, 2</column>
+<column name="available_spaces_vo_o">9, 2, 3, 6</column>
+<column name="available_spaces_vo_o_ap_vld">9, 2, 1, 2</column>
+<column name="edca_queues_ce0">9, 2, 1, 2</column>
+<column name="edca_queues_we0">9, 2, 1, 2</column>
+<column name="grp_enqueue_dequeue_fram_fu_257_ac">27, 5, 2, 10</column>
+<column name="grp_ma_unitdatax_status_s_fu_313_trans_sts">38, 7, 3, 21</column>
+<column name="grp_random_int_gen_fu_295_max_val">27, 5, 10, 50</column>
+<column name="i_0_reg_246">9, 2, 7, 14</column>
+<column name="llc_data_address0">15, 3, 7, 21</column>
+<column name="llc_data_ce0">15, 3, 1, 3</column>
+<column name="mac_data_address0">15, 3, 7, 21</column>
+<column name="mac_data_ce0">15, 3, 1, 3</column>
+<column name="mac_data_ce1">9, 2, 1, 2</column>
+<column name="mac_data_d0">15, 3, 8, 24</column>
+<column name="mac_data_we0">15, 3, 1, 3</column>
+<column name="mac_data_we1">9, 2, 1, 2</column>
+<column name="rand_state_o">9, 2, 32, 64</column>
+<column name="rand_state_o_ap_vld">9, 2, 1, 2</column>
+<column name="read_pointer_be_o">9, 2, 2, 4</column>
+<column name="read_pointer_be_o_ap_vld">9, 2, 1, 2</column>
+<column name="read_pointer_bk_o">9, 2, 2, 4</column>
+<column name="read_pointer_bk_o_ap_vld">9, 2, 1, 2</column>
+<column name="read_pointer_vi_o">9, 2, 2, 4</column>
+<column name="read_pointer_vi_o_ap_vld">9, 2, 1, 2</column>
+<column name="read_pointer_vo_o">9, 2, 2, 4</column>
+<column name="read_pointer_vo_o_ap_vld">9, 2, 1, 2</column>
+<column name="write_pointer_be_o">9, 2, 2, 4</column>
+<column name="write_pointer_be_o_ap_vld">9, 2, 1, 2</column>
+<column name="write_pointer_bk_o">9, 2, 2, 4</column>
+<column name="write_pointer_bk_o_ap_vld">9, 2, 1, 2</column>
+<column name="write_pointer_vi_o">9, 2, 2, 4</column>
+<column name="write_pointer_vi_o_ap_vld">9, 2, 1, 2</column>
+<column name="write_pointer_vo_o">9, 2, 2, 4</column>
+<column name="write_pointer_vo_o_ap_vld">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="and_ln23_reg_645">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">17, 0, 17, 0</column>
+<column name="empty_15_reg_649">1, 0, 1, 0</column>
+<column name="empty_30_reg_653">1, 0, 1, 0</column>
+<column name="empty_34_reg_685">1, 0, 1, 0</column>
+<column name="grp_compose_mac_frame_fu_303_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_enqueue_dequeue_fram_fu_257_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_random_int_gen_fu_295_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_0_reg_246">7, 0, 7, 0</column>
+<column name="i_reg_660">7, 0, 7, 0</column>
+<column name="icmp_ln41_reg_681">1, 0, 1, 0</column>
+<column name="icmp_ln43_reg_731">1, 0, 1, 0</column>
+<column name="icmp_ln56_reg_718">1, 0, 1, 0</column>
+<column name="icmp_ln67_reg_689">1, 0, 1, 0</column>
+<column name="icmp_ln69_reg_705">1, 0, 1, 0</column>
+<column name="icmp_ln80_reg_693">1, 0, 1, 0</column>
+<column name="icmp_ln82_reg_697">1, 0, 1, 0</column>
+<column name="medium_state_read_1_reg_722">1, 0, 1, 0</column>
+<column name="medium_state_read_2_reg_709">1, 0, 1, 0</column>
+<column name="medium_state_read_3_reg_701">1, 0, 1, 0</column>
+<column name="medium_state_read_reg_735">1, 0, 1, 0</column>
+<column name="seq_number">12, 0, 12, 0</column>
+<column name="seq_number_load_reg_675">12, 0, 12, 0</column>
+<column name="tmp_reg_641">1, 0, 1, 0</column>
+<column name="zext_ln36_reg_665">7, 0, 64, 57</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, ma_unitdatax_request, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, ma_unitdatax_request, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, ma_unitdatax_request, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, ma_unitdatax_request, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, ma_unitdatax_request, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, ma_unitdatax_request, return value</column>
+<column name="source_addr_mac_address0">out, 3, ap_memory, source_addr_mac, array</column>
+<column name="source_addr_mac_ce0">out, 1, ap_memory, source_addr_mac, array</column>
+<column name="source_addr_mac_q0">in, 8, ap_memory, source_addr_mac, array</column>
+<column name="source_addr_mac_address1">out, 3, ap_memory, source_addr_mac, array</column>
+<column name="source_addr_mac_ce1">out, 1, ap_memory, source_addr_mac, array</column>
+<column name="source_addr_mac_q1">in, 8, ap_memory, source_addr_mac, array</column>
+<column name="data_address0">out, 7, ap_memory, data, array</column>
+<column name="data_ce0">out, 1, ap_memory, data, array</column>
+<column name="data_q0">in, 8, ap_memory, data, array</column>
+<column name="up">in, 4, ap_none, up, scalar</column>
+<column name="s_class">in, 1, ap_none, s_class, scalar</column>
+<column name="c_identifier_operating_class">in, 8, ap_none, c_identifier_operating_class, scalar</column>
+<column name="c_identifier_channel_number">in, 8, ap_none, c_identifier_channel_number, scalar</column>
+<column name="d_rate">in, 7, ap_none, d_rate, scalar</column>
+<column name="tx_power_lvl">in, 4, ap_none, tx_power_lvl, scalar</column>
+<column name="medium_state">in, 1, ap_none, medium_state, pointer</column>
+<column name="available_spaces_bk_i">in, 3, ap_ovld, available_spaces_bk, pointer</column>
+<column name="available_spaces_bk_o">out, 3, ap_ovld, available_spaces_bk, pointer</column>
+<column name="available_spaces_bk_o_ap_vld">out, 1, ap_ovld, available_spaces_bk, pointer</column>
+<column name="write_pointer_bk_i">in, 2, ap_ovld, write_pointer_bk, pointer</column>
+<column name="write_pointer_bk_o">out, 2, ap_ovld, write_pointer_bk, pointer</column>
+<column name="write_pointer_bk_o_ap_vld">out, 1, ap_ovld, write_pointer_bk, pointer</column>
+<column name="available_spaces_be_i">in, 3, ap_ovld, available_spaces_be, pointer</column>
+<column name="available_spaces_be_o">out, 3, ap_ovld, available_spaces_be, pointer</column>
+<column name="available_spaces_be_o_ap_vld">out, 1, ap_ovld, available_spaces_be, pointer</column>
+<column name="write_pointer_be_i">in, 2, ap_ovld, write_pointer_be, pointer</column>
+<column name="write_pointer_be_o">out, 2, ap_ovld, write_pointer_be, pointer</column>
+<column name="write_pointer_be_o_ap_vld">out, 1, ap_ovld, write_pointer_be, pointer</column>
+<column name="available_spaces_vi_i">in, 3, ap_ovld, available_spaces_vi, pointer</column>
+<column name="available_spaces_vi_o">out, 3, ap_ovld, available_spaces_vi, pointer</column>
+<column name="available_spaces_vi_o_ap_vld">out, 1, ap_ovld, available_spaces_vi, pointer</column>
+<column name="write_pointer_vi_i">in, 2, ap_ovld, write_pointer_vi, pointer</column>
+<column name="write_pointer_vi_o">out, 2, ap_ovld, write_pointer_vi, pointer</column>
+<column name="write_pointer_vi_o_ap_vld">out, 1, ap_ovld, write_pointer_vi, pointer</column>
+<column name="available_spaces_vo_i">in, 3, ap_ovld, available_spaces_vo, pointer</column>
+<column name="available_spaces_vo_o">out, 3, ap_ovld, available_spaces_vo, pointer</column>
+<column name="available_spaces_vo_o_ap_vld">out, 1, ap_ovld, available_spaces_vo, pointer</column>
+<column name="write_pointer_vo_i">in, 2, ap_ovld, write_pointer_vo, pointer</column>
+<column name="write_pointer_vo_o">out, 2, ap_ovld, write_pointer_vo, pointer</column>
+<column name="write_pointer_vo_o_ap_vld">out, 1, ap_ovld, write_pointer_vo, pointer</column>
+<column name="edca_queues_address0">out, 11, ap_memory, edca_queues, array</column>
+<column name="edca_queues_ce0">out, 1, ap_memory, edca_queues, array</column>
+<column name="edca_queues_we0">out, 1, ap_memory, edca_queues, array</column>
+<column name="edca_queues_d0">out, 8, ap_memory, edca_queues, array</column>
+<column name="edca_queues_q0">in, 8, ap_memory, edca_queues, array</column>
+<column name="read_pointer_bk_i">in, 2, ap_ovld, read_pointer_bk, pointer</column>
+<column name="read_pointer_bk_o">out, 2, ap_ovld, read_pointer_bk, pointer</column>
+<column name="read_pointer_bk_o_ap_vld">out, 1, ap_ovld, read_pointer_bk, pointer</column>
+<column name="read_pointer_be_i">in, 2, ap_ovld, read_pointer_be, pointer</column>
+<column name="read_pointer_be_o">out, 2, ap_ovld, read_pointer_be, pointer</column>
+<column name="read_pointer_be_o_ap_vld">out, 1, ap_ovld, read_pointer_be, pointer</column>
+<column name="read_pointer_vi_i">in, 2, ap_ovld, read_pointer_vi, pointer</column>
+<column name="read_pointer_vi_o">out, 2, ap_ovld, read_pointer_vi, pointer</column>
+<column name="read_pointer_vi_o_ap_vld">out, 1, ap_ovld, read_pointer_vi, pointer</column>
+<column name="read_pointer_vo_i">in, 2, ap_ovld, read_pointer_vo, pointer</column>
+<column name="read_pointer_vo_o">out, 2, ap_ovld, read_pointer_vo, pointer</column>
+<column name="read_pointer_vo_o_ap_vld">out, 1, ap_ovld, read_pointer_vo, pointer</column>
+<column name="CW_bk">in, 10, ap_none, CW_bk, pointer</column>
+<column name="rand_state_i">in, 32, ap_ovld, rand_state, pointer</column>
+<column name="rand_state_o">out, 32, ap_ovld, rand_state, pointer</column>
+<column name="rand_state_o_ap_vld">out, 1, ap_ovld, rand_state, pointer</column>
+<column name="bk_backoff_counter">out, 10, ap_vld, bk_backoff_counter, pointer</column>
+<column name="bk_backoff_counter_ap_vld">out, 1, ap_vld, bk_backoff_counter, pointer</column>
+<column name="CW_be">in, 10, ap_none, CW_be, pointer</column>
+<column name="be_backoff_counter">out, 10, ap_vld, be_backoff_counter, pointer</column>
+<column name="be_backoff_counter_ap_vld">out, 1, ap_vld, be_backoff_counter, pointer</column>
+<column name="CW_vi">in, 10, ap_none, CW_vi, pointer</column>
+<column name="vi_backoff_counter">out, 10, ap_vld, vi_backoff_counter, pointer</column>
+<column name="vi_backoff_counter_ap_vld">out, 1, ap_vld, vi_backoff_counter, pointer</column>
+<column name="vo_backoff_counter">out, 10, ap_vld, vo_backoff_counter, pointer</column>
+<column name="vo_backoff_counter_ap_vld">out, 1, ap_vld, vo_backoff_counter, pointer</column>
+</table>
+</item>
+</section>
+</profile>

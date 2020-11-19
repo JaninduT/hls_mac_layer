@@ -1,0 +1,119 @@
+
+
+================================================================
+== Vivado HLS Report for 'start_tx'
+================================================================
+* Date:           Thu Nov 19 12:13:07 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        fyp
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 7.502 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        2|      203| 20.000 ns | 2.030 us |    2|  203|   none  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.44>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%current_txop_holder_s = call i3 @_ssdm_op_Read.ap_auto.i3(i3 %current_txop_holder)" [fyp/edca.c:364]   --->   Operation 3 'read' 'current_txop_holder_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%trunc_ln368 = trunc i3 %current_txop_holder_s to i2" [fyp/edca.c:368]   --->   Operation 4 'trunc' 'trunc_ln368' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (1.58ns)   --->   "%add_ln368 = add i2 -1, %trunc_ln368" [fyp/edca.c:368]   --->   Operation 5 'add' 'add_ln368' <Predicate = true> <Delay = 1.58> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 6 [2/2] (2.85ns)   --->   "%empty = call fastcc i4 @enqueue_dequeue_fram(i1 true, i2 %add_ln368, [100 x i8]* %tx_frame)" [fyp/edca.c:368]   --->   Operation 6 'call' 'empty' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 7 [1/2] (0.00ns)   --->   "%empty = call fastcc i4 @enqueue_dequeue_fram(i1 true, i2 %add_ln368, [100 x i8]* %tx_frame)" [fyp/edca.c:368]   --->   Operation 7 'call' 'empty' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "ret void" [fyp/edca.c:376]   --->   Operation 8 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 4.44ns
+The critical path consists of the following:
+	wire read on port 'current_txop_holder' (fyp/edca.c:364) [19]  (0 ns)
+	'add' operation ('add_ln368', fyp/edca.c:368) [21]  (1.58 ns)
+	'call' operation ('empty', fyp/edca.c:368) to 'enqueue_dequeue_fram' [22]  (2.86 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -5494,6 +5494,7 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
+static const uint8 generic_timeout = 2;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.h" 2
 # 1 "E:/FYP/HLS/MAC_SAP/fyp/crc_32.h" 1
 
@@ -5545,7 +5546,10 @@ void compose_mac_frame(
 
 uint1 decompose_mac_frame(
   unsigned char mac_frame[100],
-  unsigned char data[70]
+  unsigned char data[70],
+  mac48 *source_mac,
+  mac48 *dest_mac,
+  user_priority_t *up
   );
 # 8 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.h" 2
 # 1 "E:/FYP/HLS/MAC_SAP/fyp/edca.h" 1
@@ -5563,7 +5567,7 @@ uint4 enqueue_dequeue_frame(
   );
 
 void slot_boundary_timing(
-  uint2 timing_mode,
+  uint3 timing_mode,
   uint1 *idle_waiting,
   volatile uint1 *medium_state
   );
@@ -5585,19 +5589,19 @@ void backoff_bk(
   );
 
 void start_backoff_vo(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_vi(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_be(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_bk(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_tx(
@@ -5605,10 +5609,6 @@ void start_tx(
   unsigned char tx_frame[100]
   );
 # 9 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.h" 2
-
-enum mac_operation{
- MA_UNITDATAX_request = 0
-};
 
 void send_frame(
   mac48 source_addr,
@@ -5622,19 +5622,65 @@ void send_frame(
   txpwr_lvl_t tx_power_lvl,
   int64_t expiry_time,
   unsigned char mac_frame[100],
-  volatile uint1 *medium_state
+  volatile uint1 *medium_state,
+  uint3 *current_txop_holder,
+  unsigned char received_frame[100]
   );
 # 2 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c" 2
+# 1 "E:/FYP/HLS/MAC_SAP/fyp/PHY_RXEND_indication.h" 1
+
+
+
+
+
+enum rx_error{
+ NO_ERROR = 0,
+ FORMAT_VIOLATION = 1,
+ CARRIER_LOST = 2,
+ UNSUPPORTED_RATE = 3
+};
+
+void phy_rxend_indication(
+  enum rx_error rec_error,
+  volatile uint1 *medium_state,
+  uint3 *current_txop_holder,
+  unsigned char frame_to_transfer[100],
+  unsigned char received_frame[100]
+  );
+# 3 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c" 2
+# 1 "E:/FYP/HLS/MAC_SAP/fyp/initial_edca_proc.h" 1
+
+
+
+
+
+void initial_edca_process(
+  volatile uint1 *medium_state,
+  uint3 *current_txop_holder,
+  unsigned char frame_to_transfer[100]
+  );
+# 4 "E:/FYP/HLS/MAC_SAP/fyp/mac_layer.c" 2
 
 void send_frame(mac48 source_addr, mac48 dest_addr, unsigned char data[70],
   user_priority_t up, enum service_class s_class, channel_identifier c_identifier,
   enum time_slot t_slot, data_rate_t d_rate, txpwr_lvl_t tx_power_lvl,
-  int64_t expiry_time, unsigned char mac_frame[100], volatile uint1 *medium_state){
+  int64_t expiry_time, unsigned char mac_frame[100], volatile uint1 *medium_state,
+  uint3 *current_txop_holder, unsigned char received_frame[100]){
 
  ma_unitdatax_request(source_addr, dest_addr, data, up, s_class, c_identifier, t_slot, d_rate,
    tx_power_lvl, expiry_time, medium_state);
+ ma_unitdatax_request(source_addr, dest_addr, data, up, s_class, c_identifier, t_slot, d_rate,
+    tx_power_lvl, expiry_time, medium_state);
 
- uint1 res2 = enqueue_dequeue_frame(1, 3, mac_frame, &d_rate, &tx_power_lvl);
 
+
+
+ initial_edca_process(medium_state, current_txop_holder, mac_frame);
+ unsigned char data_0 = mac_frame[0];
+ phy_txstart_confirm(&data_0);
+ for(int i=0; i<100;i++){
+  phy_data_confirm(mac_frame);
+ }
+ phy_txend_confirm(medium_state, current_txop_holder, mac_frame);
  return;
 }

@@ -139,8 +139,8 @@ void phy_data_request( char *);
 
 
 /* Global Variable Definitions and Initialization */
-static unsigned char aesl_internal_phy_data_confirm_OC_count;
 static  char aesl_internal_phy_data_confirm_OC_frame[100];
+static unsigned char aesl_internal_phy_data_confirm_OC_count;
 
 
 /* Function Bodies */

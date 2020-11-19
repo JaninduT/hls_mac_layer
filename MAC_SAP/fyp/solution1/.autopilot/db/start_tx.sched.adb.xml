@@ -1,0 +1,123 @@
+<stg><name>start_tx</name>
+
+
+<trans_list>
+
+<trans id="9" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="3" op_0_bw="3" op_1_bw="3">
+<![CDATA[
+._crit_edge:0  %current_txop_holder_s = call i3 @_ssdm_op_Read.ap_auto.i3(i3 %current_txop_holder)
+
+]]></Node>
+<StgValue><ssdm name="current_txop_holder_s"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="2" op_0_bw="3">
+<![CDATA[
+._crit_edge:1  %trunc_ln368 = trunc i3 %current_txop_holder_s to i2
+
+]]></Node>
+<StgValue><ssdm name="trunc_ln368"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="2" op_0_bw="2" op_1_bw="2">
+<![CDATA[
+._crit_edge:2  %add_ln368 = add i2 -1, %trunc_ln368
+
+]]></Node>
+<StgValue><ssdm name="add_ln368"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="4" op_0_bw="4" op_1_bw="1" op_2_bw="2" op_3_bw="8" op_4_bw="3" op_5_bw="2" op_6_bw="3" op_7_bw="2" op_8_bw="3" op_9_bw="2" op_10_bw="3" op_11_bw="2" op_12_bw="8" op_13_bw="2" op_14_bw="2" op_15_bw="2" op_16_bw="2">
+<![CDATA[
+._crit_edge:3  %empty = call fastcc i4 @enqueue_dequeue_fram(i1 true, i2 %add_ln368, [100 x i8]* %tx_frame)
+
+]]></Node>
+<StgValue><ssdm name="empty"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="7" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="4" op_0_bw="4" op_1_bw="1" op_2_bw="2" op_3_bw="8" op_4_bw="3" op_5_bw="2" op_6_bw="3" op_7_bw="2" op_8_bw="3" op_9_bw="2" op_10_bw="3" op_11_bw="2" op_12_bw="8" op_13_bw="2" op_14_bw="2" op_15_bw="2" op_16_bw="2">
+<![CDATA[
+._crit_edge:3  %empty = call fastcc i4 @enqueue_dequeue_fram(i1 true, i2 %add_ln368, [100 x i8]* %tx_frame)
+
+]]></Node>
+<StgValue><ssdm name="empty"/></StgValue>
+</operation>
+
+<operation id="8" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="0">
+<![CDATA[
+._crit_edge:4  ret void
+
+]]></Node>
+<StgValue><ssdm name="ret_ln376"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

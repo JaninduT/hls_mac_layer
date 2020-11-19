@@ -1,0 +1,1490 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Nov 19 12:27:32 2020
+# Process ID: 11992
+# Current directory: E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Command line: vivado.exe -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file: E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file: E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source bd_0_hls_inst_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top bd_0_hls_inst_0 -part xc7a35tcpg236-1 -directive sdx_optimization_effort_high -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10256 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 980.402 ; gain = 234.434
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'send_frame' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 14'b00000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 14'b00000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 14'b00000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 14'b00000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 14'b00000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 14'b00000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 14'b00000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 14'b00000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 14'b00000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 14'b00001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 14'b00010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 14'b00100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 14'b01000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 14'b10000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame.v:148]
+INFO: [Synth 8-6157] synthesizing module 'send_frame_edca_qfYi' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_edca_qfYi.v:40]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 1600 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'send_frame_edca_qfYi_ram' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_edca_qfYi.v:6]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 1600 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_edca_qfYi.v:19]
+INFO: [Synth 8-3876] $readmem data file './send_frame_edca_qfYi_ram.dat' is read successfully [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_edca_qfYi.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'send_frame_edca_qfYi_ram' (1#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_edca_qfYi.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'send_frame_edca_qfYi' (2#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_edca_qfYi.v:40]
+INFO: [Synth 8-6157] synthesizing module 'send_frame_frame' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_frame.v:40]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 100 - type: integer 
+	Parameter AddressWidth bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'send_frame_frame_ram' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_frame.v:6]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 7 - type: integer 
+	Parameter MEM_SIZE bound to: 100 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_frame.v:19]
+INFO: [Synth 8-3876] $readmem data file './send_frame_frame_ram.dat' is read successfully [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_frame.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'send_frame_frame_ram' (3#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_frame.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'send_frame_frame' (4#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_frame.v:40]
+INFO: [Synth 8-6157] synthesizing module 'initial_edca_process' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/initial_edca_process.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 17'b00000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 17'b00000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 17'b00000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 17'b00000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 17'b00000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 17'b00000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 17'b00000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 17'b00000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 17'b00000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 17'b00000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 17'b00000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 17'b00000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 17'b00001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 17'b00010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 17'b00100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 17'b01000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 17'b10000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/initial_edca_process.v:229]
+INFO: [Synth 8-6157] synthesizing module 'start_tx' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_tx.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_tx.v:139]
+INFO: [Synth 8-6157] synthesizing module 'enqueue_dequeue_fram' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/enqueue_dequeue_fram.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 18'b000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 18'b000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 18'b000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 18'b000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 18'b000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 18'b000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 18'b000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 18'b000000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 18'b000000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 18'b000000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 18'b000000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 18'b000000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 18'b000001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 18'b000010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 18'b000100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 18'b001000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 18'b010000000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 18'b100000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/enqueue_dequeue_fram.v:178]
+INFO: [Synth 8-6155] done synthesizing module 'enqueue_dequeue_fram' (5#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/enqueue_dequeue_fram.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'start_tx' (6#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_tx.v:10]
+INFO: [Synth 8-6157] synthesizing module 'backoff_vo' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/backoff_vo.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/backoff_vo.v:55]
+INFO: [Synth 8-6157] synthesizing module 'random_int_gen' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/random_int_gen.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 38'b00000000000000000000000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 38'b00000000000000000000000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 38'b00000000000000000000000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 38'b00000000000000000000000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 38'b00000000000000000000000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 38'b00000000000000000000000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 38'b00000000000000000000000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 38'b00000000000000000000000000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 38'b00000000000000000000000000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 38'b00000000000000000000000000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 38'b00000000000000000000000000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 38'b00000000000000000000000000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 38'b00000000000000000000000001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 38'b00000000000000000000000010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 38'b00000000000000000000000100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 38'b00000000000000000000001000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 38'b00000000000000000000010000000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 38'b00000000000000000000100000000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 38'b00000000000000000001000000000000000000 
+	Parameter ap_ST_fsm_state20 bound to: 38'b00000000000000000010000000000000000000 
+	Parameter ap_ST_fsm_state21 bound to: 38'b00000000000000000100000000000000000000 
+	Parameter ap_ST_fsm_state22 bound to: 38'b00000000000000001000000000000000000000 
+	Parameter ap_ST_fsm_state23 bound to: 38'b00000000000000010000000000000000000000 
+	Parameter ap_ST_fsm_state24 bound to: 38'b00000000000000100000000000000000000000 
+	Parameter ap_ST_fsm_state25 bound to: 38'b00000000000001000000000000000000000000 
+	Parameter ap_ST_fsm_state26 bound to: 38'b00000000000010000000000000000000000000 
+	Parameter ap_ST_fsm_state27 bound to: 38'b00000000000100000000000000000000000000 
+	Parameter ap_ST_fsm_state28 bound to: 38'b00000000001000000000000000000000000000 
+	Parameter ap_ST_fsm_state29 bound to: 38'b00000000010000000000000000000000000000 
+	Parameter ap_ST_fsm_state30 bound to: 38'b00000000100000000000000000000000000000 
+	Parameter ap_ST_fsm_state31 bound to: 38'b00000001000000000000000000000000000000 
+	Parameter ap_ST_fsm_state32 bound to: 38'b00000010000000000000000000000000000000 
+	Parameter ap_ST_fsm_state33 bound to: 38'b00000100000000000000000000000000000000 
+	Parameter ap_ST_fsm_state34 bound to: 38'b00001000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state35 bound to: 38'b00010000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state36 bound to: 38'b00100000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state37 bound to: 38'b01000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state38 bound to: 38'b10000000000000000000000000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/random_int_gen.v:82]
+INFO: [Synth 8-6157] synthesizing module 'send_frame_urem_3bkb' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_urem_3bkb.v:154]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 36 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter dout_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'send_frame_urem_3bkb_div' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_urem_3bkb.v:82]
+	Parameter in0_WIDTH bound to: 32 - type: integer 
+	Parameter in1_WIDTH bound to: 10 - type: integer 
+	Parameter out_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'send_frame_urem_3bkb_div_u' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_urem_3bkb.v:7]
+	Parameter in0_WIDTH bound to: 32 - type: integer 
+	Parameter in1_WIDTH bound to: 10 - type: integer 
+	Parameter out_WIDTH bound to: 10 - type: integer 
+	Parameter cal_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'send_frame_urem_3bkb_div_u' (7#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_urem_3bkb.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'send_frame_urem_3bkb_div' (8#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_urem_3bkb.v:82]
+INFO: [Synth 8-6155] done synthesizing module 'send_frame_urem_3bkb' (9#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_urem_3bkb.v:154]
+INFO: [Synth 8-6157] synthesizing module 'send_frame_mul_mucud' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_mul_mucud.v:13]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 17 - type: integer 
+	Parameter din1_WIDTH bound to: 17 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'send_frame_mul_mucud_DSP48_0' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_mul_mucud.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'send_frame_mul_mucud_DSP48_0' (10#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_mul_mucud.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'send_frame_mul_mucud' (11#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_mul_mucud.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'random_int_gen' (12#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/random_int_gen.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'backoff_vo' (13#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/backoff_vo.v:10]
+INFO: [Synth 8-6157] synthesizing module 'start_backoff_vi' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_backoff_vi.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_backoff_vi.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'start_backoff_vi' (14#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_backoff_vi.v:10]
+INFO: [Synth 8-6157] synthesizing module 'start_backoff_be' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_backoff_be.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_backoff_be.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'start_backoff_be' (15#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_backoff_be.v:10]
+INFO: [Synth 8-6157] synthesizing module 'start_backoff_bk' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_backoff_bk.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_backoff_bk.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'start_backoff_bk' (16#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_backoff_bk.v:10]
+INFO: [Synth 8-6157] synthesizing module 'slot_boundary_timing' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/slot_boundary_timing.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 9'b000000001 
+	Parameter ap_ST_fsm_state2 bound to: 9'b000000010 
+	Parameter ap_ST_fsm_state3 bound to: 9'b000000100 
+	Parameter ap_ST_fsm_state4 bound to: 9'b000001000 
+	Parameter ap_ST_fsm_state5 bound to: 9'b000010000 
+	Parameter ap_ST_fsm_state6 bound to: 9'b000100000 
+	Parameter ap_ST_fsm_state7 bound to: 9'b001000000 
+	Parameter ap_ST_fsm_state8 bound to: 9'b010000000 
+	Parameter ap_ST_fsm_state9 bound to: 9'b100000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/slot_boundary_timing.v:47]
+INFO: [Synth 8-6157] synthesizing module 'start_timer' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_timer.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_state2 bound to: 3'b010 
+	Parameter ap_ST_fsm_state3 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_timer.v:41]
+WARNING: [Synth 8-6014] Unused sequential element tc_fu_32_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_timer.v:97]
+INFO: [Synth 8-6155] done synthesizing module 'start_timer' (17#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/start_timer.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'slot_boundary_timing' (18#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/slot_boundary_timing.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'initial_edca_process' (19#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/initial_edca_process.v:10]
+INFO: [Synth 8-6157] synthesizing module 'phy_txend_confirm' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/phy_txend_confirm.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 17'b00000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 17'b00000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 17'b00000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 17'b00000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 17'b00000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 17'b00000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 17'b00000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 17'b00000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 17'b00000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 17'b00000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 17'b00000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 17'b00000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 17'b00001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 17'b00010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 17'b00100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 17'b01000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 17'b10000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/phy_txend_confirm.v:229]
+INFO: [Synth 8-6155] done synthesizing module 'phy_txend_confirm' (20#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/phy_txend_confirm.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_request' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_request.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 17'b00000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 17'b00000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 17'b00000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 17'b00000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 17'b00000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 17'b00000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 17'b00000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 17'b00000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 17'b00000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 17'b00000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 17'b00000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 17'b00000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 17'b00001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 17'b00010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 17'b00100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 17'b01000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 17'b10000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_request.v:223]
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_requdEe' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_requdEe.v:37]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 70 - type: integer 
+	Parameter AddressWidth bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_requdEe_ram' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_requdEe.v:6]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 7 - type: integer 
+	Parameter MEM_SIZE bound to: 70 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_requdEe.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_requdEe_ram' (21#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_requdEe.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_requdEe' (22#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_requdEe.v:37]
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_requeOg' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_requeOg.v:52]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 100 - type: integer 
+	Parameter AddressWidth bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_requeOg_ram' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_requeOg.v:6]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 7 - type: integer 
+	Parameter MEM_SIZE bound to: 100 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_requeOg.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_requeOg_ram' (23#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_requeOg.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_requeOg' (24#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_requeOg.v:52]
+INFO: [Synth 8-6157] synthesizing module 'compose_mac_frame' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/compose_mac_frame.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 19'b0000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 19'b0000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 19'b0000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 19'b0000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 19'b0000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 19'b0000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 19'b0000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 19'b0000000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 19'b0000000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 19'b0000000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 19'b0000000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 19'b0000000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 19'b0000001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 19'b0000010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 19'b0000100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 19'b0001000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 19'b0010000000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 19'b0100000000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 19'b1000000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/compose_mac_frame.v:103]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/compose_mac_frame.v:606]
+INFO: [Synth 8-6155] done synthesizing module 'compose_mac_frame' (25#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/compose_mac_frame.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ma_unitdatax_status_s' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_status_s.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_status_s.v:34]
+WARNING: [Synth 8-6014] Unused sequential element queue_full_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_status_s.v:76]
+WARNING: [Synth 8-6014] Unused sequential element successful_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_status_s.v:82]
+WARNING: [Synth 8-6014] Unused sequential element unsupported_channel_s_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_status_s.v:88]
+WARNING: [Synth 8-6014] Unused sequential element unsupported_priority_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_status_s.v:94]
+WARNING: [Synth 8-6014] Unused sequential element unsupported_service_s_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_status_s.v:100]
+WARNING: [Synth 8-6014] Unused sequential element unsupported_tx_param_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_status_s.v:106]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_status_s' (26#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_status_s.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ma_unitdatax_request' (27#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/ma_unitdatax_request.v:10]
+INFO: [Synth 8-6157] synthesizing module 'phy_data_request' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/phy_data_request.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/phy_data_request.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'phy_data_request' (28#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/phy_data_request.v:10]
+INFO: [Synth 8-6157] synthesizing module 'phy_txend_request' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/phy_txend_request.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/phy_txend_request.v:32]
+WARNING: [Synth 8-6014] Unused sequential element stop_tx_reg was removed.  [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/phy_txend_request.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'phy_txend_request' (29#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/phy_txend_request.v:10]
+INFO: [Synth 8-6157] synthesizing module 'phy_data_request_1' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/phy_data_request_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'phy_data_request_1' (30#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/phy_data_request_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'send_frame' (31#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (32#1) [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:57]
+WARNING: [Synth 8-3331] design phy_data_request_1 has unconnected port data[7]
+WARNING: [Synth 8-3331] design phy_data_request_1 has unconnected port data[6]
+WARNING: [Synth 8-3331] design phy_data_request_1 has unconnected port data[5]
+WARNING: [Synth 8-3331] design phy_data_request_1 has unconnected port data[4]
+WARNING: [Synth 8-3331] design phy_data_request_1 has unconnected port data[3]
+WARNING: [Synth 8-3331] design phy_data_request_1 has unconnected port data[2]
+WARNING: [Synth 8-3331] design phy_data_request_1 has unconnected port data[1]
+WARNING: [Synth 8-3331] design phy_data_request_1 has unconnected port data[0]
+WARNING: [Synth 8-3331] design phy_data_request has unconnected port data_q0[7]
+WARNING: [Synth 8-3331] design phy_data_request has unconnected port data_q0[6]
+WARNING: [Synth 8-3331] design phy_data_request has unconnected port data_q0[5]
+WARNING: [Synth 8-3331] design phy_data_request has unconnected port data_q0[4]
+WARNING: [Synth 8-3331] design phy_data_request has unconnected port data_q0[3]
+WARNING: [Synth 8-3331] design phy_data_request has unconnected port data_q0[2]
+WARNING: [Synth 8-3331] design phy_data_request has unconnected port data_q0[1]
+WARNING: [Synth 8-3331] design phy_data_request has unconnected port data_q0[0]
+WARNING: [Synth 8-3331] design ma_unitdatax_status_s has unconnected port trans_sts[2]
+WARNING: [Synth 8-3331] design ma_unitdatax_status_s has unconnected port trans_sts[1]
+WARNING: [Synth 8-3331] design ma_unitdatax_status_s has unconnected port trans_sts[0]
+WARNING: [Synth 8-3331] design compose_mac_frame has unconnected port up[3]
+WARNING: [Synth 8-3331] design ma_unitdatax_requeOg has unconnected port reset
+WARNING: [Synth 8-3331] design ma_unitdatax_requdEe has unconnected port reset
+WARNING: [Synth 8-3331] design backoff_vo has unconnected port available_spaces_vo[1]
+WARNING: [Synth 8-3331] design backoff_vo has unconnected port available_spaces_vo[0]
+WARNING: [Synth 8-3331] design start_tx has unconnected port current_txop_holder[2]
+WARNING: [Synth 8-3331] design send_frame_frame has unconnected port reset
+WARNING: [Synth 8-3331] design send_frame_edca_qfYi has unconnected port reset
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q0[7]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q0[6]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q0[5]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q0[4]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q0[3]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q0[2]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q0[1]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q0[0]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q1[7]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q1[6]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q1[5]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q1[4]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q1[3]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q1[2]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q1[1]
+WARNING: [Synth 8-3331] design send_frame has unconnected port dest_addr_mac_q1[0]
+WARNING: [Synth 8-3331] design send_frame has unconnected port t_slot[1]
+WARNING: [Synth 8-3331] design send_frame has unconnected port t_slot[0]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[63]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[62]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[61]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[60]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[59]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[58]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[57]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[56]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[55]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[54]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[53]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[52]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[51]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[50]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[49]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[48]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[47]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[46]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[45]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[44]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[43]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[42]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[41]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[40]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[39]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[38]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[37]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[36]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[35]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[34]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[33]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[32]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[31]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[30]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[29]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[28]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[27]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[26]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[25]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[24]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[23]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[22]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[21]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[20]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[19]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[18]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[17]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[16]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[15]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[14]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[13]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[12]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[11]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[10]
+WARNING: [Synth 8-3331] design send_frame has unconnected port expiry_time[9]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1078.102 ; gain = 332.133
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1078.434 ; gain = 332.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1078.434 ; gain = 332.465
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.231 . Memory (MB): peak = 1078.434 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/send_frame_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/send_frame_ooc.xdc] for cell 'inst'
+Parsing XDC File [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1198.195 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.269 . Memory (MB): peak = 1212.902 ; gain = 14.707
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1212.902 ; gain = 466.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1212.902 ; gain = 466.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1212.902 ; gain = 466.934
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'mul_ln84_reg_1170_reg[1:0]' into 'mul_ln97_reg_1162_reg[1:0]' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/enqueue_dequeue_fram.v:1078]
+INFO: [Synth 8-4471] merging register 'mul_ln71_reg_1178_reg[1:0]' into 'mul_ln97_reg_1162_reg[1:0]' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/enqueue_dequeue_fram.v:1070]
+INFO: [Synth 8-4471] merging register 'mul_ln58_reg_1186_reg[1:0]' into 'mul_ln97_reg_1162_reg[1:0]' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/enqueue_dequeue_fram.v:1062]
+INFO: [Synth 8-4471] merging register 'mul_ln153_reg_1226_reg[1:0]' into 'mul_ln97_reg_1162_reg[1:0]' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/enqueue_dequeue_fram.v:1056]
+INFO: [Synth 8-4471] merging register 'mul_ln140_reg_1234_reg[1:0]' into 'mul_ln97_reg_1162_reg[1:0]' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/enqueue_dequeue_fram.v:1048]
+INFO: [Synth 8-4471] merging register 'mul_ln127_reg_1242_reg[1:0]' into 'mul_ln97_reg_1162_reg[1:0]' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/enqueue_dequeue_fram.v:1040]
+INFO: [Synth 8-4471] merging register 'mul_ln114_reg_1250_reg[1:0]' into 'mul_ln97_reg_1162_reg[1:0]' [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/enqueue_dequeue_fram.v:1032]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'remd_tmp_reg' and it is trimmed from '32' to '31' bits. [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/send_frame_urem_3bkb.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'high_2_reg_166_reg' and it is trimmed from '32' to '16' bits. [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/6e2c/hdl/verilog/random_int_gen.v:176]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-3971] The signal "ma_unitdatax_requeOg_ram:/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1212.902 ; gain = 466.934
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 9     
+	   2 Input     32 Bit       Adders := 18    
+	   2 Input     16 Bit       Adders := 9     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 12    
+	   2 Input     10 Bit       Adders := 14    
+	   2 Input      9 Bit       Adders := 26    
+	   2 Input      7 Bit       Adders := 31    
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 25    
+	   2 Input      2 Bit       Adders := 26    
++---XORs : 
+	   2 Input     32 Bit         XORs := 3     
++---Registers : 
+	               38 Bit    Registers := 9     
+	               33 Bit    Registers := 9     
+	               32 Bit    Registers := 39    
+	               31 Bit    Registers := 18    
+	               19 Bit    Registers := 1     
+	               18 Bit    Registers := 3     
+	               17 Bit    Registers := 3     
+	               16 Bit    Registers := 18    
+	               14 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 58    
+	                9 Bit    Registers := 14    
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 63    
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 21    
+	                2 Bit    Registers := 48    
+	                1 Bit    Registers := 120   
++---RAMs : 
+	              12K Bit         RAMs := 1     
+	              800 Bit         RAMs := 1     
++---Muxes : 
+	  39 Input     38 Bit        Muxes := 9     
+	   2 Input     32 Bit        Muxes := 40    
+	   2 Input     31 Bit        Muxes := 9     
+	   2 Input     19 Bit        Muxes := 2     
+	  20 Input     19 Bit        Muxes := 1     
+	  10 Input     18 Bit        Muxes := 3     
+	   2 Input     18 Bit        Muxes := 25    
+	   2 Input     17 Bit        Muxes := 6     
+	   6 Input     17 Bit        Muxes := 1     
+	  18 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 5     
+	   2 Input     15 Bit        Muxes := 3     
+	   3 Input     14 Bit        Muxes := 2     
+	   6 Input     14 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 2     
+	   3 Input     11 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 84    
+	   2 Input      9 Bit        Muxes := 6     
+	   7 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 10    
+	   2 Input      7 Bit        Muxes := 9     
+	   2 Input      6 Bit        Muxes := 11    
+	   2 Input      5 Bit        Muxes := 3     
+	   5 Input      4 Bit        Muxes := 3     
+	   8 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      3 Bit        Muxes := 60    
+	   5 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 109   
+	   4 Input      2 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 225   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module send_frame_edca_qfYi_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	              12K Bit         RAMs := 1     
+Module send_frame_frame_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module enqueue_dequeue_fram 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 8     
+	   2 Input      7 Bit       Adders := 8     
+	   2 Input      3 Bit       Adders := 8     
+	   2 Input      2 Bit       Adders := 8     
++---Registers : 
+	               18 Bit    Registers := 1     
+	                9 Bit    Registers := 4     
+	                7 Bit    Registers := 16    
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 9     
++---Muxes : 
+	  10 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 8     
+	   5 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 8     
+	   2 Input      2 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 22    
+Module start_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 1     
+Module send_frame_urem_3bkb_div_u 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               31 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 1     
+Module send_frame_urem_3bkb_div 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
+Module random_int_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               38 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               31 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  39 Input     38 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+Module backoff_vo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module start_backoff_vi 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 5     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module start_backoff_be 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 5     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module start_backoff_bk 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 5     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module start_timer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module slot_boundary_timing 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   7 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+Module initial_edca_process 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 3     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     15 Bit        Muxes := 1     
+	   3 Input     14 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 10    
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 17    
+Module phy_txend_confirm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 3     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     15 Bit        Muxes := 1     
+	   3 Input     14 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 10    
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 17    
+Module ma_unitdatax_requdEe_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module ma_unitdatax_requeOg_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---RAMs : 
+	              800 Bit         RAMs := 1     
+Module compose_mac_frame 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 3     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               19 Bit    Registers := 1     
+	                7 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     19 Bit        Muxes := 2     
+	  20 Input     19 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+Module ma_unitdatax_status_s 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module ma_unitdatax_request 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               17 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	                7 Bit    Registers := 3     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   6 Input     17 Bit        Muxes := 1     
+	  18 Input     17 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   6 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 25    
+Module phy_data_request 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module phy_txend_request 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module send_frame 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               10 Bit    Registers := 7     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 8     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 11    
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 5     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 11    
+	   2 Input      2 Bit        Muxes := 17    
+	   2 Input      1 Bit        Muxes := 53    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p, operation Mode is: A*(B:0xbc8f).
+DSP Report: operator grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p is absorbed into DSP grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p.
+DSP Report: Generating DSP grp_random_int_gen_fu_32/low_1_fu_54_p2, operation Mode is: (A:0xbc8f)*B.
+DSP Report: operator grp_random_int_gen_fu_32/low_1_fu_54_p2 is absorbed into DSP grp_random_int_gen_fu_32/low_1_fu_54_p2.
+DSP Report: Generating DSP grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p, operation Mode is: A*(B:0xbc8f).
+DSP Report: operator grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p is absorbed into DSP grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p.
+DSP Report: Generating DSP grp_random_int_gen_fu_37/low_1_fu_54_p2, operation Mode is: (A:0xbc8f)*B.
+DSP Report: operator grp_random_int_gen_fu_37/low_1_fu_54_p2 is absorbed into DSP grp_random_int_gen_fu_37/low_1_fu_54_p2.
+DSP Report: Generating DSP grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p, operation Mode is: A*(B:0xbc8f).
+DSP Report: operator grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p is absorbed into DSP grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p.
+DSP Report: Generating DSP grp_random_int_gen_fu_37/low_1_fu_54_p2, operation Mode is: (A:0xbc8f)*B.
+DSP Report: operator grp_random_int_gen_fu_37/low_1_fu_54_p2 is absorbed into DSP grp_random_int_gen_fu_37/low_1_fu_54_p2.
+DSP Report: Generating DSP grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p, operation Mode is: A*(B:0xbc8f).
+DSP Report: operator grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p is absorbed into DSP grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p.
+DSP Report: Generating DSP grp_random_int_gen_fu_37/low_1_fu_54_p2, operation Mode is: (A:0xbc8f)*B.
+DSP Report: operator grp_random_int_gen_fu_37/low_1_fu_54_p2 is absorbed into DSP grp_random_int_gen_fu_37/low_1_fu_54_p2.
+DSP Report: Generating DSP grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p, operation Mode is: A*(B:0xbc8f).
+DSP Report: operator grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p is absorbed into DSP grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p.
+DSP Report: Generating DSP grp_random_int_gen_fu_32/low_1_fu_54_p2, operation Mode is: (A:0xbc8f)*B.
+DSP Report: operator grp_random_int_gen_fu_32/low_1_fu_54_p2 is absorbed into DSP grp_random_int_gen_fu_32/low_1_fu_54_p2.
+DSP Report: Generating DSP grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p, operation Mode is: A*(B:0xbc8f).
+DSP Report: operator grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p is absorbed into DSP grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p.
+DSP Report: Generating DSP grp_random_int_gen_fu_37/low_1_fu_54_p2, operation Mode is: (A:0xbc8f)*B.
+DSP Report: operator grp_random_int_gen_fu_37/low_1_fu_54_p2 is absorbed into DSP grp_random_int_gen_fu_37/low_1_fu_54_p2.
+DSP Report: Generating DSP grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p, operation Mode is: A*(B:0xbc8f).
+DSP Report: operator grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p is absorbed into DSP grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p.
+DSP Report: Generating DSP grp_random_int_gen_fu_37/low_1_fu_54_p2, operation Mode is: (A:0xbc8f)*B.
+DSP Report: operator grp_random_int_gen_fu_37/low_1_fu_54_p2 is absorbed into DSP grp_random_int_gen_fu_37/low_1_fu_54_p2.
+DSP Report: Generating DSP grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p, operation Mode is: A*(B:0xbc8f).
+DSP Report: operator grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p is absorbed into DSP grp_random_int_gen_fu_37/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p.
+DSP Report: Generating DSP grp_random_int_gen_fu_37/low_1_fu_54_p2, operation Mode is: (A:0xbc8f)*B.
+DSP Report: operator grp_random_int_gen_fu_37/low_1_fu_54_p2 is absorbed into DSP grp_random_int_gen_fu_37/low_1_fu_54_p2.
+DSP Report: Generating DSP send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p, operation Mode is: A*(B:0xbc8f).
+DSP Report: operator send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p is absorbed into DSP send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p.
+DSP Report: Generating DSP low_1_fu_54_p2, operation Mode is: (A:0xbc8f)*B.
+DSP Report: operator low_1_fu_54_p2 is absorbed into DSP low_1_fu_54_p2.
+WARNING: [Synth 8-6014] Unused sequential element frame_U/send_frame_frame_ram_U/ram_reg was removed. 
+INFO: [Synth 8-3971] The signal "inst/grp_ma_unitdatax_request_fu_344/mac_data_U/ma_unitdatax_requeOg_ram_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[0]' (FD) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[0]' (FDE) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[1]' (FD) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[2]' (FD) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (backoff_vo:/\grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[3] )
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[4]' (FD) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[5]' (FD) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[6]'
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[6]' (FD) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[7]' (FD) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[8]'
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[8]' (FD) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (backoff_vo:/\grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/low_1_reg_161_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_backoff_be:/\grp_random_int_gen_fu_37/low_1_reg_161_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_backoff_vi:/\grp_random_int_gen_fu_37/low_1_reg_161_reg[31] )
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[1]' (FDE) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[2]' (FDE) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[4]' (FDE) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[5]' (FDE) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[6]'
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[6]' (FDE) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[7]' (FDE) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[8]'
+INFO: [Synth 8-3886] merging instance 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[8]' (FDE) to 'backoff_vo:/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln58_reg_1186_reg[-1111111109]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln58_reg_1186_reg[-1111111106]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln58_reg_1186_reg[-1111111111]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln58_reg_1186_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln58_reg_1186_reg[-1111111110]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln58_reg_1186_reg[-1111111107]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln58_reg_1186_reg[-1111111107] )
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln97_reg_1162_reg[-1111111109]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln97_reg_1162_reg[-1111111106]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln97_reg_1162_reg[-1111111111]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln97_reg_1162_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln97_reg_1162_reg[-1111111110]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln97_reg_1162_reg[-1111111107]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln97_reg_1162_reg[-1111111107] )
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln71_reg_1178_reg[-1111111109]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln71_reg_1178_reg[-1111111106]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln71_reg_1178_reg[-1111111111]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln71_reg_1178_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln71_reg_1178_reg[-1111111110]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln71_reg_1178_reg[-1111111107]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln71_reg_1178_reg[-1111111107] )
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln84_reg_1170_reg[-1111111109]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln84_reg_1170_reg[-1111111106]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln84_reg_1170_reg[-1111111111]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln84_reg_1170_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln84_reg_1170_reg[-1111111110]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln84_reg_1170_reg[-1111111107]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln84_reg_1170_reg[-1111111107] )
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/read_pointer_vo_load_reg_1206_reg[0]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln153_reg_1226_reg[-1111111109]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/read_pointer_vo_load_reg_1206_reg[1]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln153_reg_1226_reg[-1111111108]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/read_pointer_vi_load_reg_1201_reg[0]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln140_reg_1234_reg[-1111111109]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/read_pointer_vi_load_reg_1201_reg[1]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln140_reg_1234_reg[-1111111108]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/read_pointer_be_load_reg_1196_reg[0]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln127_reg_1242_reg[-1111111109]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/read_pointer_be_load_reg_1196_reg[1]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln127_reg_1242_reg[-1111111108]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/read_pointer_bk_load_reg_1191_reg[0]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln114_reg_1250_reg[-1111111109]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/read_pointer_bk_load_reg_1191_reg[1]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln114_reg_1250_reg[-1111111108]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_backoff_bk:/\grp_random_int_gen_fu_37/low_1_reg_161_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (backoff_vo:/\grp_random_int_gen_fu_32/low_1_reg_161_reg[31] )
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln114_reg_1250_reg[-1111111109]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln114_reg_1250_reg[-1111111106]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln114_reg_1250_reg[-1111111108] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln114_reg_1250_reg[-1111111107] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln114_reg_1250_reg[-1111111106] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln114_reg_1250_reg[-1111111105] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln114_reg_1250_reg[-1111111104] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln114_reg_1250_reg[-1111111103] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln153_reg_1226_reg[-1111111103] )
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln153_reg_1226_reg[-1111111109]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln153_reg_1226_reg[-1111111106]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln153_reg_1226_reg[-1111111108] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln153_reg_1226_reg[-1111111107] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln153_reg_1226_reg[-1111111106] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln153_reg_1226_reg[-1111111105] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln153_reg_1226_reg[-1111111104] )
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln127_reg_1242_reg[-1111111109]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln127_reg_1242_reg[-1111111106]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln127_reg_1242_reg[-1111111108] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln127_reg_1242_reg[-1111111107] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln127_reg_1242_reg[-1111111106] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln127_reg_1242_reg[-1111111105] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln127_reg_1242_reg[-1111111104] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln127_reg_1242_reg[-1111111103] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln97_reg_1162_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln97_reg_1162_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln140_reg_1234_reg[-1111111109]' (FDE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln140_reg_1234_reg[-1111111106]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln140_reg_1234_reg[-1111111108] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln140_reg_1234_reg[-1111111107] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln140_reg_1234_reg[-1111111106] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln140_reg_1234_reg[-1111111105] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln140_reg_1234_reg[-1111111104] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/mul_ln140_reg_1234_reg[-1111111103] )
+INFO: [Synth 8-3886] merging instance 'slot_boundary_timing:/grp_start_timer_fu_53/total_count_fu_28_reg[0]' (FDR) to 'slot_boundary_timing:/grp_start_timer_fu_53/total_count_fu_28_reg[1]'
+INFO: [Synth 8-3886] merging instance 'slot_boundary_timing:/grp_start_timer_fu_53/total_count_fu_28_reg[1]' (FDR) to 'slot_boundary_timing:/grp_start_timer_fu_53/total_count_fu_28_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (slot_boundary_timing:/\grp_start_timer_fu_53/total_count_fu_28_reg[2] )
+INFO: [Synth 8-3886] merging instance 'slot_boundary_timing:/grp_start_timer_fu_53/total_count_fu_28_reg[3]' (FDSE) to 'slot_boundary_timing:/grp_start_timer_fu_53/total_count_fu_28_reg[6]'
+INFO: [Synth 8-3886] merging instance 'slot_boundary_timing:/grp_start_timer_fu_53/total_count_fu_28_reg[4]' (FDR) to 'slot_boundary_timing:/grp_start_timer_fu_53/total_count_fu_28_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (slot_boundary_timing:/\grp_start_timer_fu_53/total_count_fu_28_reg[5] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111109]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111106]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111108] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111111]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111110]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111111]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111110]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111107]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln84_reg_1170_reg[-1111111111]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln84_reg_1170_reg[-1111111110]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln97_reg_1162_reg[-1111111111]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln97_reg_1162_reg[-1111111110]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111107]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111106] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111105] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111104] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln58_reg_1186_reg[-1111111103] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln97_reg_1162_reg[-1111111103] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln97_reg_1162_reg[-1111111109]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln97_reg_1162_reg[-1111111106]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln97_reg_1162_reg[-1111111108] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln97_reg_1162_reg[-1111111107]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111107]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln97_reg_1162_reg[-1111111106] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln97_reg_1162_reg[-1111111105] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln97_reg_1162_reg[-1111111104] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111109]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111106]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111108] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111107]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln84_reg_1170_reg[-1111111107]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111106] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111105] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111104] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln71_reg_1178_reg[-1111111103] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln84_reg_1170_reg[-1111111109]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln84_reg_1170_reg[-1111111106]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln84_reg_1170_reg[-1111111108] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln84_reg_1170_reg[-1111111107] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln84_reg_1170_reg[-1111111106] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln84_reg_1170_reg[-1111111105] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln84_reg_1170_reg[-1111111104] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln84_reg_1170_reg[-1111111103] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln114_reg_1250_reg[-1111111109]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln114_reg_1250_reg[-1111111106]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln114_reg_1250_reg[-1111111111]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln114_reg_1250_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln114_reg_1250_reg[-1111111110]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln114_reg_1250_reg[-1111111107]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln114_reg_1250_reg[-1111111107] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln153_reg_1226_reg[-1111111109]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln153_reg_1226_reg[-1111111106]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln153_reg_1226_reg[-1111111111]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln153_reg_1226_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln153_reg_1226_reg[-1111111110]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln153_reg_1226_reg[-1111111107]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln153_reg_1226_reg[-1111111107] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln127_reg_1242_reg[-1111111109]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln127_reg_1242_reg[-1111111106]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln127_reg_1242_reg[-1111111111]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln127_reg_1242_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln127_reg_1242_reg[-1111111110]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln127_reg_1242_reg[-1111111107]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln127_reg_1242_reg[-1111111107] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln97_reg_1162_reg[0]' (FD) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln97_reg_1162_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln97_reg_1162_reg[1] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln140_reg_1234_reg[-1111111109]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln140_reg_1234_reg[-1111111106]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln140_reg_1234_reg[-1111111111]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln140_reg_1234_reg[-1111111107]'
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln140_reg_1234_reg[-1111111110]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/mul_ln140_reg_1234_reg[-1111111107]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/mul_ln140_reg_1234_reg[-1111111107] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (backoff_vo:/\grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (backoff_vo:/\grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[9] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/add_ln58_reg_1322_reg[7]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/add_ln58_reg_1322_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/add_ln58_reg_1322_reg[8] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/add_ln97_reg_1268_reg[8]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/add_ln97_reg_1268_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/add_ln97_reg_1268_reg[7] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/add_ln71_reg_1304_reg[7]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/add_ln71_reg_1304_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/add_ln71_reg_1304_reg[8] )
+INFO: [Synth 8-3886] merging instance 'start_tx:/grp_enqueue_dequeue_fram_fu_44/add_ln84_reg_1286_reg[7]' (FDE) to 'start_tx:/grp_enqueue_dequeue_fram_fu_44/add_ln84_reg_1286_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (start_tx:/\grp_enqueue_dequeue_fram_fu_44/add_ln84_reg_1286_reg[8] )
+INFO: [Synth 8-3886] merging instance 'inst/grp_initial_edca_process_fu_240/grp_slot_boundary_timing_fu_204/ap_CS_fsm_reg[7]' (FDR) to 'inst/grp_initial_edca_process_fu_240/grp_slot_boundary_timing_fu_204/ap_CS_fsm_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_initial_edca_process_fu_240/grp_slot_boundary_timing_fu_204/ap_CS_fsm_reg[6]' (FDR) to 'inst/grp_initial_edca_process_fu_240/grp_slot_boundary_timing_fu_204/ap_CS_fsm_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_initial_edca_process_fu_240/grp_slot_boundary_timing_fu_204/ap_CS_fsm_reg[8]' (FDR) to 'inst/grp_initial_edca_process_fu_240/grp_slot_boundary_timing_fu_204/ap_CS_fsm_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_initial_edca_process_fu_240/grp_slot_boundary_timing_fu_204/ap_CS_fsm_reg[3]' (FDR) to 'inst/grp_initial_edca_process_fu_240/grp_slot_boundary_timing_fu_204/ap_CS_fsm_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/grp_initial_edca_process_fu_240/grp_slot_boundary_timing_fu_204/\ap_CS_fsm_reg[4] )
+INFO: [Synth 8-3886] merging instance 'inst/grp_phy_txend_confirm_fu_292/grp_slot_boundary_timing_fu_202/ap_CS_fsm_reg[7]' (FDR) to 'inst/grp_phy_txend_confirm_fu_292/grp_slot_boundary_timing_fu_202/ap_CS_fsm_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_phy_txend_confirm_fu_292/grp_slot_boundary_timing_fu_202/ap_CS_fsm_reg[6]' (FDR) to 'inst/grp_phy_txend_confirm_fu_292/grp_slot_boundary_timing_fu_202/ap_CS_fsm_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_phy_txend_confirm_fu_292/grp_slot_boundary_timing_fu_202/ap_CS_fsm_reg[1]' (FDR) to 'inst/grp_phy_txend_confirm_fu_292/grp_slot_boundary_timing_fu_202/ap_CS_fsm_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/grp_phy_txend_confirm_fu_292/grp_slot_boundary_timing_fu_202/\ap_CS_fsm_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/grp_initial_edca_process_fu_240/grp_slot_boundary_timing_fu_204/\sifs_timeout_1_reg_122_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/grp_initial_edca_process_fu_240/grp_slot_boundary_timing_fu_204/\sifs_timeout_reg_131_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/grp_phy_txend_confirm_fu_292/grp_slot_boundary_timing_fu_202/\sifs_timeout_reg_131_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_phy_txend_confirm_fu_292/grp_start_backoff_vi_fu_163/\CW_vi_loc_2_reg_24_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_initial_edca_process_fu_240/grp_start_backoff_vi_fu_165/\CW_vi_loc_2_reg_24_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_phy_txend_confirm_fu_292/grp_start_backoff_be_fu_176/\CW_be_loc_2_reg_24_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_initial_edca_process_fu_240/grp_start_backoff_be_fu_178/\CW_be_loc_2_reg_24_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_phy_txend_confirm_fu_292/grp_start_backoff_bk_fu_189/\CW_bk_loc_2_reg_24_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_initial_edca_process_fu_240/grp_start_backoff_bk_fu_191/\CW_bk_loc_2_reg_24_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/p_0_reg_352_reg[2]' (FDSE) to 'inst/grp_ma_unitdatax_request_fu_344/grp_enqueue_dequeue_fram_fu_257/p_0_reg_352_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_phy_txend_confirm_fu_292/grp_start_backoff_vi_fu_163/\grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_initial_edca_process_fu_240/grp_start_backoff_vi_fu_165/\grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_phy_txend_confirm_fu_292/grp_start_backoff_be_fu_176/\grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_initial_edca_process_fu_240/grp_start_backoff_be_fu_178/\grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_phy_txend_confirm_fu_292/grp_start_backoff_bk_fu_189/\grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_initial_edca_process_fu_240/grp_start_backoff_bk_fu_191/\grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/divisor0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_phy_txend_confirm_fu_292/grp_start_backoff_vi_fu_163/\grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_initial_edca_process_fu_240/grp_start_backoff_vi_fu_165/\grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_phy_txend_confirm_fu_292/grp_start_backoff_be_fu_176/\grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_initial_edca_process_fu_240/grp_start_backoff_be_fu_178/\grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_phy_txend_confirm_fu_292/grp_start_backoff_bk_fu_189/\grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/grp_initial_edca_process_fu_240/grp_start_backoff_bk_fu_191/\grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/divisor0_reg[0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1212.902 ; gain = 466.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------+-------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                                                    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | edca_queues_U/send_frame_edca_qfYi_ram_U/ram_reg                              | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|inst        | grp_ma_unitdatax_request_fu_344/mac_data_U/ma_unitdatax_requeOg_ram_U/ram_reg | 128 x 8(READ_FIRST)    | W | R | 128 x 8(READ_FIRST)    | W | R | Port A and B     | 1      | 0      | 
++------------+-------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++------------+-------------------------------------------------------------------------------+----------------+----------------------+----------------------------+
+|Module Name | RTL Object                                                                    | Inference      | Size (Depth x Width) | Primitives                 | 
++------------+-------------------------------------------------------------------------------+----------------+----------------------+----------------------------+
+|inst        | grp_ma_unitdatax_request_fu_344/llc_data_U/ma_unitdatax_requdEe_ram_U/ram_reg | User Attribute | 128 x 8              | RAM16X1S x 8	RAM64X1S x 8	 | 
++------------+-------------------------------------------------------------------------------+----------------+----------------------+----------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping	Report (see note below)
++-----------------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                  | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|send_frame_mul_mucud_DSP48_0 | A*(B:0xbc8f) | 17     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|random_int_gen               | (A:0xbc8f)*B | 15     | 16     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|send_frame_mul_mucud_DSP48_0 | A*(B:0xbc8f) | 17     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|random_int_gen               | (A:0xbc8f)*B | 15     | 16     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|send_frame_mul_mucud_DSP48_0 | A*(B:0xbc8f) | 17     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|random_int_gen               | (A:0xbc8f)*B | 15     | 16     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|send_frame_mul_mucud_DSP48_0 | A*(B:0xbc8f) | 17     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|random_int_gen               | (A:0xbc8f)*B | 15     | 16     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|send_frame_mul_mucud_DSP48_0 | A*(B:0xbc8f) | 17     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|random_int_gen               | (A:0xbc8f)*B | 15     | 16     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|send_frame_mul_mucud_DSP48_0 | A*(B:0xbc8f) | 17     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|random_int_gen               | (A:0xbc8f)*B | 15     | 16     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|send_frame_mul_mucud_DSP48_0 | A*(B:0xbc8f) | 17     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|random_int_gen               | (A:0xbc8f)*B | 15     | 16     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|send_frame_mul_mucud_DSP48_0 | A*(B:0xbc8f) | 17     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|random_int_gen               | (A:0xbc8f)*B | 15     | 16     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|send_frame_mul_mucud_DSP48_0 | A*(B:0xbc8f) | 17     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|random_int_gen               | (A:0xbc8f)*B | 15     | 16     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1212.902 ; gain = 466.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1243.910 ; gain = 497.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------+-------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                                                    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | edca_queues_U/send_frame_edca_qfYi_ram_U/ram_reg                              | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|inst        | grp_ma_unitdatax_request_fu_344/mac_data_U/ma_unitdatax_requeOg_ram_U/ram_reg | 128 x 8(READ_FIRST)    | W | R | 128 x 8(READ_FIRST)    | W | R | Port A and B     | 1      | 0      | 
++------------+-------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping	Report
++------------+-------------------------------------------------------------------------------+----------------+----------------------+----------------------------+
+|Module Name | RTL Object                                                                    | Inference      | Size (Depth x Width) | Primitives                 | 
++------------+-------------------------------------------------------------------------------+----------------+----------------------+----------------------------+
+|inst        | grp_ma_unitdatax_request_fu_344/llc_data_U/ma_unitdatax_requdEe_ram_U/ram_reg | User Attribute | 128 x 8              | RAM16X1S x 8	RAM64X1S x 8	 | 
++------------+-------------------------------------------------------------------------------+----------------+----------------------+----------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7053] The timing for the instance inst/edca_queues_U/send_frame_edca_qfYi_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance inst/grp_ma_unitdatax_request_fu_344/mac_data_U/ma_unitdatax_requeOg_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance inst/grp_ma_unitdatax_request_fu_344/mac_data_U/ma_unitdatax_requeOg_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1318.918 ; gain = 572.949
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 1322.691 ; gain = 576.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 1322.691 ; gain = 576.723
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 1322.691 ; gain = 576.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 1322.691 ; gain = 576.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 1323.688 ; gain = 577.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 1323.688 ; gain = 577.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                                                                                                                              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|send_frame  | grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/r_stage_reg[32]       | 32     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|send_frame  | grp_initial_edca_process_fu_240/grp_start_backoff_vi_fu_165/grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/r_stage_reg[32] | 32     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|send_frame  | grp_initial_edca_process_fu_240/grp_start_backoff_be_fu_178/grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/r_stage_reg[32] | 32     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|send_frame  | grp_initial_edca_process_fu_240/grp_start_backoff_bk_fu_191/grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/r_stage_reg[32] | 32     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|send_frame  | grp_phy_txend_confirm_fu_292/grp_backoff_vo_fu_151/grp_random_int_gen_fu_32/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/r_stage_reg[32]          | 32     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|send_frame  | grp_phy_txend_confirm_fu_292/grp_start_backoff_vi_fu_163/grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/r_stage_reg[32]    | 32     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|send_frame  | grp_phy_txend_confirm_fu_292/grp_start_backoff_be_fu_176/grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/r_stage_reg[32]    | 32     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|send_frame  | grp_phy_txend_confirm_fu_292/grp_start_backoff_bk_fu_189/grp_random_int_gen_fu_37/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/r_stage_reg[32]    | 32     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|send_frame  | grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/send_frame_urem_3bkb_div_u_0/r_stage_reg[32]                            | 32     | 1     | YES          | NO                 | YES               | 0      | 1       | 
++------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |   304|
+|2     |DSP48E1    |    18|
+|3     |LUT1       |    95|
+|4     |LUT2       |   570|
+|5     |LUT3       |   609|
+|6     |LUT4       |   623|
+|7     |LUT5       |   696|
+|8     |LUT6       |  1390|
+|9     |MUXF7      |    52|
+|10    |RAM16X1S   |     8|
+|11    |RAM64X1S   |     8|
+|12    |RAMB18E1   |     1|
+|13    |RAMB18E1_1 |     1|
+|14    |SRLC32E    |     9|
+|15    |FDRE       |  3350|
+|16    |FDSE       |    64|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------+--------------------------------+------+
+|      |Instance                                   |Module                          |Cells |
++------+-------------------------------------------+--------------------------------+------+
+|1     |top                                        |                                |  7798|
+|2     |  inst                                     |send_frame                      |  7798|
+|3     |    edca_queues_U                          |send_frame_edca_qfYi            |    12|
+|4     |      send_frame_edca_qfYi_ram_U           |send_frame_edca_qfYi_ram        |    12|
+|5     |    grp_initial_edca_process_fu_240        |initial_edca_process            |  2884|
+|6     |      grp_backoff_vo_fu_153                |backoff_vo_25                   |   564|
+|7     |        grp_random_int_gen_fu_32           |random_int_gen_51               |   550|
+|8     |          send_frame_mul_mucud_U24         |send_frame_mul_mucud_52         |    60|
+|9     |            send_frame_mul_mucud_DSP48_0_U |send_frame_mul_mucud_DSP48_0_56 |    60|
+|10    |          send_frame_urem_3bkb_U23         |send_frame_urem_3bkb_53         |   300|
+|11    |            send_frame_urem_3bkb_div_U     |send_frame_urem_3bkb_div_54     |   300|
+|12    |              send_frame_urem_3bkb_div_u_0 |send_frame_urem_3bkb_div_u_55   |   238|
+|13    |      grp_slot_boundary_timing_fu_204      |slot_boundary_timing_26         |    87|
+|14    |        grp_start_timer_fu_53              |start_timer_50                  |    70|
+|15    |      grp_start_backoff_be_fu_178          |start_backoff_be_27             |   568|
+|16    |        grp_random_int_gen_fu_37           |random_int_gen_44               |   536|
+|17    |          send_frame_mul_mucud_U24         |send_frame_mul_mucud_45         |    60|
+|18    |            send_frame_mul_mucud_DSP48_0_U |send_frame_mul_mucud_DSP48_0_49 |    60|
+|19    |          send_frame_urem_3bkb_U23         |send_frame_urem_3bkb_46         |   293|
+|20    |            send_frame_urem_3bkb_div_U     |send_frame_urem_3bkb_div_47     |   293|
+|21    |              send_frame_urem_3bkb_div_u_0 |send_frame_urem_3bkb_div_u_48   |   222|
+|22    |      grp_start_backoff_bk_fu_191          |start_backoff_bk_28             |   562|
+|23    |        grp_random_int_gen_fu_37           |random_int_gen_38               |   530|
+|24    |          send_frame_mul_mucud_U24         |send_frame_mul_mucud_39         |    60|
+|25    |            send_frame_mul_mucud_DSP48_0_U |send_frame_mul_mucud_DSP48_0_43 |    60|
+|26    |          send_frame_urem_3bkb_U23         |send_frame_urem_3bkb_40         |   293|
+|27    |            send_frame_urem_3bkb_div_U     |send_frame_urem_3bkb_div_41     |   293|
+|28    |              send_frame_urem_3bkb_div_u_0 |send_frame_urem_3bkb_div_u_42   |   222|
+|29    |      grp_start_backoff_vi_fu_165          |start_backoff_vi_29             |   568|
+|30    |        grp_random_int_gen_fu_37           |random_int_gen_32               |   536|
+|31    |          send_frame_mul_mucud_U24         |send_frame_mul_mucud_33         |    60|
+|32    |            send_frame_mul_mucud_DSP48_0_U |send_frame_mul_mucud_DSP48_0_37 |    60|
+|33    |          send_frame_urem_3bkb_U23         |send_frame_urem_3bkb_34         |   293|
+|34    |            send_frame_urem_3bkb_div_U     |send_frame_urem_3bkb_div_35     |   293|
+|35    |              send_frame_urem_3bkb_div_u_0 |send_frame_urem_3bkb_div_u_36   |   222|
+|36    |      grp_start_tx_fu_119                  |start_tx_30                     |   483|
+|37    |        grp_enqueue_dequeue_fram_fu_44     |enqueue_dequeue_fram_31         |   476|
+|38    |    grp_ma_unitdatax_request_fu_344        |ma_unitdatax_request            |  1591|
+|39    |      grp_compose_mac_frame_fu_303         |compose_mac_frame               |   327|
+|40    |      grp_enqueue_dequeue_fram_fu_257      |enqueue_dequeue_fram_18         |   531|
+|41    |      grp_random_int_gen_fu_295            |random_int_gen_19               |   559|
+|42    |        send_frame_mul_mucud_U24           |send_frame_mul_mucud_20         |    60|
+|43    |          send_frame_mul_mucud_DSP48_0_U   |send_frame_mul_mucud_DSP48_0_24 |    60|
+|44    |        send_frame_urem_3bkb_U23           |send_frame_urem_3bkb_21         |   348|
+|45    |          send_frame_urem_3bkb_div_U       |send_frame_urem_3bkb_div_22     |   348|
+|46    |            send_frame_urem_3bkb_div_u_0   |send_frame_urem_3bkb_div_u_23   |   223|
+|47    |      llc_data_U                           |ma_unitdatax_requdEe            |    25|
+|48    |        ma_unitdatax_requdEe_ram_U         |ma_unitdatax_requdEe_ram        |    25|
+|49    |      mac_data_U                           |ma_unitdatax_requeOg            |    10|
+|50    |        ma_unitdatax_requeOg_ram_U         |ma_unitdatax_requeOg_ram        |    10|
+|51    |    grp_phy_data_request_fu_422            |phy_data_request                |     9|
+|52    |    grp_phy_txend_confirm_fu_292           |phy_txend_confirm               |  3031|
+|53    |      grp_backoff_vo_fu_151                |backoff_vo                      |   544|
+|54    |        grp_random_int_gen_fu_32           |random_int_gen_12               |   528|
+|55    |          send_frame_mul_mucud_U24         |send_frame_mul_mucud_13         |    60|
+|56    |            send_frame_mul_mucud_DSP48_0_U |send_frame_mul_mucud_DSP48_0_17 |    60|
+|57    |          send_frame_urem_3bkb_U23         |send_frame_urem_3bkb_14         |   273|
+|58    |            send_frame_urem_3bkb_div_U     |send_frame_urem_3bkb_div_15     |   273|
+|59    |              send_frame_urem_3bkb_div_u_0 |send_frame_urem_3bkb_div_u_16   |   207|
+|60    |      grp_slot_boundary_timing_fu_202      |slot_boundary_timing            |    97|
+|61    |        grp_start_timer_fu_53              |start_timer                     |    81|
+|62    |      grp_start_backoff_be_fu_176          |start_backoff_be                |   586|
+|63    |        grp_random_int_gen_fu_37           |random_int_gen_6                |   542|
+|64    |          send_frame_mul_mucud_U24         |send_frame_mul_mucud_7          |    60|
+|65    |            send_frame_mul_mucud_DSP48_0_U |send_frame_mul_mucud_DSP48_0_11 |    60|
+|66    |          send_frame_urem_3bkb_U23         |send_frame_urem_3bkb_8          |   293|
+|67    |            send_frame_urem_3bkb_div_U     |send_frame_urem_3bkb_div_9      |   293|
+|68    |              send_frame_urem_3bkb_div_u_0 |send_frame_urem_3bkb_div_u_10   |   222|
+|69    |      grp_start_backoff_bk_fu_189          |start_backoff_bk                |   606|
+|70    |        grp_random_int_gen_fu_37           |random_int_gen_0                |   562|
+|71    |          send_frame_mul_mucud_U24         |send_frame_mul_mucud_1          |    60|
+|72    |            send_frame_mul_mucud_DSP48_0_U |send_frame_mul_mucud_DSP48_0_5  |    60|
+|73    |          send_frame_urem_3bkb_U23         |send_frame_urem_3bkb_2          |   293|
+|74    |            send_frame_urem_3bkb_div_U     |send_frame_urem_3bkb_div_3      |   293|
+|75    |              send_frame_urem_3bkb_div_u_0 |send_frame_urem_3bkb_div_u_4    |   222|
+|76    |      grp_start_backoff_vi_fu_163          |start_backoff_vi                |   599|
+|77    |        grp_random_int_gen_fu_37           |random_int_gen                  |   555|
+|78    |          send_frame_mul_mucud_U24         |send_frame_mul_mucud            |    60|
+|79    |            send_frame_mul_mucud_DSP48_0_U |send_frame_mul_mucud_DSP48_0    |    60|
+|80    |          send_frame_urem_3bkb_U23         |send_frame_urem_3bkb            |   302|
+|81    |            send_frame_urem_3bkb_div_U     |send_frame_urem_3bkb_div        |   302|
+|82    |              send_frame_urem_3bkb_div_u_0 |send_frame_urem_3bkb_div_u      |   222|
+|83    |      grp_start_tx_fu_117                  |start_tx                        |   541|
+|84    |        grp_enqueue_dequeue_fram_fu_44     |enqueue_dequeue_fram            |   534|
++------+-------------------------------------------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 1323.688 ; gain = 577.719
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 105 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 1323.688 ; gain = 443.250
+Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 1323.688 ; gain = 577.719
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.266 . Memory (MB): peak = 1323.688 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 392 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1323.688 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 8 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 8 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+310 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:12 ; elapsed = 00:01:17 . Memory (MB): peak = 1323.688 ; gain = 844.293
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1323.688 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = 1f54f0bf402dbe23
+INFO: [Coretcl 2-1174] Renamed 83 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1323.688 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 19 12:29:02 2020...

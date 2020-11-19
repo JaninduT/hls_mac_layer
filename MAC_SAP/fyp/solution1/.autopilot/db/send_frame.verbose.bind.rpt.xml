@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'send_frame'" level="0">
+<item name = "Date">Thu Nov 19 12:13:10 2020
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">fyp</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35t-cpg236-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.017 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_initial_edca_process_fu_240">initial_edca_process, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_phy_txend_confirm_fu_292">phy_txend_confirm, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_ma_unitdatax_request_fu_344">ma_unitdatax_request, 2, 1599, 20.000 ns, 15.990 us, 2, 1599, none</column>
+<column name="grp_phy_data_request_fu_422">phy_data_request, 1, 1, 10.000 ns, 10.000 ns, 1, 1, none</column>
+<column name="call_ln17_phy_txend_request_fu_429">phy_txend_request, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln6_phy_data_request_1_fu_435">phy_data_request_1, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">300, 20400, 3 ~ 204, -, -, 100, no</column>
+<column name=" + Loop 1.1">200, 200, 2, -, -, 100, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

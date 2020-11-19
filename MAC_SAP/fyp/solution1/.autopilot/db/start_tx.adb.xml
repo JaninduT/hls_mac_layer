@@ -1,0 +1,248 @@
+<stg><name>start_tx</name>
+
+
+<trans_list>
+
+<trans id="9" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="3" op_0_bw="3" op_1_bw="3">
+<![CDATA[
+._crit_edge:0  %current_txop_holder_s = call i3 @_ssdm_op_Read.ap_auto.i3(i3 %current_txop_holder)
+
+]]></Node>
+<StgValue><ssdm name="current_txop_holder_s"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="2" op_0_bw="3">
+<![CDATA[
+._crit_edge:1  %trunc_ln368 = trunc i3 %current_txop_holder_s to i2
+
+]]></Node>
+<StgValue><ssdm name="trunc_ln368"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="2" op_0_bw="2" op_1_bw="2">
+<![CDATA[
+._crit_edge:2  %add_ln368 = add i2 -1, %trunc_ln368
+
+]]></Node>
+<StgValue><ssdm name="add_ln368"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="4" op_0_bw="4" op_1_bw="1" op_2_bw="2" op_3_bw="8" op_4_bw="3" op_5_bw="2" op_6_bw="3" op_7_bw="2" op_8_bw="3" op_9_bw="2" op_10_bw="3" op_11_bw="2" op_12_bw="8" op_13_bw="2" op_14_bw="2" op_15_bw="2" op_16_bw="2">
+<![CDATA[
+._crit_edge:3  %empty = call fastcc i4 @enqueue_dequeue_fram(i1 true, i2 %add_ln368, [100 x i8]* %tx_frame)
+
+]]></Node>
+<StgValue><ssdm name="empty"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="7" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="4" op_0_bw="4" op_1_bw="1" op_2_bw="2" op_3_bw="8" op_4_bw="3" op_5_bw="2" op_6_bw="3" op_7_bw="2" op_8_bw="3" op_9_bw="2" op_10_bw="3" op_11_bw="2" op_12_bw="8" op_13_bw="2" op_14_bw="2" op_15_bw="2" op_16_bw="2">
+<![CDATA[
+._crit_edge:3  %empty = call fastcc i4 @enqueue_dequeue_fram(i1 true, i2 %add_ln368, [100 x i8]* %tx_frame)
+
+]]></Node>
+<StgValue><ssdm name="empty"/></StgValue>
+</operation>
+
+<operation id="8" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="0">
+<![CDATA[
+._crit_edge:4  ret void
+
+]]></Node>
+<StgValue><ssdm name="ret_ln376"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="10" name="current_txop_holder" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="current_txop_holder"/></StgValue>
+</port>
+<port id="11" name="tx_frame" dir="2" iftype="1">
+<core>RAM</core><StgValue><ssdm name="tx_frame"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="12" name="available_spaces_bk" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="available_spaces_bk"/></StgValue>
+</port>
+<port id="13" name="write_pointer_bk" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="write_pointer_bk"/></StgValue>
+</port>
+<port id="14" name="available_spaces_be" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="available_spaces_be"/></StgValue>
+</port>
+<port id="15" name="write_pointer_be" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="write_pointer_be"/></StgValue>
+</port>
+<port id="16" name="available_spaces_vi" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="available_spaces_vi"/></StgValue>
+</port>
+<port id="17" name="write_pointer_vi" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="write_pointer_vi"/></StgValue>
+</port>
+<port id="18" name="available_spaces_vo" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="available_spaces_vo"/></StgValue>
+</port>
+<port id="19" name="write_pointer_vo" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="write_pointer_vo"/></StgValue>
+</port>
+<port id="20" name="edca_queues" dir="2" iftype="1">
+<core>RAM</core><StgValue><ssdm name="edca_queues"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="21" name="read_pointer_bk" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="read_pointer_bk"/></StgValue>
+</port>
+<port id="22" name="read_pointer_be" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="read_pointer_be"/></StgValue>
+</port>
+<port id="23" name="read_pointer_vi" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="read_pointer_vi"/></StgValue>
+</port>
+<port id="24" name="read_pointer_vo" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="read_pointer_vo"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="26" from="_ssdm_op_Read.ap_auto.i3" to="current_txop_holder_s" fromId="25" toId="3">
+</dataflow>
+<dataflow id="27" from="current_txop_holder" to="current_txop_holder_s" fromId="10" toId="3">
+</dataflow>
+<dataflow id="28" from="current_txop_holder_s" to="trunc_ln368" fromId="3" toId="4">
+</dataflow>
+<dataflow id="30" from="StgValue_29" to="add_ln368" fromId="29" toId="5">
+</dataflow>
+<dataflow id="31" from="trunc_ln368" to="add_ln368" fromId="4" toId="5">
+</dataflow>
+<dataflow id="33" from="enqueue_dequeue_fram" to="empty" fromId="32" toId="6">
+</dataflow>
+<dataflow id="35" from="StgValue_34" to="empty" fromId="34" toId="6">
+</dataflow>
+<dataflow id="36" from="add_ln368" to="empty" fromId="5" toId="6">
+</dataflow>
+<dataflow id="37" from="tx_frame" to="empty" fromId="11" toId="6">
+</dataflow>
+<dataflow id="38" from="available_spaces_bk" to="empty" fromId="12" toId="6">
+</dataflow>
+<dataflow id="39" from="write_pointer_bk" to="empty" fromId="13" toId="6">
+</dataflow>
+<dataflow id="40" from="available_spaces_be" to="empty" fromId="14" toId="6">
+</dataflow>
+<dataflow id="41" from="write_pointer_be" to="empty" fromId="15" toId="6">
+</dataflow>
+<dataflow id="42" from="available_spaces_vi" to="empty" fromId="16" toId="6">
+</dataflow>
+<dataflow id="43" from="write_pointer_vi" to="empty" fromId="17" toId="6">
+</dataflow>
+<dataflow id="44" from="available_spaces_vo" to="empty" fromId="18" toId="6">
+</dataflow>
+<dataflow id="45" from="write_pointer_vo" to="empty" fromId="19" toId="6">
+</dataflow>
+<dataflow id="46" from="edca_queues" to="empty" fromId="20" toId="6">
+</dataflow>
+<dataflow id="47" from="read_pointer_bk" to="empty" fromId="21" toId="6">
+</dataflow>
+<dataflow id="48" from="read_pointer_be" to="empty" fromId="22" toId="6">
+</dataflow>
+<dataflow id="49" from="read_pointer_vi" to="empty" fromId="23" toId="6">
+</dataflow>
+<dataflow id="50" from="read_pointer_vo" to="empty" fromId="24" toId="6">
+</dataflow>
+<dataflow id="51" from="enqueue_dequeue_fram" to="empty" fromId="32" toId="7">
+</dataflow>
+<dataflow id="52" from="StgValue_34" to="empty" fromId="34" toId="7">
+</dataflow>
+<dataflow id="53" from="add_ln368" to="empty" fromId="5" toId="7">
+</dataflow>
+<dataflow id="54" from="tx_frame" to="empty" fromId="11" toId="7">
+</dataflow>
+<dataflow id="55" from="available_spaces_bk" to="empty" fromId="12" toId="7">
+</dataflow>
+<dataflow id="56" from="write_pointer_bk" to="empty" fromId="13" toId="7">
+</dataflow>
+<dataflow id="57" from="available_spaces_be" to="empty" fromId="14" toId="7">
+</dataflow>
+<dataflow id="58" from="write_pointer_be" to="empty" fromId="15" toId="7">
+</dataflow>
+<dataflow id="59" from="available_spaces_vi" to="empty" fromId="16" toId="7">
+</dataflow>
+<dataflow id="60" from="write_pointer_vi" to="empty" fromId="17" toId="7">
+</dataflow>
+<dataflow id="61" from="available_spaces_vo" to="empty" fromId="18" toId="7">
+</dataflow>
+<dataflow id="62" from="write_pointer_vo" to="empty" fromId="19" toId="7">
+</dataflow>
+<dataflow id="63" from="edca_queues" to="empty" fromId="20" toId="7">
+</dataflow>
+<dataflow id="64" from="read_pointer_bk" to="empty" fromId="21" toId="7">
+</dataflow>
+<dataflow id="65" from="read_pointer_be" to="empty" fromId="22" toId="7">
+</dataflow>
+<dataflow id="66" from="read_pointer_vi" to="empty" fromId="23" toId="7">
+</dataflow>
+<dataflow id="67" from="read_pointer_vo" to="empty" fromId="24" toId="7">
+</dataflow>
+</dataflows>
+
+
+</stg>

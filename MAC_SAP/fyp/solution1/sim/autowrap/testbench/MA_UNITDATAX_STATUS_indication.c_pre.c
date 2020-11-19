@@ -5490,6 +5490,7 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
+static const uint8 generic_timeout = 2;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_STATUS_indication.h" 2
 
 enum transmission_status{

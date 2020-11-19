@@ -18,7 +18,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../MA_UNITDATAX_STATUS_indication_test.c ../../../MA_UNITDATAX_request_test.c ../../../PHY_CCA_indication_test.c ../../../PHY_DATA_confirm_test.c ../../../PHY_RXEND_indication_test.c ../../../PHY_TXEND_confirm_test.c ../../../PHY_TXSTART_confirm_test.c ../../../backoff_test.c ../../../compose_mac_frame_test.c ../../../compose_mac_header_test.c ../../../crc_32_test.c ../../../crc_32_validate_test.c ../../../decompose_mac_frame_test.c ../../../edca_test.c ../../../mac_layer_test.c ../../../r_n_g_test.c ../../../slot_boundary_timing_test.c ../../../timer_test.c ../../../MA_UNITDATAX_STATUS_indication.c ../../../MA_UNITDATAX_request.c ../../../PHY_CCA_indication.c ../../../PHY_DATA_confirm.c ../../../PHY_DATA_request.c ../../../PHY_RXEND_indication.c ../../../PHY_TXEND_confirm.c ../../../PHY_TXEND_request.c ../../../PHY_TXSTART_confirm.c ../../../PHY_TXSTART_request.c ../../../compose_mac_frame.c ../../../crc_32.c ../../../crc_32_validate.c ../../../decompose_mac_frame.c ../../../edca.c ../../../mac_layer.c ../../../r_n_g.c ../../../timer.c
+HLS_SOURCES = ../../../timer_test.c ../../../slot_boundary_timing_test.c ../../../r_n_g_test.c ../../../mac_layer_test.c ../../../edca_test.c ../../../decompose_mac_frame_test.c ../../../crc_32_validate_test.c ../../../crc_32_test.c ../../../compose_mac_header_test.c ../../../compose_mac_frame_test.c ../../../backoff_test.c ../../../PHY_TXSTART_confirm_test.c ../../../PHY_TXEND_confirm_test.c ../../../PHY_RXSTART_indication_test.c ../../../PHY_RXEND_indication_test.c ../../../PHY_DATA_indication_test.c ../../../PHY_DATA_confirm_test.c ../../../PHY_CCA_indication_test.c ../../../MA_UNITDATA_indication_test.c ../../../MA_UNITDATAX_request_test.c ../../../MA_UNITDATAX_STATUS_indication_test.c ../../../MA_UNITDATAX_STATUS_indication.c ../../../MA_UNITDATAX_request.c ../../../MA_UNITDATA_indication.c ../../../PHY_CCA_indication.c ../../../PHY_DATA_confirm.c ../../../PHY_DATA_indication.c ../../../PHY_DATA_request.c ../../../PHY_RXEND_indication.c ../../../PHY_RXSTART_indication.c ../../../PHY_TXEND_confirm.c ../../../PHY_TXEND_request.c ../../../PHY_TXSTART_confirm.c ../../../PHY_TXSTART_request.c ../../../compose_mac_frame.c ../../../crc_32.c ../../../crc_32_validate.c ../../../decompose_mac_frame.c ../../../edca.c ../../../initial_edca_proc.c ../../../mac_layer.c ../../../r_n_g.c ../../../timer.c
 
 TARGET := csim.exe
 
@@ -59,6 +59,7 @@ IFLAG += -Wno-unknown-pragmas
 IFLAG += -g
 IFLAG += -DNT
 LFLAG += -Wl,--enable-auto-import 
+DFLAG += -DAUTOCC
 DFLAG += -D__xilinx_ip_top= -DAESL_TB
 CCFLAG += 
 TOOLCHAIN += 
@@ -71,218 +72,262 @@ all: $(TARGET)
 
 
 
-$(ObjDir)/MA_UNITDATAX_STATUS_indication_test.o: ../../../MA_UNITDATAX_STATUS_indication_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../MA_UNITDATAX_STATUS_indication_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/MA_UNITDATAX_STATUS_indication_test.d
-
-$(ObjDir)/MA_UNITDATAX_request_test.o: ../../../MA_UNITDATAX_request_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../MA_UNITDATAX_request_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/MA_UNITDATAX_request_test.d
-
-$(ObjDir)/PHY_CCA_indication_test.o: ../../../PHY_CCA_indication_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../PHY_CCA_indication_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/PHY_CCA_indication_test.d
-
-$(ObjDir)/PHY_DATA_confirm_test.o: ../../../PHY_DATA_confirm_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../PHY_DATA_confirm_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/PHY_DATA_confirm_test.d
-
-$(ObjDir)/PHY_RXEND_indication_test.o: ../../../PHY_RXEND_indication_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../PHY_RXEND_indication_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/PHY_RXEND_indication_test.d
-
-$(ObjDir)/PHY_TXEND_confirm_test.o: ../../../PHY_TXEND_confirm_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../PHY_TXEND_confirm_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/PHY_TXEND_confirm_test.d
-
-$(ObjDir)/PHY_TXSTART_confirm_test.o: ../../../PHY_TXSTART_confirm_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../PHY_TXSTART_confirm_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/PHY_TXSTART_confirm_test.d
-
-$(ObjDir)/backoff_test.o: ../../../backoff_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../backoff_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/backoff_test.d
-
-$(ObjDir)/compose_mac_frame_test.o: ../../../compose_mac_frame_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../compose_mac_frame_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/compose_mac_frame_test.d
-
-$(ObjDir)/compose_mac_header_test.o: ../../../compose_mac_header_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../compose_mac_header_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/compose_mac_header_test.d
-
-$(ObjDir)/crc_32_test.o: ../../../crc_32_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../crc_32_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/crc_32_test.d
-
-$(ObjDir)/crc_32_validate_test.o: ../../../crc_32_validate_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../crc_32_validate_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/crc_32_validate_test.d
-
-$(ObjDir)/decompose_mac_frame_test.o: ../../../decompose_mac_frame_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../decompose_mac_frame_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/decompose_mac_frame_test.d
-
-$(ObjDir)/edca_test.o: ../../../edca_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../edca_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/edca_test.d
-
-$(ObjDir)/mac_layer_test.o: ../../../mac_layer_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../mac_layer_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/mac_layer_test.d
-
-$(ObjDir)/r_n_g_test.o: ../../../r_n_g_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../r_n_g_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/r_n_g_test.d
-
-$(ObjDir)/slot_boundary_timing_test.o: ../../../slot_boundary_timing_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../slot_boundary_timing_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/slot_boundary_timing_test.d
+AUTOCC := cmd //c apcc.bat  
 
 $(ObjDir)/timer_test.o: ../../../timer_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../timer_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../timer_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/timer_test.d
 
+$(ObjDir)/slot_boundary_timing_test.o: ../../../slot_boundary_timing_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../slot_boundary_timing_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/slot_boundary_timing_test.d
+
+$(ObjDir)/r_n_g_test.o: ../../../r_n_g_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../r_n_g_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/r_n_g_test.d
+
+$(ObjDir)/mac_layer_test.o: ../../../mac_layer_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../mac_layer_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/mac_layer_test.d
+
+$(ObjDir)/edca_test.o: ../../../edca_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../edca_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/edca_test.d
+
+$(ObjDir)/decompose_mac_frame_test.o: ../../../decompose_mac_frame_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../decompose_mac_frame_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/decompose_mac_frame_test.d
+
+$(ObjDir)/crc_32_validate_test.o: ../../../crc_32_validate_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../crc_32_validate_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/crc_32_validate_test.d
+
+$(ObjDir)/crc_32_test.o: ../../../crc_32_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../crc_32_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/crc_32_test.d
+
+$(ObjDir)/compose_mac_header_test.o: ../../../compose_mac_header_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../compose_mac_header_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/compose_mac_header_test.d
+
+$(ObjDir)/compose_mac_frame_test.o: ../../../compose_mac_frame_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../compose_mac_frame_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/compose_mac_frame_test.d
+
+$(ObjDir)/backoff_test.o: ../../../backoff_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../backoff_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/backoff_test.d
+
+$(ObjDir)/PHY_TXSTART_confirm_test.o: ../../../PHY_TXSTART_confirm_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../PHY_TXSTART_confirm_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/PHY_TXSTART_confirm_test.d
+
+$(ObjDir)/PHY_TXEND_confirm_test.o: ../../../PHY_TXEND_confirm_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../PHY_TXEND_confirm_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/PHY_TXEND_confirm_test.d
+
+$(ObjDir)/PHY_RXSTART_indication_test.o: ../../../PHY_RXSTART_indication_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../PHY_RXSTART_indication_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/PHY_RXSTART_indication_test.d
+
+$(ObjDir)/PHY_RXEND_indication_test.o: ../../../PHY_RXEND_indication_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../PHY_RXEND_indication_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/PHY_RXEND_indication_test.d
+
+$(ObjDir)/PHY_DATA_indication_test.o: ../../../PHY_DATA_indication_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../PHY_DATA_indication_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/PHY_DATA_indication_test.d
+
+$(ObjDir)/PHY_DATA_confirm_test.o: ../../../PHY_DATA_confirm_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../PHY_DATA_confirm_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/PHY_DATA_confirm_test.d
+
+$(ObjDir)/PHY_CCA_indication_test.o: ../../../PHY_CCA_indication_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../PHY_CCA_indication_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/PHY_CCA_indication_test.d
+
+$(ObjDir)/MA_UNITDATA_indication_test.o: ../../../MA_UNITDATA_indication_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../MA_UNITDATA_indication_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/MA_UNITDATA_indication_test.d
+
+$(ObjDir)/MA_UNITDATAX_request_test.o: ../../../MA_UNITDATAX_request_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../MA_UNITDATAX_request_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/MA_UNITDATAX_request_test.d
+
+$(ObjDir)/MA_UNITDATAX_STATUS_indication_test.o: ../../../MA_UNITDATAX_STATUS_indication_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../MA_UNITDATAX_STATUS_indication_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/MA_UNITDATAX_STATUS_indication_test.d
+
 $(ObjDir)/MA_UNITDATAX_STATUS_indication.o: ../../../MA_UNITDATAX_STATUS_indication.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../MA_UNITDATAX_STATUS_indication.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../MA_UNITDATAX_STATUS_indication.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/MA_UNITDATAX_STATUS_indication.d
 
 $(ObjDir)/MA_UNITDATAX_request.o: ../../../MA_UNITDATAX_request.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../MA_UNITDATAX_request.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../MA_UNITDATAX_request.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/MA_UNITDATAX_request.d
 
+$(ObjDir)/MA_UNITDATA_indication.o: ../../../MA_UNITDATA_indication.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../MA_UNITDATA_indication.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/MA_UNITDATA_indication.d
+
 $(ObjDir)/PHY_CCA_indication.o: ../../../PHY_CCA_indication.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../PHY_CCA_indication.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../PHY_CCA_indication.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/PHY_CCA_indication.d
 
 $(ObjDir)/PHY_DATA_confirm.o: ../../../PHY_DATA_confirm.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../PHY_DATA_confirm.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../PHY_DATA_confirm.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/PHY_DATA_confirm.d
 
+$(ObjDir)/PHY_DATA_indication.o: ../../../PHY_DATA_indication.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../PHY_DATA_indication.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/PHY_DATA_indication.d
+
 $(ObjDir)/PHY_DATA_request.o: ../../../PHY_DATA_request.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../PHY_DATA_request.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../PHY_DATA_request.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/PHY_DATA_request.d
 
 $(ObjDir)/PHY_RXEND_indication.o: ../../../PHY_RXEND_indication.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../PHY_RXEND_indication.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../PHY_RXEND_indication.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/PHY_RXEND_indication.d
 
+$(ObjDir)/PHY_RXSTART_indication.o: ../../../PHY_RXSTART_indication.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../PHY_RXSTART_indication.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/PHY_RXSTART_indication.d
+
 $(ObjDir)/PHY_TXEND_confirm.o: ../../../PHY_TXEND_confirm.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../PHY_TXEND_confirm.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../PHY_TXEND_confirm.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/PHY_TXEND_confirm.d
 
 $(ObjDir)/PHY_TXEND_request.o: ../../../PHY_TXEND_request.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../PHY_TXEND_request.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../PHY_TXEND_request.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/PHY_TXEND_request.d
 
 $(ObjDir)/PHY_TXSTART_confirm.o: ../../../PHY_TXSTART_confirm.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../PHY_TXSTART_confirm.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../PHY_TXSTART_confirm.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/PHY_TXSTART_confirm.d
 
 $(ObjDir)/PHY_TXSTART_request.o: ../../../PHY_TXSTART_request.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../PHY_TXSTART_request.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../PHY_TXSTART_request.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/PHY_TXSTART_request.d
 
 $(ObjDir)/compose_mac_frame.o: ../../../compose_mac_frame.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../compose_mac_frame.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../compose_mac_frame.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/compose_mac_frame.d
 
 $(ObjDir)/crc_32.o: ../../../crc_32.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../crc_32.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../crc_32.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/crc_32.d
 
 $(ObjDir)/crc_32_validate.o: ../../../crc_32_validate.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../crc_32_validate.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../crc_32_validate.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/crc_32_validate.d
 
 $(ObjDir)/decompose_mac_frame.o: ../../../decompose_mac_frame.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../decompose_mac_frame.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../decompose_mac_frame.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/decompose_mac_frame.d
 
 $(ObjDir)/edca.o: ../../../edca.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../edca.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../edca.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/edca.d
 
+$(ObjDir)/initial_edca_proc.o: ../../../initial_edca_proc.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../initial_edca_proc.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/initial_edca_proc.d
+
 $(ObjDir)/mac_layer.o: ../../../mac_layer.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../mac_layer.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../mac_layer.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/mac_layer.d
 
 $(ObjDir)/r_n_g.o: ../../../r_n_g.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../r_n_g.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../r_n_g.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/r_n_g.d
 
 $(ObjDir)/timer.o: ../../../timer.c $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../timer.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling(apcc) ../../../timer.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/timer.d

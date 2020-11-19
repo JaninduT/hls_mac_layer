@@ -1,0 +1,373 @@
+<stg><name>start_backoff_bk</name>
+
+
+<trans_list>
+
+<trans id="19" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+:0  %invoke_reason_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %invoke_reason) nounwind
+
+]]></Node>
+<StgValue><ssdm name="invoke_reason_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="10" op_0_bw="10">
+<![CDATA[
+:1  %CW_bk_load = load i10* @CW_bk, align 2
+
+]]></Node>
+<StgValue><ssdm name="CW_bk_load"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:2  br i1 %invoke_reason_read, label %2, label %1
+
+]]></Node>
+<StgValue><ssdm name="br_ln354"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="invoke_reason_read" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="0" op_0_bw="10" op_1_bw="10" op_2_bw="10">
+<![CDATA[
+:0  store i10 15, i10* @CW_bk, align 2
+
+]]></Node>
+<StgValue><ssdm name="store_ln355"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="invoke_reason_read" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="0" op_0_bw="0">
+<![CDATA[
+:1  br label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln356"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="invoke_reason_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="1" op_0_bw="10" op_1_bw="10">
+<![CDATA[
+:0  %icmp_ln357 = icmp eq i10 %CW_bk_load, -1
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln357"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="invoke_reason_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:1  br i1 %icmp_ln357, label %._crit_edge, label %3
+
+]]></Node>
+<StgValue><ssdm name="br_ln356"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="invoke_reason_read" val="1"/>
+<literal name="icmp_ln357" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="10" op_0_bw="10" op_1_bw="10">
+<![CDATA[
+:0  %shl_ln358 = shl i10 %CW_bk_load, 1
+
+]]></Node>
+<StgValue><ssdm name="shl_ln358"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="invoke_reason_read" val="1"/>
+<literal name="icmp_ln357" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="10" op_0_bw="10" op_1_bw="10">
+<![CDATA[
+:1  %or_ln358 = or i10 %shl_ln358, 1
+
+]]></Node>
+<StgValue><ssdm name="or_ln358"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="invoke_reason_read" val="1"/>
+<literal name="icmp_ln357" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="0" op_0_bw="10" op_1_bw="10" op_2_bw="10">
+<![CDATA[
+:2  store i10 %or_ln358, i10* @CW_bk, align 2
+
+]]></Node>
+<StgValue><ssdm name="store_ln358"/></StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="invoke_reason_read" val="1"/>
+<literal name="icmp_ln357" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="0" op_0_bw="0">
+<![CDATA[
+:3  br label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln359"/></StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="10" op_0_bw="10" op_1_bw="0" op_2_bw="10" op_3_bw="0" op_4_bw="10" op_5_bw="0">
+<![CDATA[
+._crit_edge:0  %CW_bk_loc_2 = phi i10 [ 15, %1 ], [ %CW_bk_load, %2 ], [ %or_ln358, %3 ]
+
+]]></Node>
+<StgValue><ssdm name="CW_bk_loc_2"/></StgValue>
+</operation>
+
+<operation id="15" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="10" op_0_bw="10" op_1_bw="10" op_2_bw="32">
+<![CDATA[
+._crit_edge:1  %tmp = call fastcc zeroext i10 @random_int_gen(i10 zeroext %CW_bk_loc_2)
+
+]]></Node>
+<StgValue><ssdm name="tmp"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="16" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="10" op_0_bw="10" op_1_bw="10" op_2_bw="32">
+<![CDATA[
+._crit_edge:1  %tmp = call fastcc zeroext i10 @random_int_gen(i10 zeroext %CW_bk_loc_2)
+
+]]></Node>
+<StgValue><ssdm name="tmp"/></StgValue>
+</operation>
+
+<operation id="17" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="0" op_0_bw="10" op_1_bw="10">
+<![CDATA[
+._crit_edge:2  store i10 %tmp, i10* @bk_backoff_counter, align 2
+
+]]></Node>
+<StgValue><ssdm name="store_ln361"/></StgValue>
+</operation>
+
+<operation id="18" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="0">
+<![CDATA[
+._crit_edge:3  ret void
+
+]]></Node>
+<StgValue><ssdm name="ret_ln362"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="23" name="invoke_reason" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="invoke_reason"/></StgValue>
+</port>
+<port id="24" name="CW_bk" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="CW_bk"/></StgValue>
+</port>
+<port id="25" name="rand_state" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="rand_state"/></StgValue>
+</port>
+<port id="26" name="bk_backoff_counter" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="bk_backoff_counter"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="28" from="_ssdm_op_Read.ap_auto.i1" to="invoke_reason_read" fromId="27" toId="3">
+</dataflow>
+<dataflow id="29" from="invoke_reason" to="invoke_reason_read" fromId="23" toId="3">
+</dataflow>
+<dataflow id="30" from="CW_bk" to="CW_bk_load" fromId="24" toId="4">
+</dataflow>
+<dataflow id="31" from="invoke_reason_read" to="br_ln354" fromId="3" toId="5">
+</dataflow>
+<dataflow id="33" from="StgValue_32" to="store_ln355" fromId="32" toId="6">
+</dataflow>
+<dataflow id="34" from="CW_bk" to="store_ln355" fromId="24" toId="6">
+</dataflow>
+<dataflow id="35" from="CW_bk_load" to="icmp_ln357" fromId="4" toId="8">
+</dataflow>
+<dataflow id="37" from="StgValue_36" to="icmp_ln357" fromId="36" toId="8">
+</dataflow>
+<dataflow id="38" from="icmp_ln357" to="br_ln356" fromId="8" toId="9">
+</dataflow>
+<dataflow id="39" from="CW_bk_load" to="shl_ln358" fromId="4" toId="10">
+</dataflow>
+<dataflow id="41" from="StgValue_40" to="shl_ln358" fromId="40" toId="10">
+</dataflow>
+<dataflow id="42" from="shl_ln358" to="or_ln358" fromId="10" toId="11">
+</dataflow>
+<dataflow id="43" from="StgValue_40" to="or_ln358" fromId="40" toId="11">
+</dataflow>
+<dataflow id="44" from="or_ln358" to="store_ln358" fromId="11" toId="12">
+</dataflow>
+<dataflow id="45" from="CW_bk" to="store_ln358" fromId="24" toId="12">
+</dataflow>
+<dataflow id="46" from="StgValue_32" to="CW_bk_loc_2" fromId="32" toId="14">
+<condition id="-1">
+<or_exp><and_exp><literal name="invoke_reason_read" val="0"/>
+</and_exp></or_exp>
+</condition>
+</dataflow>
+<dataflow id="47" from="br_ln356" to="CW_bk_loc_2" fromId="7" toId="14">
+</dataflow>
+<dataflow id="48" from="CW_bk_load" to="CW_bk_loc_2" fromId="4" toId="14">
+<condition id="-1">
+<or_exp><and_exp><literal name="invoke_reason_read" val="1"/>
+<literal name="icmp_ln357" val="1"/>
+</and_exp></or_exp>
+</condition>
+</dataflow>
+<dataflow id="49" from="br_ln356" to="CW_bk_loc_2" fromId="9" toId="14">
+</dataflow>
+<dataflow id="50" from="or_ln358" to="CW_bk_loc_2" fromId="11" toId="14">
+<condition id="-1">
+<or_exp><and_exp><literal name="invoke_reason_read" val="1"/>
+<literal name="icmp_ln357" val="0"/>
+</and_exp></or_exp>
+</condition>
+</dataflow>
+<dataflow id="51" from="br_ln359" to="CW_bk_loc_2" fromId="13" toId="14">
+</dataflow>
+<dataflow id="53" from="random_int_gen" to="tmp" fromId="52" toId="15">
+</dataflow>
+<dataflow id="54" from="CW_bk_loc_2" to="tmp" fromId="14" toId="15">
+</dataflow>
+<dataflow id="55" from="rand_state" to="tmp" fromId="25" toId="15">
+</dataflow>
+<dataflow id="56" from="random_int_gen" to="tmp" fromId="52" toId="16">
+</dataflow>
+<dataflow id="57" from="CW_bk_loc_2" to="tmp" fromId="14" toId="16">
+</dataflow>
+<dataflow id="58" from="rand_state" to="tmp" fromId="25" toId="16">
+</dataflow>
+<dataflow id="59" from="tmp" to="store_ln361" fromId="16" toId="17">
+</dataflow>
+<dataflow id="60" from="bk_backoff_counter" to="store_ln361" fromId="26" toId="17">
+</dataflow>
+<dataflow id="61" from="invoke_reason_read" to="StgValue_1" fromId="3" toId="1">
+</dataflow>
+<dataflow id="62" from="icmp_ln357" to="StgValue_1" fromId="8" toId="1">
+</dataflow>
+</dataflows>
+
+
+</stg>

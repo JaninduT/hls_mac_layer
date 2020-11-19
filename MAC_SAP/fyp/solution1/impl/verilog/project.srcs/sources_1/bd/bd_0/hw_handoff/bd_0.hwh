@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov 19 12:27:23 2020" VIVADOVERSION="2019.2">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="bd_0" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000.0" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="ap_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ap_rst" SIGIS="rst" SIGNAME="External_Ports_ap_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="ap_rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="c_identifier_channel_number" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_c_identifier_channel_number">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="c_identifier_channel_number"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="c_identifier_operating_class" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_c_identifier_operating_class">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="c_identifier_operating_class"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="2" NAME="current_txop_holder_i" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_current_txop_holder_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="current_txop_holder_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="current_txop_holder_o" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_current_txop_holder_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="current_txop_holder_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="current_txop_holder_o_ap_vld" SIGIS="undef" SIGNAME="hls_inst_current_txop_holder_o_ap_vld">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="current_txop_holder_o_ap_vld"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="6" NAME="d_rate" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_d_rate">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="d_rate"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="6" NAME="data_address0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_data_address0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="data_address0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="data_ce0" SIGIS="undef" SIGNAME="hls_inst_data_ce0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="data_ce0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="data_q0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_data_q0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="data_q0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="dest_addr_mac_address0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_dest_addr_mac_address0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="dest_addr_mac_address0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="dest_addr_mac_address1" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_dest_addr_mac_address1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="dest_addr_mac_address1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="dest_addr_mac_ce0" SIGIS="undef" SIGNAME="hls_inst_dest_addr_mac_ce0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="dest_addr_mac_ce0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="dest_addr_mac_ce1" SIGIS="undef" SIGNAME="hls_inst_dest_addr_mac_ce1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="dest_addr_mac_ce1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="dest_addr_mac_d0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_dest_addr_mac_d0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="dest_addr_mac_d0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="dest_addr_mac_d1" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_dest_addr_mac_d1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="dest_addr_mac_d1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="dest_addr_mac_q0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_dest_addr_mac_q0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="dest_addr_mac_q0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="dest_addr_mac_q1" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_dest_addr_mac_q1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="dest_addr_mac_q1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="dest_addr_mac_we0" SIGIS="undef" SIGNAME="hls_inst_dest_addr_mac_we0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="dest_addr_mac_we0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="dest_addr_mac_we1" SIGIS="undef" SIGNAME="hls_inst_dest_addr_mac_we1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="dest_addr_mac_we1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="63" NAME="expiry_time" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_expiry_time">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="expiry_time"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="6" NAME="mac_frame_address0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_mac_frame_address0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="mac_frame_address0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mac_frame_ce0" SIGIS="undef" SIGNAME="hls_inst_mac_frame_ce0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="mac_frame_ce0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="mac_frame_d0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_mac_frame_d0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="mac_frame_d0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="mac_frame_q0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_mac_frame_q0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="mac_frame_q0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mac_frame_we0" SIGIS="undef" SIGNAME="hls_inst_mac_frame_we0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="mac_frame_we0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="medium_state" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_medium_state">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="medium_state"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="6" NAME="received_frame_address0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_received_frame_address0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="received_frame_address0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="6" NAME="received_frame_address1" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_received_frame_address1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="received_frame_address1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="received_frame_ce0" SIGIS="undef" SIGNAME="hls_inst_received_frame_ce0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="received_frame_ce0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="received_frame_ce1" SIGIS="undef" SIGNAME="hls_inst_received_frame_ce1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="received_frame_ce1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="received_frame_d0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_received_frame_d0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="received_frame_d0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="received_frame_d1" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_received_frame_d1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="received_frame_d1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="received_frame_q0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_received_frame_q0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="received_frame_q0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="received_frame_q1" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_received_frame_q1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="received_frame_q1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="received_frame_we0" SIGIS="undef" SIGNAME="hls_inst_received_frame_we0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="received_frame_we0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="received_frame_we1" SIGIS="undef" SIGNAME="hls_inst_received_frame_we1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="received_frame_we1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="s_class" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_s_class">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_class"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="source_addr_mac_address0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_source_addr_mac_address0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="source_addr_mac_address0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="source_addr_mac_address1" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_source_addr_mac_address1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="source_addr_mac_address1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="source_addr_mac_ce0" SIGIS="undef" SIGNAME="hls_inst_source_addr_mac_ce0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="source_addr_mac_ce0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="source_addr_mac_ce1" SIGIS="undef" SIGNAME="hls_inst_source_addr_mac_ce1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="source_addr_mac_ce1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="source_addr_mac_q0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_source_addr_mac_q0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="source_addr_mac_q0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="source_addr_mac_q1" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_source_addr_mac_q1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="source_addr_mac_q1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="t_slot" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_t_slot">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="t_slot"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="tx_power_lvl" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_tx_power_lvl">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="tx_power_lvl"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="up" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_up">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="up"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ap_ctrl_start" SIGIS="undef" SIGNAME="hls_inst_ap_start">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="ap_start"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ap_ctrl_done" SIGIS="undef" SIGNAME="hls_inst_ap_done">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="ap_done"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ap_ctrl_idle" SIGIS="undef" SIGNAME="hls_inst_ap_idle">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="ap_idle"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ap_ctrl_ready" SIGIS="undef" SIGNAME="hls_inst_ap_ready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="ap_ready"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES>
+    <BUSINTERFACE BUSNAME="External_Interface_ap_ctrl" NAME="ap_ctrl" TYPE="TARGET">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="start" PHYSICAL="ap_ctrl_start"/>
+        <PORTMAP LOGICAL="done" PHYSICAL="ap_ctrl_done"/>
+        <PORTMAP LOGICAL="idle" PHYSICAL="ap_ctrl_idle"/>
+        <PORTMAP LOGICAL="ready" PHYSICAL="ap_ctrl_ready"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+  </EXTERNALINTERFACES>
+
+  <MODULES>
+    <MODULE COREREVISION="2011191226" FULLNAME="/hls_inst" HWVERSION="1.0" INSTANCE="hls_inst" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="send_frame" VLNV="jt:hls:send_frame:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="bd_0_hls_inst_0"/>
+        <PARAMETER NAME="clk_period" VALUE="10"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="undef"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="source_addr_mac_ce0" SIGIS="undef" SIGNAME="hls_inst_source_addr_mac_ce0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="source_addr_mac_ce0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="source_addr_mac_ce1" SIGIS="undef" SIGNAME="hls_inst_source_addr_mac_ce1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="source_addr_mac_ce1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dest_addr_mac_ce0" SIGIS="undef" SIGNAME="hls_inst_dest_addr_mac_ce0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="dest_addr_mac_ce0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dest_addr_mac_we0" SIGIS="undef" SIGNAME="hls_inst_dest_addr_mac_we0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="dest_addr_mac_we0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dest_addr_mac_ce1" SIGIS="undef" SIGNAME="hls_inst_dest_addr_mac_ce1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="dest_addr_mac_ce1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dest_addr_mac_we1" SIGIS="undef" SIGNAME="hls_inst_dest_addr_mac_we1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="dest_addr_mac_we1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="data_ce0" SIGIS="undef" SIGNAME="hls_inst_data_ce0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="data_ce0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="mac_frame_ce0" SIGIS="undef" SIGNAME="hls_inst_mac_frame_ce0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mac_frame_ce0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="mac_frame_we0" SIGIS="undef" SIGNAME="hls_inst_mac_frame_we0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mac_frame_we0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="current_txop_holder_o_ap_vld" SIGIS="undef" SIGNAME="hls_inst_current_txop_holder_o_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="current_txop_holder_o_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="received_frame_ce0" SIGIS="undef" SIGNAME="hls_inst_received_frame_ce0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="received_frame_ce0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="received_frame_we0" SIGIS="undef" SIGNAME="hls_inst_received_frame_we0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="received_frame_we0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="received_frame_ce1" SIGIS="undef" SIGNAME="hls_inst_received_frame_ce1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="received_frame_ce1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="received_frame_we1" SIGIS="undef" SIGNAME="hls_inst_received_frame_we1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="received_frame_we1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000.0" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst" SIGIS="rst" SIGNAME="External_Ports_ap_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_start" SIGIS="undef" SIGNAME="hls_inst_ap_start">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="ap_ctrl_start"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_done" SIGIS="undef" SIGNAME="hls_inst_ap_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="ap_ctrl_done"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_idle" SIGIS="undef" SIGNAME="hls_inst_ap_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="ap_ctrl_idle"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_ready" SIGIS="undef" SIGNAME="hls_inst_ap_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="ap_ctrl_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="source_addr_mac_address0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_source_addr_mac_address0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="source_addr_mac_address0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="source_addr_mac_q0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_source_addr_mac_q0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="source_addr_mac_q0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="source_addr_mac_address1" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_source_addr_mac_address1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="source_addr_mac_address1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="source_addr_mac_q1" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_source_addr_mac_q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="source_addr_mac_q1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="dest_addr_mac_address0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_dest_addr_mac_address0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="dest_addr_mac_address0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="dest_addr_mac_d0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_dest_addr_mac_d0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="dest_addr_mac_d0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="dest_addr_mac_q0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_dest_addr_mac_q0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="dest_addr_mac_q0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="dest_addr_mac_address1" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_dest_addr_mac_address1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="dest_addr_mac_address1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="dest_addr_mac_d1" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_dest_addr_mac_d1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="dest_addr_mac_d1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="dest_addr_mac_q1" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_dest_addr_mac_q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="dest_addr_mac_q1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="data_address0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_data_address0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="data_address0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="data_q0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_data_q0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="data_q0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="up" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_up">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="up"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_class" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_s_class">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="s_class"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="c_identifier_operating_class" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_c_identifier_operating_class">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_identifier_operating_class"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="c_identifier_channel_number" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_c_identifier_channel_number">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_identifier_channel_number"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="t_slot" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_t_slot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="t_slot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="6" NAME="d_rate" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_d_rate">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="d_rate"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="tx_power_lvl" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_tx_power_lvl">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="tx_power_lvl"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="expiry_time" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_expiry_time">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="expiry_time"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="mac_frame_address0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_mac_frame_address0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mac_frame_address0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="mac_frame_d0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_mac_frame_d0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mac_frame_d0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="mac_frame_q0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_mac_frame_q0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mac_frame_q0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="medium_state" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_medium_state">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="medium_state"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="current_txop_holder_i" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_current_txop_holder_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="current_txop_holder_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="current_txop_holder_o" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_current_txop_holder_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="current_txop_holder_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="received_frame_address0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_received_frame_address0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="received_frame_address0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="received_frame_d0" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_received_frame_d0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="received_frame_d0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="received_frame_q0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_received_frame_q0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="received_frame_q0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="received_frame_address1" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_received_frame_address1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="received_frame_address1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="received_frame_d1" RIGHT="0" SIGIS="data" SIGNAME="hls_inst_received_frame_d1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="received_frame_d1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="received_frame_q1" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_received_frame_q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="received_frame_q1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="External_Interface_ap_ctrl" NAME="ap_ctrl" TYPE="TARGET" VLNV="xilinx.com:interface:acc_handshake:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="start" PHYSICAL="ap_start"/>
+            <PORTMAP LOGICAL="done" PHYSICAL="ap_done"/>
+            <PORTMAP LOGICAL="idle" PHYSICAL="ap_idle"/>
+            <PORTMAP LOGICAL="ready" PHYSICAL="ap_ready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

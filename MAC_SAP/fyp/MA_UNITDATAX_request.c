@@ -42,7 +42,7 @@ void ma_unitdatax_request (mac48 source_addr, mac48 dest_addr,
 		uint4 enqueue_res_bk = enqueue_dequeue_frame(0, 0, mac_data, &d_rate, &tx_power_lvl);
 		if(enqueue_res_bk == 14){
 			if(*medium_state == 0){
-				start_backoff_bk(0);
+				start_backoff_bk(2);
 			}
 			ma_unitdatax_status_indication(source_addr, dest_addr, 0, up, s_class);
 			seq_number += 1;
@@ -55,7 +55,7 @@ void ma_unitdatax_request (mac48 source_addr, mac48 dest_addr,
 		uint4 enqueue_res_be = enqueue_dequeue_frame(0, 1, mac_data, &d_rate, &tx_power_lvl);
 		if(enqueue_res_be == 14){
 			if(*medium_state == 0){
-				start_backoff_be(0);
+				start_backoff_be(2);
 			}
 			ma_unitdatax_status_indication(source_addr, dest_addr, 0, up, s_class);
 			seq_number += 1;
@@ -68,7 +68,7 @@ void ma_unitdatax_request (mac48 source_addr, mac48 dest_addr,
 		uint4 enqueue_res_vi = enqueue_dequeue_frame(0, 2, mac_data, &d_rate, &tx_power_lvl);
 		if(enqueue_res_vi == 14){
 			if(*medium_state == 0){
-				start_backoff_vi(0);
+				start_backoff_vi(2);
 			}
 			ma_unitdatax_status_indication(source_addr, dest_addr, 0, up, s_class);
 			seq_number += 1;
@@ -81,7 +81,7 @@ void ma_unitdatax_request (mac48 source_addr, mac48 dest_addr,
 		uint4 enqueue_res_vo = enqueue_dequeue_frame(0, 3, mac_data, &d_rate, &tx_power_lvl);
 		if(enqueue_res_vo == 14){
 			if(*medium_state == 0){
-				start_backoff_vo(0);
+				start_backoff_vo(2);
 			}
 			ma_unitdatax_status_indication(source_addr, dest_addr, 0, up, s_class);
 			seq_number += 1;

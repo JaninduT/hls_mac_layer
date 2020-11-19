@@ -1,0 +1,19 @@
+
+
+Implementation tool: Xilinx Vivado v.2019.2
+Project:             fyp
+Solution:            solution1
+Device target:       xc7a35t-cpg236-1
+Report date:         Thu Nov 19 12:30:04 +0530 2020
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:           3466
+FF:            3414
+DSP:             18
+BRAM:             2
+SRL:              9
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    7.721
+Timing met

@@ -1,0 +1,314 @@
+
+
+================================================================
+== Vivado HLS Report for 'initial_edca_process'
+================================================================
+* Date:           Thu Nov 19 12:13:07 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        fyp
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.017 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        ?|        ?|         ?|          -|          -|     ?|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 17
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 17 
+5 --> 6 
+6 --> 8 7 9 
+7 --> 8 
+8 --> 11 10 12 
+9 --> 8 
+10 --> 11 
+11 --> 14 13 15 
+12 --> 11 
+13 --> 14 
+14 --> 16 17 
+15 --> 14 
+16 --> 4 
+17 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.69>
+ST_1 : Operation 18 [2/2] (4.69ns)   --->   "%idle_waited = call fastcc i1 @slot_boundary_timing(i3 -4, i1* %medium_state)" [fyp/initial_edca_proc.c:6]   --->   Operation 18 'call' 'idle_waited' <Predicate = true> <Delay = 4.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 8.01>
+ST_2 : Operation 19 [1/2] (8.01ns)   --->   "%idle_waited = call fastcc i1 @slot_boundary_timing(i3 -4, i1* %medium_state)" [fyp/initial_edca_proc.c:6]   --->   Operation 19 'call' 'idle_waited' <Predicate = true> <Delay = 8.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.66>
+ST_3 : Operation 20 [1/1] (1.66ns)   --->   "br label %1" [fyp/initial_edca_proc.c:7]   --->   Operation 20 'br' <Predicate = true> <Delay = 1.66>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%idle_waited_0 = phi i1 [ %idle_waited, %0 ], [ %idle_waited_2, %19 ]"   --->   Operation 21 'phi' 'idle_waited_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "br i1 %idle_waited_0, label %2, label %.loopexit.loopexit" [fyp/initial_edca_proc.c:7]   --->   Operation 22 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [2/2] (0.00ns)   --->   "call fastcc void @backoff_vo(i3* %current_txop_holder) nounwind" [fyp/initial_edca_proc.c:8]   --->   Operation 23 'call' <Predicate = (idle_waited_0)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 24 'br' <Predicate = (!idle_waited_0)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 25 [1/2] (0.00ns)   --->   "call fastcc void @backoff_vo(i3* %current_txop_holder) nounwind" [fyp/initial_edca_proc.c:8]   --->   Operation 25 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 2.12>
+ST_6 : Operation 26 [1/1] (0.00ns)   --->   "%current_txop_holder_s = call i3 @_ssdm_op_Read.ap_auto.i3P(i3* %current_txop_holder)" [fyp/initial_edca_proc.c:9]   --->   Operation 26 'read' 'current_txop_holder_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 27 [1/1] (0.00ns)   --->   "%available_spaces_vi_s = load i3* @available_spaces_vi, align 1" [fyp/edca.c:267->fyp/initial_edca_proc.c:9]   --->   Operation 27 'load' 'available_spaces_vi_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 28 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i3.i32(i3 %available_spaces_vi_s, i32 2)" [fyp/edca.c:267->fyp/initial_edca_proc.c:9]   --->   Operation 28 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 29 [1/1] (0.00ns)   --->   "br i1 %tmp, label %backoff_vi.exit, label %3" [fyp/edca.c:267->fyp/initial_edca_proc.c:9]   --->   Operation 29 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%vi_backoff_counter_l = load i10* @vi_backoff_counter, align 2" [fyp/edca.c:268->fyp/initial_edca_proc.c:9]   --->   Operation 30 'load' 'vi_backoff_counter_l' <Predicate = (!tmp)> <Delay = 0.00>
+ST_6 : Operation 31 [1/1] (1.70ns)   --->   "%icmp_ln268 = icmp eq i10 %vi_backoff_counter_l, 0" [fyp/edca.c:268->fyp/initial_edca_proc.c:9]   --->   Operation 31 'icmp' 'icmp_ln268' <Predicate = (!tmp)> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 32 [1/1] (0.00ns)   --->   "br i1 %icmp_ln268, label %4, label %7" [fyp/edca.c:268->fyp/initial_edca_proc.c:9]   --->   Operation 32 'br' <Predicate = (!tmp)> <Delay = 0.00>
+ST_6 : Operation 33 [1/1] (2.12ns)   --->   "%add_ln278 = add i10 %vi_backoff_counter_l, -1" [fyp/edca.c:278->fyp/initial_edca_proc.c:9]   --->   Operation 33 'add' 'add_ln278' <Predicate = (!tmp & !icmp_ln268)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 34 [1/1] (0.00ns)   --->   "store i10 %add_ln278, i10* @vi_backoff_counter, align 2" [fyp/edca.c:278->fyp/initial_edca_proc.c:9]   --->   Operation 34 'store' <Predicate = (!tmp & !icmp_ln268)> <Delay = 0.00>
+ST_6 : Operation 35 [1/1] (0.00ns)   --->   "br label %backoff_vi.exit" [fyp/edca.c:279->fyp/initial_edca_proc.c:9]   --->   Operation 35 'br' <Predicate = (!tmp & !icmp_ln268)> <Delay = 0.00>
+ST_6 : Operation 36 [1/1] (1.18ns)   --->   "%icmp_ln269 = icmp ult i3 %current_txop_holder_s, 3" [fyp/edca.c:269->fyp/initial_edca_proc.c:9]   --->   Operation 36 'icmp' 'icmp_ln269' <Predicate = (!tmp & icmp_ln268)> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "br i1 %icmp_ln269, label %5, label %6" [fyp/edca.c:269->fyp/initial_edca_proc.c:9]   --->   Operation 37 'br' <Predicate = (!tmp & icmp_ln268)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 1.66>
+ST_7 : Operation 38 [2/2] (1.66ns)   --->   "call fastcc void @start_backoff_vi(i1 zeroext true) nounwind" [fyp/edca.c:274->fyp/initial_edca_proc.c:9]   --->   Operation 38 'call' <Predicate = true> <Delay = 1.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 2.12>
+ST_8 : Operation 39 [1/2] (0.00ns)   --->   "call fastcc void @start_backoff_vi(i1 zeroext true) nounwind" [fyp/edca.c:274->fyp/initial_edca_proc.c:9]   --->   Operation 39 'call' <Predicate = (!tmp & icmp_ln268 & !icmp_ln269)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 40 [1/1] (0.00ns)   --->   "br label %backoff_vi.exit" [fyp/edca.c:275->fyp/initial_edca_proc.c:9]   --->   Operation 40 'br' <Predicate = (!tmp & icmp_ln268 & !icmp_ln269)> <Delay = 0.00>
+ST_8 : Operation 41 [1/2] (0.00ns)   --->   "call fastcc void @start_backoff_vi(i1 zeroext false) nounwind" [fyp/edca.c:271->fyp/initial_edca_proc.c:9]   --->   Operation 41 'call' <Predicate = (!tmp & icmp_ln268 & icmp_ln269)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 42 [1/1] (0.00ns)   --->   "br label %backoff_vi.exit" [fyp/edca.c:272->fyp/initial_edca_proc.c:9]   --->   Operation 42 'br' <Predicate = (!tmp & icmp_ln268 & icmp_ln269)> <Delay = 0.00>
+ST_8 : Operation 43 [1/1] (0.00ns)   --->   "%current_txop_holder_4 = call i3 @_ssdm_op_Read.ap_auto.i3P(i3* %current_txop_holder)" [fyp/initial_edca_proc.c:10]   --->   Operation 43 'read' 'current_txop_holder_4' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 44 [1/1] (0.00ns)   --->   "%available_spaces_be_s = load i3* @available_spaces_be, align 1" [fyp/edca.c:285->fyp/initial_edca_proc.c:10]   --->   Operation 44 'load' 'available_spaces_be_s' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 45 [1/1] (0.00ns)   --->   "%tmp_7 = call i1 @_ssdm_op_BitSelect.i1.i3.i32(i3 %available_spaces_be_s, i32 2)" [fyp/edca.c:285->fyp/initial_edca_proc.c:10]   --->   Operation 45 'bitselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 46 [1/1] (0.00ns)   --->   "br i1 %tmp_7, label %backoff_be.exit, label %8" [fyp/edca.c:285->fyp/initial_edca_proc.c:10]   --->   Operation 46 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 47 [1/1] (0.00ns)   --->   "%be_backoff_counter_l = load i10* @be_backoff_counter, align 2" [fyp/edca.c:286->fyp/initial_edca_proc.c:10]   --->   Operation 47 'load' 'be_backoff_counter_l' <Predicate = (!tmp_7)> <Delay = 0.00>
+ST_8 : Operation 48 [1/1] (1.70ns)   --->   "%icmp_ln286 = icmp eq i10 %be_backoff_counter_l, 0" [fyp/edca.c:286->fyp/initial_edca_proc.c:10]   --->   Operation 48 'icmp' 'icmp_ln286' <Predicate = (!tmp_7)> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 49 [1/1] (0.00ns)   --->   "br i1 %icmp_ln286, label %9, label %12" [fyp/edca.c:286->fyp/initial_edca_proc.c:10]   --->   Operation 49 'br' <Predicate = (!tmp_7)> <Delay = 0.00>
+ST_8 : Operation 50 [1/1] (2.12ns)   --->   "%add_ln296 = add i10 %be_backoff_counter_l, -1" [fyp/edca.c:296->fyp/initial_edca_proc.c:10]   --->   Operation 50 'add' 'add_ln296' <Predicate = (!tmp_7 & !icmp_ln286)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 51 [1/1] (0.00ns)   --->   "store i10 %add_ln296, i10* @be_backoff_counter, align 2" [fyp/edca.c:296->fyp/initial_edca_proc.c:10]   --->   Operation 51 'store' <Predicate = (!tmp_7 & !icmp_ln286)> <Delay = 0.00>
+ST_8 : Operation 52 [1/1] (0.00ns)   --->   "br label %backoff_be.exit" [fyp/edca.c:297->fyp/initial_edca_proc.c:10]   --->   Operation 52 'br' <Predicate = (!tmp_7 & !icmp_ln286)> <Delay = 0.00>
+ST_8 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_8 = call i2 @_ssdm_op_PartSelect.i2.i3.i32.i32(i3 %current_txop_holder_4, i32 1, i32 2)" [fyp/edca.c:287->fyp/initial_edca_proc.c:10]   --->   Operation 53 'partselect' 'tmp_8' <Predicate = (!tmp_7 & icmp_ln286)> <Delay = 0.00>
+ST_8 : Operation 54 [1/1] (0.93ns)   --->   "%icmp_ln287 = icmp eq i2 %tmp_8, 0" [fyp/edca.c:287->fyp/initial_edca_proc.c:10]   --->   Operation 54 'icmp' 'icmp_ln287' <Predicate = (!tmp_7 & icmp_ln286)> <Delay = 0.93> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 55 [1/1] (0.00ns)   --->   "br i1 %icmp_ln287, label %10, label %11" [fyp/edca.c:287->fyp/initial_edca_proc.c:10]   --->   Operation 55 'br' <Predicate = (!tmp_7 & icmp_ln286)> <Delay = 0.00>
+
+State 9 <SV = 6> <Delay = 1.66>
+ST_9 : Operation 56 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i3P(i3* %current_txop_holder, i3 3)" [fyp/edca.c:270->fyp/initial_edca_proc.c:9]   --->   Operation 56 'write' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 57 [2/2] (1.66ns)   --->   "call fastcc void @start_backoff_vi(i1 zeroext false) nounwind" [fyp/edca.c:271->fyp/initial_edca_proc.c:9]   --->   Operation 57 'call' <Predicate = true> <Delay = 1.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 8> <Delay = 1.66>
+ST_10 : Operation 58 [2/2] (1.66ns)   --->   "call fastcc void @start_backoff_be(i1 zeroext true) nounwind" [fyp/edca.c:292->fyp/initial_edca_proc.c:10]   --->   Operation 58 'call' <Predicate = true> <Delay = 1.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 9> <Delay = 2.12>
+ST_11 : Operation 59 [1/2] (0.00ns)   --->   "call fastcc void @start_backoff_be(i1 zeroext true) nounwind" [fyp/edca.c:292->fyp/initial_edca_proc.c:10]   --->   Operation 59 'call' <Predicate = (!tmp_7 & icmp_ln286 & !icmp_ln287)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 60 [1/1] (0.00ns)   --->   "br label %backoff_be.exit" [fyp/edca.c:293->fyp/initial_edca_proc.c:10]   --->   Operation 60 'br' <Predicate = (!tmp_7 & icmp_ln286 & !icmp_ln287)> <Delay = 0.00>
+ST_11 : Operation 61 [1/2] (0.00ns)   --->   "call fastcc void @start_backoff_be(i1 zeroext false) nounwind" [fyp/edca.c:289->fyp/initial_edca_proc.c:10]   --->   Operation 61 'call' <Predicate = (!tmp_7 & icmp_ln286 & icmp_ln287)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 62 [1/1] (0.00ns)   --->   "br label %backoff_be.exit" [fyp/edca.c:290->fyp/initial_edca_proc.c:10]   --->   Operation 62 'br' <Predicate = (!tmp_7 & icmp_ln286 & icmp_ln287)> <Delay = 0.00>
+ST_11 : Operation 63 [1/1] (0.00ns)   --->   "%current_txop_holder_5 = call i3 @_ssdm_op_Read.ap_auto.i3P(i3* %current_txop_holder)" [fyp/initial_edca_proc.c:11]   --->   Operation 63 'read' 'current_txop_holder_5' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 64 [1/1] (0.00ns)   --->   "%available_spaces_bk_s = load i3* @available_spaces_bk, align 1" [fyp/edca.c:303->fyp/initial_edca_proc.c:11]   --->   Operation 64 'load' 'available_spaces_bk_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 65 [1/1] (0.00ns)   --->   "%tmp_9 = call i1 @_ssdm_op_BitSelect.i1.i3.i32(i3 %available_spaces_bk_s, i32 2)" [fyp/edca.c:303->fyp/initial_edca_proc.c:11]   --->   Operation 65 'bitselect' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 66 [1/1] (0.00ns)   --->   "br i1 %tmp_9, label %backoff_bk.exit, label %13" [fyp/edca.c:303->fyp/initial_edca_proc.c:11]   --->   Operation 66 'br' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 67 [1/1] (0.00ns)   --->   "%bk_backoff_counter_l = load i10* @bk_backoff_counter, align 2" [fyp/edca.c:304->fyp/initial_edca_proc.c:11]   --->   Operation 67 'load' 'bk_backoff_counter_l' <Predicate = (!tmp_9)> <Delay = 0.00>
+ST_11 : Operation 68 [1/1] (1.70ns)   --->   "%icmp_ln304 = icmp eq i10 %bk_backoff_counter_l, 0" [fyp/edca.c:304->fyp/initial_edca_proc.c:11]   --->   Operation 68 'icmp' 'icmp_ln304' <Predicate = (!tmp_9)> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 69 [1/1] (0.00ns)   --->   "br i1 %icmp_ln304, label %14, label %17" [fyp/edca.c:304->fyp/initial_edca_proc.c:11]   --->   Operation 69 'br' <Predicate = (!tmp_9)> <Delay = 0.00>
+ST_11 : Operation 70 [1/1] (2.12ns)   --->   "%add_ln314 = add i10 %bk_backoff_counter_l, -1" [fyp/edca.c:314->fyp/initial_edca_proc.c:11]   --->   Operation 70 'add' 'add_ln314' <Predicate = (!tmp_9 & !icmp_ln304)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 71 [1/1] (0.00ns)   --->   "store i10 %add_ln314, i10* @bk_backoff_counter, align 2" [fyp/edca.c:314->fyp/initial_edca_proc.c:11]   --->   Operation 71 'store' <Predicate = (!tmp_9 & !icmp_ln304)> <Delay = 0.00>
+ST_11 : Operation 72 [1/1] (0.00ns)   --->   "br label %backoff_bk.exit" [fyp/edca.c:315->fyp/initial_edca_proc.c:11]   --->   Operation 72 'br' <Predicate = (!tmp_9 & !icmp_ln304)> <Delay = 0.00>
+ST_11 : Operation 73 [1/1] (1.18ns)   --->   "%icmp_ln305 = icmp eq i3 %current_txop_holder_5, 0" [fyp/edca.c:305->fyp/initial_edca_proc.c:11]   --->   Operation 73 'icmp' 'icmp_ln305' <Predicate = (!tmp_9 & icmp_ln304)> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 74 [1/1] (0.00ns)   --->   "br i1 %icmp_ln305, label %15, label %16" [fyp/edca.c:305->fyp/initial_edca_proc.c:11]   --->   Operation 74 'br' <Predicate = (!tmp_9 & icmp_ln304)> <Delay = 0.00>
+
+State 12 <SV = 8> <Delay = 1.66>
+ST_12 : Operation 75 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i3P(i3* %current_txop_holder, i3 2)" [fyp/edca.c:288->fyp/initial_edca_proc.c:10]   --->   Operation 75 'write' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 76 [2/2] (1.66ns)   --->   "call fastcc void @start_backoff_be(i1 zeroext false) nounwind" [fyp/edca.c:289->fyp/initial_edca_proc.c:10]   --->   Operation 76 'call' <Predicate = true> <Delay = 1.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 10> <Delay = 1.66>
+ST_13 : Operation 77 [2/2] (1.66ns)   --->   "call fastcc void @start_backoff_bk(i1 zeroext true) nounwind" [fyp/edca.c:310->fyp/initial_edca_proc.c:11]   --->   Operation 77 'call' <Predicate = true> <Delay = 1.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 11> <Delay = 4.69>
+ST_14 : Operation 78 [1/2] (0.00ns)   --->   "call fastcc void @start_backoff_bk(i1 zeroext true) nounwind" [fyp/edca.c:310->fyp/initial_edca_proc.c:11]   --->   Operation 78 'call' <Predicate = (!tmp_9 & icmp_ln304 & !icmp_ln305)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 79 [1/1] (0.00ns)   --->   "br label %backoff_bk.exit" [fyp/edca.c:311->fyp/initial_edca_proc.c:11]   --->   Operation 79 'br' <Predicate = (!tmp_9 & icmp_ln304 & !icmp_ln305)> <Delay = 0.00>
+ST_14 : Operation 80 [1/2] (0.00ns)   --->   "call fastcc void @start_backoff_bk(i1 zeroext false) nounwind" [fyp/edca.c:307->fyp/initial_edca_proc.c:11]   --->   Operation 80 'call' <Predicate = (!tmp_9 & icmp_ln304 & icmp_ln305)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 81 [1/1] (0.00ns)   --->   "br label %backoff_bk.exit" [fyp/edca.c:308->fyp/initial_edca_proc.c:11]   --->   Operation 81 'br' <Predicate = (!tmp_9 & icmp_ln304 & icmp_ln305)> <Delay = 0.00>
+ST_14 : Operation 82 [1/1] (0.00ns)   --->   "%current_txop_holder_6 = call i3 @_ssdm_op_Read.ap_auto.i3P(i3* %current_txop_holder)" [fyp/initial_edca_proc.c:12]   --->   Operation 82 'read' 'current_txop_holder_6' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 83 [1/1] (1.18ns)   --->   "%icmp_ln12 = icmp eq i3 %current_txop_holder_6, 0" [fyp/initial_edca_proc.c:12]   --->   Operation 83 'icmp' 'icmp_ln12' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 84 [1/1] (0.00ns)   --->   "br i1 %icmp_ln12, label %19, label %18" [fyp/initial_edca_proc.c:12]   --->   Operation 84 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 85 [2/2] (4.69ns)   --->   "%idle_waited_2 = call fastcc i1 @slot_boundary_timing(i3 3, i1* %medium_state)" [fyp/initial_edca_proc.c:17]   --->   Operation 85 'call' 'idle_waited_2' <Predicate = (icmp_ln12)> <Delay = 4.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 86 [2/2] (4.44ns)   --->   "call fastcc void @start_tx(i3 zeroext %current_txop_holder_6, [100 x i8]* %frame_to_transfer)" [fyp/initial_edca_proc.c:13]   --->   Operation 86 'call' <Predicate = (!icmp_ln12)> <Delay = 4.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 10> <Delay = 1.66>
+ST_15 : Operation 87 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i3P(i3* %current_txop_holder, i3 1)" [fyp/edca.c:306->fyp/initial_edca_proc.c:11]   --->   Operation 87 'write' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 88 [2/2] (1.66ns)   --->   "call fastcc void @start_backoff_bk(i1 zeroext false) nounwind" [fyp/edca.c:307->fyp/initial_edca_proc.c:11]   --->   Operation 88 'call' <Predicate = true> <Delay = 1.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 12> <Delay = 8.01>
+ST_16 : Operation 89 [1/2] (8.01ns)   --->   "%idle_waited_2 = call fastcc i1 @slot_boundary_timing(i3 3, i1* %medium_state)" [fyp/initial_edca_proc.c:17]   --->   Operation 89 'call' 'idle_waited_2' <Predicate = true> <Delay = 8.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 90 [1/1] (0.00ns)   --->   "br label %1" [fyp/initial_edca_proc.c:19]   --->   Operation 90 'br' <Predicate = true> <Delay = 0.00>
+
+State 17 <SV = 12> <Delay = 0.00>
+ST_17 : Operation 91 [1/2] (0.00ns)   --->   "call fastcc void @start_tx(i3 zeroext %current_txop_holder_6, [100 x i8]* %frame_to_transfer)" [fyp/initial_edca_proc.c:13]   --->   Operation 91 'call' <Predicate = (idle_waited_0)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 92 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i3P(i3* %current_txop_holder, i3 0)" [fyp/initial_edca_proc.c:14]   --->   Operation 92 'write' <Predicate = (idle_waited_0)> <Delay = 0.00>
+ST_17 : Operation 93 [1/1] (0.00ns)   --->   "br label %.loopexit" [fyp/initial_edca_proc.c:15]   --->   Operation 93 'br' <Predicate = (idle_waited_0)> <Delay = 0.00>
+ST_17 : Operation 94 [1/1] (0.00ns)   --->   "ret void" [fyp/initial_edca_proc.c:21]   --->   Operation 94 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 4.7ns
+The critical path consists of the following:
+	'call' operation ('idle_waited', fyp/initial_edca_proc.c:6) to 'slot_boundary_timing' [31]  (4.7 ns)
+
+ <State 2>: 8.02ns
+The critical path consists of the following:
+	'call' operation ('idle_waited', fyp/initial_edca_proc.c:6) to 'slot_boundary_timing' [31]  (8.02 ns)
+
+ <State 3>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('idle_waited') with incoming values : ('idle_waited', fyp/initial_edca_proc.c:6) ('idle_waited', fyp/initial_edca_proc.c:17) [34]  (1.66 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 2.12ns
+The critical path consists of the following:
+	'load' operation ('vi_backoff_counter_l', fyp/edca.c:268->fyp/initial_edca_proc.c:9) on static variable 'vi_backoff_counter' [43]  (0 ns)
+	'add' operation ('add_ln278', fyp/edca.c:278->fyp/initial_edca_proc.c:9) [47]  (2.12 ns)
+
+ <State 7>: 1.66ns
+The critical path consists of the following:
+	'call' operation ('call_ln274', fyp/edca.c:274->fyp/initial_edca_proc.c:9) to 'start_backoff_vi' [54]  (1.66 ns)
+
+ <State 8>: 2.12ns
+The critical path consists of the following:
+	'load' operation ('be_backoff_counter_l', fyp/edca.c:286->fyp/initial_edca_proc.c:10) on static variable 'be_backoff_counter' [66]  (0 ns)
+	'add' operation ('add_ln296', fyp/edca.c:296->fyp/initial_edca_proc.c:10) [70]  (2.12 ns)
+
+ <State 9>: 1.66ns
+The critical path consists of the following:
+	'call' operation ('call_ln271', fyp/edca.c:271->fyp/initial_edca_proc.c:9) to 'start_backoff_vi' [58]  (1.66 ns)
+
+ <State 10>: 1.66ns
+The critical path consists of the following:
+	'call' operation ('call_ln292', fyp/edca.c:292->fyp/initial_edca_proc.c:10) to 'start_backoff_be' [78]  (1.66 ns)
+
+ <State 11>: 2.12ns
+The critical path consists of the following:
+	'load' operation ('bk_backoff_counter_l', fyp/edca.c:304->fyp/initial_edca_proc.c:11) on static variable 'bk_backoff_counter' [90]  (0 ns)
+	'add' operation ('add_ln314', fyp/edca.c:314->fyp/initial_edca_proc.c:11) [94]  (2.12 ns)
+
+ <State 12>: 1.66ns
+The critical path consists of the following:
+	'call' operation ('call_ln289', fyp/edca.c:289->fyp/initial_edca_proc.c:10) to 'start_backoff_be' [82]  (1.66 ns)
+
+ <State 13>: 1.66ns
+The critical path consists of the following:
+	'call' operation ('call_ln310', fyp/edca.c:310->fyp/initial_edca_proc.c:11) to 'start_backoff_bk' [101]  (1.66 ns)
+
+ <State 14>: 4.7ns
+The critical path consists of the following:
+	'call' operation ('idle_waited', fyp/initial_edca_proc.c:17) to 'slot_boundary_timing' [112]  (4.7 ns)
+
+ <State 15>: 1.66ns
+The critical path consists of the following:
+	'call' operation ('call_ln307', fyp/edca.c:307->fyp/initial_edca_proc.c:11) to 'start_backoff_bk' [105]  (1.66 ns)
+
+ <State 16>: 8.02ns
+The critical path consists of the following:
+	'call' operation ('idle_waited', fyp/initial_edca_proc.c:17) to 'slot_boundary_timing' [112]  (8.02 ns)
+
+ <State 17>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

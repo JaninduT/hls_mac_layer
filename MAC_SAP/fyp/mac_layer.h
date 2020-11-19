@@ -7,10 +7,6 @@
 #include "decompose_mac_frame.h"
 #include "edca.h"
 
-enum mac_operation{
-	MA_UNITDATAX_request = 0
-};
-
 void send_frame(
 		mac48 source_addr,
 		mac48 dest_addr,
@@ -23,7 +19,9 @@ void send_frame(
 		txpwr_lvl_t tx_power_lvl,
 		int64_t expiry_time,
 		unsigned char mac_frame[100],
-		volatile uint1 *medium_state
+		volatile uint1 *medium_state,
+		uint3 *current_txop_holder,
+		unsigned char received_frame[100]
 		);
 
 #endif

@@ -12,7 +12,7 @@ uint4 enqueue_dequeue_frame(
 		);
 
 void slot_boundary_timing(
-		uint2 timing_mode,
+		uint3 timing_mode,
 		bool *idle_waiting,
 		volatile uint1 *medium_state
 		);
@@ -34,19 +34,19 @@ void backoff_bk(
 		);
 
 void start_backoff_vo(
-		uint1 invoke_reason
+		uint2 invoke_reason
 		);
 
 void start_backoff_vi(
-		uint1 invoke_reason
+		uint2 invoke_reason
 		);
 
 void start_backoff_be(
-		uint1 invoke_reason
+		uint2 invoke_reason
 		);
 
 void start_backoff_bk(
-		uint1 invoke_reason
+		uint2 invoke_reason
 		);
 
 void start_tx(

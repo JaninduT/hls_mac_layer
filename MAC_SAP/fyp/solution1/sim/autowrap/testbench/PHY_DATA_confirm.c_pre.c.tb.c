@@ -5510,6 +5510,7 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
+static const uint8 generic_timeout = 2;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/PHY_TXEND_request.h" 2
 
 void phy_txend_request();

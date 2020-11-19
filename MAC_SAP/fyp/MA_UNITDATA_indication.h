@@ -4,11 +4,10 @@
 #include "common.h"
 
 void ma_unitdata_indication (
-		mac48 source_addr,
-		mac48 dest_addr,
-		unsigned char data[70],
-		user_priority_t priority,
-		enum service_class s_class
+		volatile mac48 *source_addr,
+		volatile mac48 *dest_addr,
+		volatile unsigned char data[70],
+		volatile user_priority_t *us_priority
 		);
 
 #endif

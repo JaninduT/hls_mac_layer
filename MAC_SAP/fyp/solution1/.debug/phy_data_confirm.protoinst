@@ -13,7 +13,17 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_phy_data_request_fu_79/grp_phy_data_request_fu_79_activity": {
+				"call_ln17_phy_txend_request_fu_85/call_ln17_phy_txend_request_fu_85_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_phy_data_request_fu_78/grp_phy_data_request_fu_78_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

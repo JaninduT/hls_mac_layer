@@ -1,6 +1,6 @@
 {
-  "Top": "phy_data_confirm",
-  "RtlTop": "phy_data_confirm",
+  "Top": "send_frame",
+  "RtlTop": "send_frame",
   "RtlPrefix": "",
   "SourceLanguage": "c",
   "ResetStyle": "control",
@@ -17,19 +17,191 @@
       "config_export -rtl=verilog",
       "config_export -vendor=jt"
     ]},
-  "Args": {"frame_to_transfer": {
+  "Args": {
+    "source_addr": {
       "index": "0",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "mac48",
+        "structImpl": "flat-interface",
+        "fields": {"mac": {
+            "order": "0",
+            "kinds": ["array"],
+            "dataType": "unsigned",
+            "dataWidth": "8",
+            "arraySizes": ["6"],
+            "multiInterfaceRef": [
+              "source_addr_mac_address0",
+              "source_addr_mac_address1",
+              "source_addr_mac_q0",
+              "source_addr_mac_q1"
+            ],
+            "structImpl": "interface"
+          }}
+      }
+    },
+    "dest_addr": {
+      "index": "1",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "mac48",
+        "structImpl": "flat-interface",
+        "fields": {"mac": {
+            "order": "0",
+            "kinds": ["array"],
+            "dataType": "unsigned",
+            "dataWidth": "8",
+            "arraySizes": ["6"],
+            "multiInterfaceRef": [
+              "dest_addr_mac_address0",
+              "dest_addr_mac_address1",
+              "dest_addr_mac_d0",
+              "dest_addr_mac_d1",
+              "dest_addr_mac_q0",
+              "dest_addr_mac_q1"
+            ],
+            "structImpl": "interface"
+          }}
+      }
+    },
+    "data": {
+      "index": "2",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "unsigned",
+        "dataWidth": "8",
+        "arraySizes": ["70"],
+        "multiInterfaceRef": [
+          "data_address0",
+          "data_q0"
+        ]
+      }
+    },
+    "up": {
+      "index": "3",
+      "type": {
+        "dataType": "uint4",
+        "dataWidth": "4",
+        "interfaceRef": "up"
+      }
+    },
+    "s_class": {
+      "index": "4",
+      "type": {
+        "dataType": "service_class",
+        "dataWidth": "1",
+        "interfaceRef": "s_class"
+      }
+    },
+    "c_identifier": {
+      "index": "5",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "channel_identifier",
+        "structImpl": "flat-interface",
+        "fields": {
+          "operating_class": {
+            "order": "0",
+            "dataType": "unsigned",
+            "dataWidth": "8",
+            "interfaceRef": "c_identifier_operating_class",
+            "structImpl": "field"
+          },
+          "channel_number": {
+            "order": "1",
+            "dataType": "unsigned",
+            "dataWidth": "8",
+            "interfaceRef": "c_identifier_channel_number",
+            "structImpl": "field"
+          }
+        }
+      }
+    },
+    "t_slot": {
+      "index": "6",
+      "type": {
+        "dataType": "time_slot",
+        "dataWidth": "2",
+        "interfaceRef": "t_slot"
+      }
+    },
+    "d_rate": {
+      "index": "7",
+      "type": {
+        "dataType": "uint7",
+        "dataWidth": "7",
+        "interfaceRef": "d_rate"
+      }
+    },
+    "tx_power_lvl": {
+      "index": "8",
+      "type": {
+        "dataType": "uint4",
+        "dataWidth": "4",
+        "interfaceRef": "tx_power_lvl"
+      }
+    },
+    "expiry_time": {
+      "index": "9",
+      "type": {
+        "dataType": "long",
+        "dataWidth": "64",
+        "interfaceRef": "expiry_time"
+      }
+    },
+    "mac_frame": {
+      "index": "10",
       "type": {
         "kinds": ["array"],
         "dataType": "unsigned",
         "dataWidth": "8",
         "arraySizes": ["100"],
         "multiInterfaceRef": [
-          "frame_to_transfer_address0",
-          "frame_to_transfer_q0"
+          "mac_frame_address0",
+          "mac_frame_d0",
+          "mac_frame_q0"
         ]
       }
-    }},
+    },
+    "medium_state": {
+      "index": "11",
+      "type": {
+        "kinds": ["pointer"],
+        "dataType": "uint1",
+        "dataWidth": "1",
+        "interfaceRef": "medium_state"
+      }
+    },
+    "current_txop_holder": {
+      "index": "12",
+      "type": {
+        "kinds": ["pointer"],
+        "dataType": "uint3",
+        "dataWidth": "3",
+        "multiInterfaceRef": [
+          "current_txop_holder_i",
+          "current_txop_holder_o"
+        ]
+      }
+    },
+    "received_frame": {
+      "index": "13",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "unsigned",
+        "dataWidth": "8",
+        "arraySizes": ["100"],
+        "multiInterfaceRef": [
+          "received_frame_address0",
+          "received_frame_address1",
+          "received_frame_d0",
+          "received_frame_d1",
+          "received_frame_q0",
+          "received_frame_q1"
+        ]
+      }
+    }
+  },
   "Return": {
     
   },
@@ -38,16 +210,16 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "2",
+    "Latency": "undef",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
   "Ipx": {
-    "Vendor": "xilinx.com",
+    "Vendor": "jt",
     "Library": "hls",
-    "Name": "phy_data_confirm",
+    "Name": "send_frame",
     "Version": "1.0",
-    "DisplayName": "Phy_data_confirm",
+    "DisplayName": "Send_frame",
     "Revision": "",
     "Description": "An IP generated by Vivado HLS",
     "Taxonomy": "\/VIVADO_HLS_IP",
@@ -58,6 +230,7 @@
       "..\/timer.c",
       "..\/r_n_g.c",
       "..\/mac_layer.c",
+      "..\/initial_edca_proc.c",
       "..\/edca.c",
       "..\/decompose_mac_frame.c",
       "..\/crc_32_validate.c",
@@ -67,26 +240,72 @@
       "..\/PHY_TXSTART_confirm.c",
       "..\/PHY_TXEND_request.c",
       "..\/PHY_TXEND_confirm.c",
+      "..\/PHY_RXSTART_indication.c",
       "..\/PHY_RXEND_indication.c",
       "..\/PHY_DATA_request.c",
+      "..\/PHY_DATA_indication.c",
       "..\/PHY_DATA_confirm.c",
       "..\/PHY_CCA_indication.c",
+      "..\/MA_UNITDATA_indication.c",
       "..\/MA_UNITDATAX_request.c",
       "..\/MA_UNITDATAX_STATUS_indication.c"
     ],
     "Vhdl": [
-      "impl\/vhdl\/phy_data_confirm_bkb.vhd",
+      "impl\/vhdl\/backoff_vo.vhd",
+      "impl\/vhdl\/compose_mac_frame.vhd",
+      "impl\/vhdl\/enqueue_dequeue_fram.vhd",
+      "impl\/vhdl\/initial_edca_process.vhd",
+      "impl\/vhdl\/ma_unitdatax_requdEe.vhd",
+      "impl\/vhdl\/ma_unitdatax_requeOg.vhd",
+      "impl\/vhdl\/ma_unitdatax_request.vhd",
+      "impl\/vhdl\/ma_unitdatax_status_s.vhd",
       "impl\/vhdl\/phy_data_request.vhd",
-      "impl\/vhdl\/phy_data_confirm.vhd"
+      "impl\/vhdl\/phy_data_request_1.vhd",
+      "impl\/vhdl\/phy_txend_confirm.vhd",
+      "impl\/vhdl\/phy_txend_request.vhd",
+      "impl\/vhdl\/random_int_gen.vhd",
+      "impl\/vhdl\/send_frame_edca_qfYi.vhd",
+      "impl\/vhdl\/send_frame_frame.vhd",
+      "impl\/vhdl\/send_frame_mul_mucud.vhd",
+      "impl\/vhdl\/send_frame_urem_3bkb.vhd",
+      "impl\/vhdl\/slot_boundary_timing.vhd",
+      "impl\/vhdl\/start_backoff_be.vhd",
+      "impl\/vhdl\/start_backoff_bk.vhd",
+      "impl\/vhdl\/start_backoff_vi.vhd",
+      "impl\/vhdl\/start_timer.vhd",
+      "impl\/vhdl\/start_tx.vhd",
+      "impl\/vhdl\/send_frame.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/phy_data_confirm_bkb.v",
-      "impl\/verilog\/phy_data_confirm_bkb_ram.dat",
+      "impl\/verilog\/backoff_vo.v",
+      "impl\/verilog\/compose_mac_frame.v",
+      "impl\/verilog\/enqueue_dequeue_fram.v",
+      "impl\/verilog\/initial_edca_process.v",
+      "impl\/verilog\/ma_unitdatax_requdEe.v",
+      "impl\/verilog\/ma_unitdatax_requeOg.v",
+      "impl\/verilog\/ma_unitdatax_request.v",
+      "impl\/verilog\/ma_unitdatax_status_s.v",
       "impl\/verilog\/phy_data_request.v",
-      "impl\/verilog\/phy_data_confirm.v"
+      "impl\/verilog\/phy_data_request_1.v",
+      "impl\/verilog\/phy_txend_confirm.v",
+      "impl\/verilog\/phy_txend_request.v",
+      "impl\/verilog\/random_int_gen.v",
+      "impl\/verilog\/send_frame_edca_qfYi.v",
+      "impl\/verilog\/send_frame_edca_qfYi_ram.dat",
+      "impl\/verilog\/send_frame_frame.v",
+      "impl\/verilog\/send_frame_frame_ram.dat",
+      "impl\/verilog\/send_frame_mul_mucud.v",
+      "impl\/verilog\/send_frame_urem_3bkb.v",
+      "impl\/verilog\/slot_boundary_timing.v",
+      "impl\/verilog\/start_backoff_be.v",
+      "impl\/verilog\/start_backoff_bk.v",
+      "impl\/verilog\/start_backoff_vi.v",
+      "impl\/verilog\/start_timer.v",
+      "impl\/verilog\/start_tx.v",
+      "impl\/verilog\/send_frame.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
-    "DesignXml": "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.autopilot\/db\/phy_data_confirm.design.xml",
+    "DesignXml": "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.autopilot\/db\/send_frame.design.xml",
     "DebugDir": "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug",
     "ProtoInst": [
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/add_to_queue.protoinst",
@@ -103,10 +322,13 @@
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/enque_frame.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/ma_unitdatax_request.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/ma_unitdatax_status_indication.protoinst",
+      "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/ma_unitdata_indication.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/phy_cca_indication.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/phy_data_confirm.protoinst",
+      "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/phy_data_indication.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/phy_data_request.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/phy_rxend_indication.protoinst",
+      "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/phy_rxstart_indication.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/phy_txend_confirm.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/phy_txstart_confirm.protoinst",
       "E:\/FYP\/HLS\/MAC_SAP\/fyp\/solution1\/.debug\/random_int_gen.protoinst",
@@ -149,18 +371,7 @@
       "bundle_name": "ap_rst",
       "bundle_role": "default"
     },
-    "frame_to_transfer_address0": {
-      "type": "data",
-      "dir": "out",
-      "width": "7",
-      "ctype": {"DATA": {
-          "Type": "null",
-          "Width": "7"
-        }},
-      "bundle_name": "frame_to_transfer",
-      "bundle_role": "address0"
-    },
-    "frame_to_transfer_q0": {
+    "c_identifier_channel_number": {
       "type": "data",
       "dir": "in",
       "width": "8",
@@ -168,8 +379,349 @@
           "Type": "integer unsigned",
           "Width": "8"
         }},
-      "bundle_name": "frame_to_transfer",
+      "bundle_name": "c_identifier_channel_number",
+      "bundle_role": "default"
+    },
+    "c_identifier_operating_class": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "c_identifier_operating_class",
+      "bundle_role": "default"
+    },
+    "current_txop_holder_i": {
+      "type": "data",
+      "dir": "in",
+      "width": "3",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        }},
+      "bundle_name": "current_txop_holder",
+      "bundle_role": "i"
+    },
+    "current_txop_holder_o": {
+      "type": "data",
+      "dir": "out",
+      "width": "3",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        }},
+      "bundle_name": "current_txop_holder",
+      "bundle_role": "o"
+    },
+    "d_rate": {
+      "type": "data",
+      "dir": "in",
+      "width": "7",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "7"
+        }},
+      "bundle_name": "d_rate",
+      "bundle_role": "default"
+    },
+    "data_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "7",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "7"
+        }},
+      "bundle_name": "data",
+      "bundle_role": "address0"
+    },
+    "data_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "data",
       "bundle_role": "q0"
+    },
+    "dest_addr_mac_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "3",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "3"
+        }},
+      "bundle_name": "dest_addr_mac",
+      "bundle_role": "address0"
+    },
+    "dest_addr_mac_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "3",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "3"
+        }},
+      "bundle_name": "dest_addr_mac",
+      "bundle_role": "address1"
+    },
+    "dest_addr_mac_d0": {
+      "type": "data",
+      "dir": "out",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "dest_addr_mac",
+      "bundle_role": "d0"
+    },
+    "dest_addr_mac_d1": {
+      "type": "data",
+      "dir": "out",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "dest_addr_mac",
+      "bundle_role": "d1"
+    },
+    "dest_addr_mac_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "dest_addr_mac",
+      "bundle_role": "q0"
+    },
+    "dest_addr_mac_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "dest_addr_mac",
+      "bundle_role": "q1"
+    },
+    "expiry_time": {
+      "type": "data",
+      "dir": "in",
+      "width": "64",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "64"
+        }},
+      "bundle_name": "expiry_time",
+      "bundle_role": "default"
+    },
+    "mac_frame_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "7",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "7"
+        }},
+      "bundle_name": "mac_frame",
+      "bundle_role": "address0"
+    },
+    "mac_frame_d0": {
+      "type": "data",
+      "dir": "out",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "mac_frame",
+      "bundle_role": "d0"
+    },
+    "mac_frame_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "mac_frame",
+      "bundle_role": "q0"
+    },
+    "medium_state": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }},
+      "bundle_name": "medium_state",
+      "bundle_role": "default"
+    },
+    "received_frame_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "7",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "7"
+        }},
+      "bundle_name": "received_frame",
+      "bundle_role": "address0"
+    },
+    "received_frame_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "7",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "7"
+        }},
+      "bundle_name": "received_frame",
+      "bundle_role": "address1"
+    },
+    "received_frame_d0": {
+      "type": "data",
+      "dir": "out",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "received_frame",
+      "bundle_role": "d0"
+    },
+    "received_frame_d1": {
+      "type": "data",
+      "dir": "out",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "received_frame",
+      "bundle_role": "d1"
+    },
+    "received_frame_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "received_frame",
+      "bundle_role": "q0"
+    },
+    "received_frame_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "received_frame",
+      "bundle_role": "q1"
+    },
+    "s_class": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "s_class",
+      "bundle_role": "default"
+    },
+    "source_addr_mac_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "3",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "3"
+        }},
+      "bundle_name": "source_addr_mac",
+      "bundle_role": "address0"
+    },
+    "source_addr_mac_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "3",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "3"
+        }},
+      "bundle_name": "source_addr_mac",
+      "bundle_role": "address1"
+    },
+    "source_addr_mac_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "source_addr_mac",
+      "bundle_role": "q0"
+    },
+    "source_addr_mac_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "source_addr_mac",
+      "bundle_role": "q1"
+    },
+    "t_slot": {
+      "type": "data",
+      "dir": "in",
+      "width": "2",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "2"
+        }},
+      "bundle_name": "t_slot",
+      "bundle_role": "default"
+    },
+    "tx_power_lvl": {
+      "type": "data",
+      "dir": "in",
+      "width": "4",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        }},
+      "bundle_name": "tx_power_lvl",
+      "bundle_role": "default"
+    },
+    "up": {
+      "type": "data",
+      "dir": "in",
+      "width": "4",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        }},
+      "bundle_name": "up",
+      "bundle_role": "default"
     }
   },
   "RtlPorts": {
@@ -197,28 +749,440 @@
       "dir": "out",
       "width": "1"
     },
-    "frame_to_transfer_address0": {
+    "source_addr_mac_address0": {
       "dir": "out",
-      "width": "7"
+      "width": "3"
     },
-    "frame_to_transfer_ce0": {
+    "source_addr_mac_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "frame_to_transfer_q0": {
+    "source_addr_mac_q0": {
+      "dir": "in",
+      "width": "8"
+    },
+    "source_addr_mac_address1": {
+      "dir": "out",
+      "width": "3"
+    },
+    "source_addr_mac_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "source_addr_mac_q1": {
+      "dir": "in",
+      "width": "8"
+    },
+    "dest_addr_mac_address0": {
+      "dir": "out",
+      "width": "3"
+    },
+    "dest_addr_mac_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "dest_addr_mac_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "dest_addr_mac_d0": {
+      "dir": "out",
+      "width": "8"
+    },
+    "dest_addr_mac_q0": {
+      "dir": "in",
+      "width": "8"
+    },
+    "dest_addr_mac_address1": {
+      "dir": "out",
+      "width": "3"
+    },
+    "dest_addr_mac_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "dest_addr_mac_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "dest_addr_mac_d1": {
+      "dir": "out",
+      "width": "8"
+    },
+    "dest_addr_mac_q1": {
+      "dir": "in",
+      "width": "8"
+    },
+    "data_address0": {
+      "dir": "out",
+      "width": "7"
+    },
+    "data_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "data_q0": {
+      "dir": "in",
+      "width": "8"
+    },
+    "up": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_class": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "c_identifier_operating_class": {
+      "dir": "in",
+      "width": "8"
+    },
+    "c_identifier_channel_number": {
+      "dir": "in",
+      "width": "8"
+    },
+    "t_slot": {
+      "dir": "in",
+      "width": "2"
+    },
+    "d_rate": {
+      "dir": "in",
+      "width": "7"
+    },
+    "tx_power_lvl": {
+      "dir": "in",
+      "width": "4"
+    },
+    "expiry_time": {
+      "dir": "in",
+      "width": "64"
+    },
+    "mac_frame_address0": {
+      "dir": "out",
+      "width": "7"
+    },
+    "mac_frame_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "mac_frame_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "mac_frame_d0": {
+      "dir": "out",
+      "width": "8"
+    },
+    "mac_frame_q0": {
+      "dir": "in",
+      "width": "8"
+    },
+    "medium_state": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "current_txop_holder_i": {
+      "dir": "in",
+      "width": "3"
+    },
+    "current_txop_holder_o": {
+      "dir": "out",
+      "width": "3"
+    },
+    "current_txop_holder_o_ap_vld": {
+      "dir": "out",
+      "width": "1"
+    },
+    "received_frame_address0": {
+      "dir": "out",
+      "width": "7"
+    },
+    "received_frame_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "received_frame_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "received_frame_d0": {
+      "dir": "out",
+      "width": "8"
+    },
+    "received_frame_q0": {
+      "dir": "in",
+      "width": "8"
+    },
+    "received_frame_address1": {
+      "dir": "out",
+      "width": "7"
+    },
+    "received_frame_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "received_frame_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "received_frame_d1": {
+      "dir": "out",
+      "width": "8"
+    },
+    "received_frame_q1": {
       "dir": "in",
       "width": "8"
     }
   },
   "ModuleInfo": {
     "Hierarchy": {
-      "ModuleName": "phy_data_confirm",
-      "Instances": [{
+      "ModuleName": "send_frame",
+      "Instances": [
+        {
+          "ModuleName": "initial_edca_process",
+          "InstanceName": "grp_initial_edca_process_fu_240",
+          "Instances": [
+            {
+              "ModuleName": "start_tx",
+              "InstanceName": "grp_start_tx_fu_119",
+              "Instances": [{
+                  "ModuleName": "enqueue_dequeue_fram",
+                  "InstanceName": "grp_enqueue_dequeue_fram_fu_44"
+                }]
+            },
+            {
+              "ModuleName": "backoff_vo",
+              "InstanceName": "grp_backoff_vo_fu_153",
+              "Instances": [{
+                  "ModuleName": "random_int_gen",
+                  "InstanceName": "grp_random_int_gen_fu_32"
+                }]
+            },
+            {
+              "ModuleName": "start_backoff_vi",
+              "InstanceName": "grp_start_backoff_vi_fu_165",
+              "Instances": [{
+                  "ModuleName": "random_int_gen",
+                  "InstanceName": "grp_random_int_gen_fu_37"
+                }]
+            },
+            {
+              "ModuleName": "start_backoff_be",
+              "InstanceName": "grp_start_backoff_be_fu_178",
+              "Instances": [{
+                  "ModuleName": "random_int_gen",
+                  "InstanceName": "grp_random_int_gen_fu_37"
+                }]
+            },
+            {
+              "ModuleName": "start_backoff_bk",
+              "InstanceName": "grp_start_backoff_bk_fu_191",
+              "Instances": [{
+                  "ModuleName": "random_int_gen",
+                  "InstanceName": "grp_random_int_gen_fu_37"
+                }]
+            },
+            {
+              "ModuleName": "slot_boundary_timing",
+              "InstanceName": "grp_slot_boundary_timing_fu_204",
+              "Instances": [{
+                  "ModuleName": "start_timer",
+                  "InstanceName": "grp_start_timer_fu_53"
+                }]
+            }
+          ]
+        },
+        {
+          "ModuleName": "phy_txend_confirm",
+          "InstanceName": "grp_phy_txend_confirm_fu_292",
+          "Instances": [
+            {
+              "ModuleName": "start_tx",
+              "InstanceName": "grp_start_tx_fu_117",
+              "Instances": [{
+                  "ModuleName": "enqueue_dequeue_fram",
+                  "InstanceName": "grp_enqueue_dequeue_fram_fu_44"
+                }]
+            },
+            {
+              "ModuleName": "backoff_vo",
+              "InstanceName": "grp_backoff_vo_fu_151",
+              "Instances": [{
+                  "ModuleName": "random_int_gen",
+                  "InstanceName": "grp_random_int_gen_fu_32"
+                }]
+            },
+            {
+              "ModuleName": "start_backoff_vi",
+              "InstanceName": "grp_start_backoff_vi_fu_163",
+              "Instances": [{
+                  "ModuleName": "random_int_gen",
+                  "InstanceName": "grp_random_int_gen_fu_37"
+                }]
+            },
+            {
+              "ModuleName": "start_backoff_be",
+              "InstanceName": "grp_start_backoff_be_fu_176",
+              "Instances": [{
+                  "ModuleName": "random_int_gen",
+                  "InstanceName": "grp_random_int_gen_fu_37"
+                }]
+            },
+            {
+              "ModuleName": "start_backoff_bk",
+              "InstanceName": "grp_start_backoff_bk_fu_189",
+              "Instances": [{
+                  "ModuleName": "random_int_gen",
+                  "InstanceName": "grp_random_int_gen_fu_37"
+                }]
+            },
+            {
+              "ModuleName": "slot_boundary_timing",
+              "InstanceName": "grp_slot_boundary_timing_fu_202",
+              "Instances": [{
+                  "ModuleName": "start_timer",
+                  "InstanceName": "grp_start_timer_fu_53"
+                }]
+            }
+          ]
+        },
+        {
+          "ModuleName": "ma_unitdatax_request",
+          "InstanceName": "grp_ma_unitdatax_request_fu_344",
+          "Instances": [
+            {
+              "ModuleName": "enqueue_dequeue_fram",
+              "InstanceName": "grp_enqueue_dequeue_fram_fu_257"
+            },
+            {
+              "ModuleName": "random_int_gen",
+              "InstanceName": "grp_random_int_gen_fu_295"
+            },
+            {
+              "ModuleName": "compose_mac_frame",
+              "InstanceName": "grp_compose_mac_frame_fu_303"
+            },
+            {
+              "ModuleName": "ma_unitdatax_status_s",
+              "InstanceName": "grp_ma_unitdatax_status_s_fu_313"
+            }
+          ]
+        },
+        {
           "ModuleName": "phy_data_request",
-          "InstanceName": "grp_phy_data_request_fu_79"
-        }]
+          "InstanceName": "grp_phy_data_request_fu_422"
+        },
+        {
+          "ModuleName": "phy_txend_request",
+          "InstanceName": "call_ln17_phy_txend_request_fu_429"
+        },
+        {
+          "ModuleName": "phy_data_request_1",
+          "InstanceName": "call_ln6_phy_data_request_1_fu_435"
+        }
+      ]
     },
     "Info": {
+      "ma_unitdatax_status_s": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "compose_mac_frame": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "enqueue_dequeue_fram": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "random_int_gen": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "ma_unitdatax_request": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "start_timer": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "slot_boundary_timing": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "backoff_vo": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "start_backoff_vi": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "start_backoff_be": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "start_backoff_bk": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "start_tx": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "initial_edca_process": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "phy_data_request_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "1",
+        "isOneStateSeq": "0"
+      },
       "phy_data_request": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
@@ -226,7 +1190,21 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "phy_data_confirm": {
+      "phy_txend_request": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "phy_txend_confirm": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "send_frame": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -235,6 +1213,431 @@
       }
     },
     "Metrics": {
+      "ma_unitdatax_status_s": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "2.115"
+        },
+        "Area": {
+          "FF": "49",
+          "LUT": "135",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "compose_mac_frame": {
+        "Latency": {
+          "LatencyBest": "1215",
+          "LatencyAvg": "1215",
+          "LatencyWorst": "1215",
+          "PipelineII": "1215",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "6.316"
+        },
+        "Loops": [
+          {
+            "Name": "Loop 1",
+            "TripCount": "70",
+            "Latency": "140",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "char_array_loop",
+            "TripCount": "96",
+            "Latency": "1056",
+            "PipelineII": "",
+            "PipelineDepth": "11",
+            "Loops": [{
+                "Name": "iter_through_byte_loop",
+                "TripCount": "8",
+                "Latency": "8",
+                "PipelineII": "",
+                "PipelineDepth": "1"
+              }]
+          },
+          {
+            "Name": "Loop 3",
+            "TripCount": "4",
+            "Latency": "4",
+            "PipelineII": "",
+            "PipelineDepth": "1"
+          }
+        ],
+        "Area": {
+          "FF": "118",
+          "LUT": "751",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "enqueue_dequeue_fram": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "90",
+          "LatencyWorst": "202",
+          "PipelineIIMin": "1",
+          "PipelineIIMax": "202",
+          "PipelineII": "1 ~ 202",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "7.502"
+        },
+        "Loops": [
+          {
+            "Name": "write_to_bk",
+            "TripCount": "100",
+            "Latency": "200",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "write_to_be",
+            "TripCount": "100",
+            "Latency": "200",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "write_to_vi",
+            "TripCount": "100",
+            "Latency": "200",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "write_to_vo",
+            "TripCount": "100",
+            "Latency": "200",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "read_from_bk",
+            "TripCount": "100",
+            "Latency": "200",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "read_from_be",
+            "TripCount": "100",
+            "Latency": "200",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "read_from_vi",
+            "TripCount": "100",
+            "Latency": "200",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "read_from_vo",
+            "TripCount": "100",
+            "Latency": "200",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          }
+        ],
+        "Area": {
+          "DSP48E": "0",
+          "FF": "258",
+          "LUT": "1425",
+          "BRAM_18K": "0",
+          "URAM": "0"
+        }
+      },
+      "random_int_gen": {
+        "Latency": {
+          "LatencyBest": "37",
+          "LatencyAvg": "37",
+          "LatencyWorst": "37",
+          "PipelineII": "37",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "7.180"
+        },
+        "Area": {
+          "DSP48E": "2",
+          "FF": "554",
+          "LUT": "637",
+          "BRAM_18K": "0",
+          "URAM": "0"
+        }
+      },
+      "ma_unitdatax_request": {
+        "Latency": {
+          "LatencyBest": "2",
+          "LatencyAvg": "1003",
+          "LatencyWorst": "1599",
+          "PipelineIIMin": "2",
+          "PipelineIIMax": "1599",
+          "PipelineII": "2 ~ 1599",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "7.502"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "70",
+            "Latency": "140",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "BRAM_18K": "1",
+          "DSP48E": "2",
+          "FF": "1076",
+          "LUT": "3801",
+          "URAM": "0"
+        }
+      },
+      "start_timer": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "6.173"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "",
+            "PipelineDepth": "1"
+          }],
+        "Area": {
+          "FF": "42",
+          "LUT": "158",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "slot_boundary_timing": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.017"
+        },
+        "Area": {
+          "FF": "59",
+          "LUT": "298",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "backoff_vo": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "13",
+          "LatencyWorst": "38",
+          "PipelineIIMin": "1",
+          "PipelineIIMax": "38",
+          "PipelineII": "1 ~ 38",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "7.180"
+        },
+        "Area": {
+          "DSP48E": "2",
+          "FF": "559",
+          "LUT": "710",
+          "BRAM_18K": "0",
+          "URAM": "0"
+        }
+      },
+      "start_backoff_vi": {
+        "Latency": {
+          "LatencyBest": "38",
+          "LatencyAvg": "38",
+          "LatencyWorst": "38",
+          "PipelineII": "38",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "7.558"
+        },
+        "Area": {
+          "DSP48E": "2",
+          "FF": "567",
+          "LUT": "714",
+          "BRAM_18K": "0",
+          "URAM": "0"
+        }
+      },
+      "start_backoff_be": {
+        "Latency": {
+          "LatencyBest": "38",
+          "LatencyAvg": "38",
+          "LatencyWorst": "38",
+          "PipelineII": "38",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "7.558"
+        },
+        "Area": {
+          "DSP48E": "2",
+          "FF": "567",
+          "LUT": "714",
+          "BRAM_18K": "0",
+          "URAM": "0"
+        }
+      },
+      "start_backoff_bk": {
+        "Latency": {
+          "LatencyBest": "38",
+          "LatencyAvg": "38",
+          "LatencyWorst": "38",
+          "PipelineII": "38",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "7.558"
+        },
+        "Area": {
+          "DSP48E": "2",
+          "FF": "567",
+          "LUT": "714",
+          "BRAM_18K": "0",
+          "URAM": "0"
+        }
+      },
+      "start_tx": {
+        "Latency": {
+          "LatencyBest": "2",
+          "LatencyAvg": "91",
+          "LatencyWorst": "203",
+          "PipelineIIMin": "2",
+          "PipelineIIMax": "203",
+          "PipelineII": "2 ~ 203",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "7.502"
+        },
+        "Area": {
+          "DSP48E": "0",
+          "FF": "263",
+          "LUT": "1558",
+          "BRAM_18K": "0",
+          "URAM": "0"
+        }
+      },
+      "initial_edca_process": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.017"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "",
+            "PipelineDepth": ""
+          }],
+        "Area": {
+          "DSP48E": "8",
+          "FF": "2619",
+          "LUT": "5401",
+          "BRAM_18K": "0",
+          "URAM": "0"
+        }
+      },
+      "phy_data_request_1": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "0.000"
+        },
+        "Area": {
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "FF": "0",
+          "LUT": "0",
+          "URAM": "0"
+        }
+      },
       "phy_data_request": {
         "Latency": {
           "LatencyBest": "1",
@@ -257,35 +1660,95 @@
           "URAM": "0"
         }
       },
-      "phy_data_confirm": {
+      "phy_txend_request": {
         "Latency": {
-          "LatencyBest": "2",
-          "LatencyAvg": "103",
-          "LatencyWorst": "203",
-          "PipelineIIMin": "3",
-          "PipelineIIMax": "204",
-          "PipelineII": "3 ~ 204",
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "4.457"
+          "Estimate": "0.000"
+        },
+        "Area": {
+          "FF": "2",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "LUT": "0",
+          "URAM": "0"
+        }
+      },
+      "phy_txend_confirm": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.017"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "",
+            "PipelineDepth": ""
+          }],
+        "Area": {
+          "DSP48E": "8",
+          "FF": "2619",
+          "LUT": "5401",
+          "BRAM_18K": "0",
+          "URAM": "0"
+        }
+      },
+      "send_frame": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.017"
         },
         "Loops": [{
             "Name": "Loop 1",
             "TripCount": "100",
-            "Latency": "200",
+            "LatencyMin": "300",
+            "LatencyMax": "20400",
+            "Latency": "300 ~ 20400",
             "PipelineII": "",
-            "PipelineDepth": "2"
+            "PipelineDepthMin": "3",
+            "PipelineDepthMax": "204",
+            "PipelineDepth": "3 ~ 204",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "100",
+                "Latency": "200",
+                "PipelineII": "",
+                "PipelineDepth": "2"
+              }]
           }],
         "Area": {
-          "BRAM_18K": "0",
-          "FF": "75",
-          "LUT": "177",
-          "URAM": "0",
-          "DSP48E": "0"
+          "BRAM_18K": "2",
+          "DSP48E": "18",
+          "FF": "6548",
+          "LUT": "15348",
+          "URAM": "0"
         }
       }
     }
@@ -295,12 +1758,12 @@
     "ProfileOption": "0",
     "ProfileType": "none",
     "XO": "",
-    "KernelName": "phy_data_confirm",
+    "KernelName": "send_frame",
     "EnableXoSwEmu": "1"
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-11-11 13:42:28 +0530",
+    "Time": "2020-11-19 12:26:51 +0530",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

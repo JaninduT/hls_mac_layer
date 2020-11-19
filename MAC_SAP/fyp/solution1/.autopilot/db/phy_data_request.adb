@@ -194,7 +194,7 @@
             <Obj>
               <type>0</type>
               <id>6</id>
-              <name>tx_0_0</name>
+              <name>data_load</name>
               <fileName>fyp/PHY_DATA_request.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>7</lineNumber>

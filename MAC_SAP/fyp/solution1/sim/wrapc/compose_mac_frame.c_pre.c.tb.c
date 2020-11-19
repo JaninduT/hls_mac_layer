@@ -5494,6 +5494,7 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
+static const uint8 generic_timeout = 2;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/compose_mac_frame.h" 2
 
 typedef uint2 frame_type_t;
@@ -5547,7 +5548,7 @@ uint4 enqueue_dequeue_frame(
   );
 
 void slot_boundary_timing(
-  uint2 timing_mode,
+  uint3 timing_mode,
   uint1 *idle_waiting,
   volatile uint1 *medium_state
   );
@@ -5569,19 +5570,19 @@ void backoff_bk(
   );
 
 void start_backoff_vo(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_vi(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_be(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_bk(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_tx(

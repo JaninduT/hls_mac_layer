@@ -1,7 +1,0 @@
-sv work "glbl.v"
-sv xil_defaultlib "AESL_automem_frame_to_transfer.v"
-sv xil_defaultlib "phy_data_confirm.autotb.v"
-sv xil_defaultlib "phy_data_confirm.v"
-sv xil_defaultlib "phy_data_confirm_bkb.v"
-sv xil_defaultlib "phy_data_request.v"
-

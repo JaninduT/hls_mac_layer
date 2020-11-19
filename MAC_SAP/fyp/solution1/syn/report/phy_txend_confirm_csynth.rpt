@@ -1,0 +1,296 @@
+
+
+================================================================
+== Vivado HLS Report for 'phy_txend_confirm'
+================================================================
+* Date:           Thu Nov 19 12:13:17 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        fyp
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.017 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------+----------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |                                 |                      |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+        |             Instance            |        Module        |   min   |   max   |    min    |    max   | min | max |   Type  |
+        +---------------------------------+----------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |grp_start_tx_fu_117              |start_tx              |        2|      203| 20.000 ns | 2.030 us |    2|  203|   none  |
+        |grp_backoff_vo_fu_151            |backoff_vo            |        1|       38| 10.000 ns | 0.380 us |    1|   38|   none  |
+        |grp_start_backoff_vi_fu_163      |start_backoff_vi      |       38|       38|  0.380 us | 0.380 us |   38|   38|   none  |
+        |grp_start_backoff_be_fu_176      |start_backoff_be      |       38|       38|  0.380 us | 0.380 us |   38|   38|   none  |
+        |grp_start_backoff_bk_fu_189      |start_backoff_bk      |       38|       38|  0.380 us | 0.380 us |   38|   38|   none  |
+        |grp_slot_boundary_timing_fu_202  |slot_boundary_timing  |        ?|        ?|          ?|         ?|    ?|    ?|   none  |
+        +---------------------------------+----------------------+---------+---------+-----------+----------+-----+-----+---------+
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        ?|        ?|         ?|          -|          -|     ?|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
++-----------------+---------+-------+-------+-------+-----+
+|DSP              |        -|      -|      -|      -|    -|
+|Expression       |        -|      -|      0|    136|    -|
+|FIFO             |        -|      -|      -|      -|    -|
+|Instance         |        -|      8|   2582|   4708|    -|
+|Memory           |        -|      -|      -|      -|    -|
+|Multiplexer      |        -|      -|      -|    557|    -|
+|Register         |        -|      -|     37|      -|    -|
++-----------------+---------+-------+-------+-------+-----+
+|Total            |        0|      8|   2619|   5401|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Available        |      100|     90|  41600|  20800|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Utilization (%)  |        0|      8|      6|     25|    0|
++-----------------+---------+-------+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------+----------------------+---------+-------+-----+------+-----+
+    |             Instance            |        Module        | BRAM_18K| DSP48E|  FF |  LUT | URAM|
+    +---------------------------------+----------------------+---------+-------+-----+------+-----+
+    |grp_backoff_vo_fu_151            |backoff_vo            |        0|      2|  559|   710|    0|
+    |grp_slot_boundary_timing_fu_202  |slot_boundary_timing  |        0|      0|   59|   298|    0|
+    |grp_start_backoff_be_fu_176      |start_backoff_be      |        0|      2|  567|   714|    0|
+    |grp_start_backoff_bk_fu_189      |start_backoff_bk      |        0|      2|  567|   714|    0|
+    |grp_start_backoff_vi_fu_163      |start_backoff_vi      |        0|      2|  567|   714|    0|
+    |grp_start_tx_fu_117              |start_tx              |        0|      0|  263|  1558|    0|
+    +---------------------------------+----------------------+---------+-------+-----+------+-----+
+    |Total                            |                      |        0|      8| 2582|  4708|    0|
+    +---------------------------------+----------------------+---------+-------+-----+------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln278_fu_239_p2               |     +    |      0|  0|  17|          10|           2|
+    |add_ln296_fu_279_p2               |     +    |      0|  0|  17|          10|           2|
+    |add_ln314_fu_329_p2               |     +    |      0|  0|  17|          10|           2|
+    |ap_block_state17_on_subcall_done  |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op39_call_state8     |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op41_call_state8     |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op59_call_state11    |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op61_call_state11    |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op78_call_state14    |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op80_call_state14    |    and   |      0|  0|   2|           1|           1|
+    |grp_fu_211_p2                     |   icmp   |      0|  0|   9|           3|           1|
+    |icmp_ln268_fu_233_p2              |   icmp   |      0|  0|  13|          10|           1|
+    |icmp_ln269_fu_251_p2              |   icmp   |      0|  0|   9|           3|           2|
+    |icmp_ln286_fu_273_p2              |   icmp   |      0|  0|  13|          10|           1|
+    |icmp_ln287_fu_301_p2              |   icmp   |      0|  0|   8|           2|           1|
+    |icmp_ln304_fu_323_p2              |   icmp   |      0|  0|  13|          10|           1|
+    |ap_block_state11_on_subcall_done  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state14_on_subcall_done  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state8_on_subcall_done   |    or    |      0|  0|   2|           1|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0| 136|          78|          23|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                    | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |CW_be_o                                      |   9|          2|   10|         20|
+    |CW_be_o_ap_vld                               |   9|          2|    1|          2|
+    |CW_bk_o                                      |   9|          2|   10|         20|
+    |CW_bk_o_ap_vld                               |   9|          2|    1|          2|
+    |CW_vi_o                                      |   9|          2|   10|         20|
+    |CW_vi_o_ap_vld                               |   9|          2|    1|          2|
+    |ap_NS_fsm                                    |  89|         18|    1|         18|
+    |available_spaces_be_o                        |   9|          2|    3|          6|
+    |available_spaces_be_o_ap_vld                 |   9|          2|    1|          2|
+    |available_spaces_bk_o                        |   9|          2|    3|          6|
+    |available_spaces_bk_o_ap_vld                 |   9|          2|    1|          2|
+    |available_spaces_vi_o                        |   9|          2|    3|          6|
+    |available_spaces_vi_o_ap_vld                 |   9|          2|    1|          2|
+    |available_spaces_vo_o                        |   9|          2|    3|          6|
+    |available_spaces_vo_o_ap_vld                 |   9|          2|    1|          2|
+    |be_backoff_counter_o                         |  15|          3|   10|         30|
+    |be_backoff_counter_o_ap_vld                  |  15|          3|    1|          3|
+    |bk_backoff_counter_o                         |  15|          3|   10|         30|
+    |bk_backoff_counter_o_ap_vld                  |  15|          3|    1|          3|
+    |current_txop_holder_o                        |  33|          6|    3|         18|
+    |current_txop_holder_o_ap_vld                 |  15|          3|    1|          3|
+    |grp_slot_boundary_timing_fu_202_timing_mode  |  15|          3|    3|          9|
+    |grp_start_backoff_be_fu_176_invoke_reason    |  15|          3|    1|          3|
+    |grp_start_backoff_bk_fu_189_invoke_reason    |  15|          3|    1|          3|
+    |grp_start_backoff_vi_fu_163_invoke_reason    |  15|          3|    1|          3|
+    |idle_waited_0_reg_107                        |   9|          2|    1|          2|
+    |rand_state_o                                 |  27|          5|   32|        160|
+    |rand_state_o_ap_vld                          |  27|          5|    1|          5|
+    |read_pointer_be_o                            |   9|          2|    2|          4|
+    |read_pointer_bk_o                            |   9|          2|    2|          4|
+    |read_pointer_vi_o                            |   9|          2|    2|          4|
+    |read_pointer_vo_o                            |   9|          2|    2|          4|
+    |vi_backoff_counter_o                         |  15|          3|   10|         30|
+    |vi_backoff_counter_o_ap_vld                  |  15|          3|    1|          3|
+    |vo_backoff_counter_o                         |   9|          2|   10|         20|
+    |write_pointer_be_o                           |   9|          2|    2|          4|
+    |write_pointer_bk_o                           |   9|          2|    2|          4|
+    |write_pointer_vi_o                           |   9|          2|    2|          4|
+    |write_pointer_vo_o                           |   9|          2|    2|          4|
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |Total                                        | 557|        115|  153|        473|
+    +---------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------+----+----+-----+-----------+
+    |                     Name                     | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                     |  17|   0|   17|          0|
+    |current_txop_holder_3_reg_382                 |   3|   0|    3|          0|
+    |grp_backoff_vo_fu_151_ap_start_reg            |   1|   0|    1|          0|
+    |grp_slot_boundary_timing_fu_202_ap_start_reg  |   1|   0|    1|          0|
+    |grp_start_backoff_be_fu_176_ap_start_reg      |   1|   0|    1|          0|
+    |grp_start_backoff_bk_fu_189_ap_start_reg      |   1|   0|    1|          0|
+    |grp_start_backoff_vi_fu_163_ap_start_reg      |   1|   0|    1|          0|
+    |grp_start_tx_fu_117_ap_start_reg              |   1|   0|    1|          0|
+    |icmp_ln268_reg_350                            |   1|   0|    1|          0|
+    |icmp_ln269_reg_354                            |   1|   0|    1|          0|
+    |icmp_ln286_reg_362                            |   1|   0|    1|          0|
+    |icmp_ln287_reg_366                            |   1|   0|    1|          0|
+    |icmp_ln304_reg_374                            |   1|   0|    1|          0|
+    |icmp_ln305_reg_378                            |   1|   0|    1|          0|
+    |idle_waited_0_reg_107                         |   1|   0|    1|          0|
+    |idle_waited_reg_341                           |   1|   0|    1|          0|
+    |tmp_2_reg_358                                 |   1|   0|    1|          0|
+    |tmp_4_reg_370                                 |   1|   0|    1|          0|
+    |tmp_reg_346                                   |   1|   0|    1|          0|
+    +----------------------------------------------+----+----+-----+-----------+
+    |Total                                         |  37|   0|   37|          0|
+    +----------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+---------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++------------------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                        |  in |    1| ap_ctrl_hs |  phy_txend_confirm  | return value |
+|ap_rst                        |  in |    1| ap_ctrl_hs |  phy_txend_confirm  | return value |
+|ap_start                      |  in |    1| ap_ctrl_hs |  phy_txend_confirm  | return value |
+|ap_done                       | out |    1| ap_ctrl_hs |  phy_txend_confirm  | return value |
+|ap_idle                       | out |    1| ap_ctrl_hs |  phy_txend_confirm  | return value |
+|ap_ready                      | out |    1| ap_ctrl_hs |  phy_txend_confirm  | return value |
+|medium_state                  |  in |    1|   ap_none  |     medium_state    |    pointer   |
+|current_txop_holder_i         |  in |    3|   ap_ovld  | current_txop_holder |    pointer   |
+|current_txop_holder_o         | out |    3|   ap_ovld  | current_txop_holder |    pointer   |
+|current_txop_holder_o_ap_vld  | out |    1|   ap_ovld  | current_txop_holder |    pointer   |
+|frame_to_transfer_address0    | out |    7|  ap_memory |  frame_to_transfer  |     array    |
+|frame_to_transfer_ce0         | out |    1|  ap_memory |  frame_to_transfer  |     array    |
+|frame_to_transfer_we0         | out |    1|  ap_memory |  frame_to_transfer  |     array    |
+|frame_to_transfer_d0          | out |    8|  ap_memory |  frame_to_transfer  |     array    |
+|frame_to_transfer_q0          |  in |    8|  ap_memory |  frame_to_transfer  |     array    |
+|available_spaces_vo_i         |  in |    3|   ap_ovld  | available_spaces_vo |    pointer   |
+|available_spaces_vo_o         | out |    3|   ap_ovld  | available_spaces_vo |    pointer   |
+|available_spaces_vo_o_ap_vld  | out |    1|   ap_ovld  | available_spaces_vo |    pointer   |
+|vo_backoff_counter_i          |  in |   10|   ap_ovld  |  vo_backoff_counter |    pointer   |
+|vo_backoff_counter_o          | out |   10|   ap_ovld  |  vo_backoff_counter |    pointer   |
+|vo_backoff_counter_o_ap_vld   | out |    1|   ap_ovld  |  vo_backoff_counter |    pointer   |
+|rand_state_i                  |  in |   32|   ap_ovld  |      rand_state     |    pointer   |
+|rand_state_o                  | out |   32|   ap_ovld  |      rand_state     |    pointer   |
+|rand_state_o_ap_vld           | out |    1|   ap_ovld  |      rand_state     |    pointer   |
+|available_spaces_vi_i         |  in |    3|   ap_ovld  | available_spaces_vi |    pointer   |
+|available_spaces_vi_o         | out |    3|   ap_ovld  | available_spaces_vi |    pointer   |
+|available_spaces_vi_o_ap_vld  | out |    1|   ap_ovld  | available_spaces_vi |    pointer   |
+|vi_backoff_counter_i          |  in |   10|   ap_ovld  |  vi_backoff_counter |    pointer   |
+|vi_backoff_counter_o          | out |   10|   ap_ovld  |  vi_backoff_counter |    pointer   |
+|vi_backoff_counter_o_ap_vld   | out |    1|   ap_ovld  |  vi_backoff_counter |    pointer   |
+|CW_vi_i                       |  in |   10|   ap_ovld  |        CW_vi        |    pointer   |
+|CW_vi_o                       | out |   10|   ap_ovld  |        CW_vi        |    pointer   |
+|CW_vi_o_ap_vld                | out |    1|   ap_ovld  |        CW_vi        |    pointer   |
+|available_spaces_be_i         |  in |    3|   ap_ovld  | available_spaces_be |    pointer   |
+|available_spaces_be_o         | out |    3|   ap_ovld  | available_spaces_be |    pointer   |
+|available_spaces_be_o_ap_vld  | out |    1|   ap_ovld  | available_spaces_be |    pointer   |
+|be_backoff_counter_i          |  in |   10|   ap_ovld  |  be_backoff_counter |    pointer   |
+|be_backoff_counter_o          | out |   10|   ap_ovld  |  be_backoff_counter |    pointer   |
+|be_backoff_counter_o_ap_vld   | out |    1|   ap_ovld  |  be_backoff_counter |    pointer   |
+|CW_be_i                       |  in |   10|   ap_ovld  |        CW_be        |    pointer   |
+|CW_be_o                       | out |   10|   ap_ovld  |        CW_be        |    pointer   |
+|CW_be_o_ap_vld                | out |    1|   ap_ovld  |        CW_be        |    pointer   |
+|available_spaces_bk_i         |  in |    3|   ap_ovld  | available_spaces_bk |    pointer   |
+|available_spaces_bk_o         | out |    3|   ap_ovld  | available_spaces_bk |    pointer   |
+|available_spaces_bk_o_ap_vld  | out |    1|   ap_ovld  | available_spaces_bk |    pointer   |
+|bk_backoff_counter_i          |  in |   10|   ap_ovld  |  bk_backoff_counter |    pointer   |
+|bk_backoff_counter_o          | out |   10|   ap_ovld  |  bk_backoff_counter |    pointer   |
+|bk_backoff_counter_o_ap_vld   | out |    1|   ap_ovld  |  bk_backoff_counter |    pointer   |
+|CW_bk_i                       |  in |   10|   ap_ovld  |        CW_bk        |    pointer   |
+|CW_bk_o                       | out |   10|   ap_ovld  |        CW_bk        |    pointer   |
+|CW_bk_o_ap_vld                | out |    1|   ap_ovld  |        CW_bk        |    pointer   |
+|write_pointer_bk_i            |  in |    2|   ap_ovld  |   write_pointer_bk  |    pointer   |
+|write_pointer_bk_o            | out |    2|   ap_ovld  |   write_pointer_bk  |    pointer   |
+|write_pointer_bk_o_ap_vld     | out |    1|   ap_ovld  |   write_pointer_bk  |    pointer   |
+|write_pointer_be_i            |  in |    2|   ap_ovld  |   write_pointer_be  |    pointer   |
+|write_pointer_be_o            | out |    2|   ap_ovld  |   write_pointer_be  |    pointer   |
+|write_pointer_be_o_ap_vld     | out |    1|   ap_ovld  |   write_pointer_be  |    pointer   |
+|write_pointer_vi_i            |  in |    2|   ap_ovld  |   write_pointer_vi  |    pointer   |
+|write_pointer_vi_o            | out |    2|   ap_ovld  |   write_pointer_vi  |    pointer   |
+|write_pointer_vi_o_ap_vld     | out |    1|   ap_ovld  |   write_pointer_vi  |    pointer   |
+|write_pointer_vo_i            |  in |    2|   ap_ovld  |   write_pointer_vo  |    pointer   |
+|write_pointer_vo_o            | out |    2|   ap_ovld  |   write_pointer_vo  |    pointer   |
+|write_pointer_vo_o_ap_vld     | out |    1|   ap_ovld  |   write_pointer_vo  |    pointer   |
+|edca_queues_address0          | out |   11|  ap_memory |     edca_queues     |     array    |
+|edca_queues_ce0               | out |    1|  ap_memory |     edca_queues     |     array    |
+|edca_queues_we0               | out |    1|  ap_memory |     edca_queues     |     array    |
+|edca_queues_d0                | out |    8|  ap_memory |     edca_queues     |     array    |
+|edca_queues_q0                |  in |    8|  ap_memory |     edca_queues     |     array    |
+|read_pointer_bk_i             |  in |    2|   ap_ovld  |   read_pointer_bk   |    pointer   |
+|read_pointer_bk_o             | out |    2|   ap_ovld  |   read_pointer_bk   |    pointer   |
+|read_pointer_bk_o_ap_vld      | out |    1|   ap_ovld  |   read_pointer_bk   |    pointer   |
+|read_pointer_be_i             |  in |    2|   ap_ovld  |   read_pointer_be   |    pointer   |
+|read_pointer_be_o             | out |    2|   ap_ovld  |   read_pointer_be   |    pointer   |
+|read_pointer_be_o_ap_vld      | out |    1|   ap_ovld  |   read_pointer_be   |    pointer   |
+|read_pointer_vi_i             |  in |    2|   ap_ovld  |   read_pointer_vi   |    pointer   |
+|read_pointer_vi_o             | out |    2|   ap_ovld  |   read_pointer_vi   |    pointer   |
+|read_pointer_vi_o_ap_vld      | out |    1|   ap_ovld  |   read_pointer_vi   |    pointer   |
+|read_pointer_vo_i             |  in |    2|   ap_ovld  |   read_pointer_vo   |    pointer   |
+|read_pointer_vo_o             | out |    2|   ap_ovld  |   read_pointer_vo   |    pointer   |
+|read_pointer_vo_o_ap_vld      | out |    1|   ap_ovld  |   read_pointer_vo   |    pointer   |
++------------------------------+-----+-----+------------+---------------------+--------------+
+

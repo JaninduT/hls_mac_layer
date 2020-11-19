@@ -1,4 +1,5 @@
 #include "PHY_TXEND_confirm.h"
+#include "edca.h"
 
 void phy_txend_confirm(volatile uint1 *medium_state, uint3 *current_txop_holder,
 		unsigned char frame_to_transfer[100]){

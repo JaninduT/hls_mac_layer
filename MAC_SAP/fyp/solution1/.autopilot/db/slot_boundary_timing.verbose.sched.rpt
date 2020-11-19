@@ -1,0 +1,206 @@
+
+
+================================================================
+== Vivado HLS Report for 'slot_boundary_timing'
+================================================================
+* Date:           Thu Nov 19 12:13:06 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        fyp
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.017 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 8 7 4 3 2 6 
+2 --> 6 
+3 --> 6 
+4 --> 5 6 
+5 --> 6 
+6 --> 
+7 --> 6 
+8 --> 6 9 
+9 --> 6 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.53>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%timing_mode_read = call i3 @_ssdm_op_Read.ap_auto.i3(i3 %timing_mode) nounwind" [fyp/edca.c:183]   --->   Operation 10 'read' 'timing_mode_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.18ns)   --->   "%icmp_ln187 = icmp eq i3 %timing_mode_read, 0" [fyp/edca.c:187]   --->   Operation 11 'icmp' 'icmp_ln187' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "br i1 %icmp_ln187, label %1, label %3" [fyp/edca.c:187]   --->   Operation 12 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.18ns)   --->   "%icmp_ln203 = icmp eq i3 %timing_mode_read, 1" [fyp/edca.c:203]   --->   Operation 13 'icmp' 'icmp_ln203' <Predicate = (!icmp_ln187)> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "br i1 %icmp_ln203, label %4, label %5" [fyp/edca.c:203]   --->   Operation 14 'br' <Predicate = (!icmp_ln187)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.18ns)   --->   "%icmp_ln213 = icmp eq i3 %timing_mode_read, 2" [fyp/edca.c:213]   --->   Operation 15 'icmp' 'icmp_ln213' <Predicate = (!icmp_ln187 & !icmp_ln203)> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "br i1 %icmp_ln213, label %6, label %8" [fyp/edca.c:213]   --->   Operation 16 'br' <Predicate = (!icmp_ln187 & !icmp_ln203)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.18ns)   --->   "%icmp_ln229 = icmp eq i3 %timing_mode_read, 3" [fyp/edca.c:229]   --->   Operation 17 'icmp' 'icmp_ln229' <Predicate = (!icmp_ln187 & !icmp_ln203 & !icmp_ln213)> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "br i1 %icmp_ln229, label %9, label %10" [fyp/edca.c:229]   --->   Operation 18 'br' <Predicate = (!icmp_ln187 & !icmp_ln203 & !icmp_ln213)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.18ns)   --->   "%icmp_ln239 = icmp eq i3 %timing_mode_read, -4" [fyp/edca.c:239]   --->   Operation 19 'icmp' 'icmp_ln239' <Predicate = (!icmp_ln187 & !icmp_ln203 & !icmp_ln213 & !icmp_ln229)> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (1.84ns)   --->   "br i1 %icmp_ln239, label %11, label %._crit_edge" [fyp/edca.c:239]   --->   Operation 20 'br' <Predicate = (!icmp_ln187 & !icmp_ln203 & !icmp_ln213 & !icmp_ln229)> <Delay = 1.84>
+ST_1 : Operation 21 [2/2] (3.53ns)   --->   "%idle_timeout_4 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:241]   --->   Operation 21 'call' 'idle_timeout_4' <Predicate = (!icmp_ln187 & !icmp_ln203 & !icmp_ln213 & !icmp_ln229 & icmp_ln239)> <Delay = 3.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 22 [2/2] (3.53ns)   --->   "%idle_timeout_3 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:231]   --->   Operation 22 'call' 'idle_timeout_3' <Predicate = (!icmp_ln187 & !icmp_ln203 & !icmp_ln213 & icmp_ln229)> <Delay = 3.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 23 [2/2] (3.53ns)   --->   "%sifs_timeout_1 = call fastcc i1 @start_timer(i1 false, i1* %medium_state)" [fyp/edca.c:216]   --->   Operation 23 'call' 'sifs_timeout_1' <Predicate = (!icmp_ln187 & !icmp_ln203 & icmp_ln213)> <Delay = 3.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 24 [2/2] (3.53ns)   --->   "%idle_timeout_1 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:205]   --->   Operation 24 'call' 'idle_timeout_1' <Predicate = (!icmp_ln187 & icmp_ln203)> <Delay = 3.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 25 [2/2] (3.53ns)   --->   "%sifs_timeout = call fastcc i1 @start_timer(i1 false, i1* %medium_state)" [fyp/edca.c:190]   --->   Operation 25 'call' 'sifs_timeout' <Predicate = (icmp_ln187)> <Delay = 3.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 6.17>
+ST_2 : Operation 26 [1/2] (6.17ns)   --->   "%idle_timeout_4 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:241]   --->   Operation 26 'call' 'idle_timeout_4' <Predicate = true> <Delay = 6.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 27 [1/1] (1.84ns)   --->   "br label %._crit_edge" [fyp/edca.c:244]   --->   Operation 27 'br' <Predicate = true> <Delay = 1.84>
+
+State 3 <SV = 1> <Delay = 6.17>
+ST_3 : Operation 28 [1/2] (6.17ns)   --->   "%idle_timeout_3 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:231]   --->   Operation 28 'call' 'idle_timeout_3' <Predicate = true> <Delay = 6.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 29 [1/1] (1.84ns)   --->   "br label %._crit_edge" [fyp/edca.c:234]   --->   Operation 29 'br' <Predicate = true> <Delay = 1.84>
+
+State 4 <SV = 1> <Delay = 8.01>
+ST_4 : Operation 30 [1/2] (6.17ns)   --->   "%sifs_timeout_1 = call fastcc i1 @start_timer(i1 false, i1* %medium_state)" [fyp/edca.c:216]   --->   Operation 30 'call' 'sifs_timeout_1' <Predicate = true> <Delay = 6.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 31 [1/1] (1.84ns)   --->   "br i1 %sifs_timeout_1, label %7, label %._crit_edge" [fyp/edca.c:217]   --->   Operation 31 'br' <Predicate = true> <Delay = 1.84>
+
+State 5 <SV = 2> <Delay = 3.53>
+ST_5 : Operation 32 [2/2] (3.53ns)   --->   "%idle_timeout_2 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:218]   --->   Operation 32 'call' 'idle_timeout_2' <Predicate = true> <Delay = 3.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 3> <Delay = 8.01>
+ST_6 : Operation 33 [1/2] (6.17ns)   --->   "%idle_timeout_2 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:218]   --->   Operation 33 'call' 'idle_timeout_2' <Predicate = (!icmp_ln187 & !icmp_ln203 & icmp_ln213 & sifs_timeout_1)> <Delay = 6.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 34 [1/1] (1.84ns)   --->   "br label %._crit_edge" [fyp/edca.c:221]   --->   Operation 34 'br' <Predicate = (!icmp_ln187 & !icmp_ln203 & icmp_ln213 & sifs_timeout_1)> <Delay = 1.84>
+ST_6 : Operation 35 [1/2] (6.17ns)   --->   "%idle_timeout = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:192]   --->   Operation 35 'call' 'idle_timeout' <Predicate = (icmp_ln187 & sifs_timeout)> <Delay = 6.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 36 [1/1] (1.84ns)   --->   "br label %._crit_edge" [fyp/edca.c:195]   --->   Operation 36 'br' <Predicate = (icmp_ln187 & sifs_timeout)> <Delay = 1.84>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%idle_waiting_write_a = phi i1 [ false, %1 ], [ false, %6 ], [ false, %10 ], [ %idle_timeout, %2 ], [ %idle_timeout_1, %4 ], [ %idle_timeout_2, %7 ], [ %idle_timeout_3, %9 ], [ %idle_timeout_4, %11 ]"   --->   Operation 37 'phi' 'idle_waiting_write_a' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (0.00ns)   --->   "ret i1 %idle_waiting_write_a" [fyp/edca.c:250]   --->   Operation 38 'ret' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 1> <Delay = 6.17>
+ST_7 : Operation 39 [1/2] (6.17ns)   --->   "%idle_timeout_1 = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:205]   --->   Operation 39 'call' 'idle_timeout_1' <Predicate = true> <Delay = 6.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 40 [1/1] (1.84ns)   --->   "br label %._crit_edge" [fyp/edca.c:208]   --->   Operation 40 'br' <Predicate = true> <Delay = 1.84>
+
+State 8 <SV = 1> <Delay = 8.01>
+ST_8 : Operation 41 [1/2] (6.17ns)   --->   "%sifs_timeout = call fastcc i1 @start_timer(i1 false, i1* %medium_state)" [fyp/edca.c:190]   --->   Operation 41 'call' 'sifs_timeout' <Predicate = true> <Delay = 6.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 42 [1/1] (1.84ns)   --->   "br i1 %sifs_timeout, label %2, label %._crit_edge" [fyp/edca.c:191]   --->   Operation 42 'br' <Predicate = true> <Delay = 1.84>
+
+State 9 <SV = 2> <Delay = 3.53>
+ST_9 : Operation 43 [2/2] (3.53ns)   --->   "%idle_timeout = call fastcc i1 @start_timer(i1 true, i1* %medium_state)" [fyp/edca.c:192]   --->   Operation 43 'call' 'idle_timeout' <Predicate = true> <Delay = 3.53> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.53ns
+The critical path consists of the following:
+	'call' operation ('idle_timeout', fyp/edca.c:241) to 'start_timer' [19]  (3.53 ns)
+
+ <State 2>: 6.17ns
+The critical path consists of the following:
+	'call' operation ('idle_timeout', fyp/edca.c:241) to 'start_timer' [19]  (6.17 ns)
+
+ <State 3>: 6.17ns
+The critical path consists of the following:
+	'call' operation ('idle_timeout', fyp/edca.c:231) to 'start_timer' [22]  (6.17 ns)
+
+ <State 4>: 8.02ns
+The critical path consists of the following:
+	'call' operation ('sifs_timeout', fyp/edca.c:216) to 'start_timer' [25]  (6.17 ns)
+	multiplexor before 'phi' operation ('idle_timeout') with incoming values : ('idle_timeout', fyp/edca.c:241) ('idle_timeout', fyp/edca.c:231) ('idle_timeout', fyp/edca.c:218) ('idle_timeout', fyp/edca.c:205) ('idle_timeout', fyp/edca.c:192) [40]  (1.84 ns)
+
+ <State 5>: 3.53ns
+The critical path consists of the following:
+	'call' operation ('idle_timeout', fyp/edca.c:218) to 'start_timer' [28]  (3.53 ns)
+
+ <State 6>: 8.02ns
+The critical path consists of the following:
+	'call' operation ('idle_timeout', fyp/edca.c:218) to 'start_timer' [28]  (6.17 ns)
+	multiplexor before 'phi' operation ('idle_timeout') with incoming values : ('idle_timeout', fyp/edca.c:241) ('idle_timeout', fyp/edca.c:231) ('idle_timeout', fyp/edca.c:218) ('idle_timeout', fyp/edca.c:205) ('idle_timeout', fyp/edca.c:192) [40]  (1.84 ns)
+	'phi' operation ('idle_timeout') with incoming values : ('idle_timeout', fyp/edca.c:241) ('idle_timeout', fyp/edca.c:231) ('idle_timeout', fyp/edca.c:218) ('idle_timeout', fyp/edca.c:205) ('idle_timeout', fyp/edca.c:192) [40]  (0 ns)
+
+ <State 7>: 6.17ns
+The critical path consists of the following:
+	'call' operation ('idle_timeout', fyp/edca.c:205) to 'start_timer' [31]  (6.17 ns)
+
+ <State 8>: 8.02ns
+The critical path consists of the following:
+	'call' operation ('sifs_timeout', fyp/edca.c:190) to 'start_timer' [34]  (6.17 ns)
+	multiplexor before 'phi' operation ('idle_timeout') with incoming values : ('idle_timeout', fyp/edca.c:241) ('idle_timeout', fyp/edca.c:231) ('idle_timeout', fyp/edca.c:218) ('idle_timeout', fyp/edca.c:205) ('idle_timeout', fyp/edca.c:192) [40]  (1.84 ns)
+
+ <State 9>: 3.53ns
+The critical path consists of the following:
+	'call' operation ('idle_timeout', fyp/edca.c:192) to 'start_timer' [37]  (3.53 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

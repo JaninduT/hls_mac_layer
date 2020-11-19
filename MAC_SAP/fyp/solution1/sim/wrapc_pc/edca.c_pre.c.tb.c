@@ -5494,6 +5494,7 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
+static const uint8 generic_timeout = 2;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/edca.h" 2
 
 uint4 enqueue_dequeue_frame(
@@ -5505,7 +5506,7 @@ uint4 enqueue_dequeue_frame(
   );
 
 void slot_boundary_timing(
-  uint2 timing_mode,
+  uint3 timing_mode,
   uint1 *idle_waiting,
   volatile uint1 *medium_state
   );
@@ -5527,19 +5528,19 @@ void backoff_bk(
   );
 
 void start_backoff_vo(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_vi(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_be(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_bk(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_tx(
@@ -5767,7 +5768,7 @@ uint4 enqueue_dequeue_frame(uint2 operation, uint2 ac, unsigned char inout_frame
  }
 }
 
-void slot_boundary_timing(uint2 timing_mode, uint1 *idle_waiting, volatile uint1 *medium_state){
+void slot_boundary_timing(uint3 timing_mode, uint1 *idle_waiting, volatile uint1 *medium_state){
  *idle_waiting = 0;
  uint1 sifs_timeout = 0;
  uint1 idle_timeout = 0;
@@ -5823,13 +5824,25 @@ void slot_boundary_timing(uint2 timing_mode, uint1 *idle_waiting, volatile uint1
    *idle_waiting = 0;
    return;
   }
+ }else if (timing_mode == 4){
+  idle_timeout = 0;
+  start_timer(generic_timeout, &idle_timeout, 1, medium_state);
+  if(idle_timeout == 1){
+   *idle_waiting = 1;
+   return;
+  }else{
+   *idle_waiting = 0;
+   return;
+  }
  }
 }
 
 void backoff_vo(uint3 *current_txop_holder){
+#pragma HLS INLINE off
  if(available_spaces_vo < 4){
   if(vo_backoff_counter == 0){
    *current_txop_holder = 4;
+   start_backoff_vo(0);
    return;
   }else{
    vo_backoff_counter = vo_backoff_counter - 1;
@@ -5843,6 +5856,7 @@ void backoff_vi(uint3 *current_txop_holder){
   if(vi_backoff_counter == 0){
    if(*current_txop_holder < 3){
     *current_txop_holder = 3;
+    start_backoff_vi(0);
     return;
    }else{
     start_backoff_vi(1);
@@ -5860,6 +5874,7 @@ void backoff_be(uint3 *current_txop_holder){
   if(be_backoff_counter == 0){
    if(*current_txop_holder < 2){
     *current_txop_holder = 2;
+    start_backoff_be(0);
     return;
    }else{
     start_backoff_be(1);
@@ -5877,6 +5892,7 @@ void backoff_bk(uint3 *current_txop_holder){
   if(bk_backoff_counter == 0){
    if(*current_txop_holder < 1){
     *current_txop_holder = 1;
+    start_backoff_bk(0);
     return;
    }else{
     start_backoff_bk(1);
@@ -5889,7 +5905,7 @@ void backoff_bk(uint3 *current_txop_holder){
  }
 }
 
-void start_backoff_vo(uint1 invoke_reason){
+void start_backoff_vo(uint2 invoke_reason){
  if(invoke_reason == 0){
   CW_vo = 15;
  }else if (invoke_reason == 1){
@@ -5900,7 +5916,7 @@ void start_backoff_vo(uint1 invoke_reason){
  vo_backoff_counter = random_int_gen(&rand_state, CW_vo);
 }
 
-void start_backoff_vi(uint1 invoke_reason){
+void start_backoff_vi(uint2 invoke_reason){
  if(invoke_reason == 0){
   CW_vi = 15;
  }else if (invoke_reason == 1){
@@ -5911,7 +5927,7 @@ void start_backoff_vi(uint1 invoke_reason){
  vi_backoff_counter = random_int_gen(&rand_state, CW_vi);
 }
 
-void start_backoff_be(uint1 invoke_reason){
+void start_backoff_be(uint2 invoke_reason){
  if(invoke_reason == 0){
   CW_be = 15;
  }else if (invoke_reason == 1){
@@ -5922,7 +5938,7 @@ void start_backoff_be(uint1 invoke_reason){
  be_backoff_counter = random_int_gen(&rand_state, CW_be);
 }
 
-void start_backoff_bk(uint1 invoke_reason){
+void start_backoff_bk(uint2 invoke_reason){
  if(invoke_reason == 0){
   CW_bk = 15;
  }else if (invoke_reason == 1){
@@ -5934,6 +5950,7 @@ void start_backoff_bk(uint1 invoke_reason){
 }
 
 void start_tx(uint3 current_txop_holder, unsigned char tx_frame[100]){
+#pragma HLS INLINE off
  uint7 d_rate;
  uint4 tx_pwr_l;
  uint4 deq_result = enqueue_dequeue_frame(1, current_txop_holder-1, tx_frame, &d_rate, &tx_pwr_l);

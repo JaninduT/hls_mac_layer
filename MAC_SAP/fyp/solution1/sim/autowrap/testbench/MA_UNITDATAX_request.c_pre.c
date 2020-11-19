@@ -5490,6 +5490,7 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
+static const uint8 generic_timeout = 2;
 # 5 "E:/FYP/HLS/MAC_SAP/fyp/MA_UNITDATAX_request.h" 2
 
 void ma_unitdatax_request (
@@ -5550,7 +5551,7 @@ uint4 enqueue_dequeue_frame(
   );
 
 void slot_boundary_timing(
-  uint2 timing_mode,
+  uint3 timing_mode,
   uint1 *idle_waiting,
   volatile uint1 *medium_state
   );
@@ -5572,19 +5573,19 @@ void backoff_bk(
   );
 
 void start_backoff_vo(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_vi(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_be(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_bk(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_tx(
@@ -5655,7 +5656,7 @@ void ma_unitdatax_request (mac48 source_addr, mac48 dest_addr,
   uint4 enqueue_res_bk = enqueue_dequeue_frame(0, 0, mac_data, &d_rate, &tx_power_lvl);
   if(enqueue_res_bk == 14){
    if(*medium_state == 0){
-    start_backoff_bk(0);
+    start_backoff_bk(2);
    }
    ma_unitdatax_status_indication(source_addr, dest_addr, 0, up, s_class);
    seq_number += 1;
@@ -5668,7 +5669,7 @@ void ma_unitdatax_request (mac48 source_addr, mac48 dest_addr,
   uint4 enqueue_res_be = enqueue_dequeue_frame(0, 1, mac_data, &d_rate, &tx_power_lvl);
   if(enqueue_res_be == 14){
    if(*medium_state == 0){
-    start_backoff_be(0);
+    start_backoff_be(2);
    }
    ma_unitdatax_status_indication(source_addr, dest_addr, 0, up, s_class);
    seq_number += 1;
@@ -5681,7 +5682,7 @@ void ma_unitdatax_request (mac48 source_addr, mac48 dest_addr,
   uint4 enqueue_res_vi = enqueue_dequeue_frame(0, 2, mac_data, &d_rate, &tx_power_lvl);
   if(enqueue_res_vi == 14){
    if(*medium_state == 0){
-    start_backoff_vi(0);
+    start_backoff_vi(2);
    }
    ma_unitdatax_status_indication(source_addr, dest_addr, 0, up, s_class);
    seq_number += 1;
@@ -5694,7 +5695,7 @@ void ma_unitdatax_request (mac48 source_addr, mac48 dest_addr,
   uint4 enqueue_res_vo = enqueue_dequeue_frame(0, 3, mac_data, &d_rate, &tx_power_lvl);
   if(enqueue_res_vo == 14){
    if(*medium_state == 0){
-    start_backoff_vo(0);
+    start_backoff_vo(2);
    }
    ma_unitdatax_status_indication(source_addr, dest_addr, 0, up, s_class);
    seq_number += 1;

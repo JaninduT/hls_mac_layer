@@ -4535,6 +4535,7 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
+static const uint8 generic_timeout = 2;
 # 5 "fyp/PHY_RXEND_indication.h" 2
 
 enum rx_error{
@@ -4548,7 +4549,8 @@ void phy_rxend_indication(
   enum rx_error rec_error,
   volatile uint1 *medium_state,
   uint3 *current_txop_holder,
-  unsigned char frame_to_transfer[100]
+  unsigned char frame_to_transfer[100],
+  unsigned char received_frame[100]
   );
 # 2 "fyp/PHY_RXEND_indication.c" 2
 # 1 "fyp/edca.h" 1
@@ -4566,7 +4568,7 @@ uint4 enqueue_dequeue_frame(
   );
 
 void slot_boundary_timing(
-  uint2 timing_mode,
+  uint3 timing_mode,
   uint1 *idle_waiting,
   volatile uint1 *medium_state
   );
@@ -4588,19 +4590,19 @@ void backoff_bk(
   );
 
 void start_backoff_vo(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_vi(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_be(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_backoff_bk(
-  uint1 invoke_reason
+  uint2 invoke_reason
   );
 
 void start_tx(
@@ -4608,12 +4610,65 @@ void start_tx(
   unsigned char tx_frame[100]
   );
 # 3 "fyp/PHY_RXEND_indication.c" 2
+# 1 "fyp/crc_32.h" 1
+
+
+
+
+
+
+
+
+unsigned int calc_crc(unsigned char data[100]);
+
+unsigned int validate_crc(unsigned char data[100]);
+# 4 "fyp/PHY_RXEND_indication.c" 2
+# 1 "fyp/MA_UNITDATA_indication.h" 1
+
+
+
+
+
+void ma_unitdata_indication (
+  volatile mac48 *source_addr,
+  volatile mac48 *dest_addr,
+  volatile unsigned char data[70],
+  volatile user_priority_t *us_priority
+  );
+# 5 "fyp/PHY_RXEND_indication.c" 2
+# 1 "fyp/decompose_mac_frame.h" 1
+
+
+
+
+
+uint1 decompose_mac_frame(
+  unsigned char mac_frame[100],
+  unsigned char data[70],
+  mac48 *source_mac,
+  mac48 *dest_mac,
+  user_priority_t *up
+  );
+# 6 "fyp/PHY_RXEND_indication.c" 2
 
 void phy_rxend_indication(enum rx_error rec_error, volatile uint1 *medium_state,
-  uint3 *current_txop_holder, unsigned char frame_to_transfer[100]){_ssdm_SpecArrayDimSize(frame_to_transfer, 100);
+  uint3 *current_txop_holder, unsigned char frame_to_transfer[100],
+  unsigned char received_frame[100]){_ssdm_SpecArrayDimSize(frame_to_transfer, 100);_ssdm_SpecArrayDimSize(received_frame, 100);
  uint1 idle_waited = 0;
  if(rec_error == NO_ERROR){
-  slot_boundary_timing(0, &idle_waited, medium_state);
+  unsigned int crc = validate_crc(received_frame);
+  if(crc != 0xc704dd7b){
+   slot_boundary_timing(1, &idle_waited, medium_state);
+  }else{
+   unsigned char msdu[70];
+   mac48 source_addr;
+   mac48 dest_addr;
+   user_priority_t up;
+   if(decompose_mac_frame(received_frame, msdu, &source_addr, &dest_addr, &up)){
+    ma_unitdata_indication(&source_addr, &dest_addr, msdu, &up);
+   }
+   slot_boundary_timing(0, &idle_waited, medium_state);
+  }
   while(idle_waited){
    backoff_vo(current_txop_holder);
    backoff_vi(current_txop_holder);

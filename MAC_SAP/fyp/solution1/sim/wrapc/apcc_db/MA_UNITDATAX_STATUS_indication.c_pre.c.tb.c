@@ -145,12 +145,12 @@ void ma_unitdatax_status_indication(l_struct_OC_mac48 llvm_cbe_source_addr, l_st
 
 
 /* Global Variable Definitions and Initialization */
-static unsigned char aesl_internal_successful;
 static unsigned char aesl_internal_unsupported_priority;
+static unsigned char aesl_internal_successful;
 static unsigned char aesl_internal_unsupported_service_class;
-static unsigned char aesl_internal_unsupported_channel_identifier;
 static unsigned char aesl_internal_unsupported_tx_params;
 static unsigned char aesl_internal_queue_full;
+static unsigned char aesl_internal_unsupported_channel_identifier;
 
 
 /* Function Bodies */

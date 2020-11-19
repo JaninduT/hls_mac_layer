@@ -1,145 +1,905 @@
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Wed Nov 11 13:40:43 +0530 2020
+INFO: [HLS 200-10] For user 'User' on host 'desktop-v5a9ups' (Windows NT_amd64 version 6.2) on Thu Nov 19 12:26:47 +0530 2020
 INFO: [HLS 200-10] In directory 'E:/FYP/HLS/MAC_SAP'
-Sourcing Tcl script 'E:/FYP/HLS/MAC_SAP/fyp/solution1/csynth.tcl'
+Sourcing Tcl script 'E:/FYP/HLS/MAC_SAP/fyp/solution1/export.tcl'
 INFO: [HLS 200-10] Opening project 'E:/FYP/HLS/MAC_SAP/fyp'.
-INFO: [HLS 200-10] Adding design file 'fyp/MA_UNITDATAX_STATUS_indication.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/MA_UNITDATAX_STATUS_indication.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/MA_UNITDATAX_request.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/MA_UNITDATAX_request.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/MA_UNITDATA_indication.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_CCA_indication.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_CCA_indication.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_DATA_confirm.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_DATA_confirm.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_DATA_request.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_DATA_request.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_RXEND_indication.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_RXEND_indication.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_TXEND_confirm.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_TXEND_confirm.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_TXEND_request.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_TXEND_request.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_TXSTART_confirm.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_TXSTART_confirm.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_TXSTART_request.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/PHY_TXSTART_request.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/common.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/compose_mac_frame.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/compose_mac_frame.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/crc_32.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/crc_32.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/crc_32_validate.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/decompose_mac_frame.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/decompose_mac_frame.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/edca.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/edca.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/mac_layer.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/mac_layer.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/r_n_g.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/r_n_g.h' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/timer.c' to the project
-INFO: [HLS 200-10] Adding design file 'fyp/timer.h' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/MA_UNITDATAX_STATUS_indication_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/MA_UNITDATAX_request_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/PHY_CCA_indication_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/PHY_DATA_confirm_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/PHY_RXEND_indication_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/PHY_TXEND_confirm_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/PHY_TXSTART_confirm_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/backoff_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/compose_mac_frame_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/compose_mac_header_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/crc_32_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/crc_32_validate_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/decompose_mac_frame_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/edca_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/input_data.bin' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/input_message.bin' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/input_message_crc.bin' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/mac_frame.bin' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/mac_layer_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/r_n_g_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/slot_boundary_timing_test.c' to the project
-INFO: [HLS 200-10] Adding test bench file 'fyp/timer_test.c' to the project
 INFO: [HLS 200-10] Opening solution 'E:/FYP/HLS/MAC_SAP/fyp/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
-INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
-INFO: [HLS 200-10] Analyzing design file 'fyp/timer.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/r_n_g.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/mac_layer.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/edca.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/decompose_mac_frame.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32_validate.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/crc_32.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/compose_mac_frame.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/PHY_TXSTART_request.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/PHY_TXSTART_confirm.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/PHY_TXEND_request.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/PHY_TXEND_confirm.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/PHY_RXEND_indication.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/PHY_DATA_request.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/PHY_DATA_confirm.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/PHY_CCA_indication.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_request.c' ... 
-INFO: [HLS 200-10] Analyzing design file 'fyp/MA_UNITDATAX_STATUS_indication.c' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:01:43 . Memory (MB): peak = 191.750 ; gain = 102.289
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:01:43 . Memory (MB): peak = 191.750 ; gain = 102.289
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:01:44 . Memory (MB): peak = 191.750 ; gain = 102.289
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'phy_txend_request' into 'phy_data_confirm' (fyp/PHY_DATA_confirm.c:17) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:01:44 . Memory (MB): peak = 191.750 ; gain = 102.289
-INFO: [XFORM 203-602] Inlining function 'phy_txend_request' into 'phy_data_confirm' (fyp/PHY_DATA_confirm.c:17) automatically.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:01:44 . Memory (MB): peak = 191.750 ; gain = 102.289
-INFO: [HLS 200-472] Inferring partial write operation for 'frame' (fyp/PHY_DATA_confirm.c:12:4)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:01:44 . Memory (MB): peak = 191.750 ; gain = 102.289
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'phy_data_confirm' ...
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'phy_data_request' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 103.865 seconds; current allocated memory: 111.840 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.081 seconds; current allocated memory: 111.886 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'phy_data_confirm' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.086 seconds; current allocated memory: 111.994 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.091 seconds; current allocated memory: 112.108 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'phy_data_request' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'phy_data_request'.
-INFO: [HLS 200-111]  Elapsed time: 0.103 seconds; current allocated memory: 112.195 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'phy_data_confirm' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'phy_data_confirm/frame_to_transfer' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'phy_data_confirm' to 'ap_ctrl_hs'.
-WARNING: [RTGEN 206-101] Register 'count' is power-on initialization.
-INFO: [SYN 201-210] Renamed object name 'phy_data_confirm_frame' to 'phy_data_confirm_bkb' due to the length limit 20
-WARNING: [RTGEN 206-101] Register 'stop_tx' is power-on initialization.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'phy_data_confirm'.
-INFO: [HLS 200-111]  Elapsed time: 0.182 seconds; current allocated memory: 112.491 MB.
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 224.37 MHz
-INFO: [RTMG 210-278] Implementing memory 'phy_data_confirm_bkb_ram (RAM)' using distributed RAMs with power-on initialization.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:01:46 . Memory (MB): peak = 191.750 ; gain = 102.289
-INFO: [VHDL 208-304] Generating VHDL RTL for phy_data_confirm.
-INFO: [VLOG 209-307] Generating Verilog RTL for phy_data_confirm.
-INFO: [HLS 200-112] Total elapsed time: 105.864 seconds; peak allocated memory: 112.491 MB.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 19 12:27:07 2020...
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+
+E:\FYP\HLS\MAC_SAP\fyp\solution1\impl\verilog>D:/Xilinx/Vivado/2019.2/bin/vivado  -notrace -mode batch -source run_vivadosyn.tcl   || exit $? 
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_vivadosyn.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+Wrote  : <E:\FYP\HLS\MAC_SAP\fyp\solution1\impl\verilog\project.srcs\sources_1\bd\bd_0\bd_0.bd> 
+WARNING: [BD 41-927] Following properties on pin /hls_inst/ap_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	FREQ_HZ=100000000.0 
+Wrote  : <E:\FYP\HLS\MAC_SAP\fyp\solution1\impl\verilog\project.srcs\sources_1\bd\bd_0\bd_0.bd> 
+VHDL Output written to : E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/synth/bd_0.v
+VHDL Output written to : E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/sim/bd_0.v
+VHDL Output written to : E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/hdl/bd_0_wrapper.v
+Using BD top: bd_0_wrapper
+INFO: [BD 41-1662] The design 'bd_0.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/synth/bd_0.v
+VHDL Output written to : E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/sim/bd_0.v
+VHDL Output written to : E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/hdl/bd_0_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hls_inst .
+Exporting to file E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/hw_handoff/bd_0.hwh
+Generated Block Design Tcl file E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/hw_handoff/bd_0_bd.tcl
+Generated Hardware Definition File E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/synth/bd_0.hwdef
+[Thu Nov 19 12:27:29 2020] Launched bd_0_hls_inst_0_synth_1...
+Run output will be captured here: E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/runme.log
+[Thu Nov 19 12:27:29 2020] Launched synth_1...
+Run output will be captured here: E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/synth_1/runme.log
+[Thu Nov 19 12:27:29 2020] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log bd_0_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_wrapper.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source bd_0_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top bd_0_wrapper -part xc7a35tcpg236-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2988 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 980.930 ; gain = 235.156
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_wrapper' [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/hdl/bd_0_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'bd_0' [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/synth/bd_0.v:13]
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/synth_1/.Xil/Vivado-12728-DESKTOP-V5A9UPS/realtime/bd_0_hls_inst_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (1#1) [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/synth_1/.Xil/Vivado-12728-DESKTOP-V5A9UPS/realtime/bd_0_hls_inst_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0' (2#1) [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/synth/bd_0.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_wrapper' (3#1) [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/hdl/bd_0_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1056.484 ; gain = 310.711
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1056.484 ; gain = 310.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1056.484 ; gain = 310.711
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1056.484 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0/bd_0_hls_inst_0_in_context.xdc] for cell 'bd_0_i/hls_inst'
+Finished Parsing XDC File [e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0/bd_0_hls_inst_0_in_context.xdc] for cell 'bd_0_i/hls_inst'
+Parsing XDC File [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/send_frame.xdc]
+Finished Parsing XDC File [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/send_frame.xdc]
+Parsing XDC File [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1058.988 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1071.090 ; gain = 12.102
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1071.090 ; gain = 325.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1071.090 ; gain = 325.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for bd_0_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for bd_0_i/hls_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1071.090 ; gain = 325.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1071.090 ; gain = 325.316
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1071.090 ; gain = 325.316
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1118.969 ; gain = 373.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1119.043 ; gain = 373.270
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1128.652 ; gain = 382.879
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1144.469 ; gain = 398.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1144.469 ; gain = 398.695
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1144.469 ; gain = 398.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1144.469 ; gain = 398.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1144.469 ; gain = 398.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1144.469 ; gain = 398.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |bd_0_hls_inst_0 |         1|
++------+----------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |bd_0_hls_inst_0 |     1|
++------+----------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   100|
+|2     |  bd_0_i |bd_0   |   100|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1144.469 ; gain = 398.695
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1144.469 ; gain = 384.090
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1144.469 ; gain = 398.695
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1144.469 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1164.184 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1164.184 ; gain = 686.293
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1164.184 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.runs/synth_1/bd_0_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_wrapper_utilization_synth.rpt -pb bd_0_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 19 12:29:43 2020...
+[Thu Nov 19 12:29:44 2020] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:15 . Memory (MB): peak = 643.332 ; gain = 0.000
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-454] Reading design checkpoint 'e:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0.dcp' for cell 'bd_0_i/hls_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.225 . Memory (MB): peak = 800.785 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 392 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/send_frame.xdc]
+Finished Parsing XDC File [E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/verilog/send_frame.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 927.668 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 8 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 8 instances
+
+open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 927.668 ; gain = 284.336
+Running report: report_utilization -file ./report/send_frame_utilization_synth.rpt
+Contents of report file './report/send_frame_utilization_synth.rpt' is as follows:
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Nov 19 12:29:53 2020
+| Host         : DESKTOP-V5A9UPS running 64-bit major release  (build 9200)
+| Command      : report_utilization -file ./report/send_frame_utilization_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : 7a35tcpg236-1
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++----------------------------+------+-------+-----------+-------+
+|          Site Type         | Used | Fixed | Available | Util% |
++----------------------------+------+-------+-----------+-------+
+| Slice LUTs*                | 3466 |     0 |     20800 | 16.66 |
+|   LUT as Logic             | 3441 |     0 |     20800 | 16.54 |
+|   LUT as Memory            |   25 |     0 |      9600 |  0.26 |
+|     LUT as Distributed RAM |   16 |     0 |           |       |
+|     LUT as Shift Register  |    9 |     0 |           |       |
+| Slice Registers            | 3414 |     0 |     41600 |  8.21 |
+|   Register as Flip Flop    | 3414 |     0 |     41600 |  8.21 |
+|   Register as Latch        |    0 |     0 |     41600 |  0.00 |
+| F7 Muxes                   |   52 |     0 |     16300 |  0.32 |
+| F8 Muxes                   |    0 |     0 |      8150 |  0.00 |
++----------------------------+------+-------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 0     |          Yes |           - |        Reset |
+| 64    |          Yes |         Set |            - |
+| 3350  |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Memory
+---------
+
++-------------------+------+-------+-----------+-------+
+|     Site Type     | Used | Fixed | Available | Util% |
++-------------------+------+-------+-----------+-------+
+| Block RAM Tile    |    1 |     0 |        50 |  2.00 |
+|   RAMB36/FIFO*    |    0 |     0 |        50 |  0.00 |
+|   RAMB18          |    2 |     0 |       100 |  2.00 |
+|     RAMB18E1 only |    2 |       |           |       |
++-------------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+3. DSP
+------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |   18 |     0 |        90 | 20.00 |
+|   DSP48E1 only |   18 |       |           |       |
++----------------+------+-------+-----------+-------+
+
+
+4. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |    0 |     0 |       106 |  0.00 |
+| Bonded IPADs                |    0 |     0 |        10 |  0.00 |
+| Bonded OPADs                |    0 |     0 |         4 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
+| PHASER_REF                  |    0 |     0 |         5 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        20 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        20 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |         5 |  0.00 |
+| IBUFDS                      |    0 |     0 |       104 |  0.00 |
+| GTPE2_CHANNEL               |    0 |     0 |         2 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        20 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        20 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       250 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |         2 |  0.00 |
+| ILOGIC                      |    0 |     0 |       106 |  0.00 |
+| OLOGIC                      |    0 |     0 |       106 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
+
+
+5. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
+| BUFIO      |    0 |     0 |        20 |  0.00 |
+| MMCME2_ADV |    0 |     0 |         5 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |         5 |  0.00 |
+| BUFMRCE    |    0 |     0 |        10 |  0.00 |
+| BUFHCE     |    0 |     0 |        72 |  0.00 |
+| BUFR       |    0 |     0 |        20 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+6. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_2_1    |    0 |     0 |         1 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+7. Primitives
+-------------
+
++----------+------+---------------------+
+| Ref Name | Used | Functional Category |
++----------+------+---------------------+
+| FDRE     | 3350 |        Flop & Latch |
+| LUT6     | 1390 |                 LUT |
+| LUT5     |  696 |                 LUT |
+| LUT4     |  623 |                 LUT |
+| LUT3     |  609 |                 LUT |
+| LUT2     |  570 |                 LUT |
+| CARRY4   |  304 |          CarryLogic |
+| LUT1     |   95 |                 LUT |
+| FDSE     |   64 |        Flop & Latch |
+| MUXF7    |   52 |               MuxFx |
+| DSP48E1  |   18 |    Block Arithmetic |
+| SRLC32E  |    9 |  Distributed Memory |
+| RAMS64E  |    8 |  Distributed Memory |
+| RAMS32   |    8 |  Distributed Memory |
+| RAMB18E1 |    2 |        Block Memory |
++----------+------+---------------------+
+
+
+8. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+9. Instantiated Netlists
+------------------------
+
++-----------------+------+
+|     Ref Name    | Used |
++-----------------+------+
+| bd_0_hls_inst_0 |    1 |
++-----------------+------+
+
+
+
+Running report: report_timing_summary -file ./report/send_frame_timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1461.875 ; gain = 534.207
+Contents of report file './report/send_frame_timing_synth.rpt' is as follows:
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Nov 19 12:30:04 2020
+| Host         : DESKTOP-V5A9UPS running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -file ./report/send_frame_timing_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 70 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 38 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      2.279        0.000                      0                 5871        0.258        0.000                      0                 5871        3.750        0.000                       0                  3460  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock   Waveform(ns)       Period(ns)      Frequency(MHz)
+-----   ------------       ----------      --------------
+ap_clk  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+ap_clk              2.279        0.000                      0                 5871        0.258        0.000                      0                 5871        3.750        0.000                       0                  3460  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  ap_clk
+  To Clock:  ap_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        2.279ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.258ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             2.279ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/trunc_ln14_reg_176_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.699ns  (logic 3.163ns (41.085%)  route 4.536ns (58.915%))
+  Logic Levels:           11  (CARRY4=6 LUT1=1 LUT3=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3459, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/ap_clk
+                         DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p/CLK
+  -------------------------------------------------------------------    -------------------
+                         DSP48E1 (Prop_dsp48e1_CLK_P[18])
+                                                      0.434     1.407 f  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/p/P[18]
+                         net (fo=2, unplaced)         0.800     2.207    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/P[3]
+                         LUT1 (Prop_lut1_I0_O)        0.124     2.331 r  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/add_ln13_fu_90_p2_carry_i_2/O
+                         net (fo=1, unplaced)         0.000     2.331    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24_n_21
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.881 r  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/add_ln13_fu_90_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     2.890    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/add_ln13_fu_90_p2_carry_n_1
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     3.146 f  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/add_ln13_fu_90_p2_carry__0/O[2]
+                         net (fo=3, unplaced)         0.923     4.069    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/zext_ln13_1_fu_95_p1[7]
+                         LUT3 (Prop_lut3_I0_O)        0.301     4.370 r  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/trunc_ln14_reg_176[30]_i_36/O
+                         net (fo=17, unplaced)        0.958     5.328    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/trunc_ln14_reg_176[27]_i_14_2
+                         LUT6 (Prop_lut6_I3_O)        0.124     5.452 r  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/trunc_ln14_reg_176[30]_i_20/O
+                         net (fo=4, unplaced)         0.926     6.378    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/trunc_ln14_reg_176[30]_i_20_n_1
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.502 r  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/trunc_ln14_reg_176[27]_i_14/O
+                         net (fo=3, unplaced)         0.920     7.422    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24_n_23
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.546 r  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/trunc_ln14_reg_176[19]_i_4/O
+                         net (fo=1, unplaced)         0.000     7.546    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/trunc_ln14_reg_176_reg[19][1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.096 r  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/trunc_ln14_reg_176_reg[19]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     8.096    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/trunc_ln14_reg_176_reg[19]_i_1_n_1
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.210 r  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/trunc_ln14_reg_176_reg[23]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     8.210    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/trunc_ln14_reg_176_reg[23]_i_1_n_1
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.324 r  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/trunc_ln14_reg_176_reg[27]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     8.324    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/trunc_ln14_reg_176_reg[27]_i_1_n_1
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.348     8.672 r  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24/send_frame_mul_mucud_DSP48_0_U/trunc_ln14_reg_176_reg[30]_i_1/O[1]
+                         net (fo=1, unplaced)         0.000     8.672    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/send_frame_mul_mucud_U24_n_51
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/trunc_ln14_reg_176_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=3459, unset)         0.924    10.924    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/trunc_ln14_reg_176_reg[29]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_D)        0.062    10.951    bd_0_i/hls_inst/inst/grp_initial_edca_process_fu_240/grp_backoff_vo_fu_153/grp_random_int_gen_fu_32/trunc_ln14_reg_176_reg[29]
+  -------------------------------------------------------------------
+                         required time                         10.951    
+                         arrival time                          -8.672    
+  -------------------------------------------------------------------
+                         slack                                  2.279    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.258ns  (arrival time - required time)
+  Source:                 bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/ap_return_preg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/ap_return_preg_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.370ns  (logic 0.239ns (64.578%)  route 0.131ns (35.422%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3459, unset)         0.410     0.410    bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/ap_return_preg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/ap_return_preg_reg[0]/Q
+                         net (fo=1, unplaced)         0.131     0.682    bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/ap_return_preg_reg[9][0]
+                         LUT3 (Prop_lut3_I2_O)        0.098     0.780 r  bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/send_frame_urem_3bkb_U23/send_frame_urem_3bkb_div_U/ap_return_preg[0]_i_1__4/O
+                         net (fo=5, unplaced)         0.000     0.780    bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/grp_ma_unitdatax_request_fu_344_vo_backoff_counter[0]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/ap_return_preg_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3459, unset)         0.432     0.432    bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/ap_return_preg_reg[0]/C
+                         clock pessimism              0.000     0.432    
+                         FDRE (Hold_fdre_C_D)         0.091     0.523    bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/grp_random_int_gen_fu_295/ap_return_preg_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.523    
+                         arrival time                           0.780    
+  -------------------------------------------------------------------
+                         slack                                  0.258    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         ap_clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { ap_clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         10.000      7.056                bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/mac_data_U/ma_unitdatax_requeOg_ram_U/ram_reg/CLKARDCLK
+Low Pulse Width   Fast    RAMS32/CLK          n/a            1.250         5.000       3.750                bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/llc_data_U/ma_unitdatax_requdEe_ram_U/ram_reg_0_15_0_0/SP/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         5.000       3.750                bd_0_i/hls_inst/inst/grp_ma_unitdatax_request_fu_344/llc_data_U/ma_unitdatax_requdEe_ram_U/ram_reg_0_15_0_0/SP/CLK
+
+
+
+
+HLS EXTRACTION: calculating BRAM count: (2 bram18) + 2 * (0 bram36)
+HLS EXTRACTION: synth area_totals:  0 20800 41600 90 100 0 0
+HLS EXTRACTION: synth area_current: 0 3466 3414 18 2 0 9 0 0 0
+HLS EXTRACTION: generated E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/report/verilog/send_frame_export.xml
+
+
+Implementation tool: Xilinx Vivado v.2019.2
+Project:             fyp
+Solution:            solution1
+Device target:       xc7a35t-cpg236-1
+Report date:         Thu Nov 19 12:30:04 +0530 2020
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:           3466
+FF:            3414
+DSP:             18
+BRAM:             2
+SRL:              9
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    7.721
+Timing met
+
+HLS EXTRACTION: generated E:/FYP/HLS/MAC_SAP/fyp/solution1/impl/report/verilog/send_frame_export.rpt
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 19 12:30:04 2020...

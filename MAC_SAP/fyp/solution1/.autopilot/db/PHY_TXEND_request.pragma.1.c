@@ -4535,6 +4535,7 @@ static const uint8 rx_ok = 2;
 static const uint8 rx_error = 2;
 static const uint8 tx_ok = 2;
 static const uint8 aSlotTime = 2;
+static const uint8 generic_timeout = 2;
 # 5 "fyp/PHY_TXSTART_request.h" 2
 
 typedef struct{
@@ -4549,6 +4550,7 @@ void phy_txstart_request(tx_vector tx_vec);
 static uint1 stop_tx = 0;
 
 void phy_txend_request(){
+_ssdm_InlineSelf(2, "");
  if(stop_tx == 0){
   stop_tx = 1;
  }
